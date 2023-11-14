@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="LinkedList集合  LinkedList集合声明 1public class LinkedList&lt;E&gt;extends AbstractSequentialList&lt;E&gt;implements List&lt;E&gt;, Deque&lt;E&gt;, Cloneable, Serializable    LinkedList的使用 1234567891011121">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/LinkedList%E9%9B%86%E5%90%88/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="LinkedList集合  LinkedList集合声明 1public class LinkedList&lt;E&gt;extends AbstractSequentialList&lt;E&gt;implements List&lt;E&gt;, Deque&lt;E&gt;, Cloneable, Serializable    LinkedList的使用 1234567891011121">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T04:11:24.681Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.282Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/LinkedList集合" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/LinkedList%E9%9B%86%E5%90%88/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.681Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="LinkedList集合"><a href="#LinkedList集合" class="headerlink" title="LinkedList集合"></a>LinkedList集合</h1><br/>
+
+<p><strong>LinkedList集合声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LinkedList</span>&lt;E&gt;<span class="keyword">extends</span> <span class="title class_">AbstractSequentialList</span>&lt;E&gt;<span class="keyword">implements</span> <span class="title class_">List</span>&lt;E&gt;, Deque&lt;E&gt;, Cloneable, Serializable</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>LinkedList的使用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">LinkedList&lt;E&gt; 它是底层为链表结构的单列集合!(底层是双向链表)</span><br><span class="line">    <span class="comment">//链表结构是没有索引的,但是由于LinkedList是List接口下的实现类集合.List接口是有索引的,所以LinkedList也是有索引的!</span></span><br><span class="line">    </span><br><span class="line">创建对象:</span><br><span class="line">      LinkedList&lt;E&gt; 集合名 = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;E&gt;();</span><br><span class="line">            </span><br><span class="line">增删改查: LinkedList和List接口的功能一模一样</span><br><span class="line">	增</span><br><span class="line">   	 	<span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E e)</span> : 往集合中依次添加元素,永远返回<span class="literal">true</span></span><br><span class="line">    	<span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> index, E element)</span> :插入, 插队</span><br><span class="line">        	  <span class="type">int</span> index : 要插入的索引位置</span><br><span class="line">            E element : 要插入的元素                              </span><br><span class="line">    删</span><br><span class="line">     	<span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object o)</span> : 按照元素值来删除元素,返回删除是否成功</span><br><span class="line">     	E <span class="title function_">remove</span><span class="params">(<span class="type">int</span> index)</span> :删除指定索引位置的元素,并返回被删除的元素</span><br><span class="line">      <span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span> : 清空集合中所有的元素</span><br><span class="line">    改</span><br><span class="line">      E <span class="title function_">set</span><span class="params">(<span class="type">int</span> index, E element)</span> : 修改指定索引位置的元素,并返回被修改的元素</span><br><span class="line">    查</span><br><span class="line">      <span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(Object o)</span>  : 判断传入的元素是否包含在集合中</span><br><span class="line">      <span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span> : 判断集合是否没有元素</span><br><span class="line">      <span class="type">int</span> <span class="title function_">size</span><span class="params">()</span> : 获取集合的长度,获取集合中元素的个数</span><br><span class="line">      E <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span> : 查询指定索引位置的元素,返回该元素</span><br><span class="line">      <span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(Object o)</span>  :判断传入的元素第一次出现在集合的索引位置,不存在返回-<span class="number">1</span></span><br><span class="line">      <span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(Object o)</span> :判断传入的元素最后一次出现在集合的索引位置,不存在返回-<span class="number">1</span>    </span><br></pre></td></tr></table></figure>
+
+<p><strong>LinkedList的特有功能</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">LinkedList底层是一个双向链表 </span><br><span class="line">    数据结构: 链表结构的特点-&gt; 查询慢增删快</span><br><span class="line">    因为链表结构查询较慢,所以LinkedList集合提供了一些关于集合头尾的相关操作</span><br><span class="line">        </span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E e)</span>  : 添加元素到集合的头部</span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E e)</span>  : 添加元素到集合的尾部        </span><br><span class="line">        </span><br><span class="line">E <span class="title function_">removeFirst</span><span class="params">()</span> : 删除集合的第一个元素 </span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span> : 删除集合的最后一个元素</span><br><span class="line">        </span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span> : 获取集合中第一个元素</span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span> : 获取集合中最后一个元素</span><br></pre></td></tr></table></figure>
+
+<p><strong>LinkedList底层源码分析</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">LinkedList&lt;E&gt;集合底层链表结构中节点的类:</span><br><span class="line"><span class="comment">//这个类名字叫Node --&gt; 节点, 它是LinkedList集合类中的内部类</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">Node</span>&lt;E&gt; &#123;</span><br><span class="line">        E item;<span class="comment">// 当前Node节点的元素值</span></span><br><span class="line">        Node&lt;E&gt; next; <span class="comment">// 下一个节点对象的地址值 -&gt; 拿到下一个节点的地址值</span></span><br><span class="line">        Node&lt;E&gt; prev; <span class="comment">// 上一个节点对象的地址值 -&gt; 拿到上一个节点的地址值</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//Node类的构造方法</span></span><br><span class="line">        Node(Node&lt;E&gt; prev, E element, Node&lt;E&gt; next) &#123;</span><br><span class="line">            <span class="built_in">this</span>.item = element;<span class="comment">//给链表节点赋予元素值</span></span><br><span class="line">            <span class="built_in">this</span>.next = next;<span class="comment">//给链表节点赋予下一个节点元素的地址值</span></span><br><span class="line">            <span class="built_in">this</span>.prev = prev;<span class="comment">//给链表节点赋予上一个节点元素的地址值</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/LinkedList%E9%9B%86%E5%90%88/" data-id="cloxtn0c5000l5gye8ofv176q" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/ListIterator%E8%BF%AD%E4%BB%A3%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/LinkedHashSet%E9%9B%86%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

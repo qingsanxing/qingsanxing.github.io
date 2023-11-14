@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="内部类12内部类：定义在类内部的类内部接口：定义在类内部的接口  成员内部类123456789101112131415161718192021222324成员: 位置关系 -&gt; 在类中方法外成员内部类: 定义在类中方法外的类叫成员内部类 --&gt; 属于对象的注意：成员内部类中不能创建静态成员(原因：成员内部类是属于对象的，与static属于类的，两者加载时机不同)class Outer&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/%E5%86%85%E9%83%A8%E7%B1%BB/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="内部类12内部类：定义在类内部的类内部接口：定义在类内部的接口  成员内部类123456789101112131415161718192021222324成员: 位置关系 -&gt; 在类中方法外成员内部类: 定义在类中方法外的类叫成员内部类 --&gt; 属于对象的注意：成员内部类中不能创建静态成员(原因：成员内部类是属于对象的，与static属于类的，两者加载时机不同)class Outer&amp;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/%E5%86%85%E9%83%A8%E7%B1%BB.assets/4e236f33cd217ffd3a45789f1f641ca8.png">
+<meta property="og:image" content="http://example.com/%E5%86%85%E9%83%A8%E7%B1%BB.assets/3013015e8231313e9c8f1b17bdae3154.png">
+<meta property="article:published_time" content="2023-11-14T04:11:24.734Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.293Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/%E5%86%85%E9%83%A8%E7%B1%BB.assets/4e236f33cd217ffd3a45789f1f641ca8.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/内部类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E5%86%85%E9%83%A8%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.734Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">内部类：定义在类内部的类</span><br><span class="line">内部接口：定义在类内部的接口</span><br></pre></td></tr></table></figure>
+
+<h2 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">成员: 位置关系 -&gt; 在类中方法外</span><br><span class="line">成员内部类: 定义在类中方法外的类叫成员内部类 --&gt; 属于对象的</span><br><span class="line">注意：成员内部类中不能创建静态成员(原因：成员内部类是属于对象的，与<span class="keyword">static</span>属于类的，两者加载时机不同)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Outer</span>&#123;<span class="comment">//外部类</span></span><br><span class="line">  <span class="keyword">class</span> <span class="title class_">Inner</span>&#123;<span class="comment">//成员内部类</span></span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Outer和Inner不是继承关系</span><br><span class="line"></span><br><span class="line">  注意：</span><br><span class="line">        <span class="number">1.</span>在内部类中访问外部类成员时，如果有同名成员，遵循就近原则；特有成员直接访问即可</span><br><span class="line">        <span class="number">2.</span>在内部类中强制访问外部类的同名成员：Outer.<span class="built_in">this</span>.成员名</span><br><span class="line">        <span class="number">3.</span>成员内部类的出现就是为了方便在内部类中使用外部的私有成员</span><br><span class="line">        <span class="number">4.</span>在第三方类中创建成员内部对象的格式：Outer.<span class="type">Inner</span> <span class="variable">inner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Outer</span>.<span class="keyword">new</span> <span class="title class_">Inner</span>();</span><br><span class="line">            因为内部类属于对象，所以要外部类<span class="keyword">new</span>出对象，然后再<span class="keyword">new</span> </span><br><span class="line">        <span class="number">5.</span>在外部类中要访问内部类的成员，必须要创建内部类对象</span><br><span class="line">              <span class="type">Inner</span> <span class="variable">inner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Outer</span>().<span class="keyword">new</span> <span class="title class_">Inner</span>();<span class="comment">//外部类的静态方法中只能用这种创建方式</span></span><br><span class="line">              <span class="type">Inner</span> <span class="variable">inner</span> <span class="operator">=</span> <span class="built_in">this</span>.<span class="keyword">new</span> <span class="title class_">Inner</span>();<span class="comment">//在外部类中的成员方法中this可以省略</span></span><br><span class="line">        <span class="number">6.</span>在外部类中可以直接访问内部类中的私有成员，前提是，在外部内中必须创建内部类对象才行    </span><br><span class="line">        </span><br><span class="line"><span class="comment">//当A类只为B类服务的时候，可以把A类定义在B类中，变成B类的成员内部类</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">类本来是不能被<span class="keyword">static</span>修饰的</span><br><span class="line">        但是当类成为了一个类的成员时，<span class="keyword">static</span>关键字可以修饰成员，所以内部类是可以被<span class="keyword">static</span>修饰的</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span>关键字修饰的成员特点：</span><br><span class="line">    <span class="number">1.</span>随着类的加载而加载优先于对象</span><br><span class="line">    <span class="number">2.</span>被所有对象所共享</span><br><span class="line">    <span class="number">3.</span>可以使用类名直接调用</span><br><span class="line">    <span class="number">4.</span>静态只能访问静态</span><br><span class="line"></span><br><span class="line">格式：</span><br><span class="line">      <span class="keyword">class</span> <span class="title class_">OuterClass</span>&#123;<span class="comment">//外部类</span></span><br><span class="line">            <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">InnerClass</span>&#123;<span class="comment">//静态成员内部类</span></span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">    注意:</span><br><span class="line">          <span class="number">1.</span>静态成员内部类中是不能直接访问外部中的非静态成员 -&gt; 静态只能访问静态</span><br><span class="line">          <span class="number">2.</span>要在静态成员内部类访问外部类非静态成员-&gt;创建外部类对象</span><br><span class="line">          <span class="number">3.</span>在外部类中访问内部类，如果没有创建对象只能通过 类名.静态成员名访问</span><br><span class="line">            如果要访问内部类中非静态成员必须要创建对象</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">InnerClass</span>().非静态成员名</span><br><span class="line">          <span class="number">4.</span>第三方类访问也要内部类也要创建对象</span><br><span class="line">                访问静态成员：</span><br><span class="line">                    OuterClass.InnerClass.静态成员</span><br><span class="line">                访问非静态成员：</span><br><span class="line">                  <span class="keyword">new</span>  <span class="title class_">OuterClass</span>.InnerClass().非静态成员</span><br><span class="line">          <span class="number">5.</span>外部类中的私有成员可以被内部访问，反之一样</span><br><span class="line"></span><br><span class="line"><span class="comment">//当A类只为B类服务的时候,可以把A类定义在B类中,变成B类的成员内部类;</span></span><br><span class="line">          </span><br></pre></td></tr></table></figure>
+
+<h2 id="局部内部类"><a href="#局部内部类" class="headerlink" title="局部内部类"></a>局部内部类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">局部内部类：在局部位置的类</span><br><span class="line"></span><br><span class="line">局部：局部不能加访问修饰符</span><br><span class="line"></span><br><span class="line">    格式：</span><br><span class="line">          <span class="keyword">class</span> <span class="title class_">Outer</span>&#123;<span class="comment">//外部类</span></span><br><span class="line">              <span class="keyword">public</span> [<span class="keyword">static</span>] <span class="keyword">void</span> <span class="title function_">ClassMethod</span><span class="params">()</span>&#123;</span><br><span class="line">                <span class="keyword">class</span> <span class="title class_">Inner</span>&#123;<span class="comment">//局部内部类</span></span><br><span class="line">                    </span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">          </span><br><span class="line">          注意：</span><br><span class="line">                <span class="number">1.</span>局部内部类不能加上访问权限修饰符</span><br><span class="line">                <span class="number">2.</span>局部约束的是生命周期</span><br><span class="line">                <span class="number">3.</span>局部内部类中的方法要访问局部内部类所在的方法的重名局部变量是访问不到的</span><br><span class="line">                      除非局部内部类中没有此重名变量</span><br><span class="line">                <span class="number">4.</span>在局部内部类中创建外部类对象可以访问外部类成员(静态直接类名调用)</span><br><span class="line">                <span class="number">5.</span>局部内部类不可以在第三方创建本类对象(包括外部类)，它只能在方法里使用</span><br><span class="line">                <span class="number">6.</span> 局部内部类在它所在的方法内使用时一定要等到类声明结束后用!</span><br><span class="line">                </span><br><span class="line"><span class="comment">//当一个类只为一个方法服务的时候,就可以把这个类定义在方法内,仅供方法使用.</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">何时使用匿名内部类:</span><br><span class="line">        当只使用一次父类的子类对象，只是使用一次抽象父类的实现类对象，只使用一次父类接口的实现类对象</span><br><span class="line">        我们完全没有必要专门创建一个类继承父类，继承抽象父类，实现父接口</span><br><span class="line">        我们可以使用匿名内部类的方式完成 继承父类，继承抽象父类，实现父接口 的一系列操作</span><br><span class="line">只要涉及到匿名内部类一定是为了方便</span><br><span class="line"></span><br><span class="line">匿名内部类的本质还是一个 局部内部类</span><br><span class="line">      但是局部内部类使用的非常少，但是匿名内部类用的非常多</span><br></pre></td></tr></table></figure>
+
+<h3 id="匿名内部类对象方法调用的执行解释"><a href="#匿名内部类对象方法调用的执行解释" class="headerlink" title="匿名内部类对象方法调用的执行解释"></a>匿名内部类对象方法调用的执行解释</h3><p><img src="/%E5%86%85%E9%83%A8%E7%B1%BB.assets/4e236f33cd217ffd3a45789f1f641ca8.png" alt="4e236f33cd217ffd3a45789f1f641ca8"></p>
+<h3 id="匿名内部类作为方法的形式参数传递"><a href="#匿名内部类作为方法的形式参数传递" class="headerlink" title="匿名内部类作为方法的形式参数传递"></a>匿名内部类作为方法的形式参数传递</h3><p><img src="/%E5%86%85%E9%83%A8%E7%B1%BB.assets/3013015e8231313e9c8f1b17bdae3154.png" alt="截图"></p>
+<h3 id="匿名内部类使用场景"><a href="#匿名内部类使用场景" class="headerlink" title="匿名内部类使用场景"></a>匿名内部类使用场景</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">使用场景:</span><br><span class="line">    <span class="number">1.</span> 匿名内部类作为方法的实际参数传递.</span><br><span class="line">    <span class="number">2.</span> 匿名内部类作为方法的返回值进行返回.</span><br><span class="line">    </span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">package</span> com.yyq.scanner.innerClass.annonymity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">InnerTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 1. 匿名内部类作为方法的实际参数传递.</span></span><br><span class="line">        userFuInterface(<span class="keyword">new</span> <span class="title class_">FuInterface</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">fuInterfaceMethod</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;不知名的实现类对象实现的fuInterfaceMethod方法&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">//2. 匿名内部类作为方法的返回值进行返回.</span></span><br><span class="line">        <span class="type">FuInterface</span> <span class="variable">fuInterface</span> <span class="operator">=</span> getFuInterface();</span><br><span class="line">        fuInterface.fuInterfaceMethod();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">userFuInterface</span><span class="params">(FuInterface fuInterface)</span>&#123;</span><br><span class="line">        fuInterface.fuInterfaceMethod();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> FuInterface <span class="title function_">getFuInterface</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">FuInterface</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">fuInterfaceMethod</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;不知名的实现类对象实现的fuInterfaceMethod方法&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E5%86%85%E9%83%A8%E7%B1%BB/" data-id="cloxtn0cg001d5gye42alb66o" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/%E5%8C%85%E8%A3%85%E7%B1%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

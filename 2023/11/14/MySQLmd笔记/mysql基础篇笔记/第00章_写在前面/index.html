@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="第00章_写在前面讲师：尚硅谷-宋红康（江湖人称：康师傅） 官网：http:&#x2F;&#x2F;www.atguigu.comhttp:&#x2F;&#x2F;www.atguigu.com&#x2F;)  一、MySQL数据库基础篇大纲MySQL数据库基础篇分为5个篇章： 1. 数据库概述与MySQL安装篇 第01章：数据库概述 第02章：MySQL环境搭建  2. SQL之SELECT使用篇 第03章：基本的SELECT语句 第04章：运">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/MySQLmd%E7%AC%94%E8%AE%B0/mysql%E5%9F%BA%E7%A1%80%E7%AF%87%E7%AC%94%E8%AE%B0/%E7%AC%AC00%E7%AB%A0_%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="第00章_写在前面讲师：尚硅谷-宋红康（江湖人称：康师傅） 官网：http:&#x2F;&#x2F;www.atguigu.comhttp:&#x2F;&#x2F;www.atguigu.com&#x2F;)  一、MySQL数据库基础篇大纲MySQL数据库基础篇分为5个篇章： 1. 数据库概述与MySQL安装篇 第01章：数据库概述 第02章：MySQL环境搭建  2. SQL之SELECT使用篇 第03章：基本的SELECT语句 第04章：运">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T04:11:40.796Z">
+<meta property="article:modified_time" content="2021-10-20T12:13:01.861Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-MySQLmd笔记/mysql基础篇笔记/第00章_写在前面" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/MySQLmd%E7%AC%94%E8%AE%B0/mysql%E5%9F%BA%E7%A1%80%E7%AF%87%E7%AC%94%E8%AE%B0/%E7%AC%AC00%E7%AB%A0_%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:40.796Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="第00章-写在前面"><a href="#第00章-写在前面" class="headerlink" title="第00章_写在前面"></a>第00章_写在前面</h1><p>讲师：尚硅谷-宋红康（江湖人称：康师傅）</p>
+<p>官网：<a target="_blank" rel="noopener" href="http://www.atguigu.com/">http://www.atguigu.com</a><a target="_blank" rel="noopener" href="http://www.atguigu.com/">http://www.atguigu.com/</a>)</p>
+<hr>
+<h2 id="一、MySQL数据库基础篇大纲"><a href="#一、MySQL数据库基础篇大纲" class="headerlink" title="一、MySQL数据库基础篇大纲"></a>一、MySQL数据库基础篇大纲</h2><p><strong>MySQL数据库基础篇分为5个篇章：</strong></p>
+<h3 id="1-数据库概述与MySQL安装篇"><a href="#1-数据库概述与MySQL安装篇" class="headerlink" title="1. 数据库概述与MySQL安装篇"></a><strong>1. 数据库概述与MySQL安装篇</strong></h3><ul>
+<li>第01章：数据库概述</li>
+<li>第02章：MySQL环境搭建</li>
+</ul>
+<h3 id="2-SQL之SELECT使用篇"><a href="#2-SQL之SELECT使用篇" class="headerlink" title="2. SQL之SELECT使用篇"></a><strong>2. SQL之SELECT使用篇</strong></h3><ul>
+<li>第03章：基本的SELECT语句</li>
+<li>第04章：运算符</li>
+<li>第05章：排序与分页</li>
+<li>第06章：多表查询</li>
+<li>第07章：单行函数</li>
+<li>第08章：聚合函数</li>
+<li>第09章：子查询</li>
+</ul>
+<h3 id="3-SQL之DDL、DML、DCL使用篇"><a href="#3-SQL之DDL、DML、DCL使用篇" class="headerlink" title="3. SQL之DDL、DML、DCL使用篇"></a><strong>3. SQL之DDL、DML、DCL使用篇</strong></h3><ul>
+<li>第10章：创建和管理表</li>
+<li>第11章：数据处理之增删改</li>
+<li>第12章：MySQL数据类型精讲</li>
+<li>第13章：约束</li>
+</ul>
+<h3 id="4-其它数据库对象篇"><a href="#4-其它数据库对象篇" class="headerlink" title="4. 其它数据库对象篇"></a><strong>4. 其它数据库对象篇</strong></h3><ul>
+<li>第14章：视图</li>
+<li>第15章：存储过程与函数</li>
+<li>第16章：变量、流程控制与游标</li>
+<li>第17章：触发器</li>
+</ul>
+<h3 id="5-MySQL8-新特性篇"><a href="#5-MySQL8-新特性篇" class="headerlink" title="5. MySQL8 新特性篇"></a><strong>5. MySQL8 新特性篇</strong></h3><ul>
+<li>第18章：MySQL8其它新特性</li>
+</ul>
+<h2 id="二、MySQL高级特性篇大纲"><a href="#二、MySQL高级特性篇大纲" class="headerlink" title="二、MySQL高级特性篇大纲"></a>二、MySQL高级特性篇大纲</h2><p><strong>MySQL高级特性分为4个篇章：</strong></p>
+<h3 id="1-MySQL架构篇"><a href="#1-MySQL架构篇" class="headerlink" title="1. MySQL架构篇"></a><strong>1. MySQL架构篇</strong></h3><ul>
+<li>第01章：Linux下MySQL的安装与使用</li>
+<li>第02章：MySQL的数据目录</li>
+<li>第03章：用户与权限管理</li>
+<li>第04章：逻辑架构</li>
+<li>第05章：存储引擎</li>
+<li>第06章：InnoDB数据页结构</li>
+</ul>
+<h3 id="2-索引及调优篇"><a href="#2-索引及调优篇" class="headerlink" title="2. 索引及调优篇"></a><strong>2. 索引及调优篇</strong></h3><ul>
+<li>第07章：索引</li>
+<li>第08章：性能分析工具的使用</li>
+<li>第09章：索引优化与SQL优化</li>
+<li>第10章：数据库的设计规范</li>
+<li>第11章：数据库其他调优策略</li>
+</ul>
+<h3 id="3-事务篇"><a href="#3-事务篇" class="headerlink" title="3. 事务篇"></a><strong>3. 事务篇</strong></h3><ul>
+<li>第12章：事务基础知识</li>
+<li>第13章：MySQL事务日志</li>
+<li>第14章：锁</li>
+<li>第15章：多版本并发控制(MVCC)</li>
+</ul>
+<h3 id="4-日志与备份篇"><a href="#4-日志与备份篇" class="headerlink" title="4. 日志与备份篇"></a><strong>4. 日志与备份篇</strong></h3><ul>
+<li>第16章：其它数据库日志</li>
+<li>第17章：主从复制</li>
+<li>第18章：数据库备份与恢复</li>
+</ul>
+<h2 id="三、MySQL高手是怎样炼成的"><a href="#三、MySQL高手是怎样炼成的" class="headerlink" title="三、MySQL高手是怎样炼成的"></a>三、MySQL高手是怎样炼成的</h2><blockquote>
+<p>针对开发工程师、DBA、运维</p>
+</blockquote>
+<ul>
+<li>mysql服务器的安装配置</li>
+<li>SQL编程(自定义函数、存储过程、触发器、定时任务)</li>
+<li>数据库索引建立</li>
+<li>SQL语句优化</li>
+<li>数据库内部结构和原理</li>
+<li>数据库的性能监控分析与系统优化</li>
+<li>各种参数常量设定</li>
+<li>数据库建模优化</li>
+<li>主从复制</li>
+<li>分布式架构搭建、垂直切割和水平切割</li>
+<li>MyCat</li>
+<li>数据迁移</li>
+<li>容灾备份和恢复</li>
+<li>对开源数据库进行二次开发</li>
+</ul>
+<blockquote>
+<p><strong>数据库就像一棵常青的技能树</strong>，不管是普通开发还是首席架构、CTO 都能够从中汲取足够的技术养料。</p>
+<p><strong>普通开发</strong>往往积累单点技术、比如 CRUD、锁类型、索引的数据结构…而对于<strong>技术骨干、架构师</strong>则往往需要对底层原理吃透，数据库事务 ACID 是如何实现的？何时命中索引、何时不能，为什么？分布式场景下数据库怎么优化才能保持高性能？</p>
+<p>说白了，知道怎么用是一方面，知道为什么则是更为<strong>稀缺的能力</strong>。</p>
+</blockquote>
+<p>很多技术专家在总结程序员核心能力的时候都会提到至关重要的一点：<strong>精通数据库。精通意味着：</strong></p>
+<blockquote>
+<p>第一形成知识网，更灵活地应对突发问题；</p>
+<p>第二底层原理要懂，懂了才能更自由地应对复杂多变的业务场景。</p>
+</blockquote>
+<h2 id="四、本套课程适合人群"><a href="#四、本套课程适合人群" class="headerlink" title="四、本套课程适合人群"></a>四、本套课程适合人群</h2><p>1、MySQL数据库初学者。建议按照顺序从套课程的“基础篇”开始学习。</p>
+<p>2、从事后台开发(Java、Python、GO、PHP等)、MySQL开发 1~3 年的开发人员和运维人员。建议选择“基础篇”部分内容学习，或者跳过“基础篇”，直接从“高级特性篇”开始学习。</p>
+<p>3、有资历的MySQL DBA。本课程可以作为“案头书”。在解决问题时，如果记不清某些概念或者细节比较模糊，则可以拿来参考。</p>
+<h2 id="五、希望你能获取的"><a href="#五、希望你能获取的" class="headerlink" title="五、希望你能获取的"></a>五、希望你能获取的</h2><p>先说一个笑话。这个笑话是我从万维钢的专栏里看到的。</p>
+<p>三个逻辑学家走进酒吧，酒保问他们，三位都喝啤酒吗？<br>第一个逻辑学家说，我不知道。<br>第二个逻辑学家说，我不知道。<br>第三个逻辑学家说，是的。</p>
+<p>对于知识，是需要<code>认真</code>和<code>讲究逻辑</code>的。希望这份认真、严谨你在课程的每个细节都能体会到。希望通过这套课程的系统性训练，你也能感受到这种思维方式的美，最终也能获得这种思维方式。</p>
+<p><code>具备优秀的思维能力</code>才是在未来可以迁移的能力，如果只是学习一些命令，则很快会过时，<code>思维能力</code>和<code>学习能力</code>的提升才是不会变的东西。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/MySQLmd%E7%AC%94%E8%AE%B0/mysql%E5%9F%BA%E7%A1%80%E7%AF%87%E7%AC%94%E8%AE%B0/%E7%AC%AC00%E7%AB%A0_%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2/" data-id="cloxtn0cr002g5gye49d7hpg2" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/MySQLmd%E7%AC%94%E8%AE%B0/mysql%E5%9F%BA%E7%A1%80%E7%AF%87%E7%AC%94%E8%AE%B0/%E7%AC%AC00%E7%AB%A0_%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JDBC/JDBC%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

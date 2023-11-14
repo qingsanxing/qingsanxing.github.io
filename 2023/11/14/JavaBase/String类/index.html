@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="String类12345678910111213141516String 代表的是字符串的类!    String 类的对象是Java中最为特殊的一类对象!!         1. 因为字符串又是常量又是对象        *2. 字符串对象的创建:                 有名对象: String str &#x3D; &quot;Hello&quot;; 匿名对象: &quot;双引号引起来的内">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/String%E7%B1%BB/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="String类12345678910111213141516String 代表的是字符串的类!    String 类的对象是Java中最为特殊的一类对象!!         1. 因为字符串又是常量又是对象        *2. 字符串对象的创建:                 有名对象: String str &#x3D; &quot;Hello&quot;; 匿名对象: &quot;双引号引起来的内">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/String%E7%B1%BB.assets/09af82aeb320d8d6df2cfd9b80b28907.png">
+<meta property="og:image" content="http://example.com/String%E7%B1%BB.assets/c2b944b2a32b2857487eb0d85ff20907.png">
+<meta property="article:published_time" content="2023-11-14T04:11:24.713Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.288Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/String%E7%B1%BB.assets/09af82aeb320d8d6df2cfd9b80b28907.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/String类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/String%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.713Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="String类"><a href="#String类" class="headerlink" title="String类"></a>String类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">String 代表的是字符串的类!</span><br><span class="line">    String 类的对象是Java中最为特殊的一类对象!! </span><br><span class="line">        <span class="number">1.</span> 因为字符串又是常量又是对象</span><br><span class="line">        *<span class="number">2.</span> 字符串对象的创建: </span><br><span class="line">                有名对象: <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;Hello&quot;</span>; 匿名对象: <span class="string">&quot;双引号引起来的内容就是一个字符串对象&quot;</span></span><br><span class="line">        *<span class="number">3.</span> 字符串的底层是 一个字符数组 , 字符串的最底层是一个字节数组: </span><br><span class="line">                <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span>  <span class="string">&quot;abc&quot;</span> 底层是: <span class="type">char</span>[] chs = &#123;<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>&#125; ;</span><br><span class="line">                <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span>  <span class="string">&quot;abc&quot;</span> 底层是: <span class="type">byte</span>[] bys = &#123;<span class="number">97</span>,<span class="number">98</span>,<span class="number">99</span>&#125; ;</span><br><span class="line">        *<span class="number">4.</span> 数组一旦被定义长度不能发生改变,所以字符串一旦改变就是生成了新的字符串 </span><br><span class="line">                    -&gt; 改变字符串内容的方法记得一定要接收调用!!</span><br><span class="line">                <span class="string">&quot;hello&quot;</span> --&gt; 改变: <span class="string">&quot;hello&quot;</span> + <span class="string">&quot;abc&quot;</span> --&gt; <span class="string">&quot;helloabc&quot;</span> 新的字符串</span><br><span class="line">        <span class="number">5.</span> 字符串是Java中唯一一个可以做加法运算的对象,只能做加法运算!!</span><br><span class="line">        *<span class="number">6.</span> 字符串是常量,常量可以共用,所以字符串也可以共用! </span><br><span class="line">               <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">100</span>; <span class="type">int</span> <span class="variable">num1</span> <span class="operator">=</span> <span class="number">100</span>; --&gt; 在内存中只会有一个<span class="number">100</span></span><br><span class="line">               <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;hello&quot;</span>; <span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> <span class="string">&quot;hello&quot;</span>; --&gt; 在内存中只会有一个<span class="string">&quot;hello&quot;</span></span><br><span class="line">        <span class="number">7.</span> 常量存在于常量池,字符串的值也存在于常量池中!!           </span><br></pre></td></tr></table></figure>
+
+<p><img src="/String%E7%B1%BB.assets/09af82aeb320d8d6df2cfd9b80b28907.png" alt="1628307089268.png"></p>
+<h4 id="String对象的创建"><a href="#String对象的创建" class="headerlink" title="String对象的创建"></a>String对象的创建</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">创建字符串对象最最最推荐的方式: 直接赋值</span><br><span class="line">   ******* <span class="type">String</span> <span class="variable">str</span> <span class="operator">=</span> <span class="string">&quot;hello&quot;</span>; *******</span><br><span class="line"></span><br><span class="line">需要学习的String的构造方法们:</span><br><span class="line">        <span class="number">1.</span> String() : 创建一个空的字符串对象 --&gt; <span class="string">&quot;&quot;</span> --&gt; 没有任何意义</span><br><span class="line">        <span class="number">2.</span> String(String original) :传入的字符串对象封装成一个字符串对象 --&gt; 有病!! 没有任何意义z</span><br><span class="line">        *<span class="number">3.</span> String(<span class="type">char</span>[] value) : 把传入的字符数组中的内容拼接成一个字符串对象!!</span><br><span class="line">            有意义!它可以实现对象之间的类型转换 : <span class="type">char</span>[] ---&gt; String</span><br><span class="line">        *<span class="number">4.</span> String(<span class="type">char</span>[] value, <span class="type">int</span> offset, <span class="type">int</span> count) :把第一个参数的字符数组中的一部分转换成字符串对象</span><br><span class="line">                    <span class="type">int</span> offset: 起始索引</span><br><span class="line">                    <span class="type">int</span> count: 个数 -&gt; 转几个字符</span><br><span class="line">        *<span class="number">5.</span> String(<span class="type">byte</span>[] bytes) : 把传入的字节数组中的内容拼接成一个字符串对象!!</span><br><span class="line">        *<span class="number">6.</span> String(<span class="type">byte</span>[] bytes, <span class="type">int</span> offset, <span class="type">int</span> length) :把第一个参数的字节数组中的一部分转换成字符串对象</span><br><span class="line">                    <span class="type">int</span> offset: 起始索引</span><br><span class="line">                    <span class="type">int</span> length: 个数 -&gt; 转几个字符</span><br><span class="line"></span><br><span class="line">    输出对象一定是输出对象的地址值,但只要不是地址值就说明此对象所在的类重写了Object类中的toString()</span><br></pre></td></tr></table></figure>
+
+<p><img src="/String%E7%B1%BB.assets/c2b944b2a32b2857487eb0d85ff20907.png" alt="1628309173851.png"></p>
+<br/>
+
+<h4 id="String基本类型数据值转成基本数据类型值"><a href="#String基本类型数据值转成基本数据类型值" class="headerlink" title="String基本类型数据值转成基本数据类型值"></a>String基本类型数据值转成基本数据类型值</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;1000&quot;</span> , <span class="string">&quot;13.14&quot;</span> , <span class="string">&quot;true&quot;</span> --&gt; 是不可以做运算的,因为他们是字符串类型!</span><br><span class="line"> </span><br><span class="line">包装类中 : <span class="keyword">static</span> 对应的基本数据类型值 parseXxx(字符串类型的基本值);  </span><br><span class="line">	例如: </span><br><span class="line">		Integer 中 <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">parseInt</span><span class="params">(String <span class="type">int</span>值)</span>;</span><br><span class="line">		Boolean 中 <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">parseBoolean</span><span class="params">(String <span class="type">boolean</span>值)</span>;</span><br><span class="line">		....</span><br><span class="line">        除了Character类中没有parseXxxx方法</span><br><span class="line">            <span class="comment">// char --&gt; String : String的构造方法</span></span><br><span class="line">            <span class="comment">// String --&gt; char : String的成员方法 char charAt(int index);</span></span><br><span class="line">            <span class="comment">// String --&gt; char : String的成员方法 char[] toCharArray()</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h4 id="String的比较功能"><a href="#String的比较功能" class="headerlink" title="String的比较功能"></a>String的比较功能</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">*<span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object anObject)</span> : String类重写的父类的equals方法,从比较地址值变成比较字符串的内容是否相同,并返回布尔值;  <span class="comment">//严格区分大小写</span></span><br><span class="line">*<span class="type">boolean</span> <span class="title function_">equalsIgnoreCase</span><span class="params">(String anotherString)</span> : String比较<span class="number">2</span>个字符串的内容是否相同,但是忽略大小写,并返回布尔值;    </span><br><span class="line"></span><br><span class="line"><span class="comment">//忽略的是英文大小写,不忽略中文的大小写  1 -&gt; 壹</span></span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object anObject)</span> : 用户名和密码的校验~</span><br><span class="line"></span><br><span class="line"><span class="type">boolean</span> <span class="title function_">equalsIgnoreCase</span><span class="params">(String anotherString)</span> : 验证码的校验~</span><br><span class="line"></span><br><span class="line"><span class="comment">//源码分析</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object anObject)</span> &#123;</span><br><span class="line">        <span class="comment">//自己比自己: 如果是同一个对象,那么直接返回true</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span> == anObject) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//判断传入的参数是否是String类型的对象</span></span><br><span class="line">        <span class="keyword">if</span> (anObject <span class="keyword">instanceof</span> String) &#123;</span><br><span class="line">            <span class="comment">//多态的向下转型: 向下转型有风险</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">anotherString</span> <span class="operator">=</span> (String)anObject;</span><br><span class="line">            <span class="comment">//这段内容就是那2字符串中的字符一一比较</span></span><br><span class="line">            <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> value.length;<span class="comment">//调用方法的字符串的字符个数</span></span><br><span class="line">            <span class="keyword">if</span> (n == anotherString.value.length) &#123;</span><br><span class="line">                <span class="type">char</span> v1[] = <span class="built_in">this</span>.value;<span class="comment">//调用方法的字符串的底层数组 v1</span></span><br><span class="line">                <span class="type">char</span> v2[] = anotherString.value;<span class="comment">//传入方法的字符串的底层数组 v2</span></span><br><span class="line">                <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">while</span> (n-- != <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (v1[i] != v2[i])</span><br><span class="line">                        <span class="comment">//只要有一个字符不相同就直接返回false</span></span><br><span class="line">                        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    <span class="comment">//继续判断下一个字符</span></span><br><span class="line">                    i++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//String类型中equals方法若传入的不是String类型的对象那么直接返回false</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="String的获取功能"><a href="#String的获取功能" class="headerlink" title="String的获取功能"></a>String的获取功能</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">*<span class="type">char</span> <span class="title function_">charAt</span><span class="params">(<span class="type">int</span> index)</span> : 获取字符串中指定索引位置的字符</span><br><span class="line">*<span class="type">int</span> <span class="title function_">length</span><span class="params">()</span> : 返回字符串的长度 --&gt; 字符串中字符的个数</span><br><span class="line">    <span class="comment">//字符串遍历的标准代码</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; str.length(); i++) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;str.charAt(i) = &quot;</span> + str.charAt(i));</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line"><span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(<span class="type">int</span> ch)</span> : 获取传入的字符第一次出现在字符串中的索引位置 </span><br><span class="line">*<span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(String str)</span> : 获取传入的字符串第一次出现在字符串的索引位置(以传入的字符串的第一个字符作为起始点)</span><br><span class="line"><span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(<span class="type">int</span> ch, <span class="type">int</span> fromIndex)</span> :获取传入的字符第一次出现在字符串中的索引位置(起始索引: fromIndex)</span><br><span class="line"><span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(String str, <span class="type">int</span> fromIndex)</span> :获取传入的字符串第一次出现在字符串的索引位置 (起始索引: fromIndex)</span><br><span class="line"></span><br><span class="line">没有出现的字符返回多少呢? 不存在的索引编号 -<span class="number">1</span></span><br><span class="line">  </span><br><span class="line"><span class="comment">//last : 最后一次出现 </span></span><br><span class="line"><span class="comment">//以下方法的功能和indexOf一样,只不过获取的是最后一次出现的索引编号~</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(<span class="type">int</span> ch)</span>  </span><br><span class="line"><span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(String str)</span>  </span><br><span class="line"><span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(<span class="type">int</span> ch, <span class="type">int</span> fromIndex)</span>  </span><br><span class="line"><span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(String str, <span class="type">int</span> fromIndex)</span>      </span><br></pre></td></tr></table></figure>
+
+<h4 id="String的转换功能"><a href="#String的转换功能" class="headerlink" title="String的转换功能"></a>String的转换功能</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">String <span class="title function_">toLowerCase</span><span class="params">()</span>  : 把字符串中所有的英文大写字符转换成小写字符</span><br><span class="line">String <span class="title function_">toUpperCase</span><span class="params">()</span>  : 把字符串中所有的英文小写字符转换成大写字符  </span><br><span class="line"></span><br><span class="line"><span class="comment">//涉及到字符串改变的方法一定记得接收调用,因为字符串一旦改变就生成新的字符串</span></span><br><span class="line"></span><br><span class="line">  *  <span class="type">char</span>[] toCharArray()  : 把字符串转换成字符数组 --&gt; 打回原形</span><br><span class="line">        遍历字符串</span><br><span class="line">  *  <span class="type">byte</span>[] getBytes() : 把字符串转换成字节数组 --&gt; 打回原形</span><br><span class="line">        按照平台的编码格式对中文进行字节数组的转换;</span><br><span class="line">            UTF-<span class="number">8</span> 编码格式中,一个中文是占用<span class="number">3</span>个字节  (国际通用的编码表)</span><br><span class="line">            中文的字节是负数开头;</span><br><span class="line">    <span class="type">byte</span>[] getBytes(String charsetName) : 把字符串按照指定的编码格式进行转换</span><br><span class="line">            windows系统的默认编码格式: GBK(中文编码表)</span><br><span class="line">            GBK编码格式下一个中文是占用<span class="number">2</span>个字节</span><br><span class="line">            </span><br><span class="line"> String -&gt; <span class="type">char</span>[]</span><br><span class="line">     <span class="type">char</span>[] toCharArray()  : 把字符串转换成字符数组 --&gt; 打回原形</span><br><span class="line"> <span class="type">char</span>[] -&gt; String</span><br><span class="line">     <span class="title function_">String</span><span class="params">(<span class="type">char</span>[] value)</span> : 把传入的字符数组中的内容拼接成一个字符串对象!!</span><br><span class="line">            有意义!它可以实现对象之间的类型转换 : <span class="type">char</span>[] ---&gt; String</span><br><span class="line">    <span class="title function_">String</span><span class="params">(<span class="type">char</span>[] value, <span class="type">int</span> offset, <span class="type">int</span> count)</span> :把第一个参数的字符数组中的一部分转换成字符串对象</span><br><span class="line">    </span><br><span class="line"> String -&gt; <span class="type">byte</span>[]</span><br><span class="line">     <span class="type">byte</span>[] getBytes() : 把字符串转换成字节数组 --&gt; 打回原形</span><br><span class="line">     <span class="type">byte</span>[] getBytes(String charsetName) : 把字符串按照指定的编码格式进行转换</span><br><span class="line"> <span class="type">byte</span>[] -&gt; String     </span><br><span class="line">     <span class="title function_">String</span><span class="params">(<span class="type">byte</span>[] bytes)</span> : 把传入的字节数组中的内容拼接成一个字符串对象!!</span><br><span class="line">    String(<span class="type">byte</span>[] bytes, <span class="type">int</span> offset, <span class="type">int</span> length) :把第一个参数的字节数组中的一部分转换成字符串对象</span><br></pre></td></tr></table></figure>
+
+<h4 id="String的判断功能"><a href="#String的判断功能" class="headerlink" title="String的判断功能"></a>String的判断功能</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">*  <span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(CharSequence s)</span>  :</span><br><span class="line">  <span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(String s)</span>  : 判断传入的字符串是否存在于调用方法的字符串内</span><br><span class="line">      CharSequence是String类型的父类,父类引用接收子类对象</span><br><span class="line"></span><br><span class="line">*  <span class="type">boolean</span> <span class="title function_">startsWith</span><span class="params">(String prefix)</span>: 判断字符串是否以传入的字符串开头 -&gt; 判断姓氏</span><br><span class="line">*  <span class="type">boolean</span> <span class="title function_">endsWith</span><span class="params">(String suffix)</span>: 判断字符串是否以传入的字符串结尾 -&gt; 判断文件的后缀名</span><br><span class="line"></span><br><span class="line">  <span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span> : 判断字符串是否是空字符串 --&gt; <span class="string">&quot;&quot;</span>     </span><br></pre></td></tr></table></figure>
+
+<h4 id="String的替换功能"><a href="#String的替换功能" class="headerlink" title="String的替换功能"></a>String的替换功能</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String <span class="title function_">replace</span><span class="params">(<span class="type">char</span> oldChar, <span class="type">char</span> newChar)</span>  </span><br><span class="line">* String <span class="title function_">replace</span><span class="params">(CharSequence target, CharSequence replacement)</span>: 把target字符串替换成replacement字符串,并生成新的字符串</span><br><span class="line">    target:目标字符串</span><br><span class="line">    replacement: 替换的内容</span><br></pre></td></tr></table></figure>
+
+<h4 id="String的截取功能"><a href="#String的截取功能" class="headerlink" title="String的截取功能"></a>String的截取功能</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* String <span class="title function_">substring</span><span class="params">(<span class="type">int</span> beginIndex)</span> : 从beginIndex索引开始截取字符串到字符串的末位,并返回新的字符串</span><br><span class="line">    截取范围 : [beginIndex,str.length()-<span class="number">1</span>]</span><br><span class="line">* String <span class="title function_">substring</span><span class="params">(<span class="type">int</span> beginIndex, <span class="type">int</span> endIndex)</span>: 从beginIndex开始截取到endIndex结束并生成新的字符串       </span><br><span class="line">    截取范围 : [beginIndex,endIndex-<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<h4 id="String的切割功能"><a href="#String的切割功能" class="headerlink" title="String的切割功能"></a>String的切割功能</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">* String[] split(String regex) : 切割字符串,把切割后的字符串放在一个字符串数组中并返回</span><br><span class="line">        <span class="string">&quot;1990-01-01&quot;</span> --&gt; String[] : [<span class="string">&quot;1990&quot;</span>,<span class="string">&quot;01&quot;</span>,<span class="string">&quot;01&quot;</span>]</span><br><span class="line">        String regex :</span><br><span class="line">            <span class="number">1.</span> 你要按照什么切割就传入什么 **</span><br><span class="line">            <span class="number">2.</span> String regex: 正则表达式</span><br><span class="line">                正则表达式: 一套语法规则,适用于所有的编程语言</span><br><span class="line">                    作用: 是用来提供规则 例如需要校验电话号码,校验身份证号</span><br><span class="line">                        后期你需要正则去校验, 去百度!!!</span><br><span class="line">                    正则的通配符: . --&gt; 任意的字符</span><br><span class="line">                    你要按照.来切割 : \\.</span><br><span class="line">                    x+ : x元素出现一次或者多次都按照<span class="number">1</span>次来进行切割</span><br><span class="line">                    \\ : \\\\ -&gt; 转义符 --&gt; 记住!</span><br><span class="line"></span><br><span class="line">                    \ - &gt; 转义符</span><br><span class="line">                    \\ -&gt; 普通的\</span><br><span class="line">                    \\\\ -&gt; 普通的\普通的\ -&gt; \</span><br></pre></td></tr></table></figure>
+
+<h4 id="String的匹配功能"><a href="#String的匹配功能" class="headerlink" title="String的匹配功能"></a>String的匹配功能</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* <span class="type">boolean</span> <span class="title function_">matches</span><span class="params">(String regex)</span>: 判断调用方法的字符串是否符合正则规则要求</span><br><span class="line">    <span class="comment">//判断是否是电话</span></span><br><span class="line">        (<span class="number">13</span>[<span class="number">0</span>-<span class="number">9</span>]|<span class="number">14</span>[<span class="number">5</span>|<span class="number">7</span>]|<span class="number">15</span>[<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">7</span>|<span class="number">8</span>|<span class="number">9</span>]|<span class="number">18</span>[<span class="number">0</span>|<span class="number">1</span>|<span class="number">2</span>|<span class="number">3</span>|<span class="number">5</span>|<span class="number">6</span>|<span class="number">7</span>|<span class="number">8</span>|<span class="number">9</span>])\d&#123;<span class="number">8</span>&#125;</span><br><span class="line">    <span class="comment">//判断是否是身份证号</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="String的其他功能"><a href="#String的其他功能" class="headerlink" title="String的其他功能"></a>String的其他功能</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String <span class="title function_">concat</span><span class="params">(String str)</span>  : 把调用方法的字符串和传入方法的字符串拼接在一起!!</span><br><span class="line">String <span class="title function_">toString</span><span class="params">()</span> : 把字符串对象转换成字符串对象!!      </span><br><span class="line">    </span><br><span class="line">* String <span class="title function_">trim</span><span class="params">()</span>:去除字符串两端的空格并返回新的字符串对象 </span><br><span class="line">    <span class="comment">//尤其是拿到用户的数据时一定记得trim一下!</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="String类中对编码解码操作的方法"><a href="#String类中对编码解码操作的方法" class="headerlink" title="String类中对编码解码操作的方法"></a>String类中对编码解码操作的方法</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">编码 :  汉字 --&gt; 二进制码(字节)  ---------&gt; String -&gt; <span class="type">byte</span>[]</span><br><span class="line">            <span class="type">byte</span>[] getBytes(): 按照平台的默认编码格式对象汉字进行编码操作</span><br><span class="line">            <span class="type">byte</span>[] getBytes(String charsetName) : 按照传入的编码格式对汉字进行编码操作</span><br><span class="line"></span><br><span class="line">解码 :  二进制码(字节) --&gt; 汉字  ---------&gt; <span class="type">byte</span>[] -&gt; String</span><br><span class="line">            String的构造方法:</span><br><span class="line">            String(bytes[] bys): 按照平台默认的编码格式把字节数组的所有内容转换成字符串</span><br><span class="line">            String(bytes[] bys,<span class="type">int</span> startIndex,<span class="type">int</span> len): 按照平台默认的编码格式把字节数组的一部分内容转换成字符串</span><br><span class="line">带有编码格式设置的构造方法:</span><br><span class="line">            String(<span class="type">byte</span>[] bytes, String charsetName):按照自定义的编码格式把字节数组的所有内容转换成字符串</span><br><span class="line">            String(<span class="type">byte</span>[] bytes, <span class="type">int</span> offset, <span class="type">int</span> length, String charsetName) 按照自定义的编码格式把字节数组的一部分内容转换成字符</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/String%E7%B1%BB/" data-id="cloxtn0cb00115gyebm5d06zo" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/switch%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/StringBuffer%E7%B1%BB/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

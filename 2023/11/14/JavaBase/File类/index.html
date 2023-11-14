@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="File类  File类的声明 123public class Fileextends Objectimplements Serializable, Comparable&lt;File&gt;    File类的构造方法 1234567891011121314*File(String pathname):传入文件的路径名得到文件对象 --&gt; 最简单 File(String parent,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/File%E7%B1%BB/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="File类  File类的声明 123public class Fileextends Objectimplements Serializable, Comparable&lt;File&gt;    File类的构造方法 1234567891011121314*File(String pathname):传入文件的路径名得到文件对象 --&gt; 最简单 File(String parent,">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T04:11:24.654Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.278Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/File类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/File%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.654Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="File类"><a href="#File类" class="headerlink" title="File类"></a>File类</h1><br/>
+
+<p><strong>File类的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">File</span></span><br><span class="line"><span class="keyword">extends</span> <span class="title class_">Object</span></span><br><span class="line"><span class="keyword">implements</span> <span class="title class_">Serializable</span>, Comparable&lt;File&gt;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>File类的构造方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">*File(String pathname):传入文件的路径名得到文件对象 --&gt; 最简单</span><br><span class="line"> File(String parent, String child):以子父路径的方式表示文件路径来创建File对象</span><br><span class="line">*File(File parent, String child)：以子父路径的方式表示文件路径来创建File对象(父路径用File对象来表示)</span><br><span class="line">     -&gt; 父路径是一个File对象,是对象就能使用类中的功能!!</span><br><span class="line"></span><br><span class="line">    注意:</span><br><span class="line">        <span class="number">1.</span> 文件存在创建File对象不会覆盖文件</span><br><span class="line">        <span class="number">2.</span> 文件不存在也不会报错,也不会创建新文件</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">    倒地创建File对象干了啥?</span><br><span class="line">        <span class="number">1.</span> 创建一个File对象</span><br><span class="line">        <span class="number">2.</span> 在堆内存中开辟了内存空间</span><br><span class="line">        <span class="number">3.</span> 让这个file对象指向了路径结尾的文件或者文件夹</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>File类的创建功能</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">*<span class="type">boolean</span> <span class="title function_">createNewFile</span><span class="params">()</span> : 创建文件(并返回创建是否成功)</span><br><span class="line"> <span class="comment">//不要把文件或者文件夹的路径写错,写错会报 FileNoFoundException</span></span><br><span class="line"> <span class="type">boolean</span> <span class="title function_">mkdir</span><span class="params">()</span>:创建单级文件夹</span><br><span class="line">*<span class="type">boolean</span> <span class="title function_">mkzdirs</span><span class="params">()</span>:创建多级文件夹(也可以创建单级文件夹)</span><br><span class="line"></span><br><span class="line">注意事项</span><br><span class="line">    <span class="number">1.</span> 要创建出File对象指向的文件,必须保证文件前面的路径存在</span><br><span class="line">    <span class="number">2.</span> 不要把文件写成文件夹,也不要把文件夹写成文件</span><br><span class="line">    <span class="number">3.</span> 创建文件的方法若文件存在,创建失败(不会覆盖文件)</span><br><span class="line">    <span class="number">4.</span> file对象具体创建的是文件还是文件夹看的是程序员调用的哪个方法</span><br></pre></td></tr></table></figure>
+
+<p><strong>File的删除功能</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="title function_">delete</span><span class="params">()</span> : 删除文件/文件夹 --&gt; 不走回收站</span><br><span class="line"></span><br><span class="line">    注意:</span><br><span class="line">        <span class="number">1.</span> 文件不存在删除失败</span><br><span class="line">        <span class="number">2.</span> 删除功能若删除文件夹,必须要保证文件夹中没有任何文件和文件夹</span><br><span class="line">        <span class="number">3.</span> 计算机删除和复制文件夹的逻辑</span><br><span class="line">            删除文件夹的逻辑: 会先删除文件夹中所有文件(包括子文件夹中的文件),再删除剩余的文件夹</span><br><span class="line">            复制文件夹的逻辑: 会先复制文件夹中所有文件夹(包括子文件夹中的文件夹),再把文件复制到</span><br></pre></td></tr></table></figure>
+
+<p><strong>File的获取功能</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">*  String <span class="title function_">getName</span><span class="params">()</span>  : 获取File对象指向的那个文件或者文件夹的名称</span><br><span class="line"></span><br><span class="line">   String <span class="title function_">getAbsolutePath</span><span class="params">()</span> : 以字符串的形式返回file对象的绝对路径</span><br><span class="line">   File <span class="title function_">getAbsoluteFile</span><span class="params">()</span> : 以File对象的形式返回file对象的绝对路径</span><br><span class="line"></span><br><span class="line">   String <span class="title function_">getParent</span><span class="params">()</span> : 获取父路径(返回的是以String对象)</span><br><span class="line">   File <span class="title function_">getParentFile</span><span class="params">()</span> : 获取父路径(返回的是以File对象)</span><br><span class="line">       <span class="comment">//系统默认的父路径是路径结尾的文件/文件夹前置所有的路径</span></span><br><span class="line"></span><br><span class="line">   String <span class="title function_">getPath</span><span class="params">()</span> : 获取file对象创建时传入的路径</span><br><span class="line"></span><br><span class="line">   <span class="type">long</span> <span class="title function_">lastModified</span><span class="params">()</span> : 获取file对象指向的文件/文件夹最后修改时间,返回时间毫秒值</span><br><span class="line">  * <span class="type">long</span> <span class="title function_">length</span><span class="params">()</span> : 获取file对象指向的文件的大小(返回字节) <span class="comment">// 用length方法去获取一个文件夹的大小时,错误的返回值</span></span><br><span class="line">       <span class="comment">//文件夹是没有大小的  </span></span><br></pre></td></tr></table></figure>
+
+<p><strong>File的判断功能</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*    <span class="type">boolean</span> <span class="title function_">exists</span><span class="params">()</span> : 判断file对象指向的文件/文件夹是否存在</span><br><span class="line"></span><br><span class="line">*    <span class="type">boolean</span> <span class="title function_">isDirectory</span><span class="params">()</span>  : 判断file对象指向的是否是一个文件夹</span><br><span class="line">*    <span class="type">boolean</span> <span class="title function_">isFile</span><span class="params">()</span> : 判断file对象指向的是否是一个文件</span><br><span class="line"></span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">isAbsolute</span><span class="params">()</span> : 判断创建file对象时是否使用的绝对路径</span><br><span class="line">    <span class="type">boolean</span> <span class="title function_">isHidden</span><span class="params">()</span> :判断file对象指向的文件/文件夹是否是隐藏的</span><br></pre></td></tr></table></figure>
+
+<p><strong>文件过滤器接口</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">File类中有一个方法:</span><br><span class="line">	File[] listFiles(FileFilter filter) : 带有过滤条件获取根目录下的文件/文件夹</span><br><span class="line">        </span><br><span class="line">FileFilter filter: 文件过滤器接口</span><br><span class="line">    抽象方法: <span class="type">boolean</span> <span class="title function_">accept</span><span class="params">(File pathname)</span>  </span><br><span class="line">        File pathname: 代表的是要判断的文件对象</span><br><span class="line">        <span class="type">boolean</span> : 如果返回<span class="literal">true</span>,代表通过,如果返回<span class="literal">false</span>,代表不通过              </span><br><span class="line">            </span><br><span class="line">如果是多级文件夹获取文件夹下某一类型的文件的过滤逻辑:</span><br><span class="line">	pathname.getName().endsWith(<span class="string">&quot;文件后缀名&quot;</span>) || pathname.isDirectory()</span><br></pre></td></tr></table></figure>
+
+<p><strong>文件删除案例</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">deleteAll</span><span class="params">(File parent)</span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(parent != <span class="literal">null</span>) &#123;</span><br><span class="line">           <span class="keyword">if</span> (parent.isFile())&#123;</span><br><span class="line">               parent.delete();</span><br><span class="line">               <span class="keyword">return</span>;</span><br><span class="line">           &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">               File[] files = parent.listFiles();</span><br><span class="line">               <span class="keyword">for</span> (File file : files) &#123;</span><br><span class="line">                   deleteAll(file);</span><br><span class="line">               &#125;</span><br><span class="line">               parent.delete();</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/File%E7%B1%BB/" data-id="cloxtn0c1000b5gye60za9zc6" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/final%E5%85%B3%E9%94%AE%E5%AD%97/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/enum/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

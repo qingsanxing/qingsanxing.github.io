@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-JavaBase/单元测试" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.741Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h1><h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">黑盒测试: 不用看代码,只看输入和输出 -&gt; 低级的测试手段</span><br><span class="line">白盒测试: 使用代码对程序进行调试 -&gt; debug,Junit单元测试等等测试工具</span><br><span class="line">    </span><br><span class="line">Junit单元测试最大的特点: 把代码化繁为简,分出一小块一小块的功能单独测试    </span><br></pre></td></tr></table></figure>
+
+<h2 id="Junit是什么"><a href="#Junit是什么" class="headerlink" title="Junit是什么"></a>Junit是什么</h2><p>Junit是Java语言编写的第三方单元测试框架名称</p>
+<h3 id="单元测试概念"><a href="#单元测试概念" class="headerlink" title="单元测试概念"></a>单元测试概念</h3><ul>
+<li>单元：在Java中，一个类就是一个单元</li>
+<li>单元测试：程序猿编写的一小段代码，用来对某个类中的某个方法进行功能测试或业务逻辑测试。</li>
+</ul>
+<h3 id="Junit单元测试框架的作用"><a href="#Junit单元测试框架的作用" class="headerlink" title="Junit单元测试框架的作用"></a>Junit单元测试框架的作用</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">用来对类中的方法功能进行有目的的测试，以保证程序的正确性和稳定性。</span><br><span class="line">    </span><br><span class="line">特点:</span><br><span class="line">    能够让方法独立运行起来。</span><br></pre></td></tr></table></figure>
+
+<h3 id="Junit单元测试框架的使用步骤"><a href="#Junit单元测试框架的使用步骤" class="headerlink" title="Junit单元测试框架的使用步骤"></a>Junit单元测试框架的使用步骤</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 测试类的类名以Test结尾</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 编写测试方法 --&gt; 测试方法不是用来调用</span><br><span class="line">    测试类的测试方法名: xxxxTest()  <span class="comment">//xxxx:见名知意 你要测试什么就写什么</span></span><br><span class="line">    测试方法不允许写形参</span><br><span class="line">    测试方法的返回值类型必须是<span class="keyword">void</span></span><br><span class="line">    <span class="comment">//测试方法就是一个无参无返回值叫xxxTest的方法</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> 在测试方法中写上<span class="meta">@Test</span>注解,作用: 可以让方法单独执行</span><br><span class="line"><span class="number">4.</span> 现在控制台变了,不看结果只看红灯绿灯</span><br><span class="line">    红灯: 有问题</span><br><span class="line">    绿灯: OK没有问题</span><br><span class="line"></span><br><span class="line">断言操作:</span><br><span class="line">    Assert.assertEquals(断言值,实际值);</span><br></pre></td></tr></table></figure>
+
+<h3 id="测试方法注意事项"><a href="#测试方法注意事项" class="headerlink" title="测试方法注意事项"></a>测试方法注意事项</h3><p>  单元测试 是对方法逐一测试， 对方法有一些要求： </p>
+<ul>
+<li>必须是public修饰的，没有返回值，没有参数</li>
+<li>必须使注解@Test修饰</li>
+</ul>
+<h3 id="如何运行测试方法"><a href="#如何运行测试方法" class="headerlink" title="如何运行测试方法"></a>如何运行测试方法</h3><ul>
+<li>选中方法名 –&gt; 右键 –&gt; Run ‘测试方法名’  运行选中的测试方法</li>
+<li>选中测试类类名 –&gt; 右键 –&gt; Run ‘测试类类名’  运行测试类中所有测试方法</li>
+<li>选中模块名 –&gt; 右键 –&gt; Run ‘All Tests’  运行模块中的所有测试类的所有测试方法</li>
+</ul>
+<h3 id="如何查看测试结果"><a href="#如何查看测试结果" class="headerlink" title="如何查看测试结果"></a>如何查看测试结果</h3><ul>
+<li>绿色：表示测试通过</li>
+<li>红色：表示测试失败，有问题</li>
+</ul>
+<h3 id="Junit常用注解-Junit4-xxxx版本"><a href="#Junit常用注解-Junit4-xxxx版本" class="headerlink" title="Junit常用注解(Junit4.xxxx版本)"></a>Junit常用注解(Junit4.xxxx版本)</h3><ul>
+<li>@Before：用来修饰方法，该方法会在每一个测试方法执行之前执行一次。</li>
+<li>@After：用来修饰方法，该方法会在每一个测试方法执行之后执行一次。</li>
+<li>@BeforeClass：用来静态修饰方法，该方法会在所有测试方法之前执行一次。</li>
+<li>@AfterClass：用来静态修饰方法，该方法会在所有测试方法之后执行一次。</li>
+</ul>
+<h3 id="Junit常用注解-Junit5-xxxx版本"><a href="#Junit常用注解-Junit5-xxxx版本" class="headerlink" title="Junit常用注解(Junit5.xxxx版本)"></a>Junit常用注解(Junit5.xxxx版本)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@BeforeEach</span>：用来修饰方法，该方法会在每一个测试方法执行之前执行一次。</span><br><span class="line"><span class="meta">@AfterEach</span>：用来修饰方法，该方法会在每一个测试方法执行之后执行一次。</span><br><span class="line"><span class="meta">@BeforeAll</span>：用来静态修饰方法，该方法会在所有测试方法之前执行一次。</span><br><span class="line"><span class="meta">@AfterAll</span>：用来静态修饰方法，该方法会在所有测试方法之后执行一次。</span><br></pre></td></tr></table></figure>
+
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" data-id="cloxtn0ch001g5gye37cwg0wg" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/匿名对象" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E5%8C%BF%E5%90%8D%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.739Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">匿名对象：没有名字的对象  ---&gt;<span class="keyword">new</span> 类名();</span><br><span class="line">有名对象: 类名 对象名 = <span class="keyword">new</span> 类名();</span><br><span class="line"></span><br><span class="line">使用场景：作为方法的实际参数传递，作为方法的返回值进行返回</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当对象只使用一次的时候，为了方便所以可以直接使用匿名对象</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E5%8C%BF%E5%90%8D%E5%AF%B9%E8%B1%A1/" data-id="cloxtn0cg001f5gyegg5s78vv" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/包装类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E5%8C%85%E8%A3%85%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.736Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">集合要存储基本数据类型必须往里面存储包装类的对象!</span><br><span class="line">    </span><br><span class="line">四类八种基本数据类型都有自己的包装类!</span><br><span class="line">    <span class="type">byte</span>	----&gt;	Byte</span><br><span class="line">    <span class="type">short</span>	----&gt;	Short</span><br><span class="line">    <span class="type">int</span>	    ----&gt;	Integer (特殊)</span><br><span class="line">    <span class="type">long</span>	----&gt;	Long</span><br><span class="line">    <span class="type">float</span>	----&gt;	Float</span><br><span class="line">    <span class="type">double</span>	----&gt;	Double</span><br><span class="line">    <span class="type">char</span>	----&gt;	Character (特殊)</span><br><span class="line">    <span class="type">boolean</span>	----&gt;	Boolean</span><br><span class="line">    </span><br><span class="line">集合要存储基本数据类型必须在泛型的位置写包装类型!!</span><br><span class="line">    例如: </span><br><span class="line">		ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;();</span><br><span class="line">		ArrayList&lt;Boolean&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Boolean&gt;();</span><br><span class="line"></span><br><span class="line">包装类的出现解决了集合唯一的弊端: 不能存储基本数据类型的元素!</span><br></pre></td></tr></table></figure>
+
+<p><strong>自动装箱和自动拆箱</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Java程序的设计者站在语法的层面设计了 自动装箱和自动拆箱的概念!  </span><br><span class="line">    </span><br><span class="line">自动装箱 : 基本数据类型 ---&gt; 包装类型(引用数据类型)</span><br><span class="line">    例如: <span class="type">Integer</span> <span class="variable">num</span> <span class="operator">=</span> <span class="number">100</span>; <span class="comment">// 引用数据类型 = 基本数据类型;</span></span><br><span class="line">    <span class="comment">//底层调用了static Integer valueOf(int i)  方法</span></span><br><span class="line">    </span><br><span class="line">自动拆箱 : 包装类型(引用数据类型) -&gt; 基本数据类型</span><br><span class="line">   	例如: <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> num; <span class="comment">//基本数据类型 = 引用数据类型;</span></span><br><span class="line">   	<span class="comment">//底层调用了 int intValue()方法</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E5%8C%85%E8%A3%85%E7%B1%BB/" data-id="cloxtn0cg001e5gye1mgk80hg" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/内部类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E5%86%85%E9%83%A8%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.734Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">内部类：定义在类内部的类</span><br><span class="line">内部接口：定义在类内部的接口</span><br></pre></td></tr></table></figure>
+
+<h2 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">成员: 位置关系 -&gt; 在类中方法外</span><br><span class="line">成员内部类: 定义在类中方法外的类叫成员内部类 --&gt; 属于对象的</span><br><span class="line">注意：成员内部类中不能创建静态成员(原因：成员内部类是属于对象的，与<span class="keyword">static</span>属于类的，两者加载时机不同)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Outer</span>&#123;<span class="comment">//外部类</span></span><br><span class="line">  <span class="keyword">class</span> <span class="title class_">Inner</span>&#123;<span class="comment">//成员内部类</span></span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Outer和Inner不是继承关系</span><br><span class="line"></span><br><span class="line">  注意：</span><br><span class="line">        <span class="number">1.</span>在内部类中访问外部类成员时，如果有同名成员，遵循就近原则；特有成员直接访问即可</span><br><span class="line">        <span class="number">2.</span>在内部类中强制访问外部类的同名成员：Outer.<span class="built_in">this</span>.成员名</span><br><span class="line">        <span class="number">3.</span>成员内部类的出现就是为了方便在内部类中使用外部的私有成员</span><br><span class="line">        <span class="number">4.</span>在第三方类中创建成员内部对象的格式：Outer.<span class="type">Inner</span> <span class="variable">inner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Outer</span>.<span class="keyword">new</span> <span class="title class_">Inner</span>();</span><br><span class="line">            因为内部类属于对象，所以要外部类<span class="keyword">new</span>出对象，然后再<span class="keyword">new</span> </span><br><span class="line">        <span class="number">5.</span>在外部类中要访问内部类的成员，必须要创建内部类对象</span><br><span class="line">              <span class="type">Inner</span> <span class="variable">inner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Outer</span>().<span class="keyword">new</span> <span class="title class_">Inner</span>();<span class="comment">//外部类的静态方法中只能用这种创建方式</span></span><br><span class="line">              <span class="type">Inner</span> <span class="variable">inner</span> <span class="operator">=</span> <span class="built_in">this</span>.<span class="keyword">new</span> <span class="title class_">Inner</span>();<span class="comment">//在外部类中的成员方法中this可以省略</span></span><br><span class="line">        <span class="number">6.</span>在外部类中可以直接访问内部类中的私有成员，前提是，在外部内中必须创建内部类对象才行    </span><br><span class="line">        </span><br><span class="line"><span class="comment">//当A类只为B类服务的时候，可以把A类定义在B类中，变成B类的成员内部类</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">类本来是不能被<span class="keyword">static</span>修饰的</span><br><span class="line">        但是当类成为了一个类的成员时，<span class="keyword">static</span>关键字可以修饰成员，所以内部类是可以被<span class="keyword">static</span>修饰的</span><br><span class="line"></span><br><span class="line"><span class="keyword">static</span>关键字修饰的成员特点：</span><br><span class="line">    <span class="number">1.</span>随着类的加载而加载优先于对象</span><br><span class="line">    <span class="number">2.</span>被所有对象所共享</span><br><span class="line">    <span class="number">3.</span>可以使用类名直接调用</span><br><span class="line">    <span class="number">4.</span>静态只能访问静态</span><br><span class="line"></span><br><span class="line">格式：</span><br><span class="line">      <span class="keyword">class</span> <span class="title class_">OuterClass</span>&#123;<span class="comment">//外部类</span></span><br><span class="line">            <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">InnerClass</span>&#123;<span class="comment">//静态成员内部类</span></span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">    注意:</span><br><span class="line">          <span class="number">1.</span>静态成员内部类中是不能直接访问外部中的非静态成员 -&gt; 静态只能访问静态</span><br><span class="line">          <span class="number">2.</span>要在静态成员内部类访问外部类非静态成员-&gt;创建外部类对象</span><br><span class="line">          <span class="number">3.</span>在外部类中访问内部类，如果没有创建对象只能通过 类名.静态成员名访问</span><br><span class="line">            如果要访问内部类中非静态成员必须要创建对象</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">InnerClass</span>().非静态成员名</span><br><span class="line">          <span class="number">4.</span>第三方类访问也要内部类也要创建对象</span><br><span class="line">                访问静态成员：</span><br><span class="line">                    OuterClass.InnerClass.静态成员</span><br><span class="line">                访问非静态成员：</span><br><span class="line">                  <span class="keyword">new</span>  <span class="title class_">OuterClass</span>.InnerClass().非静态成员</span><br><span class="line">          <span class="number">5.</span>外部类中的私有成员可以被内部访问，反之一样</span><br><span class="line"></span><br><span class="line"><span class="comment">//当A类只为B类服务的时候,可以把A类定义在B类中,变成B类的成员内部类;</span></span><br><span class="line">          </span><br></pre></td></tr></table></figure>
+
+<h2 id="局部内部类"><a href="#局部内部类" class="headerlink" title="局部内部类"></a>局部内部类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">局部内部类：在局部位置的类</span><br><span class="line"></span><br><span class="line">局部：局部不能加访问修饰符</span><br><span class="line"></span><br><span class="line">    格式：</span><br><span class="line">          <span class="keyword">class</span> <span class="title class_">Outer</span>&#123;<span class="comment">//外部类</span></span><br><span class="line">              <span class="keyword">public</span> [<span class="keyword">static</span>] <span class="keyword">void</span> <span class="title function_">ClassMethod</span><span class="params">()</span>&#123;</span><br><span class="line">                <span class="keyword">class</span> <span class="title class_">Inner</span>&#123;<span class="comment">//局部内部类</span></span><br><span class="line">                    </span><br><span class="line">                &#125;</span><br><span class="line">              &#125;</span><br><span class="line">          &#125;</span><br><span class="line">          </span><br><span class="line">          注意：</span><br><span class="line">                <span class="number">1.</span>局部内部类不能加上访问权限修饰符</span><br><span class="line">                <span class="number">2.</span>局部约束的是生命周期</span><br><span class="line">                <span class="number">3.</span>局部内部类中的方法要访问局部内部类所在的方法的重名局部变量是访问不到的</span><br><span class="line">                      除非局部内部类中没有此重名变量</span><br><span class="line">                <span class="number">4.</span>在局部内部类中创建外部类对象可以访问外部类成员(静态直接类名调用)</span><br><span class="line">                <span class="number">5.</span>局部内部类不可以在第三方创建本类对象(包括外部类)，它只能在方法里使用</span><br><span class="line">                <span class="number">6.</span> 局部内部类在它所在的方法内使用时一定要等到类声明结束后用!</span><br><span class="line">                </span><br><span class="line"><span class="comment">//当一个类只为一个方法服务的时候,就可以把这个类定义在方法内,仅供方法使用.</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="匿名内部类"><a href="#匿名内部类" class="headerlink" title="匿名内部类"></a>匿名内部类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">何时使用匿名内部类:</span><br><span class="line">        当只使用一次父类的子类对象，只是使用一次抽象父类的实现类对象，只使用一次父类接口的实现类对象</span><br><span class="line">        我们完全没有必要专门创建一个类继承父类，继承抽象父类，实现父接口</span><br><span class="line">        我们可以使用匿名内部类的方式完成 继承父类，继承抽象父类，实现父接口 的一系列操作</span><br><span class="line">只要涉及到匿名内部类一定是为了方便</span><br><span class="line"></span><br><span class="line">匿名内部类的本质还是一个 局部内部类</span><br><span class="line">      但是局部内部类使用的非常少，但是匿名内部类用的非常多</span><br></pre></td></tr></table></figure>
+
+<h3 id="匿名内部类对象方法调用的执行解释"><a href="#匿名内部类对象方法调用的执行解释" class="headerlink" title="匿名内部类对象方法调用的执行解释"></a>匿名内部类对象方法调用的执行解释</h3><p><img src="/%E5%86%85%E9%83%A8%E7%B1%BB.assets/4e236f33cd217ffd3a45789f1f641ca8.png" alt="4e236f33cd217ffd3a45789f1f641ca8"></p>
+<h3 id="匿名内部类作为方法的形式参数传递"><a href="#匿名内部类作为方法的形式参数传递" class="headerlink" title="匿名内部类作为方法的形式参数传递"></a>匿名内部类作为方法的形式参数传递</h3><p><img src="/%E5%86%85%E9%83%A8%E7%B1%BB.assets/3013015e8231313e9c8f1b17bdae3154.png" alt="截图"></p>
+<h3 id="匿名内部类使用场景"><a href="#匿名内部类使用场景" class="headerlink" title="匿名内部类使用场景"></a>匿名内部类使用场景</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">使用场景:</span><br><span class="line">    <span class="number">1.</span> 匿名内部类作为方法的实际参数传递.</span><br><span class="line">    <span class="number">2.</span> 匿名内部类作为方法的返回值进行返回.</span><br><span class="line">    </span><br><span class="line">案例：</span><br><span class="line"><span class="keyword">package</span> com.yyq.scanner.innerClass.annonymity;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">InnerTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 1. 匿名内部类作为方法的实际参数传递.</span></span><br><span class="line">        userFuInterface(<span class="keyword">new</span> <span class="title class_">FuInterface</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">fuInterfaceMethod</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;不知名的实现类对象实现的fuInterfaceMethod方法&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">//2. 匿名内部类作为方法的返回值进行返回.</span></span><br><span class="line">        <span class="type">FuInterface</span> <span class="variable">fuInterface</span> <span class="operator">=</span> getFuInterface();</span><br><span class="line">        fuInterface.fuInterfaceMethod();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">userFuInterface</span><span class="params">(FuInterface fuInterface)</span>&#123;</span><br><span class="line">        fuInterface.fuInterfaceMethod();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> FuInterface <span class="title function_">getFuInterface</span><span class="params">()</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">FuInterface</span>() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">fuInterfaceMethod</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;不知名的实现类对象实现的fuInterfaceMethod方法&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E5%86%85%E9%83%A8%E7%B1%BB/" data-id="cloxtn0cg001d5gye42alb66o" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/位运算符" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.732Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <table>
+<thead>
+<tr>
+<th align="center">位运算符</th>
+<th>细节</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&lt;&lt;</td>
+<td>空缺位补0，被移除的最高位丢弃，空缺位补0</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;</td>
+<td>被移位的二进制最高位是0，右移后，空缺位补0；最高位是1，空缺位补1</td>
+</tr>
+<tr>
+<td align="center">&gt;&gt;&gt;</td>
+<td>被移位二进制最高位无论是0或1，空缺位都用0补</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E4%BD%8D%E8%BF%90%E7%AE%97%E7%AC%A6/" data-id="cloxtn0cg001c5gyehygfdcyg" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/代码块" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E4%BB%A3%E7%A0%81%E5%9D%97/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.730Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">出现在代码中的大括号就是代码块；</span><br><span class="line">  <span class="number">1.</span> 局部代码块：出现在局部位置的代码块叫局部代码块</span><br><span class="line">    作用：约束变量的生命周期(很少用)</span><br><span class="line">  <span class="number">2.</span> 构造代码块：出现在类中方法外(成员位置)的代码块叫构造代码块</span><br><span class="line">    作用：为对象的出现做准备工作</span><br><span class="line">    执行时机：每创建一次对象执行一次，且在构造方法之前执行</span><br><span class="line">  <span class="number">3.</span> 静态代码块:出现在类中方法外(成员位置)并被<span class="keyword">static</span>修饰的代码块叫静态代码块</span><br><span class="line">    执行时机：当类一次被使用的时候执行，只执行一次</span><br><span class="line">    作用：为类的加载而做准备</span><br><span class="line">  </span><br><span class="line">  执行顺序：  静态代码块           &gt;        构造代码块           &gt;          局部代码块</span><br><span class="line">            <span class="number">1</span>次(类加载时候)          多次，每次创建对象执行一次         方法执行到这个语句</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E4%BB%A3%E7%A0%81%E5%9D%97/" data-id="cloxtn0cf001b5gye2unmbn9k" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/交换两个变量的值" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E4%BA%A4%E6%8D%A2%E4%B8%A4%E4%B8%AA%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.729Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="交换两个变量的值"><a href="#交换两个变量的值" class="headerlink" title="交换两个变量的值"></a>交换两个变量的值</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">num1</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> <span class="variable">num2</span> <span class="operator">=</span> <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//方式一：定义临时变量的方式</span></span><br><span class="line"><span class="comment">//推荐的方式</span></span><br><span class="line"><span class="type">int</span> <span class="variable">temp</span> <span class="operator">=</span> num1;</span><br><span class="line">num1 = num2;</span><br><span class="line">num2 = temp;</span><br><span class="line"></span><br><span class="line"><span class="comment">//方式二：好处：不用定义临时变量  </span></span><br><span class="line"><span class="comment">//弊端：① 相加操作可能超出存储范围 ② 有局限性：只能适用于数值类型</span></span><br><span class="line">num1 = num1 + num2;</span><br><span class="line">num2 = num1 - num2;</span><br><span class="line">num1 = num1 - num2;</span><br><span class="line"></span><br><span class="line"><span class="comment">//方式三：使用位运算符</span></span><br><span class="line"><span class="comment">//有局限性：只能适用于数值类型</span></span><br><span class="line">num1 = num1 ^ num2;</span><br><span class="line">num2 = num1 ^ num2;</span><br><span class="line">num1 = num1 ^ num2;</span><br></pre></td></tr></table></figure>
+
+<p>方法三有些难以理解，下面用图示说明：</p>
+<p><img src="/%E4%BA%A4%E6%8D%A2%E4%B8%A4%E4%B8%AA%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC.assets/image-20211127084827499.png" alt="image-20211127084827499"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E4%BA%A4%E6%8D%A2%E4%B8%A4%E4%B8%AA%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC/" data-id="cloxtn0cf001a5gye8g5612cg" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/xml" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/xml/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.727Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="xml"><a href="#xml" class="headerlink" title="xml"></a>xml</h1><h2 id="Xml概述"><a href="#Xml概述" class="headerlink" title="Xml概述"></a>Xml概述</h2><ul>
+<li>概述<ul>
+<li>extensive markup language : 可扩展标签语言</li>
+<li>简单说就是指xml文件中的标签可以任意定义。</li>
+</ul>
+</li>
+<li>dom树</li>
+<li><h2 id=""><a href="#" class="headerlink" title=""></a><img src="/xml.assets/f0c5e400066942ca024d522363550dfe.png" alt="截图"></h2></li>
+<li>代码实现<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bookstore</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">book</span> <span class="attr">category</span>=<span class="string">&quot;fantasy&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>Harry Potter<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">auhor</span>&gt;</span>J K.Rowling<span class="tag">&lt;/<span class="name">auhor</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">year</span>&gt;</span>2005<span class="tag">&lt;/<span class="name">year</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">price</span>&gt;</span>29.99<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bookstore</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Xml组成"><a href="#Xml组成" class="headerlink" title="Xml组成"></a>Xml组成</h2><ul>
+<li>组成<ul>
+<li>文档声明</li>
+<li>属性</li>
+<li>元素</li>
+<li>注释</li>
+</ul>
+</li>
+<li>文档声明<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>属性<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">book</span> <span class="attr">category</span>=<span class="string">&quot;fantasy&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--属性可以写成标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">book</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">category</span>&gt;</span>fantasy<span class="tag">&lt;/<span class="name">category</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>元素<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">开始标签</span> <span class="attr">属性1</span>=<span class="string">&quot;值1&quot;</span> <span class="attr">属性2</span>=<span class="string">&quot;值2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">开始标签</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>注释<ul>
+<li>和html注释一样!</li>
+</ul>
+</li>
+</ul>
+<h2 id="Xml约束概述"><a href="#Xml约束概述" class="headerlink" title="Xml约束概述"></a>Xml约束概述</h2><ul>
+<li>概述<ul>
+<li>Xml文件中，元素名称、文本内容、属性名称、属性值都可以随意定义。如果要对这些进行规范，那么就需要用到Xml约束</li>
+</ul>
+</li>
+<li>分类<ul>
+<li>dtd约束<ul>
+<li>简单约束，只能对元素名称、属性名称进行约束</li>
+</ul>
+</li>
+<li>schema约束<ul>
+<li>复杂约束，对对元素名称、属性名称、文本内容、属性值进行约束</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="dtd约束"><a href="#dtd约束" class="headerlink" title="dtd约束)"></a>dtd约束)</h2><ul>
+<li>开发步骤<ul>
+<li>①定义xml文件</li>
+<li>②定义dtd文件</li>
+<li>③dtd文件关联xml文件</li>
+</ul>
+</li>
+<li>①定义xml文件</li>
+<li>②定义dtd文件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!-- xml文件中有一个根节点students,students下可以有n个student子节点(包括0个) --&gt;</span><br><span class="line">&lt;!ELEMENT students (student*)&gt;</span><br><span class="line">&lt;!-- student节点下,可以有name节点、age节点和sex节点,且name节点、age节点和sex节点是按照先后顺序出现 --&gt;</span><br><span class="line">&lt;!ELEMENT student (name,age,sex)&gt;</span><br><span class="line">&lt;!-- 定义name节点,且节点内容的类型为字符  --&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;</span><br><span class="line">&lt;!-- 定义age节点,且节点内容的类型为字符 --&gt;</span><br><span class="line">&lt;!ELEMENT age (#PCDATA)&gt;</span><br><span class="line">&lt;!-- 定义sex节点,且节点内容的类型为字符 --&gt;</span><br><span class="line">&lt;!ELEMENT sex (#PCDATA)&gt;</span><br><span class="line">&lt;!-- 给节点student设置属性,属性名称为id,属性的类型为CDATA(字符), #REQUIRED指本属性是必须的  #IMPLIED指属性是可选的 --&gt;</span><br><span class="line">&lt;!ATTLIST student id CDATA #REQUIRED&gt;</span><br><span class="line">&lt;!-- 给节点student设置属性,属性名称为classname,属性的类型为CDATA(字符), #REQUIRED指本属性是必须的  #IMPLIED指属性是可选的 --&gt;</span><br><span class="line">&lt;!ATTLIST student classname CDATA #REQUIRED&gt;</span><br></pre></td></tr></table></figure></li>
+<li>③dtd文件关联xml文件(内部关联、外部关联)<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">students</span> [</span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ELEMENT <span class="keyword">students</span> (<span class="keyword">student</span>*)&gt;</span></span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ELEMENT <span class="keyword">student</span> (<span class="keyword">name</span>,<span class="keyword">age</span>,<span class="keyword">sex</span>)&gt;</span></span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ELEMENT <span class="keyword">name</span> (<span class="keyword">#PCDATA</span>)&gt;</span></span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ELEMENT <span class="keyword">age</span> (<span class="keyword">#PCDATA</span>)&gt;</span></span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ELEMENT <span class="keyword">sex</span> (<span class="keyword">#PCDATA</span>)&gt;</span></span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ATTLIST <span class="keyword">student</span> <span class="keyword">id</span> <span class="keyword">CDATA</span> <span class="keyword">#REQUIRED</span>&gt;</span></span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ATTLIST <span class="keyword">student</span> <span class="keyword">classname</span> <span class="keyword">CDATA</span> <span class="keyword">#REQUIRED</span>&gt;</span></span></span><br><span class="line"><span class="meta">        ]&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">students</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span> <span class="attr">id</span>=<span class="string">&quot;21072201&quot;</span> <span class="attr">classname</span>=<span class="string">&quot;java_210722&quot;</span> &gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>陈浩<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>28<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">sex</span>&gt;</span>男<span class="tag">&lt;/<span class="name">sex</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">students</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">students</span> <span class="keyword">SYSTEM</span> <span class="string">&quot;students.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">students</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span> <span class="attr">id</span>=<span class="string">&quot;21072201&quot;</span> <span class="attr">classname</span>=<span class="string">&quot;java_210722&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>杨志鸿<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>28<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">sex</span>&gt;</span>男<span class="tag">&lt;/<span class="name">sex</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">students</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>注意事项<ul>
+<li>dtd约束只能对元素名称、属性名称进行约束。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Schema约束"><a href="#Schema约束" class="headerlink" title="Schema约束"></a>Schema约束</h2><ul>
+<li>开发步骤<ul>
+<li>①定义xml文件</li>
+<li>②定义schema文件</li>
+<li>③schema文件关联xml文件</li>
+</ul>
+</li>
+<li>①定义xml文件</li>
+<li>②定义schema文件<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">schema</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">targetNamespace</span>=<span class="string">&quot;http://www.example.org/students&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">elementFormDefault</span>=<span class="string">&quot;qualified&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- element:申明元素,包括根元素和子元素 这里就是申明根元素class --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">element</span> <span class="attr">name</span>=<span class="string">&quot;students&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 复杂元素 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">complexType</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- squence:子元素按照顺序 1,子元素如果只有一种,那么就写一个,比如student元素 2,子元素如果有多种,那么就按想要的顺序写,比如:name,age,sex --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">sequence</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!-- 申明子元素student minOccurs:最少出现次数 maxOccurs:最大出现次数,数值或unbounded(无限大) --&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">element</span> <span class="attr">name</span>=<span class="string">&quot;student&quot;</span> <span class="attr">minOccurs</span>=<span class="string">&quot;0&quot;</span> <span class="attr">maxOccurs</span>=<span class="string">&quot;unbounded&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">complexType</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">sequence</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!-- 申明子元素name --&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">element</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span> <span class="attr">type</span>=<span class="string">&quot;string&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">element</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!-- 申明子元素age simpleType:元素age是一个简单元素 restriction:age的取值范围在1~150之间 --&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">element</span> <span class="attr">name</span>=<span class="string">&quot;age&quot;</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">simpleType</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">restriction</span> <span class="attr">base</span>=<span class="string">&quot;integer&quot;</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">minInclusive</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">minInclusive</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">maxInclusive</span> <span class="attr">value</span>=<span class="string">&quot;150&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">maxInclusive</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">restriction</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">simpleType</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">element</span>&gt;</span></span><br><span class="line"></span><br><span class="line">                            <span class="comment">&lt;!-- 申明子元素 sex restriction:取值范围在&quot;男&quot;和&quot;女&quot; --&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">element</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">simpleType</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">restriction</span> <span class="attr">base</span>=<span class="string">&quot;string&quot;</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">enumeration</span> <span class="attr">value</span>=<span class="string">&quot;男&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">enumeration</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">enumeration</span> <span class="attr">value</span>=<span class="string">&quot;女&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">enumeration</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">restriction</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">simpleType</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">element</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">sequence</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">                            定义了一个属性id</span></span><br><span class="line"><span class="comment">                            use=&quot;required&quot;:属性是必须的</span></span><br><span class="line"><span class="comment">                            &lt;pattern value=&quot;java_\d&#123;4&#125;&quot;&gt;&lt;/pattern&gt;:id的值必须满足这个正则表达式:以java_开头,后面跟四个数字</span></span><br><span class="line"><span class="comment">                         --&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">attribute</span> <span class="attr">name</span>=<span class="string">&quot;id&quot;</span> <span class="attr">use</span>=<span class="string">&quot;required&quot;</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">simpleType</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">restriction</span> <span class="attr">base</span>=<span class="string">&quot;string&quot;</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">pattern</span> <span class="attr">value</span>=<span class="string">&quot;java_\d&#123;4&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">restriction</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">simpleType</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">attribute</span>&gt;</span></span><br><span class="line"></span><br><span class="line">                        <span class="tag">&lt;<span class="name">attribute</span> <span class="attr">name</span>=<span class="string">&quot;classname&quot;</span> <span class="attr">use</span>=<span class="string">&quot;required&quot;</span> <span class="attr">type</span>=<span class="string">&quot;string&quot;</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">attribute</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">complexType</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">element</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">sequence</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">complexType</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">element</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">schema</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>③schema文件关联xml文件<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">students</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.example.org/students&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span> <span class="attr">id</span>=<span class="string">&quot;java_0001&quot;</span> <span class="attr">classname</span>=<span class="string">&quot;java210722&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>朱飞宇<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>130<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">sex</span>&gt;</span>男<span class="tag">&lt;/<span class="name">sex</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">students</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="dom4j解析-掌握"><a href="#dom4j解析-掌握" class="headerlink" title="dom4j解析(掌握)"></a>dom4j解析(掌握)</h2><ul>
+<li>概述<ul>
+<li>一个简单灵活开放源代码的解析xml类库，xml解析就是对xml文件进行读写操作</li>
+<li>在很多开源的框架中大量使用dom4j，例如: mybatis、sping</li>
+</ul>
+</li>
+<li>常用方法<ul>
+<li>attributeValue(String attributeName)<ul>
+<li>获取指定属性值</li>
+</ul>
+</li>
+<li>attribute(String attributeName)<ul>
+<li>获取指定属性对象</li>
+</ul>
+</li>
+<li>Attribute.getValue()<ul>
+<li>获取属性值</li>
+</ul>
+</li>
+<li>elementText(String elementName)<ul>
+<li>获取指定元素文本内容</li>
+</ul>
+</li>
+<li>element(String elementName)<ul>
+<li>获取指定元素对象</li>
+</ul>
+</li>
+<li>Element.getText()<ul>
+<li>获取文本内容</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>开发步骤<ul>
+<li>①引入jar包</li>
+<li>②使用dom4j解析xml文件<ul>
+<li>2.1,获取解析对象</li>
+<li>2.2,获取XML文档对象</li>
+<li>2.3,获取根节点对象</li>
+<li>2.4,获取每个节点信息</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>①引入jar包</li>
+<li>②使用dom4j解析xml文件<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo01</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">//1,获取解析对象</span></span><br><span class="line">        <span class="type">SAXReader</span> <span class="variable">saxReader</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SAXReader</span>();</span><br><span class="line">        <span class="type">InputStream</span> <span class="variable">inputStream</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(<span class="string">&quot;students.xml&quot;</span>);</span><br><span class="line">        <span class="comment">//2,获取XML文档对象</span></span><br><span class="line">        <span class="type">Document</span> <span class="variable">document</span> <span class="operator">=</span> saxReader.read(inputStream);</span><br><span class="line">        <span class="comment">//3,获取根节点对象</span></span><br><span class="line">        <span class="type">Element</span> <span class="variable">rootElement</span> <span class="operator">=</span> document.getRootElement();</span><br><span class="line">        <span class="comment">//4,获取所有student节点对象</span></span><br><span class="line">        List&lt;Element&gt; stuEles = rootElement.elements(<span class="string">&quot;student&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (Element stuEle : stuEles) &#123;</span><br><span class="line">            <span class="comment">//获取id属性值</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">id</span> <span class="operator">=</span> stuEle.attributeValue(<span class="string">&quot;id&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;id = &quot;</span> + id);</span><br><span class="line">            <span class="comment">//获取classname属性值</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">classname</span> <span class="operator">=</span> stuEle.attribute(<span class="string">&quot;classname&quot;</span>).getValue();</span><br><span class="line">            System.out.println(<span class="string">&quot;classname = &quot;</span> + classname);</span><br><span class="line">            <span class="comment">//获取name元素值</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> stuEle.elementText(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;name = &quot;</span> + name);</span><br><span class="line">            <span class="comment">//获取age元素值</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">age</span> <span class="operator">=</span> stuEle.element(<span class="string">&quot;age&quot;</span>).getText();</span><br><span class="line">            System.out.println(<span class="string">&quot;age = &quot;</span> + age);</span><br><span class="line">            <span class="comment">//获取sex元素值</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">sex</span> <span class="operator">=</span> stuEle.elementText(<span class="string">&quot;sex&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;sex = &quot;</span> + sex);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/xml/" data-id="cloxtn0cf00195gyeac2b3dan" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/Vector集合" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/Vector%E9%9B%86%E5%90%88/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.725Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Vector集合"><a href="#Vector集合" class="headerlink" title="Vector集合"></a>Vector集合</h1><br/>
+
+<p><strong>Vector集合的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Vector</span>&lt;E&gt;<span class="keyword">extends</span> <span class="title class_">AbstractList</span>&lt;E&gt;<span class="keyword">implements</span> <span class="title class_">List</span>&lt;E&gt;, RandomAccess, Cloneable, Serializable</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>Vector集合使用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Vector&lt;E&gt; :  它是Java中最早的单列集合</span><br><span class="line">    从JDK1<span class="number">.2</span>版本开始,Vector&lt;E&gt;并入到集合体系中,Vector被ArrayList取代;</span><br><span class="line"></span><br><span class="line">	Vector&lt;E&gt;: 在多线程环境下是安全的,因为Vector类中的所有方法都被同步修饰!!</span><br><span class="line">    Vector&lt;E&gt;: Vector中也是有全套List接口中的功能!!</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/Vector%E9%9B%86%E5%90%88/" data-id="cloxtn0cc00145gye6ibsbdzq" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/TreeSet集合" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/TreeSet%E9%9B%86%E5%90%88/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.723Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="TreeSet集合"><a href="#TreeSet集合" class="headerlink" title="TreeSet集合"></a>TreeSet集合</h1><br/>
+
+<p><strong>TreeSet的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TreeSet</span>&lt;E&gt;</span><br><span class="line"><span class="keyword">extends</span> <span class="title class_">AbstractSet</span>&lt;E&gt;</span><br><span class="line"><span class="keyword">implements</span> <span class="title class_">NavigableSet</span>&lt;E&gt;, Cloneable, Serializable</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>TreeSet的使用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">TreeSet&lt;E&gt;底层是红黑树结构的set集合</span><br><span class="line">    红黑树结构: 排序,查找效率,去重!!</span><br><span class="line">        </span><br><span class="line">创建对象:</span><br><span class="line">	      TreeSet&lt;E&gt; 集合名 = <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;E&gt;(); <span class="comment">// 必须泛型类E提供排序规则</span></span><br><span class="line">        TreeSet(Comparator&lt;E&gt; comparator);<span class="comment">//自己在创建TreeSet集合提供规则</span></span><br><span class="line">增删改查: <span class="comment">//和Set集合一模一样</span></span><br><span class="line">	增:</span><br><span class="line">		    <span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E e)</span>  : 添加元素返回添加是否成功!!</span><br><span class="line">    删:</span><br><span class="line">		    <span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object o)</span>  : 按照元素值删除元素,并返回删除是否成功!!</span><br><span class="line">        <span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span> : 清空集合中所有的元素</span><br><span class="line">    改: 因为没有索引,所以没有set方法</span><br><span class="line">    查: 因为没有索引,所以没有get方法</span><br><span class="line">        <span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(Object obj)</span>: 查询元素是否包含在集合中</span><br><span class="line">        <span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span>: 查询集合是否为空集合</span><br><span class="line">        <span class="type">int</span> <span class="title function_">size</span><span class="params">()</span>: 查询集合的长度</span><br><span class="line">遍历:</span><br><span class="line">	  <span class="number">1.</span> 转数组: Object[] toArray()  </span><br><span class="line">    <span class="number">2.</span> 普通迭代器: Iterator&lt;E&gt; <span class="title function_">iterator</span><span class="params">()</span> </span><br><span class="line">    <span class="number">3.</span> 增强<span class="keyword">for</span>:	</span><br><span class="line"></span><br><span class="line">TreeSet&lt;E&gt;集合具备排序的能力:</span><br><span class="line">	自然排序规则: 升序</span><br><span class="line">    	Integer : 升序</span><br><span class="line">      String : 字符串中字符的ASCII码值的升序进行排列,字符越往前优先级越高</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用两种比较器排序</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//默认使用Comparable排序默认升序</span></span><br><span class="line">        TreeSet&lt;Integer&gt; integers = <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;&gt;();</span><br><span class="line">        integers.add(<span class="number">34</span>);</span><br><span class="line">        integers.add(<span class="number">1</span>);</span><br><span class="line">        integers.add(<span class="number">234</span>);</span><br><span class="line">        integers.add(<span class="number">345</span>);</span><br><span class="line">        integers.add(<span class="number">24</span>);</span><br><span class="line">        integers.add(<span class="number">34345</span>);</span><br><span class="line">        integers.add(<span class="number">134</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;integerTreeSet = &quot;</span> + integers);</span><br><span class="line">        <span class="comment">//使用Comparator比较器排序</span></span><br><span class="line">        TreeSet&lt;Integer&gt; integerTreeSet = <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;&gt;(<span class="keyword">new</span> <span class="title class_">Comparator</span>&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(Integer o1, Integer o2)</span> &#123; <span class="comment">//o1 - o2 升序 o2 -o1 降序</span></span><br><span class="line">                <span class="keyword">return</span> o2 - o1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        integerTreeSet.add(<span class="number">20</span>);</span><br><span class="line">        integerTreeSet.add(<span class="number">1</span>);</span><br><span class="line">        integerTreeSet.add(<span class="number">234</span>);</span><br><span class="line">        integerTreeSet.add(<span class="number">345</span>);</span><br><span class="line">        integerTreeSet.add(<span class="number">24</span>);</span><br><span class="line">        integerTreeSet.add(<span class="number">34345</span>);</span><br><span class="line">        integerTreeSet.add(<span class="number">134</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;integerTreeSet = &quot;</span> + integerTreeSet);</span><br></pre></td></tr></table></figure>
+
+<p><strong>TreeSet集合存储自定义对象排序</strong>  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">TreeSet集合具备排序能力!! 但是排序规则得程序员提供!!</span><br><span class="line"></span><br><span class="line">    String和Integer能排序是因为 String和Integer 提供了排序规则!</span><br><span class="line"></span><br><span class="line">    结论: 想让TreeSet集合排序,必须给TreeSet集合提供排序规则!</span><br><span class="line">        <span class="comment">//若不给泛型类提供排序规则,那么使用TreeSet集合报错</span></span><br><span class="line"></span><br><span class="line">    提供规则的方式有<span class="number">2</span>种:</span><br><span class="line">        <span class="number">1.</span> 让需要排序的类实现比较器接口 Comparable&lt;E&gt;</span><br><span class="line">                --&gt; 绑定比较器(此比较器和需要排序的类在一起)</span><br><span class="line">        <span class="number">2.</span> TreeSet集合的构造方法:</span><br><span class="line">                TreeSet(Comparator&lt;E&gt; comparator)</span><br><span class="line">           Comparator&lt;E&gt; comparator : 独立比较器接口 -&gt; 此比较器不需要跟 需要排序的类绑定</span><br><span class="line">           应用场景: 比如我要修改Integer的排序规则,修改String的排序规则</span><br><span class="line">代码:</span><br><span class="line"><span class="number">1.</span> 使用Comparable比较器排序</span><br><span class="line">people类:</span><br><span class="line"><span class="keyword">import</span> java.util.Objects;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">People</span> <span class="keyword">implements</span> <span class="title class_">Comparable</span>&lt;People&gt;&#123;<span class="comment">//注意使用Comparable比较强排序自定义类，要实现Comparable接口并加泛型</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">People</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">People</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAge</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(<span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object o)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span> == o) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (o == <span class="literal">null</span> || getClass() != o.getClass()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="type">People</span> <span class="variable">people</span> <span class="operator">=</span> (People) o;</span><br><span class="line">        <span class="keyword">return</span> age == people.age &amp;&amp;</span><br><span class="line">                Objects.equals(name, people.name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> Objects.hash(name, age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;People&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, age=&quot;</span> + age +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compareTo</span><span class="params">(People o)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> age - o.age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">测试代码:</span><br><span class="line">        TreeSet&lt;People&gt; peoples = <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;&gt;();</span><br><span class="line">        peoples.add(<span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;张子枫&quot;</span>,<span class="number">20</span>));</span><br><span class="line">        peoples.add(<span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;吴磊&quot;</span>,<span class="number">21</span>));</span><br><span class="line">        peoples.add(<span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;胡歌&quot;</span>,<span class="number">35</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;peoples = &quot;</span> + peoples);</span><br><span class="line">        <span class="comment">//peoples = [People&#123;name=&#x27;张子枫&#x27;, age=20&#125;, People&#123;name=&#x27;吴磊&#x27;, age=21&#125;, People&#123;name=&#x27;胡歌&#x27;, age=35&#125;]</span></span><br><span class="line">        </span><br><span class="line"><span class="number">2.</span>使用Comparator比较器排序</span><br><span class="line">        TreeSet&lt;People&gt; people = <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;&gt;(<span class="keyword">new</span> <span class="title class_">Comparator</span>&lt;People&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(People o1, People o2)</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> o2.getAge() - o1.getAge();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        people.add(<span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;张子枫&quot;</span>,<span class="number">20</span>));</span><br><span class="line">        people.add(<span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;吴磊&quot;</span>,<span class="number">21</span>));</span><br><span class="line">        people.add(<span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;胡歌&quot;</span>,<span class="number">35</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;people = &quot;</span> + people); </span><br><span class="line">        <span class="comment">//people = [People&#123;name=&#x27;胡歌&#x27;, age=35&#125;, People&#123;name=&#x27;吴磊&#x27;, age=21&#125;, People&#123;name=&#x27;张子枫&#x27;, age=20&#125;]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>TreeSet底层原理</strong></p>
+<p><img src="/TreeSet%E9%9B%86%E5%90%88.assets/59ac372996f25917dcf786aed859b5a1.png" alt="截图"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/TreeSet%E9%9B%86%E5%90%88/" data-id="cloxtn0cc00135gye80w8b8tr" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/7/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/9/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

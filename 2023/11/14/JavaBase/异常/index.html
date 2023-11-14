@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="异常1234567异常 : Exception  -&gt; 每一种异常都是JDK提供的类 -&gt; 可以处理的问题    空指针异常: NullPointerException    类型转换异常: ClassCastException      索引越界异常: IndexOutOfBoundsException        错误 : Error -&gt; 每一种错误都是JDK提供的类 -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/%E5%BC%82%E5%B8%B8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="异常1234567异常 : Exception  -&gt; 每一种异常都是JDK提供的类 -&gt; 可以处理的问题    空指针异常: NullPointerException    类型转换异常: ClassCastException      索引越界异常: IndexOutOfBoundsException        错误 : Error -&gt; 每一种错误都是JDK提供的类 -">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/%E5%BC%82%E5%B8%B8.assets/f90dbb06faa76e84d2b047a00161c84d.png">
+<meta property="article:published_time" content="2023-11-14T04:11:24.756Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.306Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/%E5%BC%82%E5%B8%B8.assets/f90dbb06faa76e84d2b047a00161c84d.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/异常" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E5%BC%82%E5%B8%B8/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.756Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">异常 : Exception  -&gt; 每一种异常都是JDK提供的类 -&gt; 可以处理的问题</span><br><span class="line">    空指针异常: NullPointerException</span><br><span class="line">    类型转换异常: ClassCastException  </span><br><span class="line">    索引越界异常: IndexOutOfBoundsException</span><br><span class="line">        </span><br><span class="line">错误 : Error -&gt; 每一种错误都是JDK提供的类 -&gt; 不可以处理的问题</span><br><span class="line">    栈内存溢出: StackOverFlowError</span><br></pre></td></tr></table></figure>
+
+<p><strong>异常体系结构</strong></p>
+<p><img src="/%E5%BC%82%E5%B8%B8.assets/f90dbb06faa76e84d2b047a00161c84d.png" alt="异常的体系结构.png"></p>
+<p><strong>JVM处理异常的方式</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">若方法内部有异常,程序员没有自主去处理,谁调用方法谁处理;</span><br><span class="line">    </span><br><span class="line">JVM处理异常的方式:</span><br><span class="line">        <span class="number">1.</span> 红色异常报错信息</span><br><span class="line">        <span class="number">2.</span> 程序中断了</span><br><span class="line">        <span class="number">3.</span> Exception in thread <span class="string">&quot;main&quot;</span> : 异常所在的线程</span><br><span class="line">        <span class="number">4.</span> java.lang.xxxException : 异常的类型/名字</span><br><span class="line">        <span class="number">5.</span> xxxx : 异常产生的原因</span><br><span class="line">        <span class="number">6.</span> at ExceptionDemo1.main(java:<span class="number">8</span>) : 异常产生位置</span><br><span class="line">        <span class="number">7.</span> JVM还会在内存中创建一个此类异常的对象</span><br></pre></td></tr></table></figure>
+
+<h2 id="处理异常两种方式"><a href="#处理异常两种方式" class="headerlink" title="处理异常两种方式"></a>处理异常两种方式</h2><p><strong>第一种：抛出去</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">抛出去: 交给调用者处理(最终都会抛给JVM处理)</span><br><span class="line">    </span><br><span class="line">抛出去的格式:</span><br><span class="line">	方法的修饰符 返回值类型 方法名(形式参数列表) <span class="keyword">throws</span> 异常类型&#123;</span><br><span class="line">        方法体;<span class="comment">//假设方法体中有异常</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">注意:</span><br><span class="line">	<span class="number">1.</span> 运行时期异常不需要抛(程序如果有运行时期异常,执行过程中出现问题JVM会主动处理)</span><br><span class="line">	<span class="number">2.</span> 编译时期异常你可以抛,抛给调用者</span><br><span class="line">  <span class="number">3.</span> 若方法上抛出的是一个父类型的异常,方法内的小异常全部都抛出了 --&gt; 多态</span><br><span class="line">  <span class="number">4.</span> 若方法内有大类型异常,在方法纳尼上抛出小异常,大异常还是没有抛出</span><br><span class="line">  <span class="number">5.</span> 一个方法声明上可以同时抛出多个异常,多个异常之间使用逗号进行分割</span><br><span class="line">        </span><br><span class="line">原则:</span><br><span class="line">	  运行时期异常没有必要抛出;</span><br><span class="line">    编译时期异常若你要使用抛出方式处理异常,在哪调用就要再哪抛一次</span><br></pre></td></tr></table></figure>
+
+<p><strong>第二种方式: 包起来</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">包起来: 使用<span class="keyword">try</span>..<span class="keyword">catch</span>代码块把代码进行包裹(自己处理异常)</span><br><span class="line">    </span><br><span class="line">包起来的方式处理异常最好的在: 它不会影响程序往后执行!</span><br><span class="line">    </span><br><span class="line">包起来的方式同样可以处理编译时期异常和运行时期异常.</span><br><span class="line">    </span><br><span class="line">包起来:</span><br><span class="line">        格式:</span><br><span class="line">            <span class="keyword">try</span>&#123;</span><br><span class="line">                可能出现问题的代码;</span><br><span class="line">            &#125;<span class="keyword">catch</span>(异常类型 对象名)&#123;</span><br><span class="line">                你处理异常的方式;</span><br><span class="line">            &#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">                最终一定会执行的代码;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">     执行流程:</span><br><span class="line">        <span class="number">1.</span> 若<span class="keyword">try</span>中无异常,那么<span class="keyword">try</span>代码块正常执行完,然后执行<span class="keyword">finally</span>代码块,<span class="keyword">finally</span>代码块执行完毕,<span class="keyword">try</span>外面的代码也要继续执行</span><br><span class="line">        <span class="number">2.</span> 若<span class="keyword">try</span>中有异常,且被<span class="keyword">catch</span>捕获,那么立刻终止<span class="keyword">try</span>中代码执行,进入到<span class="keyword">catch</span>执行代码,再进入<span class="keyword">finally</span>执行,执行<span class="keyword">try</span>..<span class="keyword">catch</span>后的代码</span><br><span class="line">        <span class="number">3.</span> 若<span class="keyword">try</span>中有异常,没有被<span class="keyword">catch</span>捕获,那么立刻终止所有程序,JVM介入处理异常!!</span><br><span class="line">     优点:</span><br><span class="line">        <span class="number">1.</span> 异常被它包裹若被捕获,不会影响程序往后执行</span><br></pre></td></tr></table></figure>
+
+<p><strong>try..catch代码块的注意事项</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>..<span class="keyword">catch</span>代码块的注意事项:</span><br><span class="line">    <span class="number">1.</span><span class="keyword">try</span>中无异常,<span class="keyword">catch</span>不执行,执行<span class="keyword">try</span>..<span class="keyword">catch</span>后面的代码</span><br><span class="line">    <span class="number">2.</span><span class="keyword">try</span>中有异常立刻终止<span class="keyword">try</span>中代码执行,<span class="keyword">catch</span>捕获到了,<span class="keyword">catch</span>执行,执行<span class="keyword">try</span>..<span class="keyword">catch</span>后面的代码</span><br><span class="line">    <span class="number">3.</span><span class="keyword">try</span>中有异常立刻终止<span class="keyword">try</span>中代码执行,<span class="keyword">catch</span>没有捕获,JVM介入处理立刻中断程序,不执行<span class="keyword">try</span>..<span class="keyword">catch</span>后面的代码</span><br><span class="line">    <span class="number">4.</span><span class="keyword">try</span>..<span class="keyword">catch</span>结构中可以不写<span class="keyword">finally</span>(<span class="keyword">finally</span>: 类似于<span class="keyword">if</span>..<span class="keyword">else</span>中的<span class="keyword">else</span>)</span><br><span class="line">    <span class="number">5.</span><span class="keyword">catch</span>小括号里面的(异常类型 变量名) -&gt; 等待接收异常对象 (类似于方法的形参)</span><br><span class="line">        <span class="comment">//我会把catch理解成 catch方法</span></span><br><span class="line">    <span class="number">6.</span><span class="keyword">catch</span>小括号里面的(异常类型 变量名)只能同时捕获一个异常</span><br><span class="line">    <span class="number">7.</span>一个<span class="keyword">try</span>可有多个<span class="keyword">catch</span> (类似于方法的重载)</span><br><span class="line">    <span class="number">8.</span><span class="keyword">catch</span>捕获大类型异常小异常也能捕获 --&gt; 多态性</span><br><span class="line">    <span class="number">9.</span><span class="keyword">catch</span>捕获的大类型必须放在<span class="keyword">catch</span>捕获的小类型后面</span><br></pre></td></tr></table></figure>
+
+<p><strong>异常对象的功能</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String <span class="title function_">getMessage</span><span class="params">()</span> :获取异常产生的原因</span><br><span class="line">String <span class="title function_">toString</span><span class="params">()</span> : 获取异常的类型 + 异常产生的原因</span><br><span class="line"><span class="keyword">void</span> <span class="title function_">printStackTrace</span><span class="params">()</span> : 获取异常的类型 + 异常产生的原因 + 异常可能出现的代码位置 + 红色字体 + 开启一个新的线程去打印红色字体</span><br><span class="line">        JVM介入的时候,其实就是调用了异常对象的此方法  </span><br></pre></td></tr></table></figure>
+
+<p><strong>自定义异常类型使用的步骤</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">自定义异常类型创建的步骤:</span><br><span class="line">    <span class="number">1.</span> 创建一个类,类名 XxxxException</span><br><span class="line">    <span class="number">2.</span> 若你想让你自己定义的异常是编译时期异常就直接继承Excption即可</span><br><span class="line">       若你想让你自己定义的异常是运行时期异常就直接继承Runnable即可</span><br><span class="line">    <span class="number">3.</span> 在自定义异常类中,自动无参构造方法 和 带有一个String参数的构造方法</span><br><span class="line">        </span><br><span class="line">暴露自定义异常对象的步骤:</span><br><span class="line">	<span class="number">1.</span> 在方法某个条件内</span><br><span class="line">        	<span class="keyword">throw</span> <span class="keyword">new</span> 异常类型(<span class="string">&quot;异常的提示信息&quot;</span>);</span><br><span class="line">注意:</span><br><span class="line">	<span class="number">1.</span> 如果你在方法内部暴露的是一个编译时期异常,方法自己也要先处理一遍异常(一般选择抛出)</span><br><span class="line">  <span class="number">2.</span> 如果你在方法内部暴露的是一个运行时期异常,方法自己不需要处理,调用方法的人可以选择性处理</span><br></pre></td></tr></table></figure>
+
+<h2 id="异常总结"><a href="#异常总结" class="headerlink" title="异常总结"></a>异常总结</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">根节点: Throwable</span><br><span class="line">子节点: </span><br><span class="line">    Error: 错误 -&gt; 必须修改代码</span><br><span class="line">    Exception: 异常 -&gt; 可以处理(抛出去,包起来)</span><br><span class="line">        编译时期异常: Exception的子类但不是RuntimeException的子类</span><br><span class="line">        运行时期异常: RuntimeException的子类   </span><br><span class="line"><span class="keyword">throw</span> 和 <span class="keyword">throws</span> 的区别:</span><br><span class="line">    <span class="number">1.</span> 使用的位置不一样:</span><br><span class="line">        <span class="keyword">throws</span> : 方法的形参后面</span><br><span class="line">        <span class="keyword">throw</span> :  方法的内部</span><br><span class="line">    <span class="number">2.</span> 功能不一样:</span><br><span class="line">        <span class="keyword">throws</span> : 抛出异常给调用者</span><br><span class="line">        <span class="keyword">throw</span> : 在方法内部暴露异常对象 -&gt; 若没有暴露异常对象,不算在方法内设置异常!!    </span><br><span class="line"><span class="keyword">final</span> 和 <span class="keyword">finally</span> 的区别:</span><br><span class="line">    <span class="number">1.</span> 性质不一样:</span><br><span class="line">        <span class="keyword">final</span> :  修饰符</span><br><span class="line">        <span class="keyword">finally</span> : <span class="keyword">finally</span> 代码块</span><br><span class="line">    <span class="number">2.</span> 功能不一样:</span><br><span class="line">        <span class="keyword">final</span> : 最终的,修饰的类没儿子,修饰方法不能重写,修饰变量不能修改变常量</span><br><span class="line">        <span class="keyword">finally</span> : 最后一定执行的代码块,跟<span class="keyword">try</span>..<span class="keyword">catch</span>语句一起使用,除了JVM退出的情况,其他情况都需要执行   </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E5%BC%82%E5%B8%B8/" data-id="cloxtn0ci001n5gye5cfjddvb" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/%E6%8A%BD%E8%B1%A1%E7%B1%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/%E5%AF%B9%E8%B1%A1%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/13/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-JavaBase/Arrays类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/Arrays%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.632Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Arrays类"><a href="#Arrays类" class="headerlink" title="Arrays类"></a>Arrays类</h1><br/>
+
+<h2 id="Arrays的创建格式"><a href="#Arrays的创建格式" class="headerlink" title="Arrays的创建格式"></a>Arrays的创建格式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Arrays</span> <span class="keyword">extends</span> <span class="title class_">Object</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h2 id="Arrays中的方法"><a href="#Arrays中的方法" class="headerlink" title="Arrays中的方法"></a>Arrays中的方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">Arrays 是关于数组操作的工具类，(操作任意类型的数组)</span><br><span class="line"></span><br><span class="line">    静态方法：</span><br><span class="line">          <span class="number">1.</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">binarySearch</span><span class="params">(<span class="type">int</span>[] a, <span class="type">int</span> key)</span> :二分查找法查找元素在数组中的索引位置</span><br><span class="line">          </span><br><span class="line">            <span class="type">int</span>[] a : 要查找的数组</span><br><span class="line">            <span class="type">int</span> key ：查找的值</span><br><span class="line">          </span><br><span class="line">          <span class="number">2.</span> <span class="keyword">static</span> <span class="type">int</span>[] copyOf(<span class="type">int</span>[] original, <span class="type">int</span> newLength):复制数组内所有元素到新数组中</span><br><span class="line">            <span class="type">int</span>[] original 老数组</span><br><span class="line">            <span class="type">int</span> newLength 新数组长度</span><br><span class="line">            </span><br><span class="line">            源码：</span><br><span class="line">                <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span>[] copyOf(<span class="type">int</span>[] original, <span class="type">int</span> newLength) &#123;</span><br><span class="line">                  <span class="type">int</span>[] copy = <span class="keyword">new</span> <span class="title class_">int</span>[newLength];</span><br><span class="line">                  System.arraycopy(original, <span class="number">0</span>, copy, <span class="number">0</span>,</span><br><span class="line">                                   Math.min(original.length, newLength)); </span><br><span class="line">                  <span class="keyword">return</span> copy;</span><br><span class="line">              &#125;</span><br><span class="line">              </span><br><span class="line">              <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(<span class="type">int</span>[] a, <span class="type">int</span>[] a2)</span>: 比较<span class="number">2</span>个数组是否相同</span><br><span class="line">              </span><br><span class="line">              equals方法源码分析：</span><br><span class="line">              </span><br><span class="line">                  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(<span class="type">int</span>[] a, <span class="type">int</span>[] a2)</span> &#123;</span><br><span class="line">                      <span class="keyword">if</span> (a==a2)  <span class="comment">//比较地址值是否相同</span></span><br><span class="line">                          <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                      <span class="keyword">if</span> (a==<span class="literal">null</span> || a2==<span class="literal">null</span>) <span class="comment">//判断2个数组是否为null</span></span><br><span class="line">                          <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">              </span><br><span class="line">                      <span class="type">int</span> <span class="variable">length</span> <span class="operator">=</span> a.length; </span><br><span class="line">                      <span class="keyword">if</span> (a2.length != length) <span class="comment">// 判断长度是否相等</span></span><br><span class="line">                          <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">              </span><br><span class="line">                      <span class="keyword">for</span> (<span class="type">int</span> i=<span class="number">0</span>; i&lt;length; i++) <span class="comment">//判断每一个元素是否相等</span></span><br><span class="line">                          <span class="keyword">if</span> (a[i] != a2[i])</span><br><span class="line">                              <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">              </span><br><span class="line">                      <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                  &#125;</span><br><span class="line">           <span class="number">3.</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(<span class="type">int</span>[] a)</span> : 对传入的数组元素进行排序操作(自然升序) --&gt; 底层是 快速排序</span><br><span class="line">	            <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(Object[] a)</span> : 引用数据类型元素的数组 --&gt; 也是需要提供规则的(不提供排序规则就报错)</span><br><span class="line">              <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(T[] a, Comparator&lt;T&gt; c)</span>: 自带比较器的排序方法sort</span><br><span class="line">           </span><br><span class="line">           <span class="number">4.</span> <span class="keyword">static</span> String <span class="title function_">toString</span><span class="params">(<span class="type">int</span>[] a)</span> : 漂亮的打印数组</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/Arrays%E7%B1%BB/" data-id="cloxtn0bq00005gye9zpi1k8q" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/ArrayList集合" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/ArrayList%E9%9B%86%E5%90%88/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.629Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="ArrayList类"><a href="#ArrayList类" class="headerlink" title="ArrayList类"></a>ArrayList类</h1><br/>
+
+<p><strong>ArrayList的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ArrayList</span>&lt;E&gt;<span class="keyword">extends</span> <span class="title class_">AbstractList</span>&lt;E&gt;<span class="keyword">implements</span> <span class="title class_">List</span>&lt;E&gt;, RandomAccess, Cloneable, Serializable</span><br></pre></td></tr></table></figure>
+
+<p><strong>ArrayList的使用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">ArrayList: 底层是一个数组结构的List集合的实现!</span><br><span class="line">    它是最常用的元素可以重复的单列集合!!!</span><br><span class="line">    </span><br><span class="line">创建对象和增删改查的方法:</span><br><span class="line">创建对象:</span><br><span class="line">    ArrayList&lt;E&gt; 集合名 = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;E&gt;();</span><br><span class="line">            </span><br><span class="line">增删改查: ArrayList完整的实现了List接口的功能!</span><br><span class="line">	增</span><br><span class="line">   	 	<span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E e)</span> : 往集合中依次添加元素,永远返回<span class="literal">true</span></span><br><span class="line">    	<span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> index, E element)</span> :插入, 插队</span><br><span class="line">        	<span class="type">int</span> index : 要插入的索引位置</span><br><span class="line">            E element : 要插入的元素                           </span><br><span class="line">    删</span><br><span class="line">     	<span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object o)</span> : 按照元素值来删除元素,返回删除是否成功</span><br><span class="line">     	E <span class="title function_">remove</span><span class="params">(<span class="type">int</span> index)</span> :删除指定索引位置的元素,并返回被删除的元素</span><br><span class="line">        <span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span> : 清空集合中所有的元素</span><br><span class="line">    改</span><br><span class="line">        E <span class="title function_">set</span><span class="params">(<span class="type">int</span> index, E element)</span> : 修改指定索引位置的元素,并返回被修改的元素</span><br><span class="line">    查</span><br><span class="line">        <span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(Object o)</span>  : 判断传入的元素是否包含在集合中</span><br><span class="line">        <span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span> : 判断集合是否没有元素</span><br><span class="line">        <span class="type">int</span> <span class="title function_">size</span><span class="params">()</span> : 获取集合的长度,获取集合中元素的个数</span><br><span class="line">        E <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span> : 查询指定索引位置的元素,返回该元素</span><br><span class="line">        <span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(Object o)</span>  :判断传入的元素第一次出现在集合的索引位置,不存在返回-<span class="number">1</span></span><br><span class="line">        <span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(Object o)</span> :判断传入的元素最后一次出现在集合的索引位置,不存在返回-<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>ArrayList的源码分析</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;Integer&gt; arrayList = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        arrayList.add(<span class="number">1</span>);</span><br><span class="line">        arrayList.add(<span class="number">2</span>);</span><br><span class="line">        arrayList.add(<span class="number">3</span>);</span><br><span class="line">        arrayList.add(<span class="number">4</span>);</span><br><span class="line">        </span><br><span class="line"><span class="keyword">private</span> <span class="type">int</span> size;<span class="comment">//为ArrayList集合内部的元素个数</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = &#123;&#125;;<span class="comment">//底层数组默认容量为空</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E e)</span> &#123;</span><br><span class="line">        ensureCapacityInternal(size + <span class="number">1</span>);  <span class="comment">//先判断底层数组空间够补够用</span></span><br><span class="line">        elementData[size++] = e;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;<span class="comment">//无论怎样都会返回true</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">DEFAULT_CAPACITY</span> <span class="operator">=</span> <span class="number">10</span>; <span class="comment">//数组第一次创建容量为10</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">ensureCapacityInternal</span><span class="params">(<span class="type">int</span> minCapacity)</span> &#123;<span class="comment">//minCapacity现在数组需要的最小容量</span></span><br><span class="line">    <span class="keyword">if</span> (elementData == DEFAULTCAPACITY_EMPTY_ELEMENTDATA) &#123;<span class="comment">//如果数组刚创建则执行</span></span><br><span class="line">        minCapacity = Math.max(DEFAULT_CAPACITY, minCapacity);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    ensureExplicitCapacity(minCapacity);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">ensureExplicitCapacity</span><span class="params">(<span class="type">int</span> minCapacity)</span> &#123;</span><br><span class="line">        modCount++; <span class="comment">//集合被修改的次数</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// overflow-conscious code</span></span><br><span class="line">        <span class="keyword">if</span> (minCapacity - elementData.length &gt; <span class="number">0</span>) <span class="comment">//数组当前长度如果大于数组所需最小容量这不用扩容，反之需要</span></span><br><span class="line">            grow(minCapacity);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">grow</span><span class="params">(<span class="type">int</span> minCapacity)</span> &#123;</span><br><span class="line">    <span class="comment">// overflow-conscious code</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">oldCapacity</span> <span class="operator">=</span> elementData.length; <span class="comment">//老数组长度</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">newCapacity</span> <span class="operator">=</span> oldCapacity + (oldCapacity &gt;&gt; <span class="number">1</span>); <span class="comment">//新数组扩容长度</span></span><br><span class="line">    <span class="keyword">if</span> (newCapacity - minCapacity &lt; <span class="number">0</span>)<span class="comment">//如果新数组扩容后还没有最小容量大，则新数组长度位最小容量长度</span></span><br><span class="line">        newCapacity = minCapacity;</span><br><span class="line">    <span class="keyword">if</span> (newCapacity - MAX_ARRAY_SIZE &gt; <span class="number">0</span>)</span><br><span class="line">        newCapacity = hugeCapacity(minCapacity);<span class="comment">//当新数组长度大于很大长度时</span></span><br><span class="line">    <span class="comment">// minCapacity is usually close to size, so this is a win:</span></span><br><span class="line">    elementData = Arrays.copyOf(elementData, newCapacity); <span class="comment">//扩容数组并生成新的数组</span></span><br><span class="line">    <span class="comment">//底层还是调用System.arraycopy(Object src, int srcPos, Object dest, int destPos, int length)方法</span></span><br><span class="line">&#125;</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+
+<p><strong>老师讲解版本</strong></p>
+<p><img src="/ArrayList%E9%9B%86%E5%90%88.assets/98f85411dc88fbed3190a830b58757fe.png" alt="微信图片_20210814175123.png"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/ArrayList%E9%9B%86%E5%90%88/" data-id="cloxtn0bu00015gye7owzd3yq" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-git/git" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/git/git/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.455Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="Git概述"><a href="#Git概述" class="headerlink" title="Git概述"></a>Git概述</h2><ul>
+<li>Git 是一个免费的、开源的分布式版本控制系统，可以快速高效地处理从小型到大型的各种 项目。</li>
+<li>Git 易于学习，占地面积小，性能极快。 它具有廉价的本地库，方便的暂存区域和多个工作 流分支等特性。其性能优于 Subversion、CVS、Perforce 和 ClearCase 等版本控制工具</li>
+</ul>
+<h3 id="何为版本控制"><a href="#何为版本控制" class="headerlink" title="何为版本控制"></a>何为版本控制</h3><ul>
+<li>版本控制是一种记录文件内容变化，以便将来查阅特定版本修订情况的系统。</li>
+<li>版本控制其实最重要的是可以记录文件修改历史记录，从而让用户能够查看历史版本， 方便版本切换</li>
+</ul>
+<p><img src="/git.assets/image-20211108062006677.png" alt="image-20211108062006677"></p>
+<h3 id="为什么需要版本控制"><a href="#为什么需要版本控制" class="headerlink" title="为什么需要版本控制"></a>为什么需要版本控制</h3><ul>
+<li>个人开发过渡到团队协作</li>
+</ul>
+<p><img src="/git.assets/image-20211108062133146.png" alt="image-20211108062133146"></p>
+<h3 id="版本控制工具"><a href="#版本控制工具" class="headerlink" title="版本控制工具"></a>版本控制工具</h3><ul>
+<li>集中式版本控制工具<ul>
+<li>集中化的版本控制系统诸如 CVS、SVN 等，都有一个单一的集中管理的服务器，保存 所有文件的修订版本，而协同工作的人们都通过客户端连到这台服务器，取出最新的文件或 者提交更新。多年以来，这已成为版本控制系统的标准做法</li>
+<li>这种做法带来了许多好处，每个人都可以在一定程度上看到项目中的其他人正在做些什 么。而管理员也可以轻松掌控每个开发者的权限，并且管理一个集中化的版本控制系统，要 远比在各个客户端上维护本地数据库来得轻松容易</li>
+<li>事分两面，有好有坏。这么做显而易见的缺点是中央服务器的单点故障。如果服务器宕 机一小时，那么在这一小时内，谁都无法提交更新，也就无法协同工作</li>
+</ul>
+</li>
+</ul>
+<p><img src="/git.assets/image-20211108062314186.png" alt="image-20211108062314186"></p>
+<ul>
+<li>分布式版本控制工具<ul>
+<li>像 Git 这种分布式版本控制工具，客户端提取的不是最新版本的文件快照，而是把代码 仓库完整地镜像下来（本地库）。这样任何一处协同工作用的文件发生故障，事后都可以用 其他客户端的本地仓库进行恢复。因为每个客户端的每一次文件提取操作，实际上都是一次 对整个文件仓库的完整备份</li>
+</ul>
+</li>
+<li>分布式的版本控制系统出现之后,解决了集中式版本控制系统的缺陷：<ul>
+<li>服务器断网的情况下也可以进行开发（因为版本控制是在本地进行的）</li>
+<li>每个客户端保存的也都是整个完整的项目（包含历史记录，更加安全）</li>
+</ul>
+</li>
+</ul>
+<p><img src="/git.assets/image-20211108062431371.png" alt="image-20211108062431371"></p>
+<h3 id="Git-简史"><a href="#Git-简史" class="headerlink" title="Git 简史"></a>Git 简史</h3><p><img src="/git.assets/image-20211108062457518.png" alt="image-20211108062457518"></p>
+<h3 id="Git-工作机制"><a href="#Git-工作机制" class="headerlink" title="Git 工作机制"></a>Git 工作机制</h3><p><img src="/git.assets/image-20211108062536971.png" alt="image-20211108062536971"></p>
+<h3 id="Git-和代码托管中心"><a href="#Git-和代码托管中心" class="headerlink" title="Git 和代码托管中心"></a>Git 和代码托管中心</h3><ul>
+<li>代码托管中心是基于网络服务器的远程代码仓库，一般我们简单称为远程库。</li>
+<li>局域网<ul>
+<li>GitLab</li>
+</ul>
+</li>
+<li>互联网<ul>
+<li>GitHub（外网）</li>
+<li>Gitee 码云（国内网站）</li>
+</ul>
+</li>
+</ul>
+<h2 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git 安装"></a>Git 安装</h2><ul>
+<li><p><img src="/git.assets/image-20211108062725975.png" alt="image-20211108062725975"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108062825380.png" alt="image-20211108062825380"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108062842297.png" alt="image-20211108062842297"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108062908095.png" alt="image-20211108062908095"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108062941088.png" alt="image-20211108062941088"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108063003668.png" alt="image-20211108063003668"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108063023816.png" alt="image-20211108063023816"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108063045923.png" alt="image-20211108063045923"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108063108125.png" alt="image-20211108063108125"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108063129309.png" alt="image-20211108063129309"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108063203772.png" alt="image-20211108063203772"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108063221411.png" alt="image-20211108063221411"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108063244154.png" alt="image-20211108063244154"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108063301782.png" alt="image-20211108063301782"></p>
+</li>
+<li><p><img src="/git.assets/image-20211108063320619.png" alt="image-20211108063320619"></p>
+</li>
+</ul>
+<p>在 Git Bash 终端里输入 git –version 查看 git 版本，如图所示，说明 Git 安装成功。</p>
+<p><img src="/git.assets/image-20211108063439202.png" alt="image-20211108063439202"></p>
+<h2 id="Git-常用命令"><a href="#Git-常用命令" class="headerlink" title="Git 常用命令"></a>Git 常用命令</h2><table>
+<thead>
+<tr>
+<th>命令名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git config –global user.name 用户名</td>
+<td>设置用户签名（随便设置）</td>
+</tr>
+<tr>
+<td>git config –global user.email 邮箱</td>
+<td>设置用户签名（随便设置）</td>
+</tr>
+<tr>
+<td>git init</td>
+<td>初始化本地库</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>查看本地库状态</td>
+</tr>
+<tr>
+<td>git add 文件名</td>
+<td>添加到暂存区</td>
+</tr>
+<tr>
+<td>git commit -m “日志信息” 文件名</td>
+<td>提交到本地库</td>
+</tr>
+<tr>
+<td>git reflog</td>
+<td>查看历史记录</td>
+</tr>
+<tr>
+<td>git reset –hard 版本号</td>
+<td>版本穿梭</td>
+</tr>
+</tbody></table>
+<h3 id="修改设置用户签名和邮箱"><a href="#修改设置用户签名和邮箱" class="headerlink" title="修改设置用户签名和邮箱"></a>修改设置用户签名和邮箱</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name xxxx</span><br><span class="line">git config --global user.email xxxx</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看当前用户名"><a href="#查看当前用户名" class="headerlink" title="查看当前用户名"></a>查看当前用户名</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config user.name</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看当前邮箱"><a href="#查看当前邮箱" class="headerlink" title="查看当前邮箱"></a>查看当前邮箱</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>说明：<ul>
+<li>签名的作用是区分不同操作者身份。用户的签名信息在每一个版本的提交信息中能够看 到，以此确认本次提交是谁做的。<strong>Git 首次安装必须设置一下用户签名，否则无法提交代码。</strong></li>
+</ul>
+</li>
+<li>注意：<ul>
+<li>这里设置用户签名和将来登录 GitHub（或其他代码托管中心）的账号没有任 何关系。</li>
+</ul>
+</li>
+</ul>
+<h3 id="初始化本地库"><a href="#初始化本地库" class="headerlink" title="初始化本地库"></a>初始化本地库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>会给当前目录下生成一个.git文件</li>
+<li>会将当前文件夹变为本地库</li>
+</ul>
+<h3 id="查看本地库状态"><a href="#查看本地库状态" class="headerlink" title="查看本地库状态"></a>查看本地库状态</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<h3 id="添加暂存区"><a href="#添加暂存区" class="headerlink" title="添加暂存区"></a>添加暂存区</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add 文件名</span><br></pre></td></tr></table></figure>
+
+<h3 id="提交本地库"><a href="#提交本地库" class="headerlink" title="提交本地库"></a>提交本地库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;提交信息&quot; 文件名</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>注意<ul>
+<li>每次修改都要重新提交到本地库中</li>
+</ul>
+</li>
+</ul>
+<h3 id="查看历史版本"><a href="#查看历史版本" class="headerlink" title="查看历史版本"></a>查看历史版本</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git reflog   查看版本信息</span><br><span class="line">git log		 查看版本详细信息</span><br></pre></td></tr></table></figure>
+
+<h3 id="版本穿梭"><a href="#版本穿梭" class="headerlink" title="版本穿梭"></a>版本穿梭</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard 版本号</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Git 切换版本，底层其实是移动的 HEAD 指针，具体原理如下图所示。</li>
+</ul>
+<p><img src="/git.assets/image-20211108065459071.png" alt="image-20211108065459071"></p>
+<h2 id="Git-分支操作"><a href="#Git-分支操作" class="headerlink" title="Git 分支操作"></a>Git 分支操作</h2><p><img src="/git.assets/image-20211108065524631.png" alt="image-20211108065524631"></p>
+<h3 id="什么是分支"><a href="#什么是分支" class="headerlink" title="什么是分支"></a>什么是分支</h3><ul>
+<li>在版本控制过程中，同时推进多个任务，为每个任务，我们就可以创建每个任务的单独 分支。使用分支意味着程序员可以把自己的工作从开发主线上分离开来，开发自己分支的时 候，不会影响主线分支的运行。对于初学者而言，分支可以简单理解为副本，一个分支就是 一个单独的副本。（分支底层其实也是指针的引用）</li>
+</ul>
+<p><img src="/git.assets/image-20211108065558743.png" alt="image-20211108065558743"></p>
+<h3 id="分支的好处"><a href="#分支的好处" class="headerlink" title="分支的好处"></a>分支的好处</h3><ul>
+<li>同时并行推进多个功能开发，提高开发效率。</li>
+<li>各个分支在开发过程中，如果某一个分支开发失败，不会对其他分支有任何影响。失败 的分支删除重新开始即可</li>
+</ul>
+<h3 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h3><table>
+<thead>
+<tr>
+<th>命令名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git branch 分支名</td>
+<td>创建分支</td>
+</tr>
+<tr>
+<td>git branch -v</td>
+<td>查看分支</td>
+</tr>
+<tr>
+<td>git checkout 分支名</td>
+<td>切换分支</td>
+</tr>
+<tr>
+<td>git merge 分支名</td>
+<td>把指定的分支合并到当前分支上</td>
+</tr>
+</tbody></table>
+<h3 id="查看分支"><a href="#查看分支" class="headerlink" title="查看分支"></a>查看分支</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 分支名</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在底层只是多了一个名为分支名的指针</li>
+</ul>
+<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 分支名</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>底层只是移动head指针到该分支名上</li>
+<li>在哪个分支哪个版本创建的新分支，则该版本就算新分支的第一个版本</li>
+</ul>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge 分支名</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>合并分支要切换到master分支上</li>
+<li>合并之后只会修改master分支上内容</li>
+<li>冲突产生的原因：<ul>
+<li>当master和要合并的分支都做了修改</li>
+<li>合并分支时，两个分支在同一个文件的同一个位置有两套完全不同的修改。Git 无法替 我们决定使用哪一个。必须人为决定新代码内容。</li>
+</ul>
+</li>
+</ul>
+<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><ul>
+<li>编辑有冲突的文件，删除特殊符号，决定要使用的内容</li>
+<li>特殊符号：&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD 当前分支的代码 &#x3D;&#x3D;&#x3D; 合并过来的代码 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 要合并分支名</li>
+<li>重写提交到本地库，在提交时不能带文件名</li>
+</ul>
+<h3 id="创建分支和切换分支图"><a href="#创建分支和切换分支图" class="headerlink" title="创建分支和切换分支图"></a>创建分支和切换分支图</h3><p><img src="/git.assets/image-20211108070722556.png" alt="image-20211108070722556"></p>
+<ul>
+<li>master、其他分支 其实都是指向具体版本记录的指针。当前所在的分支，其实是由 HEAD 决定的。所以创建分支的本质就是多创建一个指针</li>
+<li>HEAD 如果指向 master，那么我们现在就在 master 分支上。</li>
+<li>HEAD 如果执行 其他分支，那么我们现在就在 hotfix 分支上。</li>
+<li>所以切换分支的本质就是移动 HEAD 指针。</li>
+</ul>
+<h2 id="个人总结"><a href="#个人总结" class="headerlink" title="个人总结"></a>个人总结</h2><img src="C:\Users\84390\AppData\Roaming\Typora\typora-user-images\image-20230926161023122.png" alt="image-20230926161023122" style="zoom: 80%;" />
+
+<h2 id="Git-团队协作机制"><a href="#Git-团队协作机制" class="headerlink" title="Git 团队协作机制"></a>Git 团队协作机制</h2><h3 id="团队内协作"><a href="#团队内协作" class="headerlink" title="团队内协作"></a>团队内协作</h3><p><img src="/git.assets/image-20211108071006124.png" alt="image-20211108071006124"></p>
+<h3 id="跨团队协作"><a href="#跨团队协作" class="headerlink" title="跨团队协作"></a>跨团队协作</h3><p><img src="/git.assets/image-20211108071400893.png" alt="image-20211108071400893"></p>
+<h2 id="GitHub-操作"><a href="#GitHub-操作" class="headerlink" title="GitHub 操作"></a>GitHub 操作</h2><h3 id="创建远程仓库"><a href="#创建远程仓库" class="headerlink" title="创建远程仓库"></a>创建远程仓库</h3><p><img src="/git.assets/image-20211108082822517.png" alt="image-20211108082822517"></p>
+<img src="git.assets/image-20211108083044655.png" alt="image-20211108083044655" style="zoom:50%;" />
+
+<h3 id="远程仓库操作"><a href="#远程仓库操作" class="headerlink" title="远程仓库操作"></a>远程仓库操作</h3><table>
+<thead>
+<tr>
+<th>命令名称</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>git remote -v</td>
+<td>查看当前所有远程地址别名</td>
+</tr>
+<tr>
+<td>git remote add 别名 远程地址</td>
+<td>起别名</td>
+</tr>
+<tr>
+<td>git remote remove 别名</td>
+<td>删除别名</td>
+</tr>
+<tr>
+<td>git push 别名 分支</td>
+<td>推送本地分支上的内容到远程仓库</td>
+</tr>
+<tr>
+<td>git clone 远程地址</td>
+<td>将远程仓库的内容克隆到本地</td>
+</tr>
+<tr>
+<td>git pull 远程库地址别名 远程分支名</td>
+<td>将远程仓库对于分支最新内容拉下来后与 当前本地分支直接合并</td>
+</tr>
+</tbody></table>
+<h3 id="查看远程仓库别名"><a href="#查看远程仓库别名" class="headerlink" title="查看远程仓库别名"></a>查看远程仓库别名</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建远程仓库别名"><a href="#创建远程仓库别名" class="headerlink" title="创建远程仓库别名"></a>创建远程仓库别名</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add 别名 远程地址</span><br></pre></td></tr></table></figure>
+
+<h3 id="推送本地分支到远程仓库"><a href="#推送本地分支到远程仓库" class="headerlink" title="推送本地分支到远程仓库"></a>推送本地分支到远程仓库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push 别名 分支</span><br></pre></td></tr></table></figure>
+
+<h3 id="克隆远程仓库到本地"><a href="#克隆远程仓库到本地" class="headerlink" title="克隆远程仓库到本地"></a>克隆远程仓库到本地</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone 远程地址</span><br></pre></td></tr></table></figure>
+
+<h3 id="邀请加入团队-github为例"><a href="#邀请加入团队-github为例" class="headerlink" title="邀请加入团队(github为例)"></a>邀请加入团队(github为例)</h3><img src="git.assets/image-20211108095724251.png" alt="image-20211108095724251" style="zoom:50%;" />
+
+<img src="git.assets/image-20211108095926104.png" alt="image-20211108095926104" style="zoom:50%;" />
+
+<img src="git.assets/image-20211108110112735.png" alt="image-20211108110112735" style="zoom:50%;" />
+
+<h3 id="拉取远程库内容"><a href="#拉取远程库内容" class="headerlink" title="拉取远程库内容"></a>拉取远程库内容</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull 远程库地址别名 远程分支名</span><br></pre></td></tr></table></figure>
+
+<h3 id="SSH-免密登录"><a href="#SSH-免密登录" class="headerlink" title="SSH 免密登录"></a>SSH 免密登录</h3><img src="git.assets/image-20211108153431142.png" alt="image-20211108153431142" style="zoom: 67%;" />
+
+<ul>
+<li>运行命令生成.ssh 秘钥目录</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C 邮箱(随便)</span><br></pre></td></tr></table></figure>
+
+<p>- </p>
+<img src="git.assets/image-20211108153843239.png" alt="image-20211108153843239" style="zoom:50%;" />
+
+<ul>
+<li><img src="git.assets/image-20211108153931300.png" alt="image-20211108153931300" style="zoom:50%;" /></li>
+</ul>
+<img src="git.assets/image-20211108153957766.png" alt="image-20211108153957766" style="zoom:50%;" />
+
+<ul>
+<li>生成的密钥在C:\Users\你的用户名.ssh（不同电脑情况不一样）</li>
+</ul>
+<h2 id="IDEA-集成-Git"><a href="#IDEA-集成-Git" class="headerlink" title="IDEA 集成 Git"></a>IDEA 集成 Git</h2><h3 id="配置-Git-忽略文件"><a href="#配置-Git-忽略文件" class="headerlink" title="配置 Git 忽略文件"></a>配置 Git 忽略文件</h3><h4 id="为什么要忽略他们？"><a href="#为什么要忽略他们？" class="headerlink" title="为什么要忽略他们？"></a>为什么要忽略他们？</h4><ul>
+<li>与项目的实际功能无关，不参与服务器上部署运行。把它们忽略掉能够屏蔽 IDE 工具之 间的差异</li>
+</ul>
+<h4 id="怎么忽略"><a href="#怎么忽略" class="headerlink" title="怎么忽略"></a>怎么忽略</h4><ul>
+<li><p>创建忽略规则文件 xxxx.ignore（前缀名随便起，建议是 git.ignore）</p>
+</li>
+<li><p>这个文件的存放位置原则上在哪里都可以，为了便于让~&#x2F;.gitconfig 文件引用，建议也放在用 户家目录下(Windows 的当前用户目录中,IDEA里面有这个文件，也可以不设置,设置则是全局的)</p>
+<ul>
+<li><pre><code># Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+hs_err_pid*
+
+.classpath
+.project
+.settings
+target
+.idea
+*.iml
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 在.gitconfig 文件中引用忽略配置文件（此文件在 Windows 的家目录中)</span><br><span class="line"></span><br><span class="line">  - ```git</span><br><span class="line">    [core]</span><br><span class="line">    	excludesfile = C:/Users/卿/git.ignore</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><img src="git.assets/image-20211108154847215.png" alt="image-20211108154847215" style="zoom:50%;" /></li>
+</ul>
+<h3 id="初始化本地库-1"><a href="#初始化本地库-1" class="headerlink" title="初始化本地库"></a>初始化本地库</h3><img src="git.assets/image-20211108155032930.png" alt="image-20211108155032930" style="zoom:50%;" />
+
+<h3 id="添加到暂存区"><a href="#添加到暂存区" class="headerlink" title="添加到暂存区"></a>添加到暂存区</h3><img src="git.assets/image-20211108155235996.png" alt="image-20211108155235996" style="zoom:50%;" />
+
+<h3 id="提交到本地库"><a href="#提交到本地库" class="headerlink" title="提交到本地库"></a>提交到本地库</h3><img src="git.assets/image-20211108155404302.png" alt="image-20211108155404302" style="zoom:50%;" />
+
+<img src="git.assets/image-20211108155512428.png" alt="image-20211108155512428" style="zoom:50%;" />
+
+<h3 id="切换版本"><a href="#切换版本" class="headerlink" title="切换版本"></a>切换版本</h3><img src="git.assets/image-20211108155610766.png" alt="image-20211108155610766" style="zoom:50%;" />
+
+<img src="git.assets/image-20211108155803370.png" alt="image-20211108155803370" style="zoom:50%;" />
+
+<h3 id="创建分支-1"><a href="#创建分支-1" class="headerlink" title="创建分支"></a>创建分支</h3><img src="git.assets/image-20211108155905804.png" alt="image-20211108155905804" style="zoom: 67%;" />
+
+<img src="git.assets/image-20211108155930632.png" alt="image-20211108155930632" style="zoom:67%;" />
+
+<h3 id="切换分支-1"><a href="#切换分支-1" class="headerlink" title="切换分支"></a>切换分支</h3><img src="git.assets/image-20211108160054027.png" alt="image-20211108160054027" style="zoom: 67%;" />
+
+<h3 id="合并分支-1"><a href="#合并分支-1" class="headerlink" title="合并分支"></a>合并分支</h3><img src="git.assets/image-20211108160335124.png" alt="image-20211108160335124" style="zoom:67%;" />
+
+<h3 id="解决冲突-1"><a href="#解决冲突-1" class="headerlink" title="解决冲突"></a>解决冲突</h3><img src="git.assets/image-20211108160524312.png" alt="image-20211108160524312" style="zoom:50%;" />
+
+<img src="git.assets/image-20211108160544950.png" alt="image-20211108160544950" style="zoom:50%;" />
+
+<ul>
+<li>手动合并完代码以后，点击右下角的 Apply 按钮。</li>
+<li>代码冲突解决，自动提交本地库。</li>
+</ul>
+<h2 id="IDEA-集成-GitHub"><a href="#IDEA-集成-GitHub" class="headerlink" title="IDEA 集成 GitHub"></a>IDEA 集成 GitHub</h2><img src="git.assets/image-20211108160722342.png" alt="image-20211108160722342" style="zoom:50%;" />
+
+<img src="git.assets/image-20211108160827396.png" alt="image-20211108160827396" style="zoom:50%;" />
+
+<ul>
+<li><p>然后去 GitHub 账户上设置 token</p>
+</li>
+<li><p>进入setting设置</p>
+</li>
+<li><img src="git.assets/image-20211108160950701.png" alt="image-20211108160950701" style="zoom:50%;" /></li>
+<li><p><img src="/git.assets/image-20211108161046832.png" alt="image-20211108161046832"></p>
+</li>
+<li><img src="git.assets/image-20211108161113149.png" alt="image-20211108161113149" style="zoom:50%;" />
+</li>
+<li><img src="git.assets/image-20211108161241891.png" alt="image-20211108161241891" style="zoom:50%;" />
+</li>
+<li><img src="git.assets/image-20211108161315663.png" alt="image-20211108161315663" style="zoom:50%;" /></li>
+</ul>
+<h3 id="分享工程到-GitHub"><a href="#分享工程到-GitHub" class="headerlink" title="分享工程到 GitHub"></a>分享工程到 GitHub</h3><ul>
+<li><img src="git.assets/image-20211108161436007.png" alt="image-20211108161436007" style="zoom:50%;" /></li>
+</ul>
+<img src="git.assets/image-20211108162125993.png" alt="image-20211108162125993" style="zoom:50%;" />
+
+<h3 id="push-推送本地库到远程库"><a href="#push-推送本地库到远程库" class="headerlink" title="push 推送本地库到远程库"></a>push 推送本地库到远程库</h3><img src="git.assets/image-20211108161923746.png" alt="image-20211108161923746" style="zoom:50%;" />
+
+<img src="git.assets/image-20211108162144884.png" alt="image-20211108162144884" style="zoom:50%;" />
+
+<img src="git.assets/image-20211108162233862.png" alt="image-20211108162233862" style="zoom:50%;" />
+
+<img src="git.assets/image-20211108162326145.png" alt="image-20211108162326145" style="zoom:50%;" />
+
+<img src="git.assets/image-20211108162510758.png" alt="image-20211108162510758" style="zoom:50%;" />
+
+<ul>
+<li>注意：push 是将本地库代码推送到远程库，如果本地库代码跟远程库代码版本不一致， push 的操作是会被拒绝的。也就是说，要想 push 成功，<strong>一定要保证本地库的版本要比远程 库的版本高</strong>！因此一个成熟的程序员在动手改本地代码之前，一定会先检查下远程库跟本地 代码的区别！如果本地的代码版本已经落后，切记要先 pull 拉取一下远程库的代码，将本地 代码更新到最新以后，然后再修改，提交，推送！</li>
+</ul>
+<h3 id="pull-拉取远程库到本地库"><a href="#pull-拉取远程库到本地库" class="headerlink" title="pull 拉取远程库到本地库"></a>pull 拉取远程库到本地库</h3><ul>
+<li><img src="git.assets/image-20211108162625285.png" alt="image-20211108162625285" style="zoom:50%;" />
+</li>
+<li><img src="git.assets/image-20211108162749157.png" alt="image-20211108162749157" style="zoom:50%;" />
+</li>
+<li><p>注意：pull 是拉取远端仓库代码到本地，如果远程库代码和本地库代码不一致，会自动 合并，如果自动合并失败，还会涉及到手动解决冲突的问题</p>
+</li>
+</ul>
+<h3 id="clone-克隆远程库到本地"><a href="#clone-克隆远程库到本地" class="headerlink" title="clone 克隆远程库到本地"></a>clone 克隆远程库到本地</h3><img src="git.assets/image-20211108162907847.png" alt="image-20211108162907847" style="zoom:50%;" />
+
+<img src="git.assets/image-20211108162949575.png" alt="image-20211108162949575" style="zoom:50%;" />
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/git/git/" data-id="cloxtn0cq002d5gye164cddcl" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/12/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><span class="page-number current">13</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

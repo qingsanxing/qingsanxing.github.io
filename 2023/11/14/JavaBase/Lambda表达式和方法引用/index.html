@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="函数式接口1234567891011121314151617181920212223函数式接口: 有且仅有一个抽象方法的接口叫函数式接口.    函数式接口只约束了抽象方法的个数并没有约束默认方法,静态方法,私有方法,私有静态方法的个数    函数式接口的定义可以使用注解: @FunctionalInterface 进行格式的约束     我已经见过函数式接口:Comparable&lt;T&amp;gt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="函数式接口1234567891011121314151617181920212223函数式接口: 有且仅有一个抽象方法的接口叫函数式接口.    函数式接口只约束了抽象方法的个数并没有约束默认方法,静态方法,私有方法,私有静态方法的个数    函数式接口的定义可以使用注解: @FunctionalInterface 进行格式的约束     我已经见过函数式接口:Comparable&lt;T&amp;gt">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T04:11:24.674Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.282Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/Lambda表达式和方法引用" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.674Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="函数式接口"><a href="#函数式接口" class="headerlink" title="函数式接口"></a>函数式接口</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">函数式接口: 有且仅有一个抽象方法的接口叫函数式接口.</span><br><span class="line">    </span><br><span class="line">函数式接口只约束了抽象方法的个数并没有约束默认方法,静态方法,私有方法,私有静态方法的个数</span><br><span class="line">    </span><br><span class="line">函数式接口的定义可以使用注解: <span class="meta">@FunctionalInterface</span> 进行格式的约束 </span><br><span class="line">    </span><br><span class="line">我已经见过函数式接口:</span><br><span class="line">Comparable&lt;T&gt;接口: 绑定比较器接口</span><br><span class="line">    有且仅有一个抽象方法: <span class="type">int</span> <span class="title function_">compareTo</span><span class="params">(T o)</span>;</span><br><span class="line"></span><br><span class="line">Comparator&lt;T&gt;接口: 独立比较器接口</span><br><span class="line">    有且仅有一个抽象方法: <span class="type">int</span> <span class="title function_">compare</span><span class="params">(T o1,T o2)</span>;</span><br><span class="line"></span><br><span class="line">Runnable接口: 线程对象的任务接口</span><br><span class="line">    有且仅有一个抽象方法: <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">Callable&lt;V&gt;接口: 线程对象带有任务结果的接口</span><br><span class="line">    有且仅有一个抽象方法: V <span class="title function_">call</span><span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">FileFilter接口: 文件过滤器接口</span><br><span class="line">    有且仅有一个抽象方法: <span class="type">boolean</span> <span class="title function_">accept</span><span class="params">(File pathname)</span>  </span><br><span class="line">        </span><br><span class="line">JDK8中又新增了很多函数式接口,目的推广Lambda表达式的使用 (Lambda的使用前提是接口必须是函数式接口)     </span><br></pre></td></tr></table></figure>
+
+<h4 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">概述: Lambda是对匿名内部类格式的简写</span><br><span class="line">    </span><br><span class="line">匿名内部类:对创建子类/创建实现类操作的简写</span><br><span class="line">   作用范围: 普通类,抽象类,接口</span><br><span class="line">       </span><br><span class="line">Lambda表达式: 对函数式接口匿名内部类实现的简写</span><br><span class="line">   作用范围: 函数式接口    </span><br><span class="line">       </span><br><span class="line">方法引用: 对Lambda表达式的简写</span><br><span class="line">    要求更加严苛~</span><br></pre></td></tr></table></figure>
+
+<h4 id="Lambda之初体验"><a href="#Lambda之初体验" class="headerlink" title="Lambda之初体验"></a>Lambda之初体验</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyTarget</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;实现类实现Runnable~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LambdaDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//开启线程</span></span><br><span class="line">        <span class="comment">//实现类的方式</span></span><br><span class="line">        <span class="type">MyTarget</span> <span class="variable">mt</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MyTarget</span>();</span><br><span class="line">        <span class="type">Thread</span> <span class="variable">t1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(mt);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//万一MyTarget对象只使用一次! 我没有必要创建一个专门的文件存储MyTarget类的内容</span></span><br><span class="line">        <span class="comment">//匿名内部类的方式</span></span><br><span class="line">        <span class="comment">//面向对象: 关注对象,关注对象做了什么</span></span><br><span class="line">        <span class="type">Thread</span> <span class="variable">t2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(<span class="keyword">new</span> <span class="title class_">Runnable</span>() &#123;<span class="comment">//匿名对象</span></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;匿名内部类实现的Runnable~&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Lambda表达式的方式 -&gt; 匿名内部类的简写</span></span><br><span class="line">        <span class="comment">//面向函数 : 更关注的是对象做了什么, 而不是哪个对象去做</span></span><br><span class="line">        <span class="comment">//构造方法: Thread(Runnable target,String name)</span></span><br><span class="line">        <span class="comment">// 推导过程 : 把形参推导到方法体中去运算</span></span><br><span class="line">        <span class="type">Thread</span> <span class="variable">t3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Thread</span>(() -&gt; System.out.println(<span class="string">&quot;匿名内部类实现的Runnable~&quot;</span>),<span class="string">&quot;线程1&quot;</span>);</span><br><span class="line">        t1.start();</span><br><span class="line">        t2.start();</span><br><span class="line">        t3.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="面向函数式编程思想"><a href="#面向函数式编程思想" class="headerlink" title="面向函数式编程思想"></a>面向函数式编程思想</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">面向过程: 凡事必躬亲</span><br><span class="line">面向对象: 自己的事情对象做 --&gt; 面向对象基于面向过程</span><br><span class="line">面向函数: 忽略对象(不代表没有对象),只关注对象做什么  --&gt; 面向函数基于面向对象  </span><br></pre></td></tr></table></figure>
+
+<h4 id="Lambda表示的好处"><a href="#Lambda表示的好处" class="headerlink" title="Lambda表示的好处"></a>Lambda表示的好处</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 简化代码(前提: Lambda表达式必须适用于函数式接口)</span><br><span class="line"><span class="number">2.</span> 延迟加载 </span><br><span class="line">     如果没有使用Lambda表达式编写的<span class="string">&quot;匿名内部类&quot;</span>对象,那么这个匿名内部类的字节码文件是不会产生的</span><br></pre></td></tr></table></figure>
+
+<h4 id="Lambda表达式的格式"><a href="#Lambda表达式的格式" class="headerlink" title="Lambda表达式的格式"></a>Lambda表达式的格式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Lambda表达式只能适用于函数式接口</span></span><br><span class="line"></span><br><span class="line">格式:</span><br><span class="line">    (重写方法的形式参数列表) -&gt; &#123;</span><br><span class="line">        <span class="comment">//重写父接口抽象方法的方法体;</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LambdaDemo2</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//无参无返回值的抽象方法的Lambda的编写格式</span></span><br><span class="line">        <span class="type">InterB</span> <span class="variable">interB</span> <span class="operator">=</span> () -&gt; &#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;1111&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;2222&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;3333&quot;</span>);</span><br><span class="line">            &#125;;</span><br><span class="line">        interB.method();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//有参无返回值的抽象方法的Lambda的编写格式</span></span><br><span class="line">        <span class="type">InterC</span> <span class="variable">interC</span> <span class="operator">=</span> (<span class="type">int</span> num1, <span class="type">int</span> num2) -&gt; &#123;</span><br><span class="line">                System.out.println(num1);</span><br><span class="line">                System.out.println(num2);</span><br><span class="line">            &#125;;</span><br><span class="line">        interC.method(<span class="number">100</span>,<span class="number">200</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//无参有返回值的抽象方法的Lambda的编写格式</span></span><br><span class="line">        <span class="type">InterD</span> <span class="variable">interD</span> <span class="operator">=</span> () -&gt;&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">111</span>;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="type">int</span> <span class="variable">method</span> <span class="operator">=</span> interD.method();</span><br><span class="line">        System.out.println(<span class="string">&quot;method = &quot;</span> + method);<span class="comment">//111</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//有参有返回值抽象方法的Lambda的编写格式</span></span><br><span class="line">        <span class="type">InterE</span> <span class="variable">interE</span> <span class="operator">=</span>(String str) -&gt; &#123;</span><br><span class="line">                <span class="keyword">return</span> Integer.parseInt(str);</span><br><span class="line">            &#125;;</span><br><span class="line">        <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> interE.method(<span class="string">&quot;300&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;num = &quot;</span> + num);<span class="comment">//300</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">InterB</span>&#123;</span><br><span class="line">    <span class="comment">//无参无返回值的抽象方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">InterC</span>&#123;</span><br><span class="line">    <span class="comment">//有参无返回值的抽象方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">method</span><span class="params">(<span class="type">int</span> num1,<span class="type">int</span> num2)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">InterD</span>&#123;</span><br><span class="line">    <span class="comment">//无参有返回值的抽象方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="type">int</span> <span class="title function_">method</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">InterE</span>&#123;</span><br><span class="line">    <span class="comment">//有参有返回值的抽象方法</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="type">int</span> <span class="title function_">method</span><span class="params">(String str)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Lambda的格式简写"><a href="#Lambda的格式简写" class="headerlink" title="Lambda的格式简写"></a>Lambda的格式简写</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lambda的格式简写:</span><br><span class="line">    <span class="number">1.</span> 所有的方法形参的类型可以不写</span><br><span class="line">    <span class="number">2.</span> 当方法的形参个数有且仅有一个的时候,可以不写形参的小括号</span><br><span class="line">    <span class="number">3.</span> 当重写方法的方法体有且仅有一句的时候,可以省略重写方法体中的 &#123;&#125;,<span class="keyword">return</span>,;</span><br><span class="line">        要求要省略就必须全部省略</span><br></pre></td></tr></table></figure>
+
+<h4 id="方法引用-了解"><a href="#方法引用-了解" class="headerlink" title="方法引用(了解)"></a>方法引用(了解)</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">方法引用: 它是对Lambda表达式的简写</span><br><span class="line">    </span><br><span class="line">方法引用能够使用的条件:</span><br><span class="line">    <span class="number">1.</span> 必须满足Lambda表达式的条件(必须是函数式接口)</span><br><span class="line">    <span class="number">2.</span> 必须要求重写方法内方法体有且仅有一句代码 --&gt; 严苛</span><br><span class="line">    <span class="number">3.</span> 必须要求重写方法内方法体的这句代码: -&gt; 严苛至极</span><br><span class="line">        a. 对象调方法</span><br><span class="line">        b. 类名调静态方法</span><br><span class="line">        c. 创建对象</span><br><span class="line">        d. 创建数组     </span><br></pre></td></tr></table></figure>
+
+<p>Lambda表达式是可以简化函数式接口的变量与形参赋值的语法。而方法引用和构造器引用是为了简化Lambda表达式的。当Lambda表达式满足一些特殊的情况时，还可以再简化：</p>
+<h5 id="方法引用"><a href="#方法引用" class="headerlink" title="方法引用"></a>方法引用</h5><p>方法引用的语法格式：</p>
+<p>（1）对象名::实例方法    –&gt; 对象调方法</p>
+<p>（2）类名::静态方法 –&gt; 类名调用静态方法</p>
+<p>说明：</p>
+<ul>
+<li>::称为方法引用操作符</li>
+<li>Lambda表达式的形参列表，全部在Lambda体中使用上了，要么是作为调用方法的对象，要么是作为方法的实参。</li>
+<li>在整个Lambda体中没有额外的数据。</li>
+</ul>
+<h5 id="构造器引用"><a href="#构造器引用" class="headerlink" title="构造器引用"></a>构造器引用</h5><p>（1）当Lambda表达式是创建一个对象，并且满足Lambda表达式形参，正好是给创建这个对象的构造器的实参列表。</p>
+<p>（2）  当Lambda表达式是创建一个数组对象，并且满足Lambda表达式形参，正好是给创建这个数组对象的长度</p>
+<p>构造器引用的语法格式：</p>
+<ul>
+<li>类名::new</li>
+<li>数组类型名::new</li>
+</ul>
+<h5 id="案例-1"><a href="#案例-1" class="headerlink" title="案例"></a>案例</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MethodDemo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//匿名内部类的写法</span></span><br><span class="line">        <span class="type">InterA</span> <span class="variable">ia1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">InterA</span>()&#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">print</span><span class="params">(String str)</span> &#123;</span><br><span class="line">                System.out.println(str);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Lambda表达式的写法</span></span><br><span class="line">        <span class="type">InterA</span> <span class="variable">ia2</span> <span class="operator">=</span> str -&gt; System.out.println(str);</span><br><span class="line">        <span class="comment">// System.out-&gt; 对象</span></span><br><span class="line">        <span class="comment">// println(str) -&gt; 方法</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//方法引用的写法 :</span></span><br><span class="line">        <span class="comment">// 基于Lambda做的简化,要求重写方法内有且仅有一句代码且这句代码是</span></span><br><span class="line">        <span class="comment">//要么对象调方法</span></span><br><span class="line">        <span class="comment">//要么类名调用静态方法</span></span><br><span class="line">        <span class="comment">//要么是创建对象</span></span><br><span class="line">        <span class="comment">//要么是创建一个数组</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//对象调方法: 格式 对象::方法名</span></span><br><span class="line">        <span class="type">InterA</span> <span class="variable">ia3</span> <span class="operator">=</span> System.out::println;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//类名调用静态方法 : 格式 类名::方法名</span></span><br><span class="line">        <span class="type">InterB</span> <span class="variable">ib</span> <span class="operator">=</span> Integer::parseInt;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//创建对象 : 格式 类型::new</span></span><br><span class="line">        <span class="comment">//InterC ic = () -&gt; new Date();</span></span><br><span class="line">        <span class="type">InterC</span> <span class="variable">ic</span> <span class="operator">=</span> Date::<span class="keyword">new</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//创建InterD的实现类对象</span></span><br><span class="line">        <span class="comment">//InterD id = length -&gt; new int[length];</span></span><br><span class="line">        <span class="comment">//创建数组对象 格式: 数组类型::new</span></span><br><span class="line">        <span class="type">InterD</span> <span class="variable">id</span> <span class="operator">=</span> <span class="type">int</span>[]::<span class="keyword">new</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">InterA</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">print</span><span class="params">(String str)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">InterB</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="type">int</span> <span class="title function_">change</span><span class="params">(String str)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">InterC</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> Date <span class="title function_">get</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@FunctionalInterface</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">InterD</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="type">int</span>[] get(<span class="type">int</span> length);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%92%8C%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/" data-id="cloxtn0c4000j5gye6eglh0m2" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/LinkedHashMap%E9%9B%86%E5%90%88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/JDK7%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

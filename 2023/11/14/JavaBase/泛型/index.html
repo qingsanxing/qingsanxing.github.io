@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="泛型12345678910111213141516泛型: 一种不明确的引用数据类型    泛型在集合中如何使用呢? 集合中存储的元素数据类型是什么泛型就写什么类型    	作用: 是用来约束集合中元素的数据类型的(泛型是编译阶段有效,到了运行阶段就无效了)    为什么泛型在集合中到了运行阶段就无效了?        因为集合在设计之初,就是为了存入任意引用数据类型的对象容器而设计的.但是因为使用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/%E6%B3%9B%E5%9E%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="泛型12345678910111213141516泛型: 一种不明确的引用数据类型    泛型在集合中如何使用呢? 集合中存储的元素数据类型是什么泛型就写什么类型    	作用: 是用来约束集合中元素的数据类型的(泛型是编译阶段有效,到了运行阶段就无效了)    为什么泛型在集合中到了运行阶段就无效了?        因为集合在设计之初,就是为了存入任意引用数据类型的对象容器而设计的.但是因为使用">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T04:11:24.769Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.308Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/泛型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E6%B3%9B%E5%9E%8B/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.769Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">泛型: 一种不明确的引用数据类型</span><br><span class="line">    泛型在集合中如何使用呢? 集合中存储的元素数据类型是什么泛型就写什么类型</span><br><span class="line">    	作用: 是用来约束集合中元素的数据类型的(泛型是编译阶段有效,到了运行阶段就无效了)</span><br><span class="line">    为什么泛型在集合中到了运行阶段就无效了?</span><br><span class="line">        因为集合在设计之初,就是为了存入任意引用数据类型的对象容器而设计的.但是因为使用的不是很方便,所以在JDK5版本增加了泛型的概念.(若集合创建不给泛型,泛型默认是Object)</span><br><span class="line">            </span><br><span class="line">泛型的格式:&lt;字母&gt;</span><br><span class="line">	注意:</span><br><span class="line">		<span class="number">1.</span> 字母最好大写表示 --&gt; 规范</span><br><span class="line">		<span class="number">2.</span> 字母可以是任意字母 --&gt; &lt;E&gt;,&lt;T&gt; ...</span><br><span class="line">		<span class="number">3.</span> 泛型可以是多个大写字母组成 --&gt; &lt;MVP&gt;</span><br><span class="line">		<span class="number">4.</span> 一个尖括号内可以定义多个泛型,多个泛型之间使用逗号分隔 --&gt; &lt;O,M,K&gt;,&lt;K,V&gt;</span><br><span class="line">		</span><br><span class="line">泛型的使用:</span><br><span class="line">	若一个地方在定义的时候使用了泛型,那么在使用的时候,一定要拿一个具体的引用数据类型去替换泛型</span><br><span class="line">	(若你不去替换,泛型默认变成Object..)</span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">泛型类: 在定义类的时候在类的声明上加上泛型 (例如: ArrayList&lt;E&gt;)</span><br><span class="line">    </span><br><span class="line">格式: </span><br><span class="line">	<span class="comment">//泛型类</span></span><br><span class="line">	<span class="keyword">public</span> class 类名&lt;泛型&gt;&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">泛型类的使用场景: 你在一个类上声明了一个泛型,那么就代表此类中你可以使用这个类型!</span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">泛型接口和泛型类的定义和使用基本上一样!</span><br><span class="line"></span><br><span class="line">泛型延用的问题:</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        Zi&lt;String&gt; zi = <span class="keyword">new</span> <span class="title class_">Zi</span>&lt;&gt;();</span><br><span class="line">        zi.show(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line"></span><br><span class="line">        Zi&lt;Integer&gt; zi1 = <span class="keyword">new</span> <span class="title class_">Zi</span>&lt;&gt;();</span><br><span class="line">        zi1.show(<span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">        <span class="type">Son</span> <span class="variable">son</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Son</span>();</span><br><span class="line">        son.show(<span class="string">&quot;Java&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Fu</span>&lt;R&gt;&#123;<span class="comment">//泛型接口</span></span><br><span class="line">    <span class="comment">//从此在此接口中就有一种类型叫R</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">show</span><span class="params">(R r)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Zi</span>&lt;R&gt; <span class="keyword">implements</span> <span class="title class_">Fu</span>&lt;R&gt;&#123;<span class="comment">//ArrayList</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">show</span><span class="params">(R r)</span> &#123;</span><br><span class="line">        System.out.println(r);</span><br><span class="line">    &#125;<span class="comment">//沿用了父接口的泛型</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Son</span>&lt;T&gt; <span class="keyword">implements</span> <span class="title class_">Fu</span>&lt;String&gt;&#123;<span class="comment">//Properties</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">show</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;<span class="comment">//没有延用父接口的泛型</span></span><br><span class="line">&#125;	</span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">泛型方法: 泛型方法的使用和泛型类,泛型接口的使用方式一样!</span><br><span class="line">    泛型类,泛型接口定义的泛型在整个类/接口中有效</span><br><span class="line">    但是泛型方法上的定义的泛型只能在方法内使用!! --&gt; 区别就在作用域问题上</span><br><span class="line">    </span><br><span class="line">格式:</span><br><span class="line">	<span class="comment">//从此在此方法内多了一种类型 &lt;泛型&gt; 给方法使用</span></span><br><span class="line">	方法的修饰符 &lt;泛型&gt; 返回值类型 方法名(形式参数列表)&#123;</span><br><span class="line">        方法体;</span><br><span class="line">        <span class="comment">//return 值;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">例如:</span><br><span class="line">	<span class="keyword">static</span> &lt;T&gt; <span class="type">boolean</span> <span class="title function_">addAll</span><span class="params">(Collection&lt;T&gt; c, T... elements)</span> </span><br><span class="line">  <span class="keyword">static</span> &lt;T&gt; <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(List&lt;T&gt; list, Comparator&lt;T&gt; c)</span>  </span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h1 id="泛型通配符"><a href="#泛型通配符" class="headerlink" title="泛型通配符"></a>泛型通配符</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">集合泛型通配符的使用场景: 在方法的形参上,要定义一个方法接收任意泛型类型的集合对象</span><br><span class="line"> &lt;?&gt; : 代表的是任意的引用数据类型</span><br><span class="line"> 集合泛型通配符只用在方法的形式参数上!!</span><br><span class="line">    </span><br><span class="line">例如: <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">shuffle</span><span class="params">(List&lt;?&gt; list)</span>:可以传入任意泛型类型的List集合...</span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型上下限"><a href="#泛型上下限" class="headerlink" title="泛型上下限"></a>泛型上下限</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">介绍一个继承关系:</span><br><span class="line">	爷爷类 Object</span><br><span class="line">    父类 Number</span><br><span class="line">    子类 Integer</span><br><span class="line"></span><br><span class="line">    需求是:</span><br><span class="line">        <span class="number">1.</span> 我要定义一个方法,要求方法只能能够接收泛型为Number类型或者Object类型的ArrayList集合</span><br><span class="line">                集合泛型的下限 : &lt;? <span class="built_in">super</span> Number&gt;</span><br><span class="line">                    ? : 你要传入的集合类型</span><br><span class="line">                    类型允许是: Number或者Number的父类型</span><br><span class="line">        <span class="number">2.</span> 我要定义一个方法,要求方法只能能够接收泛型为Number类型或者Integer类型的ArrayList集合</span><br><span class="line">                集合泛型的上限 : &lt;? <span class="keyword">extends</span> <span class="title class_">Number</span>&gt;</span><br><span class="line">                    ? : 你要传入的集合类型</span><br><span class="line">                    类型允许是: Number或者Number的子类型</span><br><span class="line"></span><br><span class="line">     重要!!!!!不管是下限还是上限,都是包含extends/<span class="built_in">super</span>后面的类型的!! 重要!!!!!</span><br><span class="line">                        </span><br><span class="line">     上限是:    &lt;? <span class="keyword">extends</span> <span class="title class_">T</span>&gt; </span><br><span class="line">     下限是:    &lt;? <span class="built_in">super</span> T&gt;  </span><br><span class="line"></span><br><span class="line">API中:</span><br><span class="line">	<span class="number">1.</span> <span class="keyword">static</span> &lt;T&gt; <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(List&lt;T&gt; list, Comparator&lt;? <span class="built_in">super</span> T&gt; c)</span></span><br><span class="line">        &lt;T&gt; 方法上的泛型</span><br><span class="line">        List&lt;T&gt; list : 传入的集合泛型是什么T就是什么类型  T代表的就是集合的泛型!</span><br><span class="line">        Comparator&lt;? <span class="built_in">super</span> T&gt; c :     </span><br><span class="line">			? <span class="built_in">super</span> T: 下限 要求Comparator比较器的泛型最低得是T类型(集合的泛型)</span><br><span class="line">                为什么这样设计?</span><br><span class="line">                	比较器是用来比较集合中的元素的,如果比较器的泛型还没有集合元素的泛型类型大,那么比较器如何去装下集合中的元素,并比较!!</span><br><span class="line">                </span><br><span class="line">     <span class="number">2.</span> <span class="keyword">static</span> &lt;T <span class="keyword">extends</span> <span class="title class_">Comparable</span>&lt;? <span class="built_in">super</span> T&gt;&gt; <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(List&lt;T&gt; list)</span>   </span><br><span class="line">         &lt;T <span class="keyword">extends</span> <span class="title class_">Comparable</span>&lt;? <span class="built_in">super</span> T&gt;&gt;</span><br><span class="line">                T: 方法的泛型 -&gt; T类型又是集合List的泛型</span><br><span class="line">                T <span class="keyword">extends</span> <span class="title class_">Comparable</span>: 要求集合的泛型必须是Comparable的子类型</span><br><span class="line">                    <span class="comment">// 导致了如果你传入的集合泛型没有实现Comparable接口就方法报错!!(变相的帮你去校验集合泛型类有没有提供比较规则)</span></span><br><span class="line">                Comparable&lt;? <span class="built_in">super</span> T&gt; : 要求比较器的泛型类型必须大于或者等于集合的泛型 </span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E6%B3%9B%E5%9E%8B/" data-id="cloxtn0cl001t5gyebs7yew8s" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/%E6%B3%A8%E8%A7%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/%E6%B1%82n%E4%BB%A5%E5%86%85%E8%8C%83%E5%9B%B4%E7%9A%84%E8%B4%A8%E6%95%B0%E7%AE%97%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

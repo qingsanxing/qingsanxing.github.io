@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Iterator接口  Iterator的声明 1public interface Iterator&lt;E&gt;    Iterator遍历数组&#x2F;集合的使用 1234567891011121314151617181920212223242526272829303132Iterator&lt;E&gt; : 迭代器的接口 --&gt; 迭代器的作用就是来遍历集合    Iterato">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Iterator接口  Iterator的声明 1public interface Iterator&lt;E&gt;    Iterator遍历数组&#x2F;集合的使用 1234567891011121314151617181920212223242526272829303132Iterator&lt;E&gt; : 迭代器的接口 --&gt; 迭代器的作用就是来遍历集合    Iterato">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8.assets/e338457f80443a74a676f61ee437117e.png">
+<meta property="article:published_time" content="2023-11-14T04:11:24.668Z">
+<meta property="article:modified_time" content="2023-11-04T06:06:22.820Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8.assets/e338457f80443a74a676f61ee437117e.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/Iterator迭代器" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.668Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Iterator接口"><a href="#Iterator接口" class="headerlink" title="Iterator接口"></a>Iterator接口</h1><br/>
+
+<p><strong>Iterator的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Iterator</span>&lt;E&gt;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>Iterator遍历数组&#x2F;集合的使用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">Iterator&lt;E&gt; : 迭代器的接口 --&gt; 迭代器的作用就是来遍历集合</span><br><span class="line">    Iterator&lt;E&gt; 是一个接口,不能创建对象!!</span><br><span class="line">    </span><br><span class="line">Collection&lt;E&gt; 接口中的方法: -&gt; 所有的单列集合都可以使用迭代器对象遍历</span><br><span class="line">	Iterator&lt;E&gt; <span class="title function_">iterator</span><span class="params">()</span>: 获取迭代器对象!!</span><br><span class="line"></span><br><span class="line">迭代器的原理:     </span><br><span class="line">	  <span class="number">1.</span> 复制一份集合的镜像 -&gt; 为什么迭代器对象也带泛型!!这个泛型和集合的泛型一致!</span><br><span class="line">    <span class="number">2.</span> 迭代器对象判断是否还有下一个元素:</span><br><span class="line">		Iterator接口:  <span class="type">boolean</span> <span class="title function_">hasNext</span><span class="params">()</span></span><br><span class="line">    <span class="number">3.</span> 如果有元素就去除元素:</span><br><span class="line">		Iterator接口: E <span class="title function_">next</span><span class="params">()</span></span><br><span class="line">    <span class="number">4.</span> 以上动作是一个重复动作,可以循环包裹! -&gt; 不明确次数的循环</span><br><span class="line">          <span class="keyword">while</span> 循环来做! </span><br><span class="line">使用步骤:</span><br><span class="line">        <span class="number">1.</span> 通过集合对象获取此集合对象的迭代器对象</span><br><span class="line">        <span class="number">2.</span> 编写<span class="keyword">while</span>循环</span><br><span class="line">        <span class="number">3.</span> 在<span class="keyword">while</span>循环的判断条件语句的位置,使用迭代器对象判断是否还有下一个元素</span><br><span class="line">        <span class="number">4.</span> 在<span class="keyword">while</span>循环的循环体语句中,使用迭代器对象获取集合中的下一个元素</span><br><span class="line"></span><br><span class="line">代码实现:</span><br><span class="line">      Collection&lt;String&gt; collection = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        collection.add(<span class="string">&quot;李云龙&quot;</span>);</span><br><span class="line">        collection.add(<span class="string">&quot;张大彪&quot;</span>);</span><br><span class="line">        collection.add(<span class="string">&quot;和尚&quot;</span>);</span><br><span class="line">        collection.add(<span class="string">&quot;政委&quot;</span>);</span><br><span class="line">        collection.add(<span class="string">&quot;田雨&quot;</span>);</span><br><span class="line">        Iterator&lt;String&gt; iterator = collection.iterator();</span><br><span class="line">        <span class="keyword">while</span>(iterator.hasNext())&#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">next</span> <span class="operator">=</span> iterator.next();</span><br><span class="line">            System.out.println(next);</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>迭代器遍历集合会出现的问题</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ConcurrentModificationException:并发修改异常 -&gt; 只可能在迭代器中出现</span><br><span class="line">        产生的原因: 在使用迭代器对象遍历集合的时候,使用集合对象对集合内容做修改,就会报错</span><br><span class="line">               内存中生成一个集合的镜像,迭代器对象每一次遍历集合的时候会检查镜像和原集合是否一致,只要不一致就会报错!</span><br><span class="line">        产生的时机: 只要当迭代器对象创建了,你就不能对原集合内容进行修改,等迭代器使用完毕后又可以对集合内容进行修改了</span><br><span class="line">        解决方案: </span><br><span class="line">			<span class="number">1.</span>不要在使用迭代器对象遍历集合的时候修改原集合的内容</span><br><span class="line">      <span class="number">2.</span>使用迭代器对象对原集合内容进行修改(ListIterator列表迭代器才有这个功能!)</span><br></pre></td></tr></table></figure>
+
+<p><strong>迭代器的原理</strong></p>
+<p><img src="/Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8.assets/e338457f80443a74a676f61ee437117e.png" alt="截图"></p>
+<br/>
+
+<p><strong>foreach</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">增强<span class="keyword">for</span>循环,foreach,超级<span class="keyword">for</span>循环 </span><br><span class="line"></span><br><span class="line">作用: 就是用来遍历集合和数组的!</span><br><span class="line">    </span><br><span class="line">格式:</span><br><span class="line">	<span class="keyword">for</span>(数据类型 变量名: 集合名/数组名)&#123;</span><br><span class="line">        <span class="comment">//对变量的操作代码</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">格式解释:</span><br><span class="line">	集合名/数组名: 你要遍历哪个集合就写那个集合名称/数组名称</span><br><span class="line">    数据类型 变量名: 接收集合中/数组中的元素   </span><br><span class="line">        数据类型: 集合 -&gt; 泛型  数组 -&gt; 元素类型</span><br><span class="line">            </span><br><span class="line">注意事项:            </span><br><span class="line">	<span class="number">1.</span> 增强<span class="keyword">for</span>循环的底层是一个迭代器对象,所以不能在使用增强<span class="keyword">for</span>循环的时候去修改集合/数组中的元素内容</span><br><span class="line">  	<span class="number">2.</span> 不要在增强<span class="keyword">for</span>中做一些比较复杂的操作,增强<span class="keyword">for</span>只为快速遍历!</span><br><span class="line">  	<span class="number">3.</span> 只要一个类实现了一个接口 : Iterable接口 就可以使用增强<span class="keyword">for</span></span><br><span class="line">        换句话说能用迭代器遍历的容器都可以使用增强<span class="keyword">for</span>            </span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8/" data-id="cloxtn0c4000g5gyegk1o557p" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/Java%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/IO%E6%B5%81/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

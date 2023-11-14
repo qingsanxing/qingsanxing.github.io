@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="TreeSet集合  TreeSet的声明 123public class TreeSet&lt;E&gt;extends AbstractSet&lt;E&gt;implements NavigableSet&lt;E&gt;, Cloneable, Serializable    TreeSet的使用 1234567891011121314151617181920212223242526Tre">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/TreeSet%E9%9B%86%E5%90%88/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="TreeSet集合  TreeSet的声明 123public class TreeSet&lt;E&gt;extends AbstractSet&lt;E&gt;implements NavigableSet&lt;E&gt;, Cloneable, Serializable    TreeSet的使用 1234567891011121314151617181920212223242526Tre">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/TreeSet%E9%9B%86%E5%90%88.assets/59ac372996f25917dcf786aed859b5a1.png">
+<meta property="article:published_time" content="2023-11-14T04:11:24.723Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.289Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/TreeSet%E9%9B%86%E5%90%88.assets/59ac372996f25917dcf786aed859b5a1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/TreeSet集合" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/TreeSet%E9%9B%86%E5%90%88/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.723Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="TreeSet集合"><a href="#TreeSet集合" class="headerlink" title="TreeSet集合"></a>TreeSet集合</h1><br/>
+
+<p><strong>TreeSet的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TreeSet</span>&lt;E&gt;</span><br><span class="line"><span class="keyword">extends</span> <span class="title class_">AbstractSet</span>&lt;E&gt;</span><br><span class="line"><span class="keyword">implements</span> <span class="title class_">NavigableSet</span>&lt;E&gt;, Cloneable, Serializable</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>TreeSet的使用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">TreeSet&lt;E&gt;底层是红黑树结构的set集合</span><br><span class="line">    红黑树结构: 排序,查找效率,去重!!</span><br><span class="line">        </span><br><span class="line">创建对象:</span><br><span class="line">	      TreeSet&lt;E&gt; 集合名 = <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;E&gt;(); <span class="comment">// 必须泛型类E提供排序规则</span></span><br><span class="line">        TreeSet(Comparator&lt;E&gt; comparator);<span class="comment">//自己在创建TreeSet集合提供规则</span></span><br><span class="line">增删改查: <span class="comment">//和Set集合一模一样</span></span><br><span class="line">	增:</span><br><span class="line">		    <span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E e)</span>  : 添加元素返回添加是否成功!!</span><br><span class="line">    删:</span><br><span class="line">		    <span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object o)</span>  : 按照元素值删除元素,并返回删除是否成功!!</span><br><span class="line">        <span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span> : 清空集合中所有的元素</span><br><span class="line">    改: 因为没有索引,所以没有set方法</span><br><span class="line">    查: 因为没有索引,所以没有get方法</span><br><span class="line">        <span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(Object obj)</span>: 查询元素是否包含在集合中</span><br><span class="line">        <span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span>: 查询集合是否为空集合</span><br><span class="line">        <span class="type">int</span> <span class="title function_">size</span><span class="params">()</span>: 查询集合的长度</span><br><span class="line">遍历:</span><br><span class="line">	  <span class="number">1.</span> 转数组: Object[] toArray()  </span><br><span class="line">    <span class="number">2.</span> 普通迭代器: Iterator&lt;E&gt; <span class="title function_">iterator</span><span class="params">()</span> </span><br><span class="line">    <span class="number">3.</span> 增强<span class="keyword">for</span>:	</span><br><span class="line"></span><br><span class="line">TreeSet&lt;E&gt;集合具备排序的能力:</span><br><span class="line">	自然排序规则: 升序</span><br><span class="line">    	Integer : 升序</span><br><span class="line">      String : 字符串中字符的ASCII码值的升序进行排列,字符越往前优先级越高</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用两种比较器排序</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//默认使用Comparable排序默认升序</span></span><br><span class="line">        TreeSet&lt;Integer&gt; integers = <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;&gt;();</span><br><span class="line">        integers.add(<span class="number">34</span>);</span><br><span class="line">        integers.add(<span class="number">1</span>);</span><br><span class="line">        integers.add(<span class="number">234</span>);</span><br><span class="line">        integers.add(<span class="number">345</span>);</span><br><span class="line">        integers.add(<span class="number">24</span>);</span><br><span class="line">        integers.add(<span class="number">34345</span>);</span><br><span class="line">        integers.add(<span class="number">134</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;integerTreeSet = &quot;</span> + integers);</span><br><span class="line">        <span class="comment">//使用Comparator比较器排序</span></span><br><span class="line">        TreeSet&lt;Integer&gt; integerTreeSet = <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;&gt;(<span class="keyword">new</span> <span class="title class_">Comparator</span>&lt;Integer&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(Integer o1, Integer o2)</span> &#123; <span class="comment">//o1 - o2 升序 o2 -o1 降序</span></span><br><span class="line">                <span class="keyword">return</span> o2 - o1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        integerTreeSet.add(<span class="number">20</span>);</span><br><span class="line">        integerTreeSet.add(<span class="number">1</span>);</span><br><span class="line">        integerTreeSet.add(<span class="number">234</span>);</span><br><span class="line">        integerTreeSet.add(<span class="number">345</span>);</span><br><span class="line">        integerTreeSet.add(<span class="number">24</span>);</span><br><span class="line">        integerTreeSet.add(<span class="number">34345</span>);</span><br><span class="line">        integerTreeSet.add(<span class="number">134</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;integerTreeSet = &quot;</span> + integerTreeSet);</span><br></pre></td></tr></table></figure>
+
+<p><strong>TreeSet集合存储自定义对象排序</strong>  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line">TreeSet集合具备排序能力!! 但是排序规则得程序员提供!!</span><br><span class="line"></span><br><span class="line">    String和Integer能排序是因为 String和Integer 提供了排序规则!</span><br><span class="line"></span><br><span class="line">    结论: 想让TreeSet集合排序,必须给TreeSet集合提供排序规则!</span><br><span class="line">        <span class="comment">//若不给泛型类提供排序规则,那么使用TreeSet集合报错</span></span><br><span class="line"></span><br><span class="line">    提供规则的方式有<span class="number">2</span>种:</span><br><span class="line">        <span class="number">1.</span> 让需要排序的类实现比较器接口 Comparable&lt;E&gt;</span><br><span class="line">                --&gt; 绑定比较器(此比较器和需要排序的类在一起)</span><br><span class="line">        <span class="number">2.</span> TreeSet集合的构造方法:</span><br><span class="line">                TreeSet(Comparator&lt;E&gt; comparator)</span><br><span class="line">           Comparator&lt;E&gt; comparator : 独立比较器接口 -&gt; 此比较器不需要跟 需要排序的类绑定</span><br><span class="line">           应用场景: 比如我要修改Integer的排序规则,修改String的排序规则</span><br><span class="line">代码:</span><br><span class="line"><span class="number">1.</span> 使用Comparable比较器排序</span><br><span class="line">people类:</span><br><span class="line"><span class="keyword">import</span> java.util.Objects;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">People</span> <span class="keyword">implements</span> <span class="title class_">Comparable</span>&lt;People&gt;&#123;<span class="comment">//注意使用Comparable比较强排序自定义类，要实现Comparable接口并加泛型</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">People</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">People</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAge</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(<span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object o)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span> == o) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (o == <span class="literal">null</span> || getClass() != o.getClass()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="type">People</span> <span class="variable">people</span> <span class="operator">=</span> (People) o;</span><br><span class="line">        <span class="keyword">return</span> age == people.age &amp;&amp;</span><br><span class="line">                Objects.equals(name, people.name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> Objects.hash(name, age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;People&#123;&quot;</span> +</span><br><span class="line">                <span class="string">&quot;name=&#x27;&quot;</span> + name + <span class="string">&#x27;\&#x27;&#x27;</span> +</span><br><span class="line">                <span class="string">&quot;, age=&quot;</span> + age +</span><br><span class="line">                <span class="string">&#x27;&#125;&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compareTo</span><span class="params">(People o)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> age - o.age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">测试代码:</span><br><span class="line">        TreeSet&lt;People&gt; peoples = <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;&gt;();</span><br><span class="line">        peoples.add(<span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;张子枫&quot;</span>,<span class="number">20</span>));</span><br><span class="line">        peoples.add(<span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;吴磊&quot;</span>,<span class="number">21</span>));</span><br><span class="line">        peoples.add(<span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;胡歌&quot;</span>,<span class="number">35</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;peoples = &quot;</span> + peoples);</span><br><span class="line">        <span class="comment">//peoples = [People&#123;name=&#x27;张子枫&#x27;, age=20&#125;, People&#123;name=&#x27;吴磊&#x27;, age=21&#125;, People&#123;name=&#x27;胡歌&#x27;, age=35&#125;]</span></span><br><span class="line">        </span><br><span class="line"><span class="number">2.</span>使用Comparator比较器排序</span><br><span class="line">        TreeSet&lt;People&gt; people = <span class="keyword">new</span> <span class="title class_">TreeSet</span>&lt;&gt;(<span class="keyword">new</span> <span class="title class_">Comparator</span>&lt;People&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(People o1, People o2)</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> o2.getAge() - o1.getAge();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        people.add(<span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;张子枫&quot;</span>,<span class="number">20</span>));</span><br><span class="line">        people.add(<span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;吴磊&quot;</span>,<span class="number">21</span>));</span><br><span class="line">        people.add(<span class="keyword">new</span> <span class="title class_">People</span>(<span class="string">&quot;胡歌&quot;</span>,<span class="number">35</span>));</span><br><span class="line">        System.out.println(<span class="string">&quot;people = &quot;</span> + people); </span><br><span class="line">        <span class="comment">//people = [People&#123;name=&#x27;胡歌&#x27;, age=35&#125;, People&#123;name=&#x27;吴磊&#x27;, age=21&#125;, People&#123;name=&#x27;张子枫&#x27;, age=20&#125;]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>TreeSet底层原理</strong></p>
+<p><img src="/TreeSet%E9%9B%86%E5%90%88.assets/59ac372996f25917dcf786aed859b5a1.png" alt="截图"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/TreeSet%E9%9B%86%E5%90%88/" data-id="cloxtn0cc00135gye80w8b8tr" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/Vector%E9%9B%86%E5%90%88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/TreeMap%E9%9B%86%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

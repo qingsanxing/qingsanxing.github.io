@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="接口123456类: 一类事物的抽象~ 抽象类: 比类更为抽象的类叫抽象类~(抽象类中可能有抽象方法)接口: 接口是比抽象类更抽象的类~(当一个类中所有的方法都是抽象方法的时候就可以把这个类定义成接口)interface --&gt; 接口的关键class --&gt; 类的关键字enum --&gt; 枚举类型的关键字  接口的定义格式12345格式：  public interface 接口名">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/%E6%8E%A5%E5%8F%A3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="接口123456类: 一类事物的抽象~ 抽象类: 比类更为抽象的类叫抽象类~(抽象类中可能有抽象方法)接口: 接口是比抽象类更抽象的类~(当一个类中所有的方法都是抽象方法的时候就可以把这个类定义成接口)interface --&gt; 接口的关键class --&gt; 类的关键字enum --&gt; 枚举类型的关键字  接口的定义格式12345格式：  public interface 接口名">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T04:11:24.760Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.307Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/接口" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E6%8E%A5%E5%8F%A3/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.760Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">类: 一类事物的抽象~ </span><br><span class="line">抽象类: 比类更为抽象的类叫抽象类~(抽象类中可能有抽象方法)</span><br><span class="line">接口: 接口是比抽象类更抽象的类~(当一个类中所有的方法都是抽象方法的时候就可以把这个类定义成接口)</span><br><span class="line">interface --&gt; 接口的关键</span><br><span class="line">class --&gt; 类的关键字</span><br><span class="line"><span class="keyword">enum</span> --&gt; 枚举类型的关键字</span><br></pre></td></tr></table></figure>
+
+<h4 id="接口的定义格式"><a href="#接口的定义格式" class="headerlink" title="接口的定义格式"></a>接口的定义格式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">格式：</span><br><span class="line">  <span class="keyword">public</span> interface 接口名&#123;</span><br><span class="line">    <span class="comment">//接口的成员</span></span><br><span class="line">  &#125;</span><br><span class="line">  接口名：命名规范和类的命名规范一致</span><br></pre></td></tr></table></figure>
+
+<h4 id="接口和类之间的关系"><a href="#接口和类之间的关系" class="headerlink" title="接口和类之间的关系"></a>接口和类之间的关系</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">类与类之间 -&gt; 继承关系：单一继承，多层继承-&gt; extends</span><br><span class="line">抽象类与类之间-&gt;继承关系：单一继承，多层继承-&gt;extends</span><br><span class="line">接口和类之间-&gt;实现关系-&gt;implements-&gt;多实现</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//接口的出现打破Java继承的单一性</span></span><br><span class="line">接口和接口之间-&gt;继承关系-&gt;extends-&gt;多继承</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="接口的成员"><a href="#接口的成员" class="headerlink" title="接口的成员"></a>接口的成员</h4><h5 id="JDK8之前的接口成员（平时使用最多）"><a href="#JDK8之前的接口成员（平时使用最多）" class="headerlink" title="JDK8之前的接口成员（平时使用最多）"></a>JDK8之前的接口成员（平时使用最多）</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">JDK8之前的接口成员：</span><br><span class="line">  <span class="number">1.</span>成员变量：不可以有</span><br><span class="line">  <span class="number">2.</span>自定义常量：可以没有，可以有--&gt;接口中的成员变量都是自定义常量</span><br><span class="line">      接口中的自定义常量默认被：<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> 修饰</span><br><span class="line">  <span class="number">3.</span>构造方法不可有</span><br><span class="line">  <span class="number">4.</span>成员方法：不可以有JDK8之前的接口中的所有方法都是抽象方法</span><br><span class="line">  <span class="number">5.</span>抽象方法：可以没有，也可以有</span><br><span class="line">      何时使用接口：当一个类中所有的方法都是抽象方法，就可以把这个类定义成接口</span><br><span class="line">      接口的成员方法默认被：<span class="keyword">public</span> <span class="keyword">abstract</span> 修饰所以都是抽象方法</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+<h5 id="JDK8的接口成员"><a href="#JDK8的接口成员" class="headerlink" title="JDK8的接口成员"></a>JDK8的接口成员</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">JDK8中的接口成员：在JDK8之前版本基础上添加</span><br><span class="line"><span class="number">1.</span>默认方法:<span class="comment">//选择性重写</span></span><br><span class="line">  格式：</span><br><span class="line">      <span class="keyword">public</span> <span class="keyword">default</span> 返回值类型 方法名(形式参数列表)&#123;</span><br><span class="line">          方法体;</span><br><span class="line">          <span class="comment">//return 值;</span></span><br><span class="line">      &#125;</span><br><span class="line">  </span><br><span class="line">  注意：</span><br><span class="line">      <span class="number">1.</span>实现类实现父接口重写父接口中所有抽象方法</span><br><span class="line">      <span class="number">2.</span>父接口中的默认方法是可以选择性重写</span><br><span class="line">      <span class="number">3.</span>默认方法只能用接口的实现类对象去调用</span><br><span class="line">      <span class="number">4.</span>当实现类实现的多个父接口中有相同生命的默认方法</span><br><span class="line">          那么实现类必须重写父接口的默认方法</span><br><span class="line">      <span class="number">5.</span>默认方法的默认修饰符：<span class="keyword">public</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>静态方法：<span class="comment">//不能重写</span></span><br><span class="line">    格式：</span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">static</span> 返回值类型 方法名(形式参数列表)&#123;</span><br><span class="line">            方法体;</span><br><span class="line">            <span class="comment">//return 值;</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">    注意：</span><br><span class="line">        <span class="number">1.</span>父接口中编写静态方法，实现类是不需要做任何操作的</span><br><span class="line">        <span class="number">2.</span>静态方法是没有重写概念</span><br><span class="line">        <span class="number">3.</span>父接口中静态方法是不可以使用实现类对象调用的</span><br><span class="line">        <span class="number">4.</span>父接口中静态方法只能使用父类接口名直接调用</span><br><span class="line">        <span class="number">5.</span>默认被<span class="keyword">public</span>修饰</span><br><span class="line">      接口中最重要的关键字是：<span class="keyword">public</span></span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+<h5 id="JDK9的接口成员"><a href="#JDK9的接口成员" class="headerlink" title="JDK9的接口成员"></a>JDK9的接口成员</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">JDK9中的接口成员：在JDK8基础上添加</span><br><span class="line">    <span class="number">1.</span>私有方法：-&gt;给JDK8中新增的默认方法和静态方法做服务</span><br><span class="line">        普通私有方法:用来专门给默认方法服务的</span><br><span class="line">          格式：</span><br><span class="line">              <span class="keyword">private</span> 返回值类型 方法名(形式参数列表)&#123;</span><br><span class="line">                  方法体;</span><br><span class="line">                  <span class="comment">//return 值;</span></span><br><span class="line">              &#125;</span><br><span class="line">      <span class="number">2.</span> 静态私有方法：用来专门给静态方法服务的</span><br><span class="line">            <span class="keyword">private</span> <span class="keyword">static</span> 返回值类型 方法名(形式参数列表)&#123;</span><br><span class="line">                方法体;</span><br><span class="line">                <span class="comment">//return 值;</span></span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="接口的使用"><a href="#接口的使用" class="headerlink" title="接口的使用"></a>接口的使用</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">接口的含义-&gt; 规则需要公开--&gt;public</span><br><span class="line">从父接口往实现类看：</span><br><span class="line">    约束子类的行为</span><br><span class="line">从实现类往父接口看:</span><br><span class="line">    拓展了实现类的功能</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E6%8E%A5%E5%8F%A3/" data-id="cloxtn0cj001p5gye6y4hdqea" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/%E6%96%87%E6%A1%A3%E6%B3%A8%E9%87%8A/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/%E6%8A%BD%E8%B1%A1%E7%B1%BB/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

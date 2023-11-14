@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="正则表达式      正则表达式语法转义字符 . * + ( )  $ &#x2F;  \  ?  [ ]  ^  { } - | ?  等 上述元字符在正则表达式中使用需要用到\\  字符匹配符   符号 含义 示例 解释    [ ] 可接收的字符列表 [efgh] e、f、g、h中的任意1个字符   [^] 不接收的字符列表 [^abc] 除a、b、c之外的任意1个字符，包含数字和特殊符号">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/Java%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="正则表达式      正则表达式语法转义字符 . * + ( )  $ &#x2F;  \  ?  [ ]  ^  { } - | ?  等 上述元字符在正则表达式中使用需要用到\\  字符匹配符   符号 含义 示例 解释    [ ] 可接收的字符列表 [efgh] e、f、g、h中的任意1个字符   [^] 不接收的字符列表 [^abc] 除a、b、c之外的任意1个字符，包含数字和特殊符号">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T04:11:24.670Z">
+<meta property="article:modified_time" content="2023-05-02T07:20:19.742Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/Java正则表达式" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/Java%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.670Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <center><h1>正则表达式</h1></center>
+
+
+
+
+
+<h2 id="正则表达式语法"><a href="#正则表达式语法" class="headerlink" title="正则表达式语法"></a>正则表达式语法</h2><h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><ul>
+<li>. * + ( )  $ &#x2F;  \  ?  [ ]  ^  { } - | ?  等</li>
+<li>上述元字符在正则表达式中使用需要用到\\</li>
+</ul>
+<h3 id="字符匹配符"><a href="#字符匹配符" class="headerlink" title="字符匹配符"></a>字符匹配符</h3><table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">含义</th>
+<th align="center">示例</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">[ ]</td>
+<td align="center">可接收的字符列表</td>
+<td align="center">[efgh]</td>
+<td align="center">e、f、g、h中的任意1个字符</td>
+</tr>
+<tr>
+<td align="center">[^]</td>
+<td align="center">不接收的字符列表</td>
+<td align="center">[^abc]</td>
+<td align="center">除a、b、c之外的任意1个字符，包含数字和特殊符号</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">连字符</td>
+<td align="center">A-Z</td>
+<td align="center">任意单个大写字母</td>
+</tr>
+<tr>
+<td align="center">.</td>
+<td align="center">匹配\n以外的任何字符</td>
+<td align="center">a..b</td>
+<td align="center">以a开头，b结尾，中间包括2个任意字符的长度为4的字符串</td>
+</tr>
+<tr>
+<td align="center">\\d</td>
+<td align="center">匹配单个数字字符，相当于[0-9]</td>
+<td align="center">\\d{3}(\\d)?</td>
+<td align="center">包含3个或4个数字的字符串</td>
+</tr>
+<tr>
+<td align="center">\\D</td>
+<td align="center">匹配单个非数字字符，相当于 [^0-9]</td>
+<td align="center">\\D(\\d)*</td>
+<td align="center">以单个非数字字符开头，后接任意个数字字符串</td>
+</tr>
+<tr>
+<td align="center">\\w</td>
+<td align="center">匹配单个数字、大小写字母字符、下划线，相当于<br>[0-9a-zA-Z_]</td>
+<td align="center">\\d{3}\\w{4}</td>
+<td align="center">以三个数字字符开头的长度为7的数字字母下划线字符串</td>
+</tr>
+<tr>
+<td align="center">\\W</td>
+<td align="center">匹配单个非数字、大小写字母字符、下划线，相当于<br/>[^0-9a-zA-Z_]</td>
+<td align="center">\\W+\\d{2}</td>
+<td align="center">以至少一个非数字字母下划线字符开头，2个数字字符串结尾的字符串</td>
+</tr>
+<tr>
+<td align="center">\\s</td>
+<td align="center">匹配任何空白字符（空格，制表符等）</td>
+<td align="center">\\s\\d</td>
+<td align="center">以一个空白字符开头，和数字字符结尾长度为2字符串</td>
+</tr>
+<tr>
+<td align="center">\\S</td>
+<td align="center">匹配任何非空白字符（空格，制表符等）</td>
+<td align="center">\\S\\d</td>
+<td align="center">以一个非空白字符开头，数字字符结尾长度为2字符串</td>
+</tr>
+</tbody></table>
+<h3 id="选择匹配符"><a href="#选择匹配符" class="headerlink" title="选择匹配符"></a>选择匹配符</h3><table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">含义</th>
+<th align="center">示例</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">|</td>
+<td align="center">匹配”|”之前或之后的表达式</td>
+<td align="center">ab|cd</td>
+<td align="center">ab或者cd</td>
+</tr>
+</tbody></table>
+<h3 id="限定符"><a href="#限定符" class="headerlink" title="限定符"></a>限定符</h3><table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">含义</th>
+<th align="center">示例</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">*</td>
+<td align="center">指定字符重复0次或n次</td>
+<td align="center">(abc)*</td>
+<td align="center">仅包含任意个abc的字符串</td>
+</tr>
+<tr>
+<td align="center">+</td>
+<td align="center">指定字符重复1次或n次</td>
+<td align="center">m+(abc)*</td>
+<td align="center">至少以一个m开头，后接任意个abc的字符串</td>
+</tr>
+<tr>
+<td align="center">?</td>
+<td align="center">指定字符重复0次或1次</td>
+<td align="center">m+abc?</td>
+<td align="center">至少1个m开头，后接ab或abc的字符串</td>
+</tr>
+<tr>
+<td align="center">{n}</td>
+<td align="center">只能输入n个字符</td>
+<td align="center">[abcd]{3}</td>
+<td align="center">由abcd中任意字母组成长度为3的字符串</td>
+</tr>
+<tr>
+<td align="center">{n,}</td>
+<td align="center">指定至少n个匹配</td>
+<td align="center">[abcd]{3,}</td>
+<td align="center">由abcd中任意字母组成长度不小于3的字符串</td>
+</tr>
+<tr>
+<td align="center">{n,m}</td>
+<td align="center">指定至少n个但不多于m个匹配</td>
+<td align="center">[abcd]{3,5}</td>
+<td align="center">由abcd中任意字母组成长度不小于3，不大于5的字符串</td>
+</tr>
+</tbody></table>
+<ul>
+<li>注意<ul>
+<li>Java匹配时贪婪匹配，尽可能匹配多的字符,比如”aaaaa”, {3,},则将会匹配”aaaaa”</li>
+</ul>
+</li>
+</ul>
+<h3 id="定位符"><a href="#定位符" class="headerlink" title="定位符"></a>定位符</h3><table>
+<thead>
+<tr>
+<th align="center">符号</th>
+<th align="center">含义</th>
+<th align="center">示例</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">^</td>
+<td align="center">指定起始字符</td>
+<td align="center">^[0-9]+[a-z]*</td>
+<td align="center">至少以1个数字开头，后接任意个小写字母的字符串</td>
+</tr>
+<tr>
+<td align="center">$</td>
+<td align="center">指定结束字符</td>
+<td align="center">^[0-9]\\-[a-z]+$</td>
+<td align="center">以1个数字开头后接连字符”-“,并以至少1个小写字母结尾的字符串</td>
+</tr>
+<tr>
+<td align="center">\\b</td>
+<td align="center">匹配目标字符串的边界</td>
+<td align="center">han\\b</td>
+<td align="center">这里说的字符串的边界指的是子串间有空格，或者是目标字符串的结束位置</td>
+</tr>
+<tr>
+<td align="center">\\B</td>
+<td align="center">匹配目标字符串的非边界</td>
+<td align="center">han\\B</td>
+<td align="center">和\\b相反</td>
+</tr>
+</tbody></table>
+<h3 id="分组和捕获"><a href="#分组和捕获" class="headerlink" title="分组和捕获"></a>分组和捕获</h3><ul>
+<li>分组<ul>
+<li>我们可以用圆括号组成一个比较复杂的匹配摸式，那么一个圆括号的部分我们可以看作是一个子表达式&#x2F;一个分组。</li>
+</ul>
+</li>
+<li>捕获<ul>
+<li>把正则表达式中子表达式&#x2F;分组匹配的内容，保存到内存中以数字编号或显式命名的组里，方便后面引用，从左向右，以分组的左括号为标志，第一个出现的分组的组号为1，第二个为2，以此类推。组0代表的是整个正则式。</li>
+<li>将匹配的字符串捕获到一个组名称或编号名称中。用name的字符串不能包含任何标点符号，并且不能以数字开头。可以使用单引号代替尖括号，例如(?’name’)</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>常用分组构造形式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>(pattern)</td>
+<td>非命名捕获。捕获匹配的子字符串。编号为零的第一个捕获是由整个正则表达式模式匹配的文本，其他捕获结果则根据左括号的顺序从1开始自动编号。</td>
+</tr>
+<tr>
+<td>(?<name>patter)</td>
+<td>命名捕获。将匹配的字符串捕获到一个组名称或编号名称中。用name的字符串不能包含任何标点符号，并且不能以数字开头。可以使用单引号代替尖括号，例如(?’name’)</td>
+</tr>
+<tr>
+<td>(?:pattern)</td>
+<td>匹配pattern但不捕获该匹配的子表达式，即它是一个非捕获匹配，不存储供以后使用的匹配。这对于”or”字符(|)组合模式部件的情况很有用。例如,’industr(?:y|ies)是比’industr|industries’更经济的表达式</td>
+</tr>
+<tr>
+<td>(?&#x3D;pattern)</td>
+<td>它是一个非捕获匹配。例如，’Windows(?&#x3D;95|98|NT|2000)’匹配”Windows 2000”中的”Windows”,但不匹配”Windows 3.1”中的”Windows”.</td>
+</tr>
+<tr>
+<td>(?!pattern)</td>
+<td>该表达式匹配不处于匹配pattern的字符串的起始点的搜索字符串。它是一个非捕获匹配。例如，’Windos(?!95|98|NT|2000)’匹配”Windows 3.1”中的”Windows”，但不匹配”Windows 2000”中的”Windows”。</td>
+</tr>
+</tbody></table>
+<ul>
+<li>捕获分组</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.regexp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@title</span>: RegExp02</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> yyq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2023/4/6 16:05</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span> 分组</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RegExp02</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">content</span> <span class="operator">=</span> <span class="string">&quot;yiyuqing s7789 nn 1189yyq&quot;</span>;</span><br><span class="line">        <span class="comment">//1.非命名捕获</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">regStr</span> <span class="operator">=</span> <span class="string">&quot;(\\d\\d)(\\d\\d)&quot;</span>;</span><br><span class="line">        <span class="comment">//2.命名捕获</span></span><br><span class="line">        regStr = <span class="string">&quot;(?&lt;g1&gt;\\d\\d)(?&lt;g2&gt;\\d\\d)&quot;</span>;</span><br><span class="line">        <span class="type">Pattern</span> <span class="variable">pattern</span> <span class="operator">=</span> Pattern.compile(regStr);</span><br><span class="line">        <span class="type">Matcher</span> <span class="variable">matcher</span> <span class="operator">=</span> pattern.matcher(content);</span><br><span class="line">        <span class="comment">//非命名捕获</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        while (matcher.find()) &#123;</span></span><br><span class="line"><span class="comment">            System.out.println(&quot;找到 &quot; + matcher.group(0));</span></span><br><span class="line"><span class="comment">            System.out.println(&quot;第一个分组内容 &quot; + matcher.group(1));</span></span><br><span class="line"><span class="comment">            System.out.println(&quot;第二个分组内容 &quot; + matcher.group(2));</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="comment">//命名捕获,也可以用编号</span></span><br><span class="line">        <span class="keyword">while</span> (matcher.find()) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;找到 &quot;</span> + matcher.group(<span class="number">0</span>));</span><br><span class="line">            System.out.println(<span class="string">&quot;第一个分组g1内容 &quot;</span> + matcher.group(<span class="string">&quot;g1&quot;</span>));</span><br><span class="line">            System.out.println(<span class="string">&quot;第二个分组g2内容 &quot;</span> + matcher.group(<span class="string">&quot;g2&quot;</span>));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>非捕获分组</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.regexp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@title</span>: RegExp03</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> yyq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2023/4/6 16:29</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span> 非捕获分组 ()里面pattern不会捕获，所以该写法是一个单组，只有一个组group(0)，写group(1)会报错</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RegExp03</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line"></span><br><span class="line">        <span class="type">String</span> <span class="variable">content</span> <span class="operator">=</span> <span class="string">&quot;hello韩顺平教育 jack韩顺平老师 韩顺平同学hello&quot;</span>;</span><br><span class="line">        String regStr;</span><br><span class="line">        <span class="comment">//1.找到韩顺平教育、韩顺平老师、韩顺平同学子字符串</span></span><br><span class="line">        regStr = <span class="string">&quot;韩顺平教育|韩顺平老师|韩顺平同学&quot;</span>;</span><br><span class="line">        <span class="comment">//和上面等价</span></span><br><span class="line">        regStr = <span class="string">&quot;韩顺平(?:教育|老师|同学)&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//2.找到韩顺平这个关键字，要求只是查找韩顺平教育和韩顺平老师中包含的韩顺平</span></span><br><span class="line">        regStr = <span class="string">&quot;韩顺平(?=教育|老师)&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//3.找到韩顺平这个关键字，要求只是查找不是(韩顺平教育和韩顺平老师)中包含的韩顺平</span></span><br><span class="line">        regStr = <span class="string">&quot;韩顺平(?!教育|老师)&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="type">Pattern</span> <span class="variable">pattern</span> <span class="operator">=</span> Pattern.compile(regStr);</span><br><span class="line">        <span class="type">Matcher</span> <span class="variable">matcher</span> <span class="operator">=</span> pattern.matcher(content);</span><br><span class="line">        <span class="keyword">while</span> (matcher.find()) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;找到 &quot;</span> + matcher.group(<span class="number">0</span>));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>非贪婪匹配</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.regexp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@title</span>: RegExp04</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> yyq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2023/4/6 17:15</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span> 非贪婪匹配</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RegExp04</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">content</span> <span class="operator">=</span> <span class="string">&quot;hello11111 ok&quot;</span>;</span><br><span class="line">        String regStr;</span><br><span class="line">        <span class="comment">//默认贪婪匹配</span></span><br><span class="line">        regStr = <span class="string">&quot;\\d+&quot;</span>;</span><br><span class="line">        <span class="comment">//非贪婪匹配</span></span><br><span class="line">        regStr = <span class="string">&quot;\\d+?&quot;</span>;</span><br><span class="line">        <span class="type">Pattern</span> <span class="variable">pattern</span> <span class="operator">=</span> Pattern.compile(regStr);</span><br><span class="line">        <span class="type">Matcher</span> <span class="variable">matcher</span> <span class="operator">=</span> pattern.matcher(content);</span><br><span class="line">        <span class="keyword">while</span> (matcher.find()) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;找到 &quot;</span> + matcher.group(<span class="number">0</span>));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="正则表达式应用"><a href="#正则表达式应用" class="headerlink" title="正则表达式应用"></a>正则表达式应用</h2><ul>
+<li>案例一</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.regexp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@title</span>: RegExp05</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> yyq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2023/4/7 8:30</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span> 正则表达式应用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RegExp05</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        String content;</span><br><span class="line">        String regStr;</span><br><span class="line">        <span class="comment">//1.汉字</span></span><br><span class="line">        content = <span class="string">&quot;韩顺平教育&quot;</span>;</span><br><span class="line">        regStr = <span class="string">&quot;^[\u0391-\uffe5]+$&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//2.邮政编码,要求：是1-9开头的一个六位数。</span></span><br><span class="line">        content = <span class="string">&quot;123564&quot;</span>;</span><br><span class="line">        regStr = <span class="string">&quot;^[1-9]\\d&#123;5&#125;$&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//3.QQ号，要求：是1-9开头的一个(5位数-10位数)</span></span><br><span class="line">        content = <span class="string">&quot;546367602a&quot;</span>;</span><br><span class="line">        regStr = <span class="string">&quot;^[1-9]\\d&#123;4,9&#125;$&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//4.手机号，要求：必须以13,14,15,18开头的11位数</span></span><br><span class="line">        content = <span class="string">&quot;15971208342&quot;</span>;</span><br><span class="line">        regStr = <span class="string">&quot;^1[3458]\\d&#123;9&#125;$&quot;</span>;</span><br><span class="line">        regStr = <span class="string">&quot;^1(?:3|4|5|8)\\d&#123;9&#125;$&quot;</span>;</span><br><span class="line"></span><br><span class="line">        <span class="type">Pattern</span> <span class="variable">pattern</span> <span class="operator">=</span> Pattern.compile(regStr);</span><br><span class="line">        <span class="type">Matcher</span> <span class="variable">matcher</span> <span class="operator">=</span> pattern.matcher(content);</span><br><span class="line">        <span class="keyword">if</span> (matcher.find()) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;找到:&quot;</span> + matcher.group(<span class="number">0</span>));</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;不满足条件&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>案例二</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.regexp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@title</span>: RegExp06</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> yyq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2023/4/7 9:12</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span> 验证URL</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RegExp06</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">content</span> <span class="operator">=</span> <span class="string">&quot;https://www.bilibili.com/video/BV1Eq4y1E79W?p=17&amp;spm_id_from=pageDriver&amp;vd_source=9c867d4264667cd620c3339e66e28ba6&quot;</span>;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            思路：</span></span><br><span class="line"><span class="comment">                1.开头部分 https:// | http://  可以有也可以没有</span></span><br><span class="line"><span class="comment">                2.然后确定域名 ([\w-]+\.)+[\w-]+</span></span><br><span class="line"><span class="comment">                3.资源地址 (\/[\w-?=&amp;/%.#]*)?  可以有可以没有</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="comment">//[]中特殊字符不用转义</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">regStr</span> <span class="operator">=</span> <span class="string">&quot;^((http|https)://)?([\\w-]+\\.)+[\\w-]+(\\/[\\w-?=&amp;/%.#]*)?$&quot;</span>;</span><br><span class="line">        <span class="type">Pattern</span> <span class="variable">pattern</span> <span class="operator">=</span> Pattern.compile(regStr);</span><br><span class="line">        <span class="type">Matcher</span> <span class="variable">matcher</span> <span class="operator">=</span> pattern.matcher(content);</span><br><span class="line">        <span class="keyword">if</span> (matcher.find())&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;找到 &quot;</span> + matcher.group(<span class="number">0</span>));</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;不满足要求!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="正则表达式三个常用类"><a href="#正则表达式三个常用类" class="headerlink" title="正则表达式三个常用类"></a>正则表达式三个常用类</h2><h3 id="Pattern类"><a href="#Pattern类" class="headerlink" title="Pattern类"></a>Pattern类</h3><ul>
+<li><p>常用方法  </p>
+<ul>
+<li><p>Pattern.matches(regStr, content)</p>
+</li>
+<li><blockquote>
+<p>返回值:boolean</p>
+<p>参数一：正则表达式</p>
+<p>参数二：匹配文本</p>
+<p>作用：该方法将正则表达式整体与文本匹配，可以不用加^$定位符</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.regexp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@title</span>: PatterMethod</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> yyq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2023/4/11 14:03</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span> 演示matches方法，用于整体匹配,整体匹配可以不用^$定位符</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PatterMethod</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">content</span> <span class="operator">=</span> <span class="string">&quot;hello abc hello&quot;</span>;</span><br><span class="line">        String regStr;</span><br><span class="line">        regStr = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">        regStr = <span class="string">&quot;hello.*&quot;</span>;</span><br><span class="line">        <span class="type">boolean</span> <span class="variable">matches</span> <span class="operator">=</span> Pattern.matches(regStr, content);</span><br><span class="line">        System.out.println(<span class="string">&quot;整体匹配:&quot;</span> + matches);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Matcher类"><a href="#Matcher类" class="headerlink" title="Matcher类"></a>Matcher类</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public int start()</td>
+<td>返回以前匹配的初始索引</td>
+</tr>
+<tr>
+<td>public int start(int group)</td>
+<td>返回在以前的匹配操作期间，由给定组所捕获的子序列的初始索引</td>
+</tr>
+<tr>
+<td>public int end()</td>
+<td>返回最后匹配字符之后的偏移量</td>
+</tr>
+<tr>
+<td>public int end(int group)</td>
+<td>返回在以前的匹配操作期间，由给定组所捕获子序列的最后字符之后的偏移量</td>
+</tr>
+<tr>
+<td>public boolean lookingAt()</td>
+<td>尝试将从区域开头的输入序列与该模式匹配</td>
+</tr>
+<tr>
+<td>public boolean find()</td>
+<td>尝试查找与该模式匹配的输入序列的下一个子序列</td>
+</tr>
+<tr>
+<td>public boolean find(int start)</td>
+<td>重置从匹配器，然后尝试查找该匹配该模式、从指定索引开始的输入序列的下一个子序列</td>
+</tr>
+<tr>
+<td>public boolean matches()</td>
+<td>尝试将整个区域与模式匹配</td>
+</tr>
+<tr>
+<td>public Matcher appendReplacement(StringBuffer sb,<br>String replacement)</td>
+<td>实现非终端添加和替换步骤</td>
+</tr>
+<tr>
+<td>public StringBuffer appendTail(StringBuffer sb)</td>
+<td>实现终端添加和替换步骤</td>
+</tr>
+<tr>
+<td>public String replaceAll(String replacement)</td>
+<td>替换模式与给定替换字符串相匹配的输入序列的每个子序列</td>
+</tr>
+<tr>
+<td>public String replaceFirst(String replacement)</td>
+<td>替换模式与给定替换字符串匹配的输入序列的第一个子序列</td>
+</tr>
+<tr>
+<td>public static String quoteReplacement(String s)</td>
+<td>返回指定字符串的字面替换字符串。这个方法返回一个字符串，就像传递给Matcher类的appendReplacement方法一个字面字符串一样工作</td>
+</tr>
+</tbody></table>
+<h2 id="反向引用"><a href="#反向引用" class="headerlink" title="反向引用"></a>反向引用</h2><ul>
+<li><p>圆括号的内容被捕获后，可以在这个括号后被使用，从而写出一个比较实用的匹配模式，这个我们称为反向引用，这种引用既可以是在正则表达式内部，也可以是在正则表达式外部，内部反向引用\\分组号，外部反向引用$分组号</p>
+</li>
+<li><p>案例一</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.regexp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@title</span>: RegExp07</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> yyq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2023/5/1 8:09</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span> 1.0 反向引用</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RegExp07</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        String content;</span><br><span class="line">        String regStr;</span><br><span class="line">        <span class="comment">//1.匹配两个练习相同数字</span></span><br><span class="line">        content = <span class="string">&quot;hello jack tom11 jack22 yyy xx&quot;</span>;</span><br><span class="line">        regStr = <span class="string">&quot;(\\d)\\1&quot;</span>;</span><br><span class="line">        <span class="comment">//2.匹配五个连续相同数字</span></span><br><span class="line">        content = <span class="string">&quot;hello33333 jack tom11 jack22 yyy12345 xx&quot;</span>;</span><br><span class="line">        regStr = <span class="string">&quot;(\\d)\\1&#123;4&#125;&quot;</span>;</span><br><span class="line">        <span class="comment">//3.匹配千位与各位相同，百位与十位相同</span></span><br><span class="line">        content = <span class="string">&quot;hello1221 jack2345 tom11 jack22 yyy2112 xx&quot;</span>;</span><br><span class="line">        regStr = <span class="string">&quot;(\\d)(\\d)\\2\\1&quot;</span>;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            4.请在字符串中检索商品编号，形式如：12321-333999111这样的号码，</span></span><br><span class="line"><span class="comment">            要求满足前面是一个五位数，然后一个-号，然后是一个九位数，连续的每三位要相同</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        content = <span class="string">&quot;hello jack tom11 jack22 yyy xx12321-333999111&quot;</span>;</span><br><span class="line">        regStr = <span class="string">&quot;\\d&#123;5&#125;-(\\d)\\1&#123;2&#125;(\\d)\\2&#123;2&#125;(\\d)\\3&#123;2&#125;&quot;</span>;</span><br><span class="line">        <span class="type">Pattern</span> <span class="variable">pattern</span> <span class="operator">=</span> Pattern.compile(regStr);</span><br><span class="line">        <span class="type">Matcher</span> <span class="variable">matcher</span> <span class="operator">=</span> pattern.matcher(content);</span><br><span class="line">        <span class="keyword">while</span> (matcher.find()) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;找到: &quot;</span> + matcher.group(<span class="number">0</span>));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>案例二</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.regexp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@title</span>: RegExp08</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> yyq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2023/5/1 8:59</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RegExp08</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//1.方法一</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        String content = &quot;我...我要...学学学学....编程Java!&quot;;</span></span><br><span class="line"><span class="comment">        content = content.replace(&quot;.&quot;,&quot;&quot;);</span></span><br><span class="line"><span class="comment">        String regStr = &quot;(.)\\1*&quot;;</span></span><br><span class="line"><span class="comment">        Pattern pattern = Pattern.compile(regStr);</span></span><br><span class="line"><span class="comment">        Matcher matcher = pattern.matcher(content);</span></span><br><span class="line"><span class="comment">        while (matcher.find()) &#123;</span></span><br><span class="line"><span class="comment">            System.out.println(matcher.group(0).charAt(0));</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        <span class="comment">//2.方法二</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">content</span> <span class="operator">=</span> <span class="string">&quot;我...我要...学学学学....编程Java!&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">regStr</span> <span class="operator">=</span> <span class="string">&quot;\\.&quot;</span>;</span><br><span class="line">        <span class="type">Pattern</span> <span class="variable">pattern</span> <span class="operator">=</span> Pattern.compile(regStr);</span><br><span class="line">        <span class="type">Matcher</span> <span class="variable">matcher</span> <span class="operator">=</span> pattern.matcher(content);</span><br><span class="line">        <span class="comment">//2.1去掉.</span></span><br><span class="line">        content = matcher.replaceAll(<span class="string">&quot;&quot;</span>);</span><br><span class="line">       <span class="comment">/*</span></span><br><span class="line"><span class="comment">        //2.2</span></span><br><span class="line"><span class="comment">        pattern = Pattern.compile(&quot;(.)\\1+&quot;);</span></span><br><span class="line"><span class="comment">        matcher = pattern.matcher(content);</span></span><br><span class="line"><span class="comment">        while (matcher.find()) &#123;</span></span><br><span class="line"><span class="comment">            System.out.println(&quot;找到: &quot; + matcher.group(0));</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        //2.3使用外部反向引用</span></span><br><span class="line"><span class="comment">        content = matcher.replaceAll(&quot;$1&quot;);</span></span><br><span class="line"><span class="comment">        System.out.println(content);</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//简化成一句代码</span></span><br><span class="line">        content = Pattern.compile(<span class="string">&quot;(.)\\1+&quot;</span>).matcher(content).replaceAll(<span class="string">&quot;$1&quot;</span>);</span><br><span class="line">        System.out.println(content);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="章节练习"><a href="#章节练习" class="headerlink" title="章节练习"></a>章节练习</h2><ul>
+<li>案例一</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.regexp;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@title</span>: Homework01</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> yyq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2023/5/2 13:02</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Homework01</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            规定电子邮箱规则为</span></span><br><span class="line"><span class="comment">            1.只能有一个@</span></span><br><span class="line"><span class="comment">            2.@前面用户名，可以是a-z A-Z 0-9 _ -字符</span></span><br><span class="line"><span class="comment">            3.@后面是域名，并且域名只能是英文字母，比如souhu.com 或者tsinghua.org.cn</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">content</span> <span class="operator">=</span> <span class="string">&quot;qingsanxing@qq.cn&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">regStr</span> <span class="operator">=</span> <span class="string">&quot;^([\\w-])+@([a-zA-Z]+\\.)+[a-zA-Z]+$&quot;</span>;</span><br><span class="line">        <span class="comment">//该matchers是个整体匹配，内部其实调用Pattern.matches()方法，然后Pattern.matches()调用Matcher.matchers()方法</span></span><br><span class="line">        <span class="keyword">if</span> (content.matches(regStr)) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;匹配成功!&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;匹配失败!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<ul>
+<li>案例二</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.regexp;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@title</span>: HomeWork02</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> yyq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2023/5/2 13:39</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HomeWork02</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            要求是不是整数或者小数</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">content</span> <span class="operator">=</span> <span class="string">&quot;-0.003&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">regStr</span> <span class="operator">=</span> <span class="string">&quot;^([+-])?(0|[1-9]\\d*)(\\.\\d+)?$&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (content.matches(regStr)) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;匹配成功:整数或者小数!&quot;</span>);</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;匹配失败!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>案例三</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.regexp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@title</span>: Homework03</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Author</span> yyq</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Date</span>: 2023/5/2 14:13</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@Version</span> 1.0</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@description</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Homework03</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            http://www.sohu.com:8080/abc/index.html</span></span><br><span class="line"><span class="comment">            a)要求得到协议是什么?         http</span></span><br><span class="line"><span class="comment">            b)域名是什么?                www.sohu.com</span></span><br><span class="line"><span class="comment">            c)端口是什么?                8080</span></span><br><span class="line"><span class="comment">            d)文件名是什么?              index.htm</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">content</span> <span class="operator">=</span> <span class="string">&quot;http://www.sohu.com:8080/abc/index.html&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">regStr</span> <span class="operator">=</span> <span class="string">&quot;^([a-zA-Z]+)://([a-zA-Z.]+):([1-9]\\d+)[\\w-/]*/([\\w.]+)$&quot;</span>;</span><br><span class="line">        <span class="type">Pattern</span> <span class="variable">pattern</span> <span class="operator">=</span> Pattern.compile(regStr);</span><br><span class="line">        <span class="type">Matcher</span> <span class="variable">matcher</span> <span class="operator">=</span> pattern.matcher(content);</span><br><span class="line">        <span class="keyword">if</span> (matcher.matches()) &#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;匹配成功:&quot;</span>+matcher.group(<span class="number">0</span>));</span><br><span class="line">            System.out.println(<span class="string">&quot;协议:&quot;</span>+matcher.group(<span class="number">1</span>));</span><br><span class="line">            System.out.println(<span class="string">&quot;域名:&quot;</span>+matcher.group(<span class="number">2</span>));</span><br><span class="line">            System.out.println(<span class="string">&quot;端口号:&quot;</span>+matcher.group(<span class="number">3</span>));</span><br><span class="line">            System.out.println(<span class="string">&quot;资源名:&quot;</span>+matcher.group(<span class="number">4</span>));</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;匹配失败!&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/Java%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" data-id="cloxtn0c4000i5gye2ps8daz5" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/JDK7%E6%97%B6%E9%97%B4%E8%BD%AC%E6%8D%A2%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/Iterator%E8%BF%AD%E4%BB%A3%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

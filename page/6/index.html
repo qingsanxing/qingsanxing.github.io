@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/6/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-JavaBase/运动员案例" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E8%BF%90%E5%8A%A8%E5%91%98%E6%A1%88%E4%BE%8B/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.781Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="运动员案例"><a href="#运动员案例" class="headerlink" title="运动员案例"></a>运动员案例</h2><p><img src="/%E8%BF%90%E5%8A%A8%E5%91%98%E6%A1%88%E4%BE%8B.assets/6f41e8a4c7eb1eac8d6e5406ebffde1c.png" alt="6f41e8a4c7eb1eac8d6e5406ebffde1c"></p>
+<p><strong>People类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.playTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">People</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">People</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">People</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">eat</span><span class="params">(String food)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;姓名：&quot;</span> + name + <span class="string">&quot;年龄：&quot;</span> + age + <span class="string">&quot;岁,在吃&quot;</span> + food);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sleep</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;睡觉~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getName</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getAge</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setAge</span><span class="params">(<span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>Player类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.playTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Player</span> <span class="keyword">extends</span> <span class="title class_">People</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Player</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Player</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(name, age);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">study</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Coach类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.playTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="title class_">Coach</span> <span class="keyword">extends</span> <span class="title class_">People</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Coach</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Coach</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(name, age);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">teach</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>PingPongPlayer类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.playTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PingPongPlayer</span> <span class="keyword">extends</span> <span class="title class_">Player</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PingPongPlayer</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PingPongPlayer</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(name, age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">study</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(getName() + <span class="string">&quot;年龄&quot;</span> + getAge() + <span class="string">&quot;岁的乒乓球运动员，正在学习抽球~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>BasketBallPlay类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.playTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BasketballPlayer</span> <span class="keyword">extends</span> <span class="title class_">Player</span> <span class="keyword">implements</span> <span class="title class_">LearnEnglish</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">BasketballPlayer</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">BasketballPlayer</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(name, age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">study</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(getName() + <span class="string">&quot;年龄&quot;</span> + getAge() + <span class="string">&quot;岁的篮球运动员，正在学习扣篮~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">LearnEnglish</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(getName() + <span class="string">&quot;篮球运动员正在学习英语~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>BasketBallCoach类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.playTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BasketballCoach</span> <span class="keyword">extends</span> <span class="title class_">Coach</span> <span class="keyword">implements</span> <span class="title class_">LearnEnglish</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">BasketballCoach</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">BasketballCoach</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(name, age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">teach</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(getName() + <span class="string">&quot;年龄&quot;</span> + getAge() + <span class="string">&quot;岁的篮球教练，正在教学扣篮~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">LearnEnglish</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(getName() + <span class="string">&quot;篮球教练正在学习英语~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>PingPongCoach教练</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.playTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">PingPongCoach</span> <span class="keyword">extends</span> <span class="title class_">Coach</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PingPongCoach</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">PingPongCoach</span><span class="params">(String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(name, age);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">teach</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(getName() + <span class="string">&quot;年龄&quot;</span> + getAge() + <span class="string">&quot;岁的乒乓球教练，正在教学抽球~&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>LearnEnglish接口</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.playTest;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">LearnEnglish</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">LearnEnglish</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E8%BF%90%E5%8A%A8%E5%91%98%E6%A1%88%E4%BE%8B/" data-id="cloxtn0cn00205gyed0052gdo" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/网络编程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.779Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Day-24随堂笔记"><a href="#Day-24随堂笔记" class="headerlink" title="Day_24随堂笔记"></a>Day_24随堂笔记</h3><h4 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">网络编程 :  Socket编程,套接字编程</span><br><span class="line">    </span><br><span class="line">功能: 实现了数据在PC于PC之间的传递    </span><br></pre></td></tr></table></figure>
+
+<h4 id="网络编程的三要素"><a href="#网络编程的三要素" class="headerlink" title="网络编程的三要素"></a>网络编程的三要素</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">网络编程的三要素:</span><br><span class="line">    IP地址:可以通过IP地址在网络世界中找到你主机的位置</span><br><span class="line">    端口号:可以通过端口号找到当前计算机中通讯的软件 -&gt; 通讯软件的编号</span><br><span class="line">    网络传输协议:UDP/TCP</span><br><span class="line"></span><br><span class="line"><span class="comment">//举例: 寄快递</span></span><br><span class="line">    收件人地址: 湖北省武汉市江夏区茅店山中路东湖网谷<span class="number">6</span>号楼<span class="number">4</span>楼尚硅谷 -&gt; IP地址</span><br><span class="line">    收件人的姓名和联系方式: 张三 电话   -&gt; 端口号</span><br><span class="line">    快递公司: 顺丰,邮政   -&gt; 网络协议</span><br></pre></td></tr></table></figure>
+
+<h5 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">IP地址: 当前PC在网络世界的地址 -&gt; 我们可以通过IP地址找到当前主机;</span><br><span class="line"></span><br><span class="line">IP地址如何获取? </span><br><span class="line">    CMD窗口的命令: ipconfig </span><br><span class="line">        (打开CMD窗口 : win+r -&gt; 输入CMD)</span><br><span class="line">        </span><br><span class="line">    以太网适配器 以太网:</span><br><span class="line">       连接特定的 DNS 后缀 . . . . . . . :</span><br><span class="line">       IPv4 地址 . . . . . . . . . . . . : <span class="number">192.168</span><span class="number">.31</span><span class="number">.209</span> -&gt; IP地址</span><br><span class="line">       子网掩码  . . . . . . . . . . . . : <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span></span><br><span class="line">       默认网关. . . . . . . . . . . . . : <span class="number">192.168</span><span class="number">.31</span><span class="number">.1</span>  </span><br><span class="line">           </span><br><span class="line">IPv4 : 一种以点分十进制表示法表示的IP地址    </span><br><span class="line">    每一个数字最大能表示的数: <span class="number">255</span></span><br><span class="line">    <span class="number">192.168</span>.: 固定的</span><br><span class="line">    <span class="number">31</span>: 网段</span><br><span class="line">    <span class="number">209</span>: 计算机在此网段下具体的位置  </span><br><span class="line">        </span><br><span class="line">IPv6 : fe80:<span class="number">0000</span>:<span class="number">5417</span>:<span class="number">6931</span>:41da:<span class="number">1335</span></span><br><span class="line">    一种以冒分十六进制表示法表示的IP地址 -&gt;</span><br><span class="line">    </span><br><span class="line"> <span class="number">192.168</span><span class="number">.31</span>.(<span class="number">1</span>-<span class="number">255</span>) :</span><br><span class="line">    <span class="number">1</span> : 网关 -&gt; 一定在线</span><br><span class="line">        ping ip地址 -&gt; 查看自己的网络连接状态</span><br><span class="line">    <span class="number">255</span> : 广播地址 -&gt; 群发</span><br><span class="line">        给广播地址放消息,此号段内(<span class="number">31</span>)所有的在线设备都能收到消息</span><br><span class="line">        </span><br><span class="line">访问网址 : www.baidu.com --&gt; 本质也是IP地址  </span><br><span class="line">    DNS: 可以解析域名(www.baidu.com)获取当前域名表示的IP地址</span><br></pre></td></tr></table></figure>
+
+<h5 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">端口号: 计算机中软件的编号 (软件如果是多线程的,多个线程都可以进行网络通讯,每一个可以通讯的线程都会分配一个端口号)</span><br><span class="line">    </span><br><span class="line">范围: <span class="number">1</span> - <span class="number">65535</span>    </span><br><span class="line">    </span><br><span class="line">注意: </span><br><span class="line">    <span class="number">1.</span> 端口号不要重复 -&gt; 报错端口绑定异常</span><br><span class="line">    <span class="number">2.</span> <span class="number">1000</span>以内的端口号不要用 -&gt; 被占用了</span><br><span class="line">    <span class="number">3.</span> <span class="number">8080</span>: tomcat服务器</span><br><span class="line">       <span class="number">3306</span>: MySql数据库</span><br><span class="line">       <span class="number">2425</span>: feiQ的端口号    </span><br></pre></td></tr></table></figure>
+
+<h5 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">UDP:面向无连接的网络协议</span><br><span class="line">    特点: 只管发不管接收 -&gt; 类似村口的大喇叭</span><br><span class="line">    原理: 每次发送数据,准备一个数据包(64K),已数据包的形式往接收端发送数据(只管发不管接收)    </span><br><span class="line">TCP:面向连接的网络协议</span><br><span class="line">    特点: 先建立连接,数据以流的形式传输</span><br><span class="line">    原理: </span><br><span class="line">        连接时:三次握手</span><br><span class="line">        断开连接时:四次挥手    </span><br><span class="line">            </span><br><span class="line">UDP: 效率高,安全性低</span><br><span class="line">TCP: 效率低,安全性高    </span><br></pre></td></tr></table></figure>
+
+<h5 id="UDP网络协议传输数据的特点"><a href="#UDP网络协议传输数据的特点" class="headerlink" title="UDP网络协议传输数据的特点"></a>UDP网络协议传输数据的特点</h5><p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.assets/54159a7a15dcaa821aa845e03715b08d.png" alt="image-20210825102421870.png"></p>
+<h5 id="TCP网络协议传输数据的特点"><a href="#TCP网络协议传输数据的特点" class="headerlink" title="TCP网络协议传输数据的特点"></a>TCP网络协议传输数据的特点</h5><p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.assets/94e807c04995a1eeb6538bb63c41898f.png" alt="image-20210825103703321.png"></p>
+<h4 id="InetAddress"><a href="#InetAddress" class="headerlink" title="InetAddress"></a>InetAddress</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">InetAddress : 表示IP地址的类</span><br><span class="line">    </span><br><span class="line">创建InetAddress对象:</span><br><span class="line">    <span class="keyword">static</span> InetAddress <span class="title function_">getByName</span><span class="params">(String host)</span>  : 传入主机名或者IP地址,得到该主机的IP地址对象</span><br><span class="line">            <span class="type">InetAddress</span> <span class="variable">inet</span> <span class="operator">=</span> InetAddress.getByName(<span class="string">&quot;192.168.31.209&quot;</span>);</span><br><span class="line">            <span class="type">InetAddress</span> <span class="variable">inet</span> <span class="operator">=</span> InetAddress.getByName(<span class="string">&quot;Damon&quot;</span>);</span><br><span class="line">    <span class="keyword">static</span> InetAddress[] getAllByName(String host)  : 获取当前主机名的所有IP地址对象 </span><br><span class="line">        </span><br><span class="line">    <span class="keyword">static</span> InetAddress <span class="title function_">getLocalHost</span><span class="params">()</span> : 快速的获取本机的IP地址对象    </span><br><span class="line">        </span><br><span class="line">成员方法:</span><br><span class="line">    String <span class="title function_">getHostName</span><span class="params">()</span>  : 获取当前IP地址对象的主机名(取决于它是否用主机名构造或者是否已执行反向主机名解析)</span><br><span class="line">    String <span class="title function_">getHostAddress</span><span class="params">()</span>  : 获取当前IP地址对象的IP地址    </span><br></pre></td></tr></table></figure>
+
+<h4 id="UDP协议代码"><a href="#UDP协议代码" class="headerlink" title="UDP协议代码"></a>UDP协议代码</h4><h5 id="UDP协议的发送端"><a href="#UDP协议的发送端" class="headerlink" title="UDP协议的发送端"></a>UDP协议的发送端</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">UDP发送端的类: DatagramSocket</span><br><span class="line">    </span><br><span class="line">构造方法:</span><br><span class="line">    DatagramSocket() : 构建一个无参的UDP发送端对象</span><br><span class="line">        </span><br><span class="line">成员方法: send</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">send</span><span class="params">(DatagramPacket p)</span> : 发送数据</span><br><span class="line">    </span><br><span class="line">代码:</span><br><span class="line">        <span class="comment">//创建UDP协议发送端的对象</span></span><br><span class="line">        <span class="type">DatagramSocket</span> <span class="variable">ds</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DatagramSocket</span>();</span><br><span class="line">        <span class="type">InetAddress</span> <span class="variable">ip</span> <span class="operator">=</span> InetAddress.getByName(<span class="string">&quot;192.168.31.209&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">line</span> <span class="operator">=</span> <span class="string">&quot;Hello! UDP~&quot;</span>;</span><br><span class="line">        <span class="comment">//DatagramPacket(byte[] buf, int offset, int length, InetAddress address, int port)</span></span><br><span class="line">        <span class="type">DatagramPacket</span> <span class="variable">p</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DatagramPacket</span>(line.getBytes(), <span class="number">0</span>, line.length(), ip, <span class="number">10086</span>);</span><br><span class="line">        <span class="comment">//发送数据</span></span><br><span class="line">        ds.send(p);</span><br><span class="line">        <span class="comment">//关闭资源</span></span><br><span class="line">        ds.close();</span><br></pre></td></tr></table></figure>
+
+<h5 id="发送端的DatagramPacket数据包"><a href="#发送端的DatagramPacket数据包" class="headerlink" title="发送端的DatagramPacket数据包"></a>发送端的DatagramPacket数据包</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">数据包: 快递包裹</span><br><span class="line">    快递包裹: 收件人地址(IP地址),商品(数据),收件人的联系方式(端口号)</span><br><span class="line">构造方法:</span><br><span class="line">    DatagramPacket(<span class="type">byte</span>[] buf, <span class="type">int</span> offset, <span class="type">int</span> length, InetAddress address, <span class="type">int</span> port) </span><br><span class="line">        <span class="type">byte</span>[] buf, <span class="type">int</span> offset, <span class="type">int</span> length: 数据</span><br><span class="line">        InetAddress address : IP地址对象</span><br><span class="line">        <span class="type">int</span> port  : 端口号</span><br></pre></td></tr></table></figure>
+
+<h5 id="UDP协议的接收端"><a href="#UDP协议的接收端" class="headerlink" title="UDP协议的接收端"></a>UDP协议的接收端</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">UDP接收端的类: DatagramSocket</span><br><span class="line">    </span><br><span class="line">构造方法:</span><br><span class="line">    DatagramSocket(<span class="type">int</span> port): 带有端口号的接收端对象 -&gt;(你要接收消息,必须知道自己是谁) </span><br><span class="line">        </span><br><span class="line">成员方法:</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">receive</span><span class="params">(DatagramPacket packet)</span>: 把数据接收到数据报包中</span><br></pre></td></tr></table></figure>
+
+<h5 id="接收端的DatagramPacket数据包"><a href="#接收端的DatagramPacket数据包" class="headerlink" title="接收端的DatagramPacket数据包"></a>接收端的DatagramPacket数据包</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">数据包: 快递包裹</span><br><span class="line">    </span><br><span class="line">构造方法:</span><br><span class="line">    DatagramPacket(<span class="type">byte</span>[] buf, <span class="type">int</span> offset, <span class="type">int</span> length) </span><br><span class="line">        <span class="type">byte</span>[] buf, <span class="type">int</span> offset, <span class="type">int</span> length: 数据接收到这个数组中去</span><br><span class="line">        </span><br><span class="line">成员方法:</span><br><span class="line">    InetAddress <span class="title function_">getAddress</span><span class="params">()</span> : 获取发件人的IP地址对象</span><br><span class="line">    <span class="type">byte</span>[] getData() : 获取数据报包的字节数组 -&gt; 没必要</span><br><span class="line">    <span class="type">int</span> <span class="title function_">getLength</span><span class="params">()</span> : 返回数据的真实长度    </span><br></pre></td></tr></table></figure>
+
+<h4 id="TCP协议代码"><a href="#TCP协议代码" class="headerlink" title="TCP协议代码"></a>TCP协议代码</h4><h5 id="TCP协议的客户端"><a href="#TCP协议的客户端" class="headerlink" title="TCP协议的客户端"></a>TCP协议的客户端</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">TCP协议的客户端的类: Socket</span><br><span class="line">    </span><br><span class="line">构造方法:</span><br><span class="line">    Socket(String host, <span class="type">int</span> port) : 直接传入服务器的主机名(IP地址)和端口号创建客户端对象;</span><br><span class="line">    Socket(InetAddress address, <span class="type">int</span> port) :直接传入服务器的InetAddress对象形式的主机名(IP地址)和端口号创建客户端对象;</span><br><span class="line"></span><br><span class="line"><span class="comment">//TCP协议是建立连接的,建立管道. 三次握手建立管道后数据通过流进行传输</span></span><br><span class="line"></span><br><span class="line">发送数据类服务器,要创建流对象: (网络编程的流对象都是通过Socket对象获取的)</span><br><span class="line">    OutputStream <span class="title function_">getOutputStream</span><span class="params">()</span>  :返回此套接字的输出流。</span><br><span class="line">    InputStream <span class="title function_">getInputStream</span><span class="params">()</span> :返回此套接字的输入流.</span><br><span class="line">        </span><br><span class="line"> 接下里就是IO流的标准代码.</span><br></pre></td></tr></table></figure>
+
+<h5 id="TCP协议的服务端"><a href="#TCP协议的服务端" class="headerlink" title="TCP协议的服务端"></a>TCP协议的服务端</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">TCP协议的服务端的类: ServerSocket -&gt; 此类实现服务器套接字</span><br><span class="line">    </span><br><span class="line">构造方法:</span><br><span class="line">    ServerSocket(<span class="type">int</span> port) : 指明端口号的方式创建服务端对象</span><br><span class="line">        </span><br><span class="line">成员方法:</span><br><span class="line">    Socket <span class="title function_">accept</span><span class="params">()</span> : 侦听并接受到此套接字的连接。</span><br><span class="line">        </span><br><span class="line"><span class="comment">//通过Socket对象获取输入流对象,有了输入流对象就可以读数据        </span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" data-id="cloxtn0cn001z5gye4isd0f2r" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/继承" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E7%BB%A7%E6%89%BF/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.778Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Java中类和类之间的关系 : 继承关系 -&gt; extends</span><br><span class="line">    </span><br><span class="line">继承的特点:</span><br><span class="line">	<span class="number">1.</span> 单一继承,多层继承 (一个子类只能有一个父类,但是一个父类可以有多个子类)</span><br><span class="line">  <span class="number">2.</span> 子类继承父类,子类可以使用父类所有非私有的成员 </span><br><span class="line">  <span class="number">3.</span> 父类不可以使用子类的成员    </span><br></pre></td></tr></table></figure>
+
+<h4 id="继承格式"><a href="#继承格式" class="headerlink" title="继承格式"></a>继承格式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">格式: </span><br><span class="line">	<span class="comment">//定义一个父类</span></span><br><span class="line"> 	<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Fu</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">//定义子类</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Zi</span> <span class="keyword">extends</span> <span class="title class_">Fu</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">//一个父类可以有多个子类</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Son</span> <span class="keyword">extends</span> <span class="title class_">Fu</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="继承关系下成员变量的访问特点"><a href="#继承关系下成员变量的访问特点" class="headerlink" title="继承关系下成员变量的访问特点"></a>继承关系下成员变量的访问特点</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">子类中访问父类成员变量：<span class="built_in">super</span>.变量名(除私有外)</span><br><span class="line">第三方类中创建子类对象访问成员变量：子承父,子类可以使用父类所有非私有的成员</span><br></pre></td></tr></table></figure>
+
+<h4 id="继承关系下成员方法的访问特点"><a href="#继承关系下成员方法的访问特点" class="headerlink" title="继承关系下成员方法的访问特点"></a>继承关系下成员方法的访问特点</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 在子类中访问: 可以访问父类中所有的非私有成员</span><br><span class="line"><span class="number">2.</span> 在第三方类中访问:自己有调自己的,自己没有找父类要</span><br></pre></td></tr></table></figure>
+
+<h4 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">重载: overload -&gt; 用的多,写的少</span><br><span class="line">重写: override -&gt; 用的多,写的多</span><br><span class="line">  </span><br><span class="line">重载:</span><br><span class="line">	<span class="number">1.</span> 在同一个类中</span><br><span class="line">  <span class="number">2.</span> 方法的名称相同</span><br><span class="line">  <span class="number">3.</span> 方法的形式参数列表不同: 个数,类型,类型顺序</span><br><span class="line">  <span class="number">4.</span> 与返回值无关,与形参的变量名无关    </span><br><span class="line">重写:</span><br><span class="line">	<span class="number">1.</span> 必须有继承关系</span><br><span class="line">  <span class="number">2.</span> 子类重写父类的方法</span><br><span class="line">  <span class="number">3.</span> 子类中有和父类方法声明完全一致的方法</span><br><span class="line">    ps: 有两个地方可以不一样,百分之<span class="number">99</span>的情况都是一致的</span><br><span class="line">        权限修饰符: 子类 &gt;= 父类 (<span class="keyword">private</span>不参与)</span><br><span class="line">        返回值类型: 子类的返回值类型可以是父类重写方法的返回值类型的子类或同类(只支持引用数据类型)</span><br><span class="line"></span><br><span class="line">    注释: 用文字来解释说明代码</span><br><span class="line">    注解: 用代码来约束代码的</span><br><span class="line"></span><br><span class="line">    约束方法重写格式的注解: <span class="meta">@Override</span></span><br><span class="line">      写在子类的重写方法上!!</span><br></pre></td></tr></table></figure>
+
+<h4 id="继承关系下构造方法的访问特点"><a href="#继承关系下构造方法的访问特点" class="headerlink" title="继承关系下构造方法的访问特点"></a>继承关系下构造方法的访问特点</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">子类要加载优先加载父类!!</span><br><span class="line">注意:</span><br><span class="line">	<span class="number">1.</span> 每一个构造方法的第一句代码都隐藏着: <span class="built_in">super</span>();</span><br><span class="line">		<span class="built_in">super</span>(): 启动父类的无参构造方法</span><br><span class="line">  <span class="number">2.</span> <span class="built_in">super</span>()必须是构造方法的第一句代码</span><br><span class="line">  <span class="number">3.</span> 不能连续<span class="number">2</span>次调用<span class="built_in">super</span>();</span><br><span class="line">	<span class="number">4.</span>  <span class="built_in">super</span>():调用父类的无参构造</span><br><span class="line">        <span class="built_in">super</span>(实际参数):调用父类的含参构造</span><br><span class="line">        <span class="built_in">this</span>():调用本类的无参构造</span><br><span class="line">        <span class="built_in">this</span>(实际参数):调用本类的含参构造</span><br><span class="line">    <span class="number">5.</span> 如何你在构造方法中调用了任意的其他构造方法默认赠送的<span class="built_in">super</span>()就不送了</span><br><span class="line">    <span class="number">6.</span> 不管你在构造方法内如何去调用其他构造方法,子类的某个构造方法内一定要去加载父类!        </span><br></pre></td></tr></table></figure>
+
+<h4 id="this-和-super"><a href="#this-和-super" class="headerlink" title="this 和 super"></a>this 和 super</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">概念层面:</span><br><span class="line">	<span class="built_in">this</span>: 本类对象的引用</span><br><span class="line">        如果有对象调用含有<span class="built_in">this</span>的方法,那么<span class="built_in">this</span>就是这个对象 --&gt; 自己照镜子</span><br><span class="line">	<span class="built_in">super</span>:本类父类对象的引用</span><br><span class="line">        如果有对象调用含有<span class="built_in">super</span>的方法,那么<span class="built_in">super</span>就是这个对象的一个父类对象 -&gt; 自己照镜子,镜子里是它爹</span><br><span class="line">        </span><br><span class="line">公式层面: 重要的!!</span><br><span class="line">	<span class="built_in">this</span>.变量 : 强制访问本类成员位置上的变量 -&gt; 打破变量访问的就近原则</span><br><span class="line">  <span class="built_in">super</span>.变量 : 强制访问本类父类成员位置上的变量 -&gt; 打破变量访问的就近原则</span><br><span class="line">  <span class="built_in">this</span>.方法(实际参数) : 强制访问本类成员位置上的方法 -&gt; 傻子才这么写</span><br><span class="line">  <span class="built_in">super</span>.方法(实际参数) : 强制访问本类父类成员位置上的方法 -&gt; 用!!!    </span><br><span class="line">        </span><br><span class="line">  <span class="built_in">this</span>(): 调用本类的无参构造</span><br><span class="line">  <span class="built_in">this</span>(实际参数): 调用本类的含参构造</span><br><span class="line">  <span class="built_in">super</span>():调用父类的无参构造 -&gt; 默认的!!</span><br><span class="line">  <span class="built_in">super</span>(实际参数): 调用父类的含参构造方法</span><br></pre></td></tr></table></figure>
+
+<h4 id="九阳神功"><a href="#九阳神功" class="headerlink" title="九阳神功"></a>九阳神功</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 只要有对象调  --&gt; 对象.</span><br><span class="line"><span class="number">2.</span> 找到对象创建的位置 -&gt; 对象创建的语句: 类名 对象名 = <span class="keyword">new</span> 类名();</span><br><span class="line"><span class="number">3.</span> 再看对象在干什么??</span><br><span class="line">    对象调属性: 编译看左边,运行看左边</span><br><span class="line">    对象调方法: 编译看左边,运行看右边    </span><br><span class="line">    对象调静态方法: 编译看左边,运行看左边</span><br><span class="line">            </span><br><span class="line">        编译看: 纠错</span><br><span class="line">        运行看: 说答案</span><br></pre></td></tr></table></figure>
+
+<h4 id="继承的好处和弊端"><a href="#继承的好处和弊端" class="headerlink" title="继承的好处和弊端"></a>继承的好处和弊端</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">好处: </span><br><span class="line">	向上抽取共性!! 提高代码的复用性!</span><br><span class="line">弊端:</span><br><span class="line">	提高了代码和代码的耦合性</span><br><span class="line">        </span><br><span class="line">	写代码的六字真言: 高内聚,低耦合</span><br><span class="line">       内聚: 独立完成功能的能力</span><br><span class="line">       耦合: 类于类之间的联系   </span><br><span class="line">           </span><br><span class="line">该继承的时候果断继承!! 利大于弊   </span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E7%BB%A7%E6%89%BF/" data-id="cloxtn0cn001y5gye1cda2s4c" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/红黑树添加元素的规则" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E7%BA%A2%E9%BB%91%E6%A0%91%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0%E7%9A%84%E8%A7%84%E5%88%99/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.776Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><img src="/%E7%BA%A2%E9%BB%91%E6%A0%91%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0%E7%9A%84%E8%A7%84%E5%88%99.assets/27e2cee597cef5d55ba14cfa3ce77864.png" alt="截图"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E7%BA%A2%E9%BB%91%E6%A0%91%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0%E7%9A%84%E8%A7%84%E5%88%99/" data-id="cloxtn0cm001x5gyedlr35nlf" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/用的DOS命令" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E7%94%A8%E7%9A%84DOS%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.774Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="常用的DOS命令"><a href="#常用的DOS命令" class="headerlink" title="常用的DOS命令"></a>常用的DOS命令</h1><ul>
+<li>dir：列出当前目前下的文件以及文件夹</li>
+<li>md&lt;文件名&gt;：创建目录</li>
+<li>rd &lt;目录名&gt;：删除目录</li>
+<li>cd：进入指定目录</li>
+<li>cd..：退回到上一级目录</li>
+<li>cd\：退回到根目录</li>
+<li>del ｛文件名，目录名｝：删除文件&#x2F;或目录下文件</li>
+<li>exit：退出dos命令行</li>
+<li>echo &lt;文件内容&gt;文件名&gt;：echo name:yyq&gt;1.doc</li>
+</ul>
+<h1 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h1><ul>
+<li>← →：移动光标</li>
+<li>↓ ↑：调阅历史操作命令</li>
+<li>Delete和Backspace：删除字符</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E7%94%A8%E7%9A%84DOS%E5%91%BD%E4%BB%A4/" data-id="cloxtn0cm001w5gye86nr42le" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/注解" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E6%B3%A8%E8%A7%A3/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.772Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="注解概述"><a href="#注解概述" class="headerlink" title="注解概述"></a>注解概述</h2><h3 id="什么是注解"><a href="#什么是注解" class="headerlink" title="什么是注解"></a>什么是注解</h3><p>注解英文是annotation,是一种代码级别的说明,和类 接口平级关系。相当于一种标记，在程序中加入注解就等于为程序打上某种标记，以后，javac编译器、开发工具和其他程序可以通过反射来了解你的类及各种元素上有无标记，看你的程序有什么标记，就去干相应的事，标记可以加在包、类，属性、方法，方法的参数以及局部变量上定义</p>
+<h3 id="注解的作用"><a href="#注解的作用" class="headerlink" title="注解的作用"></a>注解的作用</h3><ul>
+<li><p>执行编译期的检查 例如:@Override   </p>
+<p><img src="/%E6%B3%A8%E8%A7%A3.assets/b1b8062544b0d44a6a105828236db330.png" alt="截图"></p>
+</li>
+<li><p>分析代码(主要用途:替代配置文件);   用在框架里面, 注解开发</p>
+<p>示例一：</p>
+<p><img src="/%E6%B3%A8%E8%A7%A3.assets/ac9f206ca1d5f9fac7e26106d2af8e60.png" alt="截图"></p>
+<p>示例二：</p>
+<p><img src="/%E6%B3%A8%E8%A7%A3.assets/e9a56e99138a1e713b23855e4f328bba.png" alt="截图"></p>
+</li>
+</ul>
+<h3 id="JDK提供的三个基本的注解"><a href="#JDK提供的三个基本的注解" class="headerlink" title="JDK提供的三个基本的注解"></a>JDK提供的三个基本的注解</h3><ol>
+<li><code>@Override</code>:描述方法的重写.</li>
+<li><code>@SuppressWarnings</code>:压制警告. </li>
+<li><code>@Deprecated</code>:标记过时</li>
+</ol>
+<h3 id="自定义注解-重点"><a href="#自定义注解-重点" class="headerlink" title="自定义注解(重点)"></a>自定义注解(重点)</h3><h3 id="自定义注解语法"><a href="#自定义注解语法" class="headerlink" title="自定义注解语法"></a>自定义注解语法</h3><p><strong>语法</strong>:  <code>@interface 注解名&#123;&#125;</code></p>
+<p><strong>示例</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 定义了注解</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Annotation01 &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>定义新的Annotation类型使用关键字@interface关键字；</p>
+<p>自定义注解自动继承了java.lang.annotation.Annotation接口；</p>
+<h3 id="注解属性"><a href="#注解属性" class="headerlink" title="注解属性"></a>注解属性</h3><h5 id="注解属性的作用"><a href="#注解属性的作用" class="headerlink" title="注解属性的作用"></a>注解属性的作用</h5><p>​    注解属性可以让注解具备携带存储数据的功能</p>
+<h5 id="注解属性的类型"><a href="#注解属性的类型" class="headerlink" title="注解属性的类型"></a>注解属性的类型</h5><ul>
+<li><p>基本类型</p>
+</li>
+<li><p>String</p>
+</li>
+<li><p>枚举类型</p>
+</li>
+<li><p>注解类型</p>
+</li>
+<li><p>Class类型  </p>
+</li>
+<li><p>以上类型的一维数组类型</p>
+</li>
+</ul>
+<p><strong>注意:</strong></p>
+<p>​    一旦注解有属性了,使用注解的时候,属性必须有值  </p>
+<ul>
+<li>示例代码</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *注解的属性; 格式和接口的方法很类似 </span></span><br><span class="line"><span class="comment"> *    1.基本类型</span></span><br><span class="line"><span class="comment">    2.String</span></span><br><span class="line"><span class="comment">    3.枚举类型</span></span><br><span class="line"><span class="comment">    4.注解类型</span></span><br><span class="line"><span class="comment">    5.Class类型  </span></span><br><span class="line"><span class="comment">    6.以上类型的一维数组类型  </span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> Annotation02 &#123;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">a</span><span class="params">()</span>;<span class="comment">//基本类型</span></span><br><span class="line">    </span><br><span class="line">    String <span class="title function_">b</span><span class="params">()</span>;<span class="comment">//String</span></span><br><span class="line">    </span><br><span class="line">    Color <span class="title function_">c</span><span class="params">()</span>;<span class="comment">//枚举类型</span></span><br><span class="line">    </span><br><span class="line">    Annotation01 <span class="title function_">d</span><span class="params">()</span>;<span class="comment">//注解类型</span></span><br><span class="line">    </span><br><span class="line">    Class <span class="title function_">e</span><span class="params">()</span>;<span class="comment">//Class类型  </span></span><br><span class="line">    </span><br><span class="line">    String[] f();<span class="comment">//一维数组类型 </span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="使用注解时给属性赋值"><a href="#使用注解时给属性赋值" class="headerlink" title="使用注解时给属性赋值"></a>使用注解时给属性赋值</h5><ul>
+<li>格式<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@注解名(属性名=值,属性名<span class="number">2</span>=值<span class="number">2</span>)  eg:<span class="meta">@MyAnnotation3(i = 0,s=&quot;23&quot;)</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="属性赋值的特殊情况"><a href="#属性赋值的特殊情况" class="headerlink" title="属性赋值的特殊情况"></a>属性赋值的特殊情况</h5><ul>
+<li><strong>若属性类型的一维数组的时候,当数组的值只有一个的时候可以省略{}</strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@MyAnnotation4(ss = &#123; &quot;a&quot; &#125;)</span><br><span class="line">@MyAnnotation4(ss = &quot;a&quot;)</span><br></pre></td></tr></table></figure></li>
+<li>注解属性可以有默认值<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">属性类型 属性名() default 默认值;</span><br></pre></td></tr></table></figure></li>
+<li><strong>若属性名为value的时候,且只有这一个属性需要赋值的时候可以省略value</strong>【重点】</li>
+</ul>
+<h3 id="元注解"><a href="#元注解" class="headerlink" title="元注解"></a>元注解</h3><h4 id="元注解的作用"><a href="#元注解的作用" class="headerlink" title="元注解的作用"></a>元注解的作用</h4><p>元注解是使用在自定义的注解上，为自定义的注解提供支持的</p>
+<h4 id="常用的元注解"><a href="#常用的元注解" class="headerlink" title="常用的元注解"></a>常用的元注解</h4><ul>
+<li><code>@Target</code>: 用于指定被修饰的注解Annotation能用在修饰哪些程序元素，默认注解可以在任何程序元素. 值为:<code>ElementType</code>的枚举值</li>
+</ul>
+<p>​        <code>METHOD</code>:方法</p>
+<p>​        <code>TYPE</code>:类 接口</p>
+<p>​        <code>FIELD</code>:字段</p>
+<p>​        <code>CONSTRUCTOR</code>:构造方法声明</p>
+<ul>
+<li><code>@Retention</code>:定义该注解保留到那个代码阶段, 值为:<code>RetentionPolicy</code>类型,<strong>默认只在源码阶段保留</strong></li>
+</ul>
+<p>​        <code>SOURCE</code>:只在源码上保留(默认)</p>
+<p>​        <code>CLASS</code>:在源码和字节码上保留</p>
+<p>​        <code>RUNTIME</code>:在所有的阶段都保留 </p>
+<p>java (源码阶段) —-编译—&gt; .class(字节码阶段) —-加载内存–&gt; 运行(RUNTIME)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Target(value = &#123;ElementType.METHOD,ElementType.TYPE  &#125;)</span></span><br><span class="line"><span class="meta">@Retention(value = RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> MyAnnotation03 &#123;</span><br><span class="line">    <span class="type">int</span> <span class="title function_">a</span><span class="params">()</span>;</span><br><span class="line">    String <span class="title function_">b</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>@Documented: 被修饰的注解将保留在文档工具类中</li>
+</ul>
+<p><img src="/%E6%B3%A8%E8%A7%A3.assets/79ba1261532efb8229073cd6ad18ceb0.png" alt="截图"></p>
+<h3 id="注解解析"><a href="#注解解析" class="headerlink" title="注解解析"></a>注解解析</h3><p>注解解析目的</p>
+<ul>
+<li>获取类、成员方法、成员变量、方法属性、构造方法等等上面的注解对象</li>
+<li>获取注解对象的属性</li>
+<li>判断某个类、成员变量、成员方法等等上面是否有某个注解</li>
+</ul>
+<p>Method、Field、Construct、Class都实现了AnnotationElement的接口</p>
+<p>java.lang.reflect.AnnotatedElement</p>
+<ul>
+<li><strong>T getAnnotation(Class<T>annotationType)</strong>:得到指定类型的注解引用。没有返回null。</li>
+<li>**boolean isAnnotationPresent(Class&lt;?extends Annotation&gt; annotationType)**：判断指定的注解类型是否存在于某个元素上</li>
+<li>**Annotation[] getAnnotations()**：得到所有的注解，包含从父类继承下来的。</li>
+<li>**Annotation[] getDeclaredAnnotations()**：得到自己身上的注解。</li>
+</ul>
+<h3 id="注解编写单元测试"><a href="#注解编写单元测试" class="headerlink" title="注解编写单元测试"></a>注解编写单元测试</h3><p><strong>自定义注解</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.junit;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.ElementType;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Retention;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.RetentionPolicy;</span><br><span class="line"><span class="keyword">import</span> java.lang.annotation.Target;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Target(ElementType.METHOD)</span></span><br><span class="line"><span class="meta">@Retention(RetentionPolicy.RUNTIME)</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> MyTest &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>带自定义注解类</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">package com.yyq.junit;</span><br><span class="line"></span><br><span class="line">public class JunitDemo &#123;</span><br><span class="line"></span><br><span class="line">    @MyTest</span><br><span class="line">    public void sum()&#123;</span><br><span class="line">        int a = 99;</span><br><span class="line">        int b = 1;</span><br><span class="line">        int sum = a + b;</span><br><span class="line">        System.out.println(&quot;sum = &quot; + sum);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @MyTest</span><br><span class="line">    public void multiply()&#123;</span><br><span class="line">        int a = 99;</span><br><span class="line">        int b = 1;</span><br><span class="line">        int multiply = a - b;</span><br><span class="line">        System.out.println(&quot;multiply = &quot; + multiply);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>配置文件</strong></p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">className</span>=<span class="string">com.yyq.junit.JunitDemo</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>实现代码</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.junit;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationTargetException;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">InsideCode</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException &#123;</span><br><span class="line">        <span class="comment">//加载配置文件</span></span><br><span class="line">        <span class="type">ClassLoader</span> <span class="variable">systemClassLoader</span> <span class="operator">=</span> ClassLoader.getSystemClassLoader();</span><br><span class="line">        <span class="type">InputStream</span> <span class="variable">resourceAsStream</span> <span class="operator">=</span> systemClassLoader.getResourceAsStream(<span class="string">&quot;com/yyq/junit/pro.properties&quot;</span>);</span><br><span class="line">        <span class="type">Properties</span> <span class="variable">properties</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Properties</span>();</span><br><span class="line">        properties.load(resourceAsStream);</span><br><span class="line">        <span class="comment">//读取配置文件</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">className</span> <span class="operator">=</span> properties.getProperty(<span class="string">&quot;className&quot;</span>);</span><br><span class="line">        <span class="comment">//获取字节码对象</span></span><br><span class="line">        <span class="type">Class</span> <span class="variable">classJunitDemo</span> <span class="operator">=</span> Class.forName(className);</span><br><span class="line">        <span class="comment">//创建实例</span></span><br><span class="line">        <span class="type">Object</span> <span class="variable">o</span> <span class="operator">=</span> classJunitDemo.newInstance();</span><br><span class="line">        <span class="comment">//获取方法</span></span><br><span class="line">        Method[] declaredMethods = classJunitDemo.getDeclaredMethods();</span><br><span class="line">        <span class="keyword">for</span> (Method method : declaredMethods) &#123;</span><br><span class="line">            <span class="comment">//判断该方法是否有该注解</span></span><br><span class="line">            <span class="keyword">if</span>(method.isAnnotationPresent(MyTest.class))</span><br><span class="line">                method.invoke(o);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E6%B3%A8%E8%A7%A3/" data-id="cloxtn0cm001v5gye9ilq30nn" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/泛型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E6%B3%9B%E5%9E%8B/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.769Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">泛型: 一种不明确的引用数据类型</span><br><span class="line">    泛型在集合中如何使用呢? 集合中存储的元素数据类型是什么泛型就写什么类型</span><br><span class="line">    	作用: 是用来约束集合中元素的数据类型的(泛型是编译阶段有效,到了运行阶段就无效了)</span><br><span class="line">    为什么泛型在集合中到了运行阶段就无效了?</span><br><span class="line">        因为集合在设计之初,就是为了存入任意引用数据类型的对象容器而设计的.但是因为使用的不是很方便,所以在JDK5版本增加了泛型的概念.(若集合创建不给泛型,泛型默认是Object)</span><br><span class="line">            </span><br><span class="line">泛型的格式:&lt;字母&gt;</span><br><span class="line">	注意:</span><br><span class="line">		<span class="number">1.</span> 字母最好大写表示 --&gt; 规范</span><br><span class="line">		<span class="number">2.</span> 字母可以是任意字母 --&gt; &lt;E&gt;,&lt;T&gt; ...</span><br><span class="line">		<span class="number">3.</span> 泛型可以是多个大写字母组成 --&gt; &lt;MVP&gt;</span><br><span class="line">		<span class="number">4.</span> 一个尖括号内可以定义多个泛型,多个泛型之间使用逗号分隔 --&gt; &lt;O,M,K&gt;,&lt;K,V&gt;</span><br><span class="line">		</span><br><span class="line">泛型的使用:</span><br><span class="line">	若一个地方在定义的时候使用了泛型,那么在使用的时候,一定要拿一个具体的引用数据类型去替换泛型</span><br><span class="line">	(若你不去替换,泛型默认变成Object..)</span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">泛型类: 在定义类的时候在类的声明上加上泛型 (例如: ArrayList&lt;E&gt;)</span><br><span class="line">    </span><br><span class="line">格式: </span><br><span class="line">	<span class="comment">//泛型类</span></span><br><span class="line">	<span class="keyword">public</span> class 类名&lt;泛型&gt;&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">泛型类的使用场景: 你在一个类上声明了一个泛型,那么就代表此类中你可以使用这个类型!</span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">泛型接口和泛型类的定义和使用基本上一样!</span><br><span class="line"></span><br><span class="line">泛型延用的问题:</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        Zi&lt;String&gt; zi = <span class="keyword">new</span> <span class="title class_">Zi</span>&lt;&gt;();</span><br><span class="line">        zi.show(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line"></span><br><span class="line">        Zi&lt;Integer&gt; zi1 = <span class="keyword">new</span> <span class="title class_">Zi</span>&lt;&gt;();</span><br><span class="line">        zi1.show(<span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">        <span class="type">Son</span> <span class="variable">son</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Son</span>();</span><br><span class="line">        son.show(<span class="string">&quot;Java&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Fu</span>&lt;R&gt;&#123;<span class="comment">//泛型接口</span></span><br><span class="line">    <span class="comment">//从此在此接口中就有一种类型叫R</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title function_">show</span><span class="params">(R r)</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Zi</span>&lt;R&gt; <span class="keyword">implements</span> <span class="title class_">Fu</span>&lt;R&gt;&#123;<span class="comment">//ArrayList</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">show</span><span class="params">(R r)</span> &#123;</span><br><span class="line">        System.out.println(r);</span><br><span class="line">    &#125;<span class="comment">//沿用了父接口的泛型</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Son</span>&lt;T&gt; <span class="keyword">implements</span> <span class="title class_">Fu</span>&lt;String&gt;&#123;<span class="comment">//Properties</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">show</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;<span class="comment">//没有延用父接口的泛型</span></span><br><span class="line">&#125;	</span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">泛型方法: 泛型方法的使用和泛型类,泛型接口的使用方式一样!</span><br><span class="line">    泛型类,泛型接口定义的泛型在整个类/接口中有效</span><br><span class="line">    但是泛型方法上的定义的泛型只能在方法内使用!! --&gt; 区别就在作用域问题上</span><br><span class="line">    </span><br><span class="line">格式:</span><br><span class="line">	<span class="comment">//从此在此方法内多了一种类型 &lt;泛型&gt; 给方法使用</span></span><br><span class="line">	方法的修饰符 &lt;泛型&gt; 返回值类型 方法名(形式参数列表)&#123;</span><br><span class="line">        方法体;</span><br><span class="line">        <span class="comment">//return 值;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">例如:</span><br><span class="line">	<span class="keyword">static</span> &lt;T&gt; <span class="type">boolean</span> <span class="title function_">addAll</span><span class="params">(Collection&lt;T&gt; c, T... elements)</span> </span><br><span class="line">  <span class="keyword">static</span> &lt;T&gt; <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(List&lt;T&gt; list, Comparator&lt;T&gt; c)</span>  </span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h1 id="泛型通配符"><a href="#泛型通配符" class="headerlink" title="泛型通配符"></a>泛型通配符</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">集合泛型通配符的使用场景: 在方法的形参上,要定义一个方法接收任意泛型类型的集合对象</span><br><span class="line"> &lt;?&gt; : 代表的是任意的引用数据类型</span><br><span class="line"> 集合泛型通配符只用在方法的形式参数上!!</span><br><span class="line">    </span><br><span class="line">例如: <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">shuffle</span><span class="params">(List&lt;?&gt; list)</span>:可以传入任意泛型类型的List集合...</span><br></pre></td></tr></table></figure>
+
+<h2 id="泛型上下限"><a href="#泛型上下限" class="headerlink" title="泛型上下限"></a>泛型上下限</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">介绍一个继承关系:</span><br><span class="line">	爷爷类 Object</span><br><span class="line">    父类 Number</span><br><span class="line">    子类 Integer</span><br><span class="line"></span><br><span class="line">    需求是:</span><br><span class="line">        <span class="number">1.</span> 我要定义一个方法,要求方法只能能够接收泛型为Number类型或者Object类型的ArrayList集合</span><br><span class="line">                集合泛型的下限 : &lt;? <span class="built_in">super</span> Number&gt;</span><br><span class="line">                    ? : 你要传入的集合类型</span><br><span class="line">                    类型允许是: Number或者Number的父类型</span><br><span class="line">        <span class="number">2.</span> 我要定义一个方法,要求方法只能能够接收泛型为Number类型或者Integer类型的ArrayList集合</span><br><span class="line">                集合泛型的上限 : &lt;? <span class="keyword">extends</span> <span class="title class_">Number</span>&gt;</span><br><span class="line">                    ? : 你要传入的集合类型</span><br><span class="line">                    类型允许是: Number或者Number的子类型</span><br><span class="line"></span><br><span class="line">     重要!!!!!不管是下限还是上限,都是包含extends/<span class="built_in">super</span>后面的类型的!! 重要!!!!!</span><br><span class="line">                        </span><br><span class="line">     上限是:    &lt;? <span class="keyword">extends</span> <span class="title class_">T</span>&gt; </span><br><span class="line">     下限是:    &lt;? <span class="built_in">super</span> T&gt;  </span><br><span class="line"></span><br><span class="line">API中:</span><br><span class="line">	<span class="number">1.</span> <span class="keyword">static</span> &lt;T&gt; <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(List&lt;T&gt; list, Comparator&lt;? <span class="built_in">super</span> T&gt; c)</span></span><br><span class="line">        &lt;T&gt; 方法上的泛型</span><br><span class="line">        List&lt;T&gt; list : 传入的集合泛型是什么T就是什么类型  T代表的就是集合的泛型!</span><br><span class="line">        Comparator&lt;? <span class="built_in">super</span> T&gt; c :     </span><br><span class="line">			? <span class="built_in">super</span> T: 下限 要求Comparator比较器的泛型最低得是T类型(集合的泛型)</span><br><span class="line">                为什么这样设计?</span><br><span class="line">                	比较器是用来比较集合中的元素的,如果比较器的泛型还没有集合元素的泛型类型大,那么比较器如何去装下集合中的元素,并比较!!</span><br><span class="line">                </span><br><span class="line">     <span class="number">2.</span> <span class="keyword">static</span> &lt;T <span class="keyword">extends</span> <span class="title class_">Comparable</span>&lt;? <span class="built_in">super</span> T&gt;&gt; <span class="keyword">void</span> <span class="title function_">sort</span><span class="params">(List&lt;T&gt; list)</span>   </span><br><span class="line">         &lt;T <span class="keyword">extends</span> <span class="title class_">Comparable</span>&lt;? <span class="built_in">super</span> T&gt;&gt;</span><br><span class="line">                T: 方法的泛型 -&gt; T类型又是集合List的泛型</span><br><span class="line">                T <span class="keyword">extends</span> <span class="title class_">Comparable</span>: 要求集合的泛型必须是Comparable的子类型</span><br><span class="line">                    <span class="comment">// 导致了如果你传入的集合泛型没有实现Comparable接口就方法报错!!(变相的帮你去校验集合泛型类有没有提供比较规则)</span></span><br><span class="line">                Comparable&lt;? <span class="built_in">super</span> T&gt; : 要求比较器的泛型类型必须大于或者等于集合的泛型 </span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E6%B3%9B%E5%9E%8B/" data-id="cloxtn0cl001t5gyebs7yew8s" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/求n以内范围的质数算法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E6%B1%82n%E4%BB%A5%E5%86%85%E8%8C%83%E5%9B%B4%E7%9A%84%E8%B4%A8%E6%95%B0%E7%AE%97%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.767Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">100</span>;</span><br><span class="line"><span class="type">boolean</span> <span class="variable">isFlag</span> <span class="operator">=</span> <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">2</span>;i &lt;= n;i++)&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> <span class="number">2</span>;j &lt;= Math.sqrt(i);j++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(i % j ==<span class="number">0</span>)&#123;</span><br><span class="line">      isFlag = <span class="literal">false</span>;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(isFlag == <span class="literal">true</span>)&#123;</span><br><span class="line">    System.out.println(i);</span><br><span class="line">  &#125;</span><br><span class="line">  isFlag = <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>算法分析：</p>
+<p>i可以分解为：</p>
+<ul>
+<li>2*i&#x2F;2</li>
+<li>3*i&#x2F;3</li>
+<li>…….</li>
+<li>根号i*根号i</li>
+</ul>
+<p>如果i满足上述一行，即i就不是一个质数，反之是质数。</p>
+<p><img src="/%E6%B1%82n%E4%BB%A5%E5%86%85%E8%8C%83%E5%9B%B4%E7%9A%84%E8%B4%A8%E6%95%B0%E7%AE%97%E6%B3%95.assets/937d353298fa1fe48398e229b04b55b7.png" alt="937d353298fa1fe48398e229b04b55b7"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E6%B1%82n%E4%BB%A5%E5%86%85%E8%8C%83%E5%9B%B4%E7%9A%84%E8%B4%A8%E6%95%B0%E7%AE%97%E6%B3%95/" data-id="cloxtn0cm001u5gye6sd4hfov" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/权限修饰符" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.765Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="权限修饰符"><a href="#权限修饰符" class="headerlink" title="权限修饰符"></a>权限修饰符</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> : 公共的</span><br><span class="line"><span class="keyword">protected</span> : 受保护的</span><br><span class="line">默认不写 :     默认的</span><br><span class="line"><span class="keyword">private</span> : 私有的</span><br><span class="line"><span class="keyword">public</span> &gt; <span class="keyword">protected</span> &gt; 默认不写 &gt; <span class="keyword">private</span></span><br><span class="line"></span><br><span class="line">Java中的类在不做其他操作的时候，在不同模块下的类是不可访问的;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">同一个模块</th>
+<th align="center">同一个类</th>
+<th align="center">同一个包不同类</th>
+<th align="center">不同包的继承关系</th>
+<th align="center">不同包没关系</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>public</strong></td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+</tr>
+<tr>
+<td align="center"><strong>protected</strong></td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="center"><strong>不写</strong></td>
+<td align="center">√</td>
+<td align="center">√</td>
+<td align="center">×</td>
+<td align="center">×</td>
+</tr>
+<tr>
+<td align="center"><strong>private</strong></td>
+<td align="center">√</td>
+<td align="center">×</td>
+<td align="center">×</td>
+<td align="center">×</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>只要访问不是同一个包下的类或者java.lang包下的类，使用时都需要导包</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6/" data-id="cloxtn0cl001s5gye46v69l4o" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/斗地主案例" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E6%96%97%E5%9C%B0%E4%B8%BB%E6%A1%88%E4%BE%8B/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.763Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.Comparator;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    斗地主案例</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//花色</span></span><br><span class="line">        String[] flower = &#123;<span class="string">&quot;♣&quot;</span>,<span class="string">&quot;♦&quot;</span>,<span class="string">&quot;♥&quot;</span>,<span class="string">&quot;♠&quot;</span>&#125;;</span><br><span class="line">        <span class="comment">//数字</span></span><br><span class="line">        String[] num = &#123;<span class="string">&quot;3&quot;</span>,<span class="string">&quot;4&quot;</span>,<span class="string">&quot;5&quot;</span>,<span class="string">&quot;6&quot;</span>,<span class="string">&quot;7&quot;</span>,<span class="string">&quot;8&quot;</span>,<span class="string">&quot;9&quot;</span>,<span class="string">&quot;10&quot;</span>,<span class="string">&quot;J&quot;</span>,<span class="string">&quot;Q&quot;</span>,<span class="string">&quot;K&quot;</span>,<span class="string">&quot;A&quot;</span>,<span class="string">&quot;2&quot;</span>&#125;;</span><br><span class="line">        <span class="comment">//大王小王</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">Joker</span> <span class="operator">=</span> <span class="string">&quot;JOKER&quot;</span>;</span><br><span class="line">        <span class="type">String</span> <span class="variable">joker</span> <span class="operator">=</span> <span class="string">&quot;joker&quot;</span>;</span><br><span class="line"></span><br><span class="line">        ArrayList&lt;String&gt; card = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; num.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i1</span> <span class="operator">=</span> <span class="number">0</span>; i1 &lt; flower.length; i1++) &#123;</span><br><span class="line">               card.add(flower[i1] + num[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        card.add(Joker);</span><br><span class="line">        card.add(joker);</span><br><span class="line">        System.out.println(<span class="string">&quot;card = &quot;</span> + card);</span><br><span class="line">        <span class="comment">//洗牌</span></span><br><span class="line">        Collections.shuffle(card);</span><br><span class="line">        ArrayList&lt;String&gt; player1 = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        ArrayList&lt;String&gt; player2 = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        ArrayList&lt;String&gt; player3 = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        ArrayList&lt;String&gt; lastThreeCard = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        lastThreeCard.add(card.get(card.size() -<span class="number">1</span>));</span><br><span class="line">        lastThreeCard.add(card.get(card.size() -<span class="number">2</span>));</span><br><span class="line">        lastThreeCard.add(card.get(card.size() -<span class="number">3</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//发牌</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; card.size() - <span class="number">3</span>; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span>(i % <span class="number">3</span> == <span class="number">0</span>)</span><br><span class="line">                player1.add(card.get(i));</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span> (i % <span class="number">3</span> == <span class="number">1</span>)</span><br><span class="line">                player2.add(card.get(i));</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                player3.add(card.get(i));</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;player1 = &quot;</span> + player1);</span><br><span class="line">        System.out.println(<span class="string">&quot;player2 = &quot;</span> + player2);</span><br><span class="line">        System.out.println(<span class="string">&quot;player3 = &quot;</span> + player3);</span><br><span class="line">        System.out.println(<span class="string">&quot;lastThreeCard = &quot;</span> + lastThreeCard);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//排序规则</span></span><br><span class="line">        ArrayList&lt;Character&gt; characters = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        Collections.addAll(characters,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;4&#x27;</span>,<span class="string">&#x27;5&#x27;</span>,<span class="string">&#x27;6&#x27;</span>,<span class="string">&#x27;7&#x27;</span>,<span class="string">&#x27;8&#x27;</span>,<span class="string">&#x27;9&#x27;</span>,<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;J&#x27;</span>,<span class="string">&#x27;Q&#x27;</span>,<span class="string">&#x27;K&#x27;</span>,<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;o&#x27;</span>,<span class="string">&#x27;O&#x27;</span>);</span><br><span class="line"></span><br><span class="line">       Comparator &lt;String&gt; rule = <span class="keyword">new</span> <span class="title class_">Comparator</span>&lt;String&gt;() &#123;</span><br><span class="line"></span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(String o1, String o2)</span> &#123;</span><br><span class="line">               <span class="type">char</span> <span class="variable">oldCard</span> <span class="operator">=</span> o1.charAt(<span class="number">1</span>);</span><br><span class="line">               <span class="type">char</span> <span class="variable">newCard</span> <span class="operator">=</span> o2.charAt(<span class="number">1</span>);</span><br><span class="line">               <span class="type">int</span> <span class="variable">oldIndex</span> <span class="operator">=</span> characters.indexOf(oldCard);</span><br><span class="line">               <span class="type">int</span> <span class="variable">newIndex</span> <span class="operator">=</span> characters.indexOf(newCard);</span><br><span class="line">               <span class="keyword">return</span> oldIndex - newIndex;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;;</span><br><span class="line">        Collections.sort(player1,rule);</span><br><span class="line">        Collections.sort(player2,rule);</span><br><span class="line">        Collections.sort(player3,rule);</span><br><span class="line">        System.out.println(<span class="string">&quot;player1 = &quot;</span> + player1);</span><br><span class="line">        System.out.println(<span class="string">&quot;player2 = &quot;</span> + player2);</span><br><span class="line">        System.out.println(<span class="string">&quot;player3 = &quot;</span> + player3);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E6%96%97%E5%9C%B0%E4%B8%BB%E6%A1%88%E4%BE%8B/" data-id="cloxtn0cl001r5gyed6r48aqc" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/5/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/7/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

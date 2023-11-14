@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Listener   监听器 事件源：事件发生的源头 监听器：事件发生触发的组件 事件：能够触发监听器的事情 事件绑定：将事件源和监听器关联起来   Servlet监听器 事件源 : 三大域对象 监听器 : 一类监听器、二类监听器、三类监听器 事件 : 域对象发生改变 事件绑定 : web.xml中配置   分类 一类监听器 监听域对象的创建、销毁   二类监听器 监听域对象中的数据的内容改变(添">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaWeb/Listener/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Listener   监听器 事件源：事件发生的源头 监听器：事件发生触发的组件 事件：能够触发监听器的事情 事件绑定：将事件源和监听器关联起来   Servlet监听器 事件源 : 三大域对象 监听器 : 一类监听器、二类监听器、三类监听器 事件 : 域对象发生改变 事件绑定 : web.xml中配置   分类 一类监听器 监听域对象的创建、销毁   二类监听器 监听域对象中的数据的内容改变(添">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T04:11:24.942Z">
+<meta property="article:modified_time" content="2023-11-08T07:15:19.115Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaWeb/Listener" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaWeb/Listener/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.942Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Listener"><a href="#Listener" class="headerlink" title="Listener"></a>Listener</h1><br/>
+
+<ul>
+<li>监听器<ul>
+<li>事件源：事件发生的源头</li>
+<li>监听器：事件发生触发的组件</li>
+<li>事件：能够触发监听器的事情</li>
+<li>事件绑定：将事件源和监听器关联起来</li>
+</ul>
+</li>
+<li>Servlet监听器<ul>
+<li>事件源 : 三大域对象</li>
+<li>监听器 : 一类监听器、二类监听器、三类监听器</li>
+<li>事件 : 域对象发生改变</li>
+<li>事件绑定 : web.xml中配置</li>
+</ul>
+</li>
+<li>分类<ul>
+<li>一类监听器<ul>
+<li>监听域对象的创建、销毁</li>
+</ul>
+</li>
+<li>二类监听器<ul>
+<li>监听域对象中的数据的内容改变(添加、移除、替换)</li>
+</ul>
+</li>
+<li>三类监听器<ul>
+<li>监听域对象中的对象的状态改变(绑定、解绑、钝化、活化)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="一类监听器之ServletRequestListener"><a href="#一类监听器之ServletRequestListener" class="headerlink" title="一类监听器之ServletRequestListener"></a>一类监听器之ServletRequestListener</h2><br/>
+
+<ul>
+<li>概述<ul>
+<li>监听ServletRequest域对象的创建、销毁</li>
+</ul>
+</li>
+<li>开发步骤<ul>
+<li>①定义类实现ServletRequestListener，并重写方法</li>
+<li>②在web.xml中，配置监听器</li>
+</ul>
+</li>
+<li>①定义类实现ServletRequestListener，并重写方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * ①定义类实现ServletRequestListener，并重写方法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyServletRequestListener</span> <span class="keyword">implements</span> <span class="title class_">ServletRequestListener</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">requestInitialized</span><span class="params">(ServletRequestEvent sre)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;request创建&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">requestDestroyed</span><span class="params">(ServletRequestEvent sre)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;request销毁&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>②在web.xml中，配置监听器</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>com.yyq.listener.listener1.MyServletRequestListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>总结</p>
+<ul>
+<li>事件源：ServletRequest</li>
+<li>监听器：ServletRequestListener</li>
+<li>事件：ServletRequestListener创建、销毁</li>
+<li>事件绑定：在web.xml中声明listener</li>
+</ul>
+<h2 id="一类监听器之HttpSessionListener"><a href="#一类监听器之HttpSessionListener" class="headerlink" title="一类监听器之HttpSessionListener"></a>一类监听器之HttpSessionListener</h2><br/>
+
+<ul>
+<li>概述<ul>
+<li>监听HttpSession对象的创建、销毁</li>
+</ul>
+</li>
+<li>开发步骤<ul>
+<li>①定义类实现HttpSessionListener，并重写方法</li>
+<li>②在web.xml中，配置监听器</li>
+</ul>
+</li>
+<li>①定义类实现HttpSessionListener，并重写方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyHttpSessionListener</span> <span class="keyword">implements</span> <span class="title class_">HttpSessionListener</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionCreated</span><span class="params">(HttpSessionEvent se)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;session创建&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionDestroyed</span><span class="params">(HttpSessionEvent se)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;session销毁&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>②在web.xml中，配置监听器</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>com.yyq.listener.listener1.MyHttpSessionListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="一类监听器之ServletContextListener"><a href="#一类监听器之ServletContextListener" class="headerlink" title="一类监听器之ServletContextListener"></a>一类监听器之ServletContextListener</h2><br/>
+
+<ul>
+<li>概述<ul>
+<li>监听ServletContext对象的创建、销毁</li>
+</ul>
+</li>
+<li>开发步骤<ul>
+<li>①定义类实现ServletContextListener，并重写方法</li>
+<li>②在web.xml中，配置监听器</li>
+</ul>
+</li>
+<li>①定义类实现ServletContextListener，并重写方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyServletContextListener</span> <span class="keyword">implements</span> <span class="title class_">ServletContextListener</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">contextInitialized</span><span class="params">(ServletContextEvent sce)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext创建&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">contextDestroyed</span><span class="params">(ServletContextEvent sce)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext销毁&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>②在web.xml中，配置监听器</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>com.yyq.listener.listener1.MyServletContextListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二类监听器概述"><a href="#二类监听器概述" class="headerlink" title="二类监听器概述"></a>二类监听器概述</h2><br/>
+
+<ul>
+<li>概述<ul>
+<li>监听域对象中数据的变更(添加、替换、移除)</li>
+</ul>
+</li>
+<li>分类<ul>
+<li>ServletRequestAttributeListener<ul>
+<li>监听ServletRequest域对象中数据的变更</li>
+</ul>
+</li>
+<li>HttpSessionAttributeListener<ul>
+<li>监听HttpSession域对象中数据的变更</li>
+</ul>
+</li>
+<li>ServletContextAttributeListener<ul>
+<li>监听ServletContext域对象中数据的变更</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="二类监听器之ServletRequestAttributeListener"><a href="#二类监听器之ServletRequestAttributeListener" class="headerlink" title="二类监听器之ServletRequestAttributeListener"></a>二类监听器之ServletRequestAttributeListener</h2><br/>
+
+<ul>
+<li>开发步骤<ul>
+<li>①定义类实现ServletRequestAttributeListener，并重写方法</li>
+<li>②在web.xml中，配置监听器</li>
+</ul>
+</li>
+<li>①定义类实现ServletRequestAttributeListener，并重写方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyServletRequestAttributeListener</span> <span class="keyword">implements</span> <span class="title class_">ServletRequestAttributeListener</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeAdded</span><span class="params">(ServletRequestAttributeEvent srae)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest数据添加&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeRemoved</span><span class="params">(ServletRequestAttributeEvent srae)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest数据移除&quot;</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeReplaced</span><span class="params">(ServletRequestAttributeEvent srae)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletRequest数据替换&quot;</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>②在web.xml中，配置监听器</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>com.yyq.listener.listener2.MyServletRequestAttributeListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二类监听器之HttpSessionAttributeListener"><a href="#二类监听器之HttpSessionAttributeListener" class="headerlink" title="二类监听器之HttpSessionAttributeListener"></a>二类监听器之HttpSessionAttributeListener</h2><br/>
+
+<ul>
+<li>开发步骤<ul>
+<li>①定义类实现HttpSessionAttributeListener，并重写方法</li>
+<li>②在web.xml中，配置监听器</li>
+</ul>
+</li>
+<li>①定义类实现HttpSessionAttributeListener，并重写方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyHttpSessionAttributeListener</span> <span class="keyword">implements</span> <span class="title class_">HttpSessionAttributeListener</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeAdded</span><span class="params">(HttpSessionBindingEvent se)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;session添加&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeRemoved</span><span class="params">(HttpSessionBindingEvent se)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;session移除&quot;</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeReplaced</span><span class="params">(HttpSessionBindingEvent se)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;session替换&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>②在web.xml中，配置监听器</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>com.yyq.listener.listener2.MyHttpSessionAttributeListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二类监听器之ServletContextAttributeListener"><a href="#二类监听器之ServletContextAttributeListener" class="headerlink" title="二类监听器之ServletContextAttributeListener"></a>二类监听器之ServletContextAttributeListener</h2><br/>
+
+<ul>
+<li>开发步骤<ul>
+<li>①定义类实现ServletContextAttributeListener，并重写方法</li>
+<li>②在web.xml中，配置监听器</li>
+</ul>
+</li>
+<li>①定义类实现ServletContextAttributeListener，并重写方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyServletContextAttributeListener</span> <span class="keyword">implements</span> <span class="title class_">ServletContextAttributeListener</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeAdded</span><span class="params">(ServletContextAttributeEvent scae)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext添加&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeRemoved</span><span class="params">(ServletContextAttributeEvent scae)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext移除&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">attributeReplaced</span><span class="params">(ServletContextAttributeEvent scae)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext替换&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>②在web.xml中，配置监听器</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span>com.yyq.listener.listener2.MyServletContextAttributeListener<span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="三类监听器概述"><a href="#三类监听器概述" class="headerlink" title="三类监听器概述"></a>三类监听器概述</h2><br/>
+
+<ul>
+<li>概述<ul>
+<li>监听域对象中的对象的状态变更(绑定&#x2F;解绑、钝化&#x2F;活化)</li>
+</ul>
+</li>
+<li>分类<ul>
+<li>HttpSessionBindingListener<ul>
+<li>监听session域对象中的对象的状态变更(绑定&#x2F;解绑)</li>
+</ul>
+</li>
+<li>HttpSessionActivationListener<ul>
+<li>监听session域对象中的对象的状态变更(钝化&#x2F;活化)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="三类监听器之HttpSessionBindingListener"><a href="#三类监听器之HttpSessionBindingListener" class="headerlink" title="三类监听器之HttpSessionBindingListener"></a>三类监听器之HttpSessionBindingListener</h2><br/>
+
+<ul>
+<li>概述<ul>
+<li>监听session域对象中的对象的绑定&#x2F;解绑<ul>
+<li>绑定：将javabean对象存储到session中</li>
+<li>解绑：将javabean对象从session中移除</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>开发步骤<ul>
+<li>①定义javabean，实现HttpSessionBindingListener，并重写方法</li>
+</ul>
+</li>
+<li>代码实现</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Student</span> <span class="keyword">implements</span> <span class="title class_">HttpSessionBindingListener</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Integer studentId;</span><br><span class="line">    <span class="keyword">private</span> String studentName;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">valueBound</span><span class="params">(HttpSessionBindingEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Student绑定&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">valueUnbound</span><span class="params">(HttpSessionBindingEvent event)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Student解绑&quot;</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结</p>
+<ul>
+<li>事件源 ：javabean对象</li>
+<li>监听器：HttpSessionBindingListener</li>
+<li>事件：javabean状态变更（绑定&#x2F;解绑）</li>
+<li>事件绑定：实现HttpSessionBindingListener</li>
+</ul>
+<h2 id="session钝化和活化"><a href="#session钝化和活化" class="headerlink" title="session钝化和活化"></a>session钝化和活化</h2><br/>
+
+<ul>
+<li>概述<ul>
+<li>有一些存储到session中的数据，想要被长久使用，为了避免服务器关闭之后，session销毁从而导致这样的数据销毁，可以利用钝化和活化来实现这个需求</li>
+</ul>
+</li>
+<li>钝化<ul>
+<li>当服务器关闭时，将数据序列化(字符串-&gt;字节)到磁盘中保存</li>
+</ul>
+</li>
+<li>活化<ul>
+<li>当服务器开启时，将数据从磁盘中反序列化(字节-&gt;字符串)读取出来</li>
+</ul>
+</li>
+</ul>
+<h2 id="三类监听器之HttpSessionActivationListener"><a href="#三类监听器之HttpSessionActivationListener" class="headerlink" title="三类监听器之HttpSessionActivationListener"></a>三类监听器之HttpSessionActivationListener</h2><br/>
+
+<ul>
+<li>开发步骤<ul>
+<li>①定义javabean，实现Serializable接口</li>
+<li>②配置tomcat的context.xml<ul>
+<li>idea需要,eclipse不需要</li>
+</ul>
+</li>
+<li>③定义类实现HttpSessionActivationListener，并重写方法</li>
+</ul>
+</li>
+<li>①定义javabean，实现Serializable接口</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> <span class="keyword">implements</span> <span class="title class_">Serializable</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Integer userId;</span><br><span class="line">    <span class="keyword">private</span> String userName;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>②配置tomcat的context.xml</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Manager</span> <span class="attr">className</span>=<span class="string">&quot;org.apache.catalina.session.PersistentManager&quot;</span> <span class="attr">saveOnRestart</span>=<span class="string">&quot;true&quot;</span> <span class="attr">maxIdleSwap</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Store</span> <span class="attr">className</span>=<span class="string">&quot;org.apache.catalina.session.FileStore&quot;</span> <span class="attr">directory</span>=<span class="string">&quot;E:\Program Files\apache-tomcat-9.0.52\conf\Session&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Manager</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>③定义类实现HttpSessionActivationListener，并重写方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">User</span> <span class="keyword">implements</span> <span class="title class_">Serializable</span> , HttpSessionActivationListener &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Integer userId;</span><br><span class="line">    <span class="keyword">private</span> String userName;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionWillPassivate</span><span class="params">(HttpSessionEvent se)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;User钝化&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">sessionDidActivate</span><span class="params">(HttpSessionEvent se)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;User活化&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="监听器注解开发"><a href="#监听器注解开发" class="headerlink" title="监听器注解开发"></a>监听器注解开发</h2><ul>
+<li>代码实现</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyServletRequestListener</span> <span class="keyword">implements</span> <span class="title class_">ServletRequestListener</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">requestInitialized</span><span class="params">(ServletRequestEvent sre)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;request创建&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">requestDestroyed</span><span class="params">(ServletRequestEvent sre)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;request销毁&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="监听器练习"><a href="#监听器练习" class="headerlink" title="监听器练习"></a>监听器练习</h2><br/>
+
+<ul>
+<li>需求<ul>
+<li>当服务器启动时，根据beans.xml中配置信息，创建user1、user2对象并保存；</li>
+<li>在servlet中，要使用user1、user2对象。</li>
+</ul>
+</li>
+<li>开发步骤<ul>
+<li>①定义MyServletContextListener</li>
+<li>②定义MyApplicationContext</li>
+<li>③定义MyApplicationContextUtils工具类</li>
+<li>③代码测试</li>
+</ul>
+</li>
+<li>①定义MyServletContextListener</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebListener</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyServletContextListener</span> <span class="keyword">implements</span> <span class="title class_">ServletContextListener</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">contextInitialized</span><span class="params">(ServletContextEvent sce)</span> &#123;<span class="comment">//监听服务器启动</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">contextConfigLocation</span> <span class="operator">=</span> sce.getServletContext().getInitParameter(<span class="string">&quot;contextConfigLocation&quot;</span>);</span><br><span class="line">        <span class="comment">//解析xml文件,根据配置信息，创建对应的对象，并保存</span></span><br><span class="line">        <span class="type">MyApplicationContext</span> <span class="variable">applicationContext</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MyApplicationContext</span>(contextConfigLocation);</span><br><span class="line">        sce.getServletContext().setAttribute(<span class="string">&quot;applicationContext&quot;</span>, applicationContext);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">contextDestroyed</span><span class="params">(ServletContextEvent sce)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;ServletContext销毁&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>②定义MyApplicationContext</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 自定义容器</span></span><br><span class="line"><span class="comment"> *  解析xml</span></span><br><span class="line"><span class="comment"> *  创建对象</span></span><br><span class="line"><span class="comment"> *  保存对象</span></span><br><span class="line"><span class="comment"> *  获取对象</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyApplicationContext</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Map&lt;String, Object&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">    <span class="keyword">private</span> String contextConfigLocation;<span class="comment">//配置文件名称</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MyApplicationContext</span><span class="params">(String contextConfigLocation)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.contextConfigLocation = contextConfigLocation;</span><br><span class="line">        parseXML(contextConfigLocation);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 解析xml</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> contextConfigLocation</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">parseXML</span><span class="params">(String contextConfigLocation)</span> &#123;</span><br><span class="line">        <span class="type">SAXReader</span> <span class="variable">saxReader</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SAXReader</span>();</span><br><span class="line">        <span class="type">InputStream</span> <span class="variable">inputStream</span> <span class="operator">=</span> MyApplicationContext.class.getClassLoader().getResourceAsStream(contextConfigLocation);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="type">Document</span> <span class="variable">document</span> <span class="operator">=</span> saxReader.read(inputStream);</span><br><span class="line">            <span class="type">Element</span> <span class="variable">rootElement</span> <span class="operator">=</span> document.getRootElement();</span><br><span class="line">            List&lt;Element&gt; beanEles = rootElement.elements(<span class="string">&quot;bean&quot;</span>);</span><br><span class="line">            <span class="keyword">for</span> (Element beanEle : beanEles) &#123;</span><br><span class="line">                <span class="comment">//获取对象的唯一标识</span></span><br><span class="line">                <span class="type">String</span> <span class="variable">id</span> <span class="operator">=</span> beanEle.attributeValue(<span class="string">&quot;id&quot;</span>);</span><br><span class="line">                <span class="type">String</span> <span class="variable">className</span> <span class="operator">=</span> beanEle.attribute(<span class="string">&quot;class&quot;</span>).getValue();</span><br><span class="line">                Class&lt;?&gt; clazz = Class.forName(className);</span><br><span class="line">                <span class="comment">//创建对象</span></span><br><span class="line">                <span class="type">Object</span> <span class="variable">instance</span> <span class="operator">=</span> clazz.newInstance();</span><br><span class="line">                List&lt;Element&gt; propertyEles = beanEle.elements(<span class="string">&quot;property&quot;</span>);</span><br><span class="line">                <span class="keyword">for</span> (Element propertyEle : propertyEles) &#123;</span><br><span class="line">                    <span class="type">String</span> <span class="variable">fieldName</span> <span class="operator">=</span> propertyEle.attributeValue(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">                    <span class="type">String</span> <span class="variable">fieldValue</span> <span class="operator">=</span> propertyEle.attributeValue(<span class="string">&quot;value&quot;</span>);</span><br><span class="line">                    <span class="type">PropertyDescriptor</span> <span class="variable">propertyDescriptor</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">PropertyDescriptor</span>(fieldName, clazz);</span><br><span class="line">                    <span class="type">Method</span> <span class="variable">writeMethod</span> <span class="operator">=</span> propertyDescriptor.getWriteMethod();</span><br><span class="line">                    <span class="comment">//先判断字段类型，再执行set方法</span></span><br><span class="line">                    <span class="type">Field</span> <span class="variable">field</span> <span class="operator">=</span> clazz.getDeclaredField(fieldName);</span><br><span class="line">                    <span class="keyword">if</span> (field.getType() == Integer.class) &#123;</span><br><span class="line">                        writeMethod.invoke(instance, Integer.parseInt(fieldValue));</span><br><span class="line"></span><br><span class="line">                    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (field.getType() == String.class) &#123;</span><br><span class="line">                        writeMethod.invoke(instance, fieldValue);</span><br><span class="line">                    &#125;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//保存对象</span></span><br><span class="line">                map.put(id, instance);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">getBean</span><span class="params">(String beanName)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> map.get(beanName);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>③定义MyApplicationContextUtils工具类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ApplicationContextUtils</span> &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> MyApplicationContext <span class="title function_">getApplicationContext</span><span class="params">(ServletContext servletContext)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (MyApplicationContext) servletContext.getAttribute(<span class="string">&quot;applicationContext&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>④代码测试</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@WebServlet(&quot;/demo14&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo14Servlet</span> <span class="keyword">extends</span> <span class="title class_">HttpServlet</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doGet</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        <span class="comment">//使用user1、user2对象，意味着要使用MyApplicationContext对象</span></span><br><span class="line">        <span class="type">MyApplicationContext</span> <span class="variable">applicationContext</span> <span class="operator">=</span> (MyApplicationContext) getServletContext().getAttribute(<span class="string">&quot;applicationContext&quot;</span>);</span><br><span class="line">        <span class="type">Object</span> <span class="variable">user1</span> <span class="operator">=</span> applicationContext.getBean(<span class="string">&quot;user1&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;user1 = &quot;</span> + user1);</span><br><span class="line">        <span class="type">Object</span> <span class="variable">user2</span> <span class="operator">=</span> applicationContext.getBean(<span class="string">&quot;user2&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;user2 = &quot;</span> + user2);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">doPost</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span> <span class="keyword">throws</span> ServletException, IOException &#123;</span><br><span class="line">        doGet(request, response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaWeb/Listener/" data-id="cloxtn0cp00265gye4sfbc3vt" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaWeb/MD5%E5%8A%A0%E5%AF%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaWeb/IDEA%E9%83%A8%E7%BD%B2web%E9%A1%B9%E7%9B%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

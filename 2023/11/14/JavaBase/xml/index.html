@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="xmlXml概述 概述 extensive markup language : 可扩展标签语言 简单说就是指xml文件中的标签可以任意定义。   dom树  代码实现123456789&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot; ?&gt;&lt;bookstore&gt;    &lt;book category&#x3D;&amp;quo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/xml/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="xmlXml概述 概述 extensive markup language : 可扩展标签语言 简单说就是指xml文件中的标签可以任意定义。   dom树  代码实现123456789&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot; ?&gt;&lt;bookstore&gt;    &lt;book category&#x3D;&amp;quo">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/xml.assets/f0c5e400066942ca024d522363550dfe.png">
+<meta property="article:published_time" content="2023-11-14T04:11:24.727Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.291Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/xml.assets/f0c5e400066942ca024d522363550dfe.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/xml" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/xml/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.727Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="xml"><a href="#xml" class="headerlink" title="xml"></a>xml</h1><h2 id="Xml概述"><a href="#Xml概述" class="headerlink" title="Xml概述"></a>Xml概述</h2><ul>
+<li>概述<ul>
+<li>extensive markup language : 可扩展标签语言</li>
+<li>简单说就是指xml文件中的标签可以任意定义。</li>
+</ul>
+</li>
+<li>dom树</li>
+<li><h2 id=""><a href="#" class="headerlink" title=""></a><img src="/xml.assets/f0c5e400066942ca024d522363550dfe.png" alt="截图"></h2></li>
+<li>代码实现<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bookstore</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">book</span> <span class="attr">category</span>=<span class="string">&quot;fantasy&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span>Harry Potter<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">auhor</span>&gt;</span>J K.Rowling<span class="tag">&lt;/<span class="name">auhor</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">year</span>&gt;</span>2005<span class="tag">&lt;/<span class="name">year</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">price</span>&gt;</span>29.99<span class="tag">&lt;/<span class="name">price</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bookstore</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Xml组成"><a href="#Xml组成" class="headerlink" title="Xml组成"></a>Xml组成</h2><ul>
+<li>组成<ul>
+<li>文档声明</li>
+<li>属性</li>
+<li>元素</li>
+<li>注释</li>
+</ul>
+</li>
+<li>文档声明<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>属性<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">book</span> <span class="attr">category</span>=<span class="string">&quot;fantasy&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--属性可以写成标签--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">book</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">category</span>&gt;</span>fantasy<span class="tag">&lt;/<span class="name">category</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">book</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>元素<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">开始标签</span> <span class="attr">属性1</span>=<span class="string">&quot;值1&quot;</span> <span class="attr">属性2</span>=<span class="string">&quot;值2&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">开始标签</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>注释<ul>
+<li>和html注释一样!</li>
+</ul>
+</li>
+</ul>
+<h2 id="Xml约束概述"><a href="#Xml约束概述" class="headerlink" title="Xml约束概述"></a>Xml约束概述</h2><ul>
+<li>概述<ul>
+<li>Xml文件中，元素名称、文本内容、属性名称、属性值都可以随意定义。如果要对这些进行规范，那么就需要用到Xml约束</li>
+</ul>
+</li>
+<li>分类<ul>
+<li>dtd约束<ul>
+<li>简单约束，只能对元素名称、属性名称进行约束</li>
+</ul>
+</li>
+<li>schema约束<ul>
+<li>复杂约束，对对元素名称、属性名称、文本内容、属性值进行约束</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="dtd约束"><a href="#dtd约束" class="headerlink" title="dtd约束)"></a>dtd约束)</h2><ul>
+<li>开发步骤<ul>
+<li>①定义xml文件</li>
+<li>②定义dtd文件</li>
+<li>③dtd文件关联xml文件</li>
+</ul>
+</li>
+<li>①定义xml文件</li>
+<li>②定义dtd文件<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!-- xml文件中有一个根节点students,students下可以有n个student子节点(包括0个) --&gt;</span><br><span class="line">&lt;!ELEMENT students (student*)&gt;</span><br><span class="line">&lt;!-- student节点下,可以有name节点、age节点和sex节点,且name节点、age节点和sex节点是按照先后顺序出现 --&gt;</span><br><span class="line">&lt;!ELEMENT student (name,age,sex)&gt;</span><br><span class="line">&lt;!-- 定义name节点,且节点内容的类型为字符  --&gt;</span><br><span class="line">&lt;!ELEMENT name (#PCDATA)&gt;</span><br><span class="line">&lt;!-- 定义age节点,且节点内容的类型为字符 --&gt;</span><br><span class="line">&lt;!ELEMENT age (#PCDATA)&gt;</span><br><span class="line">&lt;!-- 定义sex节点,且节点内容的类型为字符 --&gt;</span><br><span class="line">&lt;!ELEMENT sex (#PCDATA)&gt;</span><br><span class="line">&lt;!-- 给节点student设置属性,属性名称为id,属性的类型为CDATA(字符), #REQUIRED指本属性是必须的  #IMPLIED指属性是可选的 --&gt;</span><br><span class="line">&lt;!ATTLIST student id CDATA #REQUIRED&gt;</span><br><span class="line">&lt;!-- 给节点student设置属性,属性名称为classname,属性的类型为CDATA(字符), #REQUIRED指本属性是必须的  #IMPLIED指属性是可选的 --&gt;</span><br><span class="line">&lt;!ATTLIST student classname CDATA #REQUIRED&gt;</span><br></pre></td></tr></table></figure></li>
+<li>③dtd文件关联xml文件(内部关联、外部关联)<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">students</span> [</span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ELEMENT <span class="keyword">students</span> (<span class="keyword">student</span>*)&gt;</span></span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ELEMENT <span class="keyword">student</span> (<span class="keyword">name</span>,<span class="keyword">age</span>,<span class="keyword">sex</span>)&gt;</span></span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ELEMENT <span class="keyword">name</span> (<span class="keyword">#PCDATA</span>)&gt;</span></span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ELEMENT <span class="keyword">age</span> (<span class="keyword">#PCDATA</span>)&gt;</span></span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ELEMENT <span class="keyword">sex</span> (<span class="keyword">#PCDATA</span>)&gt;</span></span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ATTLIST <span class="keyword">student</span> <span class="keyword">id</span> <span class="keyword">CDATA</span> <span class="keyword">#REQUIRED</span>&gt;</span></span></span><br><span class="line"><span class="meta">        <span class="meta">&lt;!ATTLIST <span class="keyword">student</span> <span class="keyword">classname</span> <span class="keyword">CDATA</span> <span class="keyword">#REQUIRED</span>&gt;</span></span></span><br><span class="line"><span class="meta">        ]&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">students</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span> <span class="attr">id</span>=<span class="string">&quot;21072201&quot;</span> <span class="attr">classname</span>=<span class="string">&quot;java_210722&quot;</span> &gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>陈浩<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>28<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">sex</span>&gt;</span>男<span class="tag">&lt;/<span class="name">sex</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">students</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">students</span> <span class="keyword">SYSTEM</span> <span class="string">&quot;students.dtd&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">students</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span> <span class="attr">id</span>=<span class="string">&quot;21072201&quot;</span> <span class="attr">classname</span>=<span class="string">&quot;java_210722&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>杨志鸿<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>28<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">sex</span>&gt;</span>男<span class="tag">&lt;/<span class="name">sex</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">students</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>注意事项<ul>
+<li>dtd约束只能对元素名称、属性名称进行约束。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Schema约束"><a href="#Schema约束" class="headerlink" title="Schema约束"></a>Schema约束</h2><ul>
+<li>开发步骤<ul>
+<li>①定义xml文件</li>
+<li>②定义schema文件</li>
+<li>③schema文件关联xml文件</li>
+</ul>
+</li>
+<li>①定义xml文件</li>
+<li>②定义schema文件<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">schema</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">targetNamespace</span>=<span class="string">&quot;http://www.example.org/students&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">elementFormDefault</span>=<span class="string">&quot;qualified&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- element:申明元素,包括根元素和子元素 这里就是申明根元素class --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">element</span> <span class="attr">name</span>=<span class="string">&quot;students&quot;</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- 复杂元素 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">complexType</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!-- squence:子元素按照顺序 1,子元素如果只有一种,那么就写一个,比如student元素 2,子元素如果有多种,那么就按想要的顺序写,比如:name,age,sex --&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">sequence</span>&gt;</span></span><br><span class="line">                <span class="comment">&lt;!-- 申明子元素student minOccurs:最少出现次数 maxOccurs:最大出现次数,数值或unbounded(无限大) --&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">element</span> <span class="attr">name</span>=<span class="string">&quot;student&quot;</span> <span class="attr">minOccurs</span>=<span class="string">&quot;0&quot;</span> <span class="attr">maxOccurs</span>=<span class="string">&quot;unbounded&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">complexType</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">sequence</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!-- 申明子元素name --&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">element</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span> <span class="attr">type</span>=<span class="string">&quot;string&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">element</span>&gt;</span></span><br><span class="line">                            <span class="comment">&lt;!-- 申明子元素age simpleType:元素age是一个简单元素 restriction:age的取值范围在1~150之间 --&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">element</span> <span class="attr">name</span>=<span class="string">&quot;age&quot;</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">simpleType</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">restriction</span> <span class="attr">base</span>=<span class="string">&quot;integer&quot;</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">minInclusive</span> <span class="attr">value</span>=<span class="string">&quot;1&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">minInclusive</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">maxInclusive</span> <span class="attr">value</span>=<span class="string">&quot;150&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">maxInclusive</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">restriction</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">simpleType</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">element</span>&gt;</span></span><br><span class="line"></span><br><span class="line">                            <span class="comment">&lt;!-- 申明子元素 sex restriction:取值范围在&quot;男&quot;和&quot;女&quot; --&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">element</span> <span class="attr">name</span>=<span class="string">&quot;sex&quot;</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">simpleType</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">restriction</span> <span class="attr">base</span>=<span class="string">&quot;string&quot;</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">enumeration</span> <span class="attr">value</span>=<span class="string">&quot;男&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">enumeration</span>&gt;</span></span><br><span class="line">                                        <span class="tag">&lt;<span class="name">enumeration</span> <span class="attr">value</span>=<span class="string">&quot;女&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">enumeration</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;/<span class="name">restriction</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">simpleType</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">element</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">sequence</span>&gt;</span></span><br><span class="line">                        <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">                            定义了一个属性id</span></span><br><span class="line"><span class="comment">                            use=&quot;required&quot;:属性是必须的</span></span><br><span class="line"><span class="comment">                            &lt;pattern value=&quot;java_\d&#123;4&#125;&quot;&gt;&lt;/pattern&gt;:id的值必须满足这个正则表达式:以java_开头,后面跟四个数字</span></span><br><span class="line"><span class="comment">                         --&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">attribute</span> <span class="attr">name</span>=<span class="string">&quot;id&quot;</span> <span class="attr">use</span>=<span class="string">&quot;required&quot;</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">simpleType</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;<span class="name">restriction</span> <span class="attr">base</span>=<span class="string">&quot;string&quot;</span>&gt;</span></span><br><span class="line">                                    <span class="tag">&lt;<span class="name">pattern</span> <span class="attr">value</span>=<span class="string">&quot;java_\d&#123;4&#125;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">pattern</span>&gt;</span></span><br><span class="line">                                <span class="tag">&lt;/<span class="name">restriction</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;/<span class="name">simpleType</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">attribute</span>&gt;</span></span><br><span class="line"></span><br><span class="line">                        <span class="tag">&lt;<span class="name">attribute</span> <span class="attr">name</span>=<span class="string">&quot;classname&quot;</span> <span class="attr">use</span>=<span class="string">&quot;required&quot;</span> <span class="attr">type</span>=<span class="string">&quot;string&quot;</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">attribute</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">complexType</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">element</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">sequence</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">complexType</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">element</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">schema</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>③schema文件关联xml文件<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">students</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.example.org/students&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">student</span> <span class="attr">id</span>=<span class="string">&quot;java_0001&quot;</span> <span class="attr">classname</span>=<span class="string">&quot;java210722&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>朱飞宇<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">age</span>&gt;</span>130<span class="tag">&lt;/<span class="name">age</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">sex</span>&gt;</span>男<span class="tag">&lt;/<span class="name">sex</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">student</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">students</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="dom4j解析-掌握"><a href="#dom4j解析-掌握" class="headerlink" title="dom4j解析(掌握)"></a>dom4j解析(掌握)</h2><ul>
+<li>概述<ul>
+<li>一个简单灵活开放源代码的解析xml类库，xml解析就是对xml文件进行读写操作</li>
+<li>在很多开源的框架中大量使用dom4j，例如: mybatis、sping</li>
+</ul>
+</li>
+<li>常用方法<ul>
+<li>attributeValue(String attributeName)<ul>
+<li>获取指定属性值</li>
+</ul>
+</li>
+<li>attribute(String attributeName)<ul>
+<li>获取指定属性对象</li>
+</ul>
+</li>
+<li>Attribute.getValue()<ul>
+<li>获取属性值</li>
+</ul>
+</li>
+<li>elementText(String elementName)<ul>
+<li>获取指定元素文本内容</li>
+</ul>
+</li>
+<li>element(String elementName)<ul>
+<li>获取指定元素对象</li>
+</ul>
+</li>
+<li>Element.getText()<ul>
+<li>获取文本内容</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>开发步骤<ul>
+<li>①引入jar包</li>
+<li>②使用dom4j解析xml文件<ul>
+<li>2.1,获取解析对象</li>
+<li>2.2,获取XML文档对象</li>
+<li>2.3,获取根节点对象</li>
+<li>2.4,获取每个节点信息</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>①引入jar包</li>
+<li>②使用dom4j解析xml文件<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo01</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="comment">//1,获取解析对象</span></span><br><span class="line">        <span class="type">SAXReader</span> <span class="variable">saxReader</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SAXReader</span>();</span><br><span class="line">        <span class="type">InputStream</span> <span class="variable">inputStream</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">FileInputStream</span>(<span class="string">&quot;students.xml&quot;</span>);</span><br><span class="line">        <span class="comment">//2,获取XML文档对象</span></span><br><span class="line">        <span class="type">Document</span> <span class="variable">document</span> <span class="operator">=</span> saxReader.read(inputStream);</span><br><span class="line">        <span class="comment">//3,获取根节点对象</span></span><br><span class="line">        <span class="type">Element</span> <span class="variable">rootElement</span> <span class="operator">=</span> document.getRootElement();</span><br><span class="line">        <span class="comment">//4,获取所有student节点对象</span></span><br><span class="line">        List&lt;Element&gt; stuEles = rootElement.elements(<span class="string">&quot;student&quot;</span>);</span><br><span class="line">        <span class="keyword">for</span> (Element stuEle : stuEles) &#123;</span><br><span class="line">            <span class="comment">//获取id属性值</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">id</span> <span class="operator">=</span> stuEle.attributeValue(<span class="string">&quot;id&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;id = &quot;</span> + id);</span><br><span class="line">            <span class="comment">//获取classname属性值</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">classname</span> <span class="operator">=</span> stuEle.attribute(<span class="string">&quot;classname&quot;</span>).getValue();</span><br><span class="line">            System.out.println(<span class="string">&quot;classname = &quot;</span> + classname);</span><br><span class="line">            <span class="comment">//获取name元素值</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> stuEle.elementText(<span class="string">&quot;name&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;name = &quot;</span> + name);</span><br><span class="line">            <span class="comment">//获取age元素值</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">age</span> <span class="operator">=</span> stuEle.element(<span class="string">&quot;age&quot;</span>).getText();</span><br><span class="line">            System.out.println(<span class="string">&quot;age = &quot;</span> + age);</span><br><span class="line">            <span class="comment">//获取sex元素值</span></span><br><span class="line">            <span class="type">String</span> <span class="variable">sex</span> <span class="operator">=</span> stuEle.elementText(<span class="string">&quot;sex&quot;</span>);</span><br><span class="line">            System.out.println(<span class="string">&quot;sex = &quot;</span> + sex);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="-1"><a href="#-1" class="headerlink" title=""></a></h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/xml/" data-id="cloxtn0cf00195gyeac2b3dan" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/%E4%BA%A4%E6%8D%A2%E4%B8%A4%E4%B8%AA%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/Vector%E9%9B%86%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

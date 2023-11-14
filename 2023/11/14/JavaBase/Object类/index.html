@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Object类1234567891011121314151617Object 类: 根类,超类,基类    Java中所有的类直接或者间接的继承与Object类 -&gt; Object类中的方法Java中所有的对象都可以使用!        类 Object 是类层次结构的根类。每个类都使用 Object 作为超类。所有对象（包括数组）都实现这个类的方法。             构造方法: O">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/Object%E7%B1%BB/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Object类1234567891011121314151617Object 类: 根类,超类,基类    Java中所有的类直接或者间接的继承与Object类 -&gt; Object类中的方法Java中所有的对象都可以使用!        类 Object 是类层次结构的根类。每个类都使用 Object 作为超类。所有对象（包括数组）都实现这个类的方法。             构造方法: O">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T04:11:24.695Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.284Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/Object类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/Object%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.695Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Object 类: 根类,超类,基类</span><br><span class="line">    Java中所有的类直接或者间接的继承与Object类 -&gt; Object类中的方法Java中所有的对象都可以使用!</span><br><span class="line">    </span><br><span class="line">    类 Object 是类层次结构的根类。每个类都使用 Object 作为超类。所有对象（包括数组）都实现这个类的方法。     </span><br><span class="line">    </span><br><span class="line">    构造方法: Object() --&gt; 为什么所有类的构造方法中第一句代码默认赠送的是 <span class="built_in">super</span>();</span><br><span class="line">        因为所有的类加载最终都会去加载Object类,要加载Object类就启动Object类的构造方法</span><br><span class="line">        </span><br><span class="line">    成员方法:</span><br><span class="line">        Class <span class="title function_">getClass</span><span class="params">()</span> : 获取一个对象的字节码对象</span><br><span class="line">            <span class="comment">//在多态中判断一个对象是否属于一种类型 : 对象名.getClass() == 类名.class</span></span><br><span class="line">                <span class="comment">//这样判断的依据是: 同一种类型所有的对象的字节码对象是同一个.</span></span><br><span class="line">        <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span> : 当子类没有重写Object类中的hashCode方法时,获取一个对象的物理地址值</span><br><span class="line">        </span><br><span class="line">== : 比较运算符</span><br><span class="line">    连接基本数据类型: 一定判断的是基本数据类型的值是否相同; --&gt; <span class="number">100</span> == <span class="number">200</span></span><br><span class="line">    连接引用数据类型(对象): 一定判断的是引用数据类型对象的地址值(物理地址)是否相同        </span><br></pre></td></tr></table></figure>
+
+<h5 id="Object类中的toString方法"><a href="#Object类中的toString方法" class="headerlink" title="Object类中的toString方法"></a>Object类中的toString方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">String <span class="title function_">toString</span><span class="params">()</span>: 返回该对象的字符串表示。</span><br><span class="line">    直接输出对象名就是得到对象.toString()方法</span><br><span class="line"></span><br><span class="line">    直接输出对象就应该得到全类名+地址值,但是有时候看不到对象的地址值而是对象的其他值</span><br><span class="line">                因为在此类中重写了Object类中的toString方法</span><br><span class="line"></span><br><span class="line">    我们输出对象的名字的时候如果不想看到对象的地址值而是属性值,我们可以在子类中重写父类的方法</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    Object类中toString()方法的源码 -&gt; 浏览名著的感觉</span><br><span class="line">        <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> getClass().getName() + <span class="string">&quot;@&quot;</span> + Integer.toHexString(hashCode());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.getClass().getName() + <span class="string">&quot;@&quot;</span> + Integer.toHexString(hashCode())</span><br><span class="line">        <span class="built_in">this</span>.getClass().getName(): 对象的全类名 -&gt; 包名+类名</span><br><span class="line">            对象获取字节码对象 -&gt; 此对象的字节码对象获取字节码对象的名称</span><br><span class="line">        <span class="string">&quot;@&quot;</span>: 分隔</span><br><span class="line">        Integer.toHexString(<span class="built_in">this</span>.hashCode()) : 获取对象<span class="number">16</span>进制的地址值</span><br><span class="line">            <span class="built_in">this</span>.hashCode(): 若没有重写父类的hashCode获取的是对象的<span class="number">10</span>进制物理地址</span><br><span class="line">            Integer.toHexString(对象的十进制地址值) : 把<span class="number">10</span>进制的转成<span class="number">16</span>进制</span><br><span class="line"></span><br><span class="line">        Object中的toString():把对象的全类名和<span class="number">16</span>进制地址值进行返回</span><br><span class="line"></span><br><span class="line">        自动生成toString方法</span><br><span class="line">            alt + insert + toString    </span><br></pre></td></tr></table></figure>
+
+<h5 id="Object类中的equals方法"><a href="#Object类中的equals方法" class="headerlink" title="Object类中的equals方法"></a>Object类中的equals方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object obj)</span> : 判断其他某个对象是否与此对象“相等”。</span><br><span class="line"></span><br><span class="line">     主动查看源码:</span><br><span class="line">        <span class="number">1.</span> <span class="type">double</span> shift : 连按<span class="number">2</span>下shift 搜索你需要查询的类</span><br><span class="line">        <span class="number">2.</span> ctrl + n :  搜索你需要查询的类</span><br><span class="line"></span><br><span class="line">     Object中equals方法的源码分析:</span><br><span class="line">        <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object obj)</span> &#123; <span class="comment">//Object obj: 多态的特性</span></span><br><span class="line">            <span class="keyword">return</span> (<span class="built_in">this</span> == obj);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">this</span> == obj : 调用方法的对象和传入方法的对象进行==比较 ---&gt; 一定是比较对象的地址值</span><br><span class="line">            <span class="built_in">this</span> : 调用方法的对象</span><br><span class="line">            obj : 方法的形参 -&gt; 形参用来接收实参</span><br><span class="line"></span><br><span class="line">     如果你想比较对象的时候比较的不是对象的地址值而是对象的属性值,你需要重写父类的equals方法</span><br><span class="line"></span><br><span class="line">     注意: 就算你重写了父类的equals方法但是==判断的还是对象的地址值是否相同</span><br><span class="line">     </span><br><span class="line"><span class="number">1.</span> 自己编写equals方法     </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object obj)</span> &#123;<span class="comment">// 1. = new Cat();  2. 自己跟自己比 3. = null</span></span><br><span class="line">        <span class="comment">//提高方法的性能</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">this</span> == obj)&#123;<span class="comment">//this == obj: 自己比自己</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//若obj是一个null</span></span><br><span class="line">        <span class="keyword">if</span> (obj == <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//向下转型之前要做安全性校验</span></span><br><span class="line">        <span class="keyword">if</span> (!(obj <span class="keyword">instanceof</span> Student))&#123;</span><br><span class="line">            <span class="comment">//obj不是学生类的对象</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//先向下转型!</span></span><br><span class="line">        <span class="type">Student</span> <span class="variable">student</span> <span class="operator">=</span> (Student) obj;</span><br><span class="line">        <span class="comment">//String类型的对象中有equals方法来判断字符串的内容是否相同</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.name.equals(student.name) &amp;&amp; <span class="built_in">this</span>.age == student.age;</span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> IDEA自动生成的equals方法</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object o)</span> &#123;</span><br><span class="line">        <span class="comment">//自己和自己比</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span> == o) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">// o是null || 2个对象不是同类型</span></span><br><span class="line">        <span class="keyword">if</span> (o == <span class="literal">null</span> || <span class="built_in">this</span>.getClass() != o.getClass()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="type">Student</span> <span class="variable">student</span> <span class="operator">=</span> (Student) o;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//提高性能 如果两个对象的年龄不一样</span></span><br><span class="line">        <span class="keyword">if</span> (age != student.age) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">// 年龄相同才比较姓名</span></span><br><span class="line">        <span class="comment">// 比较调用方法对象的名字是否是null</span></span><br><span class="line">        <span class="comment">// 1. 如果调用方法的学生对象的name不为空那么拿着调用方法对象的姓名和传入方法对象的姓名进行比较内容</span></span><br><span class="line">        <span class="comment">// 2. 如果调用方法的学生对象的name 为空 那么判断传入方法的对象的姓名值是否是null</span></span><br><span class="line">        <span class="keyword">return</span> name != <span class="literal">null</span> ? <span class="built_in">this</span>.name.equals(student.name) : student.name == <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/Object%E7%B1%BB/" data-id="cloxtn0c8000s5gye62v90gcn" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/Period%E7%B1%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/Objects%E7%B1%BB/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="继承123456Java中类和类之间的关系 : 继承关系 -&gt; extends    继承的特点:	1. 单一继承,多层继承 (一个子类只能有一个父类,但是一个父类可以有多个子类)  2. 子类继承父类,子类可以使用父类所有非私有的成员   3. 父类不可以使用子类的成员      继承格式123456789101112格式: 	&#x2F;&#x2F;定义一个父类 	public class Fu&#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/%E7%BB%A7%E6%89%BF/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="继承123456Java中类和类之间的关系 : 继承关系 -&gt; extends    继承的特点:	1. 单一继承,多层继承 (一个子类只能有一个父类,但是一个父类可以有多个子类)  2. 子类继承父类,子类可以使用父类所有非私有的成员   3. 父类不可以使用子类的成员      继承格式123456789101112格式: 	&#x2F;&#x2F;定义一个父类 	public class Fu&#123;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T04:11:24.778Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.314Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/继承" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E7%BB%A7%E6%89%BF/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.778Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Java中类和类之间的关系 : 继承关系 -&gt; extends</span><br><span class="line">    </span><br><span class="line">继承的特点:</span><br><span class="line">	<span class="number">1.</span> 单一继承,多层继承 (一个子类只能有一个父类,但是一个父类可以有多个子类)</span><br><span class="line">  <span class="number">2.</span> 子类继承父类,子类可以使用父类所有非私有的成员 </span><br><span class="line">  <span class="number">3.</span> 父类不可以使用子类的成员    </span><br></pre></td></tr></table></figure>
+
+<h4 id="继承格式"><a href="#继承格式" class="headerlink" title="继承格式"></a>继承格式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">格式: </span><br><span class="line">	<span class="comment">//定义一个父类</span></span><br><span class="line"> 	<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Fu</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">//定义子类</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Zi</span> <span class="keyword">extends</span> <span class="title class_">Fu</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">	<span class="comment">//一个父类可以有多个子类</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Son</span> <span class="keyword">extends</span> <span class="title class_">Fu</span>&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="继承关系下成员变量的访问特点"><a href="#继承关系下成员变量的访问特点" class="headerlink" title="继承关系下成员变量的访问特点"></a>继承关系下成员变量的访问特点</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">子类中访问父类成员变量：<span class="built_in">super</span>.变量名(除私有外)</span><br><span class="line">第三方类中创建子类对象访问成员变量：子承父,子类可以使用父类所有非私有的成员</span><br></pre></td></tr></table></figure>
+
+<h4 id="继承关系下成员方法的访问特点"><a href="#继承关系下成员方法的访问特点" class="headerlink" title="继承关系下成员方法的访问特点"></a>继承关系下成员方法的访问特点</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 在子类中访问: 可以访问父类中所有的非私有成员</span><br><span class="line"><span class="number">2.</span> 在第三方类中访问:自己有调自己的,自己没有找父类要</span><br></pre></td></tr></table></figure>
+
+<h4 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">重载: overload -&gt; 用的多,写的少</span><br><span class="line">重写: override -&gt; 用的多,写的多</span><br><span class="line">  </span><br><span class="line">重载:</span><br><span class="line">	<span class="number">1.</span> 在同一个类中</span><br><span class="line">  <span class="number">2.</span> 方法的名称相同</span><br><span class="line">  <span class="number">3.</span> 方法的形式参数列表不同: 个数,类型,类型顺序</span><br><span class="line">  <span class="number">4.</span> 与返回值无关,与形参的变量名无关    </span><br><span class="line">重写:</span><br><span class="line">	<span class="number">1.</span> 必须有继承关系</span><br><span class="line">  <span class="number">2.</span> 子类重写父类的方法</span><br><span class="line">  <span class="number">3.</span> 子类中有和父类方法声明完全一致的方法</span><br><span class="line">    ps: 有两个地方可以不一样,百分之<span class="number">99</span>的情况都是一致的</span><br><span class="line">        权限修饰符: 子类 &gt;= 父类 (<span class="keyword">private</span>不参与)</span><br><span class="line">        返回值类型: 子类的返回值类型可以是父类重写方法的返回值类型的子类或同类(只支持引用数据类型)</span><br><span class="line"></span><br><span class="line">    注释: 用文字来解释说明代码</span><br><span class="line">    注解: 用代码来约束代码的</span><br><span class="line"></span><br><span class="line">    约束方法重写格式的注解: <span class="meta">@Override</span></span><br><span class="line">      写在子类的重写方法上!!</span><br></pre></td></tr></table></figure>
+
+<h4 id="继承关系下构造方法的访问特点"><a href="#继承关系下构造方法的访问特点" class="headerlink" title="继承关系下构造方法的访问特点"></a>继承关系下构造方法的访问特点</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">子类要加载优先加载父类!!</span><br><span class="line">注意:</span><br><span class="line">	<span class="number">1.</span> 每一个构造方法的第一句代码都隐藏着: <span class="built_in">super</span>();</span><br><span class="line">		<span class="built_in">super</span>(): 启动父类的无参构造方法</span><br><span class="line">  <span class="number">2.</span> <span class="built_in">super</span>()必须是构造方法的第一句代码</span><br><span class="line">  <span class="number">3.</span> 不能连续<span class="number">2</span>次调用<span class="built_in">super</span>();</span><br><span class="line">	<span class="number">4.</span>  <span class="built_in">super</span>():调用父类的无参构造</span><br><span class="line">        <span class="built_in">super</span>(实际参数):调用父类的含参构造</span><br><span class="line">        <span class="built_in">this</span>():调用本类的无参构造</span><br><span class="line">        <span class="built_in">this</span>(实际参数):调用本类的含参构造</span><br><span class="line">    <span class="number">5.</span> 如何你在构造方法中调用了任意的其他构造方法默认赠送的<span class="built_in">super</span>()就不送了</span><br><span class="line">    <span class="number">6.</span> 不管你在构造方法内如何去调用其他构造方法,子类的某个构造方法内一定要去加载父类!        </span><br></pre></td></tr></table></figure>
+
+<h4 id="this-和-super"><a href="#this-和-super" class="headerlink" title="this 和 super"></a>this 和 super</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">概念层面:</span><br><span class="line">	<span class="built_in">this</span>: 本类对象的引用</span><br><span class="line">        如果有对象调用含有<span class="built_in">this</span>的方法,那么<span class="built_in">this</span>就是这个对象 --&gt; 自己照镜子</span><br><span class="line">	<span class="built_in">super</span>:本类父类对象的引用</span><br><span class="line">        如果有对象调用含有<span class="built_in">super</span>的方法,那么<span class="built_in">super</span>就是这个对象的一个父类对象 -&gt; 自己照镜子,镜子里是它爹</span><br><span class="line">        </span><br><span class="line">公式层面: 重要的!!</span><br><span class="line">	<span class="built_in">this</span>.变量 : 强制访问本类成员位置上的变量 -&gt; 打破变量访问的就近原则</span><br><span class="line">  <span class="built_in">super</span>.变量 : 强制访问本类父类成员位置上的变量 -&gt; 打破变量访问的就近原则</span><br><span class="line">  <span class="built_in">this</span>.方法(实际参数) : 强制访问本类成员位置上的方法 -&gt; 傻子才这么写</span><br><span class="line">  <span class="built_in">super</span>.方法(实际参数) : 强制访问本类父类成员位置上的方法 -&gt; 用!!!    </span><br><span class="line">        </span><br><span class="line">  <span class="built_in">this</span>(): 调用本类的无参构造</span><br><span class="line">  <span class="built_in">this</span>(实际参数): 调用本类的含参构造</span><br><span class="line">  <span class="built_in">super</span>():调用父类的无参构造 -&gt; 默认的!!</span><br><span class="line">  <span class="built_in">super</span>(实际参数): 调用父类的含参构造方法</span><br></pre></td></tr></table></figure>
+
+<h4 id="九阳神功"><a href="#九阳神功" class="headerlink" title="九阳神功"></a>九阳神功</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 只要有对象调  --&gt; 对象.</span><br><span class="line"><span class="number">2.</span> 找到对象创建的位置 -&gt; 对象创建的语句: 类名 对象名 = <span class="keyword">new</span> 类名();</span><br><span class="line"><span class="number">3.</span> 再看对象在干什么??</span><br><span class="line">    对象调属性: 编译看左边,运行看左边</span><br><span class="line">    对象调方法: 编译看左边,运行看右边    </span><br><span class="line">    对象调静态方法: 编译看左边,运行看左边</span><br><span class="line">            </span><br><span class="line">        编译看: 纠错</span><br><span class="line">        运行看: 说答案</span><br></pre></td></tr></table></figure>
+
+<h4 id="继承的好处和弊端"><a href="#继承的好处和弊端" class="headerlink" title="继承的好处和弊端"></a>继承的好处和弊端</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">好处: </span><br><span class="line">	向上抽取共性!! 提高代码的复用性!</span><br><span class="line">弊端:</span><br><span class="line">	提高了代码和代码的耦合性</span><br><span class="line">        </span><br><span class="line">	写代码的六字真言: 高内聚,低耦合</span><br><span class="line">       内聚: 独立完成功能的能力</span><br><span class="line">       耦合: 类于类之间的联系   </span><br><span class="line">           </span><br><span class="line">该继承的时候果断继承!! 利大于弊   </span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E7%BB%A7%E6%89%BF/" data-id="cloxtn0cn001y5gye1cda2s4c" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/%E7%BA%A2%E9%BB%91%E6%A0%91%E6%B7%BB%E5%8A%A0%E5%85%83%E7%B4%A0%E7%9A%84%E8%A7%84%E5%88%99/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

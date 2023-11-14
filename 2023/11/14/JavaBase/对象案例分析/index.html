@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="案例1123456789101112131415161718192021222324252627282930313233343536373839404142434445public class Test08 &#123;	public static void main(String[] args) &#123;		Zi zi &#x3D; new Zi();	&#125;&#125;class Fu&amp;#12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/%E5%AF%B9%E8%B1%A1%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="案例1123456789101112131415161718192021222324252627282930313233343536373839404142434445public class Test08 &#123;	public static void main(String[] args) &#123;		Zi zi &#x3D; new Zi();	&#125;&#125;class Fu&amp;#12">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T04:11:24.754Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.305Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/对象案例分析" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E5%AF%B9%E8%B1%A1%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.754Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="案例1"><a href="#案例1" class="headerlink" title="案例1"></a>案例1</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test08</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">		<span class="type">Zi</span> <span class="variable">zi</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Zi</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Fu</span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> getNum(<span class="string">&quot;（1）i&quot;</span>);</span><br><span class="line">	<span class="keyword">private</span> <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> getNum(<span class="string">&quot;（2）j&quot;</span>);</span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		print(<span class="string">&quot;（3）父类静态代码块&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	&#123;</span><br><span class="line">		print(<span class="string">&quot;（4）父类非静态代码块，又称为构造代码块&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	Fu()&#123;</span><br><span class="line">		print(<span class="string">&quot;（5）父类构造器&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">print</span><span class="params">(String str)</span>&#123;</span><br><span class="line">		System.out.println(str + <span class="string">&quot;-&gt;&quot;</span> + i);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">getNum</span><span class="params">(String str)</span>&#123;</span><br><span class="line">		print(str);</span><br><span class="line">		<span class="keyword">return</span> ++i;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Zi</span> <span class="keyword">extends</span> <span class="title class_">Fu</span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> getNum(<span class="string">&quot;（6）k&quot;</span>);</span><br><span class="line">	<span class="keyword">private</span> <span class="type">int</span> <span class="variable">h</span> <span class="operator">=</span> getNum(<span class="string">&quot;（7）h&quot;</span>);</span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		print(<span class="string">&quot;（8）子类静态代码块&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	&#123;</span><br><span class="line">		print(<span class="string">&quot;（9）子类非静态代码块，又称为构造代码块&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	Zi()&#123;</span><br><span class="line">		print(<span class="string">&quot;（10）子类构造器&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">print</span><span class="params">(String str)</span>&#123;</span><br><span class="line">		System.out.println(str + <span class="string">&quot;-&gt;&quot;</span> + k);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">getNum</span><span class="params">(String str)</span>&#123;</span><br><span class="line">		print(str);</span><br><span class="line">		<span class="keyword">return</span> ++k;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>答案</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * （1）Fu类的类初始化</span></span><br><span class="line"><span class="comment"> * ①类变量显式赋值：</span></span><br><span class="line"><span class="comment"> * 		i = getNum(&quot;（1）i&quot;);</span></span><br><span class="line"><span class="comment"> * 		public static int getNum(String str)&#123;</span></span><br><span class="line"><span class="comment">			print(str);</span></span><br><span class="line"><span class="comment">				print方法代码如下：</span></span><br><span class="line"><span class="comment">				public static void print(String str)&#123;</span></span><br><span class="line"><span class="comment">					System.out.println(str + &quot;-&gt;&quot; + i);			(1)i -&gt; 0（默认值）</span></span><br><span class="line"><span class="comment">				&#125;</span></span><br><span class="line"><span class="comment">			return ++i;											i=1</span></span><br><span class="line"><span class="comment">		&#125;</span></span><br><span class="line"><span class="comment"> * ②静态代码块</span></span><br><span class="line"><span class="comment"> * 	static&#123;</span></span><br><span class="line"><span class="comment">		print(&quot;（3）父类静态代码块&quot;);</span></span><br><span class="line"><span class="comment">			print方法代码如下：</span></span><br><span class="line"><span class="comment">			public static void print(String str)&#123;</span></span><br><span class="line"><span class="comment">				System.out.println(str + &quot;-&gt;&quot; + i);			  （3）父类静态代码块 -&gt; 1</span></span><br><span class="line"><span class="comment">			&#125;</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment"> * （2）Zi类的类初始化</span></span><br><span class="line"><span class="comment"> * ①类变量显式赋值：</span></span><br><span class="line"><span class="comment"> * 	  k = getNum(&quot;（6）k&quot;);</span></span><br><span class="line"><span class="comment">	 * 	</span></span><br><span class="line"><span class="comment">		public static int getNum(String str)&#123;</span></span><br><span class="line"><span class="comment">			print(str);</span></span><br><span class="line"><span class="comment">				print方法代码如下：</span></span><br><span class="line"><span class="comment">				public static void print(String str)&#123;</span></span><br><span class="line"><span class="comment">					System.out.println(str + &quot;-&gt;&quot; + k);		（6）k -&gt; 0（默认值）</span></span><br><span class="line"><span class="comment">				&#125;</span></span><br><span class="line"><span class="comment">			return ++k;										k=1</span></span><br><span class="line"><span class="comment">		&#125;</span></span><br><span class="line"><span class="comment"> * ②静态代码块</span></span><br><span class="line"><span class="comment"> * 	static&#123;</span></span><br><span class="line"><span class="comment">		print(&quot;（8）子类静态代码块&quot;);</span></span><br><span class="line"><span class="comment">			print方法代码如下：</span></span><br><span class="line"><span class="comment">			public static void print(String str)&#123;</span></span><br><span class="line"><span class="comment">				System.out.println(str + &quot;-&gt;&quot; + k);		（8）子类静态代码块 -&gt; 1</span></span><br><span class="line"><span class="comment">			&#125;</span></span><br><span class="line"><span class="comment">	&#125;	</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * （3）执行Fu类的是实参初始化方法&lt;init&gt;()</span></span><br><span class="line"><span class="comment"> * ①非静态成员变量的显式赋值：</span></span><br><span class="line"><span class="comment"> * 		j = getNum(&quot;（2）j&quot;);</span></span><br><span class="line"><span class="comment">	 * 	</span></span><br><span class="line"><span class="comment">		public static int getNum(String str)&#123;</span></span><br><span class="line"><span class="comment">			print(str);</span></span><br><span class="line"><span class="comment">				print方法代码如下：</span></span><br><span class="line"><span class="comment">				public static void print(String str)&#123;</span></span><br><span class="line"><span class="comment">					System.out.println(str + &quot;-&gt;&quot; + i);  （2）j -&gt; 1</span></span><br><span class="line"><span class="comment">				&#125;</span></span><br><span class="line"><span class="comment">			return ++i;									i=2</span></span><br><span class="line"><span class="comment">		&#125;</span></span><br><span class="line"><span class="comment"> * ②非静态代码块：</span></span><br><span class="line"><span class="comment"> * 	&#123;</span></span><br><span class="line"><span class="comment">		print(&quot;（4）父类非静态代码块，又称为构造代码块&quot;);</span></span><br><span class="line"><span class="comment">			print方法代码如下：</span></span><br><span class="line"><span class="comment">			public static void print(String str)&#123;</span></span><br><span class="line"><span class="comment">				System.out.println(str + &quot;-&gt;&quot; + i);  （4）父类非静态代码块，又称为构造代码块 -&gt; 2</span></span><br><span class="line"><span class="comment">			&#125;</span></span><br><span class="line"><span class="comment">	&#125;	</span></span><br><span class="line"><span class="comment"> * ③父类的无参构造</span></span><br><span class="line"><span class="comment"> *	Fu()&#123;</span></span><br><span class="line"><span class="comment">		print(&quot;（5）父类构造器&quot;);</span></span><br><span class="line"><span class="comment">			print方法代码如下：</span></span><br><span class="line"><span class="comment">			public static void print(String str)&#123;</span></span><br><span class="line"><span class="comment">				System.out.println(str + &quot;-&gt;&quot; + i);  （5）父类构造器 -&gt; 2</span></span><br><span class="line"><span class="comment">			&#125;</span></span><br><span class="line"><span class="comment">	&#125; 		</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * （4）执行Zi类的实例初始化方法&lt;init&gt;()</span></span><br><span class="line"><span class="comment"> * ①非静态成员变量的显式赋值：</span></span><br><span class="line"><span class="comment"> * 	 h = getNum(&quot;（7）h&quot;);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	public static int getNum(String str)&#123;</span></span><br><span class="line"><span class="comment">		print(str);</span></span><br><span class="line"><span class="comment">			print方法代码如下：</span></span><br><span class="line"><span class="comment">			public static void print(String str)&#123;</span></span><br><span class="line"><span class="comment">				System.out.println(str + &quot;-&gt;&quot; + k);   （7）h -&gt;1</span></span><br><span class="line"><span class="comment">			&#125;</span></span><br><span class="line"><span class="comment">		return ++k;										k=2</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * ②非静态代码块：</span></span><br><span class="line"><span class="comment"> * 	&#123;</span></span><br><span class="line"><span class="comment">		print(&quot;（9）子类非静态代码块，又称为构造代码块&quot;);</span></span><br><span class="line"><span class="comment">			print方法代码如下：</span></span><br><span class="line"><span class="comment">			public static void print(String str)&#123;</span></span><br><span class="line"><span class="comment">				System.out.println(str + &quot;-&gt;&quot; + k);   （9）子类非静态代码块，又称为构造代码块 -&gt;2</span></span><br><span class="line"><span class="comment">			&#125;</span></span><br><span class="line"><span class="comment">	&#125;	</span></span><br><span class="line"><span class="comment"> * ③子类的无参构造</span></span><br><span class="line"><span class="comment"> * 	Zi()&#123;</span></span><br><span class="line"><span class="comment">		print(&quot;（10）子类构造器&quot;);</span></span><br><span class="line"><span class="comment">			print方法代码如下：</span></span><br><span class="line"><span class="comment">			public static void print(String str)&#123;</span></span><br><span class="line"><span class="comment">				System.out.println(str + &quot;-&gt;&quot; + k);   （10）子类构造器 -&gt;2</span></span><br><span class="line"><span class="comment">			&#125;</span></span><br><span class="line"><span class="comment">	&#125;	</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>案例分析：创建对象后成员变量及代码块加载顺序</strong></p>
+<ol>
+<li><p>父类静态成员变量</p>
+</li>
+<li><p>父类静态代码块</p>
+</li>
+<li><p>子类静态成员变量</p>
+</li>
+<li><p>子类静态代码块</p>
+</li>
+<li><p>父类成员变量</p>
+</li>
+<li><p>父类构造代码块</p>
+</li>
+<li><p>父类构造方法</p>
+</li>
+<li><p>子类成员方法</p>
+</li>
+<li><p>子类构造代码块</p>
+</li>
+<li><p>子类构造方法</p>
+</li>
+</ol>
+<h2 id="案例2"><a href="#案例2" class="headerlink" title="案例2"></a>案例2</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">T</span> &#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="variable">k</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="type">T</span> <span class="variable">t1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">T</span>(<span class="string">&quot;t1&quot;</span>);</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="type">T</span> <span class="variable">t2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">T</span>(<span class="string">&quot;t2&quot;</span>);</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> print(<span class="string">&quot;i&quot;</span>);</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">99</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">public</span> <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> print(<span class="string">&quot;j&quot;</span>);</span><br><span class="line">	&#123;</span><br><span class="line">		print(<span class="string">&quot;构造块&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">static</span>&#123;</span><br><span class="line">		print(<span class="string">&quot;静态块&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="title function_">T</span><span class="params">(String str)</span>&#123;</span><br><span class="line">		System.out.println((++k) + <span class="string">&quot;:&quot;</span> + str + <span class="string">&quot;  i=&quot;</span> + i + <span class="string">&quot;  n=&quot;</span> + n);</span><br><span class="line">		++n;</span><br><span class="line">		++i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">print</span><span class="params">(String str)</span>&#123;</span><br><span class="line">		System.out.println((++k) + <span class="string">&quot;:&quot;</span> + str + <span class="string">&quot;  i=&quot;</span> + i + <span class="string">&quot;  n=&quot;</span> + n);</span><br><span class="line">		++n;</span><br><span class="line">		<span class="keyword">return</span> ++i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">	</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>答案</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 对于T来说，就完成类初始化</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * 创建对象，调用类的实例初始化&lt;init&gt;()或&lt;init&gt;(String str)</span></span><br><span class="line"><span class="comment"> * </span></span><br><span class="line"><span class="comment"> * （1）静态变量的显式赋值</span></span><br><span class="line"><span class="comment"> * 		k = 0;</span></span><br><span class="line"><span class="comment">		t1 = new T(&quot;t1&quot;);</span></span><br><span class="line"><span class="comment">			&lt;init&gt;(String str)</span></span><br><span class="line"><span class="comment">				①j = print(&quot;j&quot;);</span></span><br><span class="line"><span class="comment">						print方法代码如下：</span></span><br><span class="line"><span class="comment">						public static int print(String str)&#123;</span></span><br><span class="line"><span class="comment">							System.out.println((++k) + &quot;:&quot; + str + &quot;  i=&quot; + i + &quot;  n=&quot; + n);  1：j i=0 n=0</span></span><br><span class="line"><span class="comment">							++n;									n=1  k=1</span></span><br><span class="line"><span class="comment">							return ++i;								i=1</span></span><br><span class="line"><span class="comment">						&#125;</span></span><br><span class="line"><span class="comment">				②	&#123;</span></span><br><span class="line"><span class="comment">					print(&quot;构造块&quot;);</span></span><br><span class="line"><span class="comment">						print方法代码如下：</span></span><br><span class="line"><span class="comment">						public static int print(String str)&#123;</span></span><br><span class="line"><span class="comment">							System.out.println((++k) + &quot;:&quot; + str + &quot;  i=&quot; + i + &quot;  n=&quot; + n);  2：构造块 i=1 n=1</span></span><br><span class="line"><span class="comment">							++n;									n=2  k=2</span></span><br><span class="line"><span class="comment">							return ++i;								i=2</span></span><br><span class="line"><span class="comment">						&#125;</span></span><br><span class="line"><span class="comment">				&#125;</span></span><br><span class="line"><span class="comment">				③public T(String str)&#123;</span></span><br><span class="line"><span class="comment">					System.out.println((++k) + &quot;:&quot; + str + &quot;  i=&quot; + i + &quot;  n=&quot; + n);	  3:t1  i=2  n=2	</span></span><br><span class="line"><span class="comment">					++n;											n=3  k=3</span></span><br><span class="line"><span class="comment">					++i;											i=3</span></span><br><span class="line"><span class="comment">				&#125;</span></span><br><span class="line"><span class="comment"> * 		t2 = new T(&quot;t2&quot;);</span></span><br><span class="line"><span class="comment">			&lt;init&gt;(String str)</span></span><br><span class="line"><span class="comment">				①j = print(&quot;j&quot;);</span></span><br><span class="line"><span class="comment">						print方法代码如下：</span></span><br><span class="line"><span class="comment">						public static int print(String str)&#123;</span></span><br><span class="line"><span class="comment">							System.out.println((++k) + &quot;:&quot; + str + &quot;  i=&quot; + i + &quot;  n=&quot; + n);  4：j i=3 n=3</span></span><br><span class="line"><span class="comment">							++n;									n=4  k=4</span></span><br><span class="line"><span class="comment">							return ++i;								i=4</span></span><br><span class="line"><span class="comment">						&#125;</span></span><br><span class="line"><span class="comment">				②	&#123;</span></span><br><span class="line"><span class="comment">					print(&quot;构造块&quot;);</span></span><br><span class="line"><span class="comment">						print方法代码如下：</span></span><br><span class="line"><span class="comment">						public static int print(String str)&#123;</span></span><br><span class="line"><span class="comment">							System.out.println((++k) + &quot;:&quot; + str + &quot;  i=&quot; + i + &quot;  n=&quot; + n);  5：构造块 i=4 n=4</span></span><br><span class="line"><span class="comment">							++n;									n=5  k=5</span></span><br><span class="line"><span class="comment">							return ++i;								i=5</span></span><br><span class="line"><span class="comment">						&#125;</span></span><br><span class="line"><span class="comment">				&#125;</span></span><br><span class="line"><span class="comment">				③public T(String str)&#123;</span></span><br><span class="line"><span class="comment">					System.out.println((++k) + &quot;:&quot; + str + &quot;  i=&quot; + i + &quot;  n=&quot; + n);	  6:t2  i=5  n=5	</span></span><br><span class="line"><span class="comment">					++n;											n=6  k=6</span></span><br><span class="line"><span class="comment">					++i;											i=6</span></span><br><span class="line"><span class="comment">				&#125;</span></span><br><span class="line"><span class="comment">	 i = print(&quot;i&quot;);</span></span><br><span class="line"><span class="comment">	 		print方法代码如下：</span></span><br><span class="line"><span class="comment">	 		public static int print(String str)&#123;</span></span><br><span class="line"><span class="comment">				System.out.println((++k) + &quot;:&quot; + str + &quot;  i=&quot; + i + &quot;  n=&quot; + n);  7：i  i=6 n=6</span></span><br><span class="line"><span class="comment">				++n;									n=7  k=7</span></span><br><span class="line"><span class="comment">				return ++i;								i=7</span></span><br><span class="line"><span class="comment">			&#125;</span></span><br><span class="line"><span class="comment">	n = 99;</span></span><br><span class="line"><span class="comment"> * （2）静态代码块</span></span><br><span class="line"><span class="comment"> * 	static&#123;</span></span><br><span class="line"><span class="comment">		print(&quot;静态块&quot;);</span></span><br><span class="line"><span class="comment">			print方法代码如下：</span></span><br><span class="line"><span class="comment">			public static int print(String str)&#123;</span></span><br><span class="line"><span class="comment">				System.out.println((++k) + &quot;:&quot; + str + &quot;  i=&quot; + i + &quot;  n=&quot; + n);  8：静态块   i=7 n=99</span></span><br><span class="line"><span class="comment">				++n;									n=100  k=8</span></span><br><span class="line"><span class="comment">				return ++i;								i=8</span></span><br><span class="line"><span class="comment">			&#125;</span></span><br><span class="line"><span class="comment">	&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>案例分析</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>类加载和创建对象是分开的</span><br><span class="line"><span class="number">2.</span>类加载先开始创建对象后</span><br><span class="line"><span class="number">3.</span>类加载会做<span class="number">2</span>个动作，先给静态变量赋值(没赋值为默认值)，后加载静态代码块</span><br><span class="line"><span class="number">4.</span>创建对象会<span class="number">3</span>个动作，先给成员变量赋值，然后加载构造代码块，最后执行构造方法</span><br><span class="line"><span class="number">5.</span>创建对象可以在类加载时期执行,但是最开始是从类加载开始执行的</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E5%AF%B9%E8%B1%A1%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" data-id="cloxtn0ci001m5gye0k4h18hi" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/%E5%BC%82%E5%B8%B8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/%E5%AE%9E%E6%97%B6final/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

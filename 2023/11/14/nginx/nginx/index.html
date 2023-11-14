@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="nginxnginx简介 Nginx (“engine x”) 是一个高性能的 HTTP 和反向代理服务器,特点是占有内存少，并发能力强，事实上 nginx 的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用 nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝  nginx作为web服务器 Nginx 可以作为静态页面的 web 服务器，同时还支持 CGI 协议的动态语言，比如 pe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/nginx/nginx/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="nginxnginx简介 Nginx (“engine x”) 是一个高性能的 HTTP 和反向代理服务器,特点是占有内存少，并发能力强，事实上 nginx 的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用 nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝  nginx作为web服务器 Nginx 可以作为静态页面的 web 服务器，同时还支持 CGI 协议的动态语言，比如 pe">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/061679e676ff6c20776c65797689d7c3.png">
+<meta property="og:image" content="http://example.com/nginx.assets/ecb64639e54cc0211a3e518e12c81927.png">
+<meta property="og:image" content="http://example.com/nginx.assets/430e87a33d62bd4ce1aa860671b19d30.png">
+<meta property="og:image" content="http://example.com/nginx.assets/011fd946f95a75846ac2977d73397ddb.png">
+<meta property="og:image" content="http://example.com/nginx.assets/8ab0aaa896a2955f425dba6777dc6eed.png">
+<meta property="og:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/63dbf8a24dcbc487bd307afb0384679c.png">
+<meta property="og:image" content="http://example.com/nginx.assets/1f030f8dcd1af58f8649428856840c12.png">
+<meta property="og:image" content="http://example.com/nginx.assets/113b73ee6ee94490764d86040e559a43.png">
+<meta property="og:image" content="http://example.com/nginx.assets/09c96b1a29fbc091b4f1a22fb0cfb966.png">
+<meta property="og:image" content="http://example.com/nginx.assets/cd7b9acecada191cc25de25d61d7b163.png">
+<meta property="og:image" content="http://example.com/nginx.assets/26588fb9b85aab741f02f7a681258c7d.png">
+<meta property="og:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/f5eb753d92cf66beaecccc74b264babf.png">
+<meta property="og:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/a0c5f26e4aeb9e68ee76366a6b318688.png">
+<meta property="og:image" content="http://example.com/nginx.assets/2e6605f9dfd807893550088faf130560.png">
+<meta property="og:image" content="http://example.com/nginx.assets/c6ef73e3986d76a8f5543cf066630ca7.png">
+<meta property="og:image" content="http://example.com/nginx.assets/eecc3b41e77db1ed8ba510f9665400cf.png">
+<meta property="og:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/a919bdb5cc541f1d9a0ab8aa77ef924b.png">
+<meta property="og:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/af5d0298e8ad8f01f941cdef3b093a5f.png">
+<meta property="og:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/b80cf6f756a00f8fd51490bec815549e.png">
+<meta property="og:image" content="http://example.com/nginx.assets/ff203db6f03d345f80a0371c141eb139.png">
+<meta property="og:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/8580bcac85910a918257417cce568850.png">
+<meta property="og:image" content="http://example.com/nginx.assets/6f2eb043d05c4176a58be697ab82c1dd.png">
+<meta property="og:image" content="http://example.com/nginx.assets/7bd1309585aba48a6d3b3e657899b37d.png">
+<meta property="og:image" content="http://example.com/nginx.assets/cd7ba13e4b2c63148e9eab8fdc1a03a3.png">
+<meta property="og:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/ca1d42f584e8b441eaae8d24573ab24d.png">
+<meta property="og:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/df9d69339dcdddc1df81ec716e3dd0bb.png">
+<meta property="og:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/image-20211119202304073.png">
+<meta property="og:image" content="http://example.com/nginx.assets/image-20211119203503590.png">
+<meta property="og:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/image-20211119203600939.png">
+<meta property="article:published_time" content="2023-11-14T04:11:41.692Z">
+<meta property="article:modified_time" content="2023-10-06T17:59:26.773Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/11/14/nginx/nginx/nginx.assets/061679e676ff6c20776c65797689d7c3.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-nginx/nginx" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/nginx/nginx/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:41.692Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h1><h2 id="nginx简介"><a href="#nginx简介" class="headerlink" title="nginx简介"></a>nginx简介</h2><ul>
+<li>Nginx (“engine x”) 是一个高性能的 HTTP 和反向代理服务器,特点是占有内存少，并发能力强，事实上 nginx 的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用 nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝</li>
+</ul>
+<h3 id="nginx作为web服务器"><a href="#nginx作为web服务器" class="headerlink" title="nginx作为web服务器"></a>nginx作为web服务器</h3><ul>
+<li>Nginx 可以作为静态页面的 web 服务器，同时还支持 CGI 协议的动态语言，比如 perl、php等。但是不支持 java。Java 程序只能通过与 tomcat 配合完成。Nginx 专为性能优化而开发，性能是其最重要的考量,实现上非常注重效率 ，能经受高负载的考验,有报告表明能支持高达 50,000 个并发连接数。</li>
+</ul>
+<h3 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h3><ul>
+<li>Nginx 不仅可以做反向代理，实现负载均衡。还能用作正向代理来进行上网等功能。正向代理：如果把局域网外的 Internet 想象成一个巨大的资源库，则局域网中的客户端要访问 Internet，则需要通过代理服务器来访问，这种代理服务就称为正向代理。</li>
+</ul>
+<img src="nginx.assets/061679e676ff6c20776c65797689d7c3.png" alt="正向代理" style="zoom:100%;" />
+
+<h3 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h3><ul>
+<li>反向代理，其实客户端对代理是无感知的，因为客户端不需要任何配置就可以访问，我们只需要将请求发送到反向代理服务器，由反向代理服务器去选择目标服务器获取数据后，在返回给客户端，此时反向代理服务器和目标服务器对外就是一个服务器，暴露的是代理服务器地址，隐藏了真实服务器 IP 地址。</li>
+</ul>
+<p><img src="/nginx.assets/ecb64639e54cc0211a3e518e12c81927.png" alt="反向代理"></p>
+<h3 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h3><ul>
+<li><p>客户端发送多个请求到服务器，服务器处理请求，有一些可能要与数据库进行交互，服务器处理完毕后，再将结果返回给客户端。</p>
+</li>
+<li><p>这种架构模式对于早期的系统相对单一，并发请求相对较少的情况下是比较适合的，成本也低。但是随着信息数量的不断增长，访问量和数据量的飞速增长，以及系统业务的复杂度增加，这种架构会造成服务器相应客户端的请求日益缓慢，并发量特别大的时候，还容易造成服务器直接崩溃。很明显这是由于服务器性能的瓶颈造成的问题，那么如何解决这种情况呢？</p>
+</li>
+<li><p>我们首先想到的可能是升级服务器的配置，比如提高 CPU 执行频率，加大内存等提高机器的物理性能来解决此问题，但是我们知道摩尔定律的日益失效，硬件的性能提升已经不能满足日益提升的需求了。最明显的一个例子，天猫双十一当天，某个热销商品的瞬时访问量是极其庞大的，那么类似上面的系统架构，将机器都增加到现有的顶级物理配置，都是不能够满足需求的。那么怎么办呢？</p>
+</li>
+<li><p>上面的分析我们去掉了增加服务器物理配置来解决问题的办法，也就是说纵向解决问题的办法行不通了，那么横向增加服务器的数量呢？这时候集群的概念产生了，单个服务器解决不了，我们增加服务器的数量，然后将请求分发到各个服务器上，将原先请求集中到单个服务器上的情况改为将请求分发到多个服务器上，将负载分发到不同的服务器，也就是我们所说的负载均衡</p>
+</li>
+</ul>
+<p><img src="/nginx.assets/430e87a33d62bd4ce1aa860671b19d30.png" alt="负载均衡"></p>
+<h3 id="动静分离"><a href="#动静分离" class="headerlink" title="动静分离"></a>动静分离</h3><ul>
+<li>为了加快网站的解析速度，可以把动态页面和静态页面由不同的服务器来解析，加快解析速度。降低原来单个服务器的压力。</li>
+</ul>
+<p><img src="/nginx.assets/011fd946f95a75846ac2977d73397ddb.png" alt="动静分离"></p>
+<h2 id="Nginx-安装"><a href="#Nginx-安装" class="headerlink" title="Nginx 安装"></a>Nginx 安装</h2><h3 id="进入-nginx-官网，下载"><a href="#进入-nginx-官网，下载" class="headerlink" title="进入 nginx 官网，下载"></a>进入 nginx 官网，下载</h3><p><a href="nginx.assets/http://nginx.org/">官网</a></p>
+<p><img src="/nginx.assets/8ab0aaa896a2955f425dba6777dc6eed.png" alt="截图"></p>
+<br/>
+
+<img src="nginx.assets/63dbf8a24dcbc487bd307afb0384679c.png" alt="截图" style="zoom:50%;" />
+
+<h3 id="安装-nginx"><a href="#安装-nginx" class="headerlink" title="安装 nginx"></a>安装 nginx</h3><h4 id="安装pcre"><a href="#安装pcre" class="headerlink" title="安装pcre"></a>安装pcre</h4><ul>
+<li>wget <a target="_blank" rel="noopener" href="http://downloads.sourceforge.net/project/pcre/pcre/8.37/pcre-8.37.tar.gz">http://downloads.sourceforge.net/project/pcre/pcre/8.37/pcre-8.37.tar.gz</a></li>
+<li>解压缩pcre-xx.tar.gz包</li>
+<li>进入解压缩目录，执行.&#x2F;configure</li>
+<li>注意：如果提示错误，需要提前安装gcc++	</li>
+<li>回到 pcre 目录下执行make &amp;&amp; make install</li>
+<li>查看是否安装成功 pcre-config –version</li>
+</ul>
+<h4 id="安装-openssl-、zlib-、-gcc-依赖"><a href="#安装-openssl-、zlib-、-gcc-依赖" class="headerlink" title="安装 openssl 、zlib 、 gcc 依赖"></a>安装 openssl 、zlib 、 gcc 依赖</h4><ul>
+<li>yum -y install make zlib zlib-devel gcc-c++ libtool openssl openssl-deve</li>
+</ul>
+<h4 id="安装-nginx-1"><a href="#安装-nginx-1" class="headerlink" title="安装 nginx"></a>安装 nginx</h4><ul>
+<li><p>解压缩nginx-xx.tar.gz包  tar -zxvf nginx-1.20.1.tar.gz </p>
+</li>
+<li><p>进入解压缩目录，执行.&#x2F;configure</p>
+</li>
+<li><p>make &amp;&amp; make install</p>
+</li>
+<li><p>注意要关闭防火墙</p>
+</li>
+</ul>
+<h4 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h4><ul>
+<li><p>关闭防火墙</p>
+</li>
+<li><p>开放访问的端口号，80 端口</p>
+</li>
+<li><p>查看开放的端口号firewall-cmd –list-all</p>
+</li>
+<li><p>设置开放的端口号 firewall-cmd –add-service&#x3D;http –permanent    firewall-cmd –add-port&#x3D;80&#x2F;tcp –permanent</p>
+</li>
+<li><p>重启防火墙 	firewall-cmd  –reloa</p>
+</li>
+</ul>
+<h2 id="Nginx常用的命令和配置文件"><a href="#Nginx常用的命令和配置文件" class="headerlink" title="Nginx常用的命令和配置文件"></a>Nginx常用的命令和配置文件</h2><h3 id="nginx常用的命令"><a href="#nginx常用的命令" class="headerlink" title="nginx常用的命令"></a>nginx常用的命令</h3><ul>
+<li>启动命令:在&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin目录下执行 .&#x2F;nginx </li>
+<li>关闭命令:在&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin目录下执行 .&#x2F;nginx  -s  stop </li>
+<li>重新加载命令:在&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin目录下执行 .&#x2F;nginx  -s  reload</li>
+<li>查看版本:在&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;sbin目录下执行 .&#x2F;nginx  -v</li>
+<li>查看进程:ps -ef|grep nginx</li>
+</ul>
+<h3 id="nginx-conf-配置文件"><a href="#nginx-conf-配置文件" class="headerlink" title="nginx.conf 配置文件"></a>nginx.conf 配置文件</h3><ul>
+<li>nginx 安装目录(&#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf)下，其默认的配置文件都放在这个目录的 conf 目录下，而主配置文件 nginx.conf 也在其中，后续对 nginx 的使用基本上都是对此配置文件进行相应的修改配置文件中有很多#， 开头的表示注释内容，我们去掉所有以 # 开头的段落，精简之后的内容如下：</li>
+</ul>
+<p><img src="/nginx.assets/1f030f8dcd1af58f8649428856840c12.png" alt="截图"></p>
+<ul>
+<li>根据上述文件，我们可以很明显的将 nginx.conf 配置文件分为三部分：</li>
+</ul>
+<h4 id="第一部分：全局块"><a href="#第一部分：全局块" class="headerlink" title="第一部分：全局块"></a>第一部分：全局块</h4><ul>
+<li>从配置文件开始到 events 块之间的内容，主要会设置一些影响 nginx 服务器整体运行的配置指令，主要包括配置运行 Nginx 服务器的用户（组）、允许生成的 worker process 数，进程 PID 存放路径、日志存放路径和类型以及配置文件的引入等。</li>
+</ul>
+<p><img src="/nginx.assets/113b73ee6ee94490764d86040e559a43.png" alt="截图"></p>
+<h4 id="第二部分：events-块"><a href="#第二部分：events-块" class="headerlink" title="第二部分：events 块"></a>第二部分：events 块</h4><p><img src="/nginx.assets/09c96b1a29fbc091b4f1a22fb0cfb966.png" alt="截图"></p>
+<ul>
+<li>events 块涉及的指令主要影响 Nginx 服务器与用户的网络连接，常用的设置包括是否开启对多 work process 下的网络连接进行序列化，是否允许同时接收多个网络连接，选取哪种事件驱动模型来处理连接请求，每个 word process 可以同时支持的最大连接数等。</li>
+<li>上述例子就表示每个 work process 支持的最大连接数为 1024.这部分的配置对 Nginx 的性能影响较大，在实际中应该灵活配置。</li>
+</ul>
+<h4 id="第三部分：http-块"><a href="#第三部分：http-块" class="headerlink" title="第三部分：http 块"></a>第三部分：http 块</h4><p><img src="/nginx.assets/cd7b9acecada191cc25de25d61d7b163.png" alt="截图"></p>
+<ul>
+<li>这算是 Nginx 服务器配置中最频繁的部分，代理、缓存和日志定义等绝大多数功能和第三方模块的配置都在这里。 需要注意的是：http 块也可以包括 http 全局块、server 块。</li>
+</ul>
+<h5 id="①、http-全局块"><a href="#①、http-全局块" class="headerlink" title="①、http 全局块"></a>①、http 全局块</h5><ul>
+<li>http 全局块配置的指令包括文件引入、MIME-TYPE 定义、日志自定义、连接超时时间、单链接请求数上限等。</li>
+</ul>
+<h5 id="②、server-块"><a href="#②、server-块" class="headerlink" title="②、server 块"></a>②、server 块</h5><ul>
+<li>这块和虚拟主机有密切关系，虚拟主机从用户角度看，和一台独立的硬件主机是完全一样的，该技术的产生是为了节省互联网服务器硬件成本。</li>
+<li>每个 http 块可以包括多个 server 块，而每个 server 块就相当于一个虚拟主机。</li>
+<li>而每个 server 块也分为全局 server 块，以及可以同时包含多个 locaton 块。</li>
+</ul>
+<h6 id="全局-server-块"><a href="#全局-server-块" class="headerlink" title="全局 server 块"></a>全局 server 块</h6><ul>
+<li>最常见的配置是本虚拟机主机的监听配置和本虚拟主机的名称或 IP 配置。</li>
+</ul>
+<h6 id="location-块"><a href="#location-块" class="headerlink" title="location 块"></a>location 块</h6><ul>
+<li>一个 server 块可以配置多个 location 块</li>
+<li>这块的主要作用是基于 Nginx 服务器接收到的请求字符串（例如 server_name&#x2F;uri-string），对虚拟主机名称（也可以是 IP 别名）之外的字符串（例如 前面的 &#x2F;uri-string）进行匹配，对特定的请求进行处理。地址定向、数据缓存和应答控制等功能，还有许多第三方模块的配置也在这里进行。</li>
+</ul>
+<h2 id="nginx-配置实例-反向代理"><a href="#nginx-配置实例-反向代理" class="headerlink" title="nginx 配置实例-反向代理"></a>nginx 配置实例-反向代理</h2><h3 id="反向代理实例-1"><a href="#反向代理实例-1" class="headerlink" title="反向代理实例 1"></a>反向代理实例 1</h3><ul>
+<li><p>实现效果：使用nginx反向代理，访问 <a target="_blank" rel="noopener" href="http://www.123.com/">www.123.com</a> 直接跳转到192.168.98.128:8080</p>
+</li>
+<li><p>准备工作：</p>
+</li>
+<li><p>启动一个tomcat</p>
+</li>
+<li><p>修改windows系统hosts文件（ C:&#x2F;Windows&#x2F;System32&#x2F;drivers&#x2F;etc&#x2F;hosts ） 192.168.98.128 <a target="_blank" rel="noopener" href="http://www.123.com/">www.123.com</a> </p>
+</li>
+<li><p>在 nginx.conf 配置文件中增加如下配置</p>
+</li>
+<li><p><img src="/nginx.assets/26588fb9b85aab741f02f7a681258c7d.png" alt="截图"></p>
+</li>
+<li><p>重启nginx      .&#x2F;nginx  -s  reload</p>
+</li>
+<li><p>如上配置，我们监听 80 端口，访问域名为 <a target="_blank" rel="noopener" href="http://www.123.com,不加端口号时默认为/">www.123.com，不加端口号时默认为</a> 80 端口，故<br>访问该域名时会跳转到 127.0.0.1:8080 路径上。在浏览器端输入 <a target="_blank" rel="noopener" href="http://www.123.com/">www.123.com</a></p>
+</li>
+</ul>
+<img src="nginx.assets/f5eb753d92cf66beaecccc74b264babf.png" alt="截图" style="zoom:50%;" />
+
+<h3 id="反向代理实例-2"><a href="#反向代理实例-2" class="headerlink" title="反向代理实例 2"></a>反向代理实例 2</h3><ul>
+<li>实现效果：使用 nginx 反向代理，根据访问的路径跳转到不同端口的服务中，nginx 监听端口为 9001，</li>
+<li>访问 <a target="_blank" rel="noopener" href="http://127.0.0.1:9001/edu/">http://127.0.0.1:9001/edu/</a> 直接跳转到 127.0.0.1:8081</li>
+<li>访问 <a target="_blank" rel="noopener" href="http://127.0.0.1:9001/vod/">http://127.0.0.1:9001/vod/</a> 直接跳转到 127.0.0.1:8082</li>
+<li>实验代码</li>
+<li>第一步，准备两个 tomcat，一个 8001 端口，一个 8002 端口，并准备好测试的页面</li>
+<li>第二步，修改 nginx 的配置文件，在 http 块中添加 server{}</li>
+</ul>
+  <img src="nginx.assets/a0c5f26e4aeb9e68ee76366a6b318688.png" alt="截图" style="zoom:50%;" />
+  
+  <br/>
+
+<ul>
+<li>开放对外访问的端口号 9001 8080 8081</li>
+</ul>
+<p><img src="/nginx.assets/2e6605f9dfd807893550088faf130560.png" alt="截图"></p>
+<h4 id="location-指令说明"><a href="#location-指令说明" class="headerlink" title="location 指令说明"></a>location 指令说明</h4><ul>
+<li>该指令用于匹配 URL。<br> 语法如下：</li>
+</ul>
+<p><img src="/nginx.assets/c6ef73e3986d76a8f5543cf066630ca7.png" alt="截图"></p>
+<ol>
+<li>&#x3D; ：用于不含正则表达式的 uri 前，要求请求字符串与 uri 严格匹配，如果匹配成功，就停止继续向下搜索并立即处理该请求。</li>
+<li>~：用于表示 uri 包含正则表达式，并且区分大小写。</li>
+<li>~*：用于表示 uri 包含正则表达式，并且不区分大小写。</li>
+<li>^~：用于不含正则表达式的 uri 前，要求 Nginx 服务器找到标识 uri 和请求字符串匹配度最高的 location 后，立即使用此 location 处理请求，而不再使用 location 块中的正则 uri 和请求字符串做匹配。</li>
+</ol>
+<p><strong>注意：</strong></p>
+<pre><code>如果 uri 包含正则表达式，则必须要有 ~ 或者 ~* 标识。
+</code></pre>
+<h2 id="nginx-配置实例-负载均衡"><a href="#nginx-配置实例-负载均衡" class="headerlink" title="nginx 配置实例-负载均衡"></a>nginx 配置实例-负载均衡</h2><ul>
+<li><p>实现效果</p>
+</li>
+<li><p>浏览器地址栏输入地址 <a target="_blank" rel="noopener" href="http://ip/edu/a.html%EF%BC%8C%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%E6%95%88%E6%9E%9C%EF%BC%8C%E5%B9%B3%E5%9D%87">http://ip/edu/a.html，负载均衡效果，平均</a> 8080和 8081 端口中</p>
+</li>
+<li><p>准备工作</p>
+</li>
+<li><p>准备两台 tomcat 服务器，一台 8080，一台 8081</p>
+</li>
+<li><p>在两台 tomcat 里面 webapps 目录中，创建名称是 edu 文件夹，在 edu 文件夹中创建页面 a.html，用于测试</p>
+</li>
+<li><p>在 nginx 的配置文件中进行负载均衡的配置</p>
+</li>
+<li><p><img src="/nginx.assets/eecc3b41e77db1ed8ba510f9665400cf.png" alt="截图"></p>
+</li>
+<li><img src="nginx.assets/a919bdb5cc541f1d9a0ab8aa77ef924b.png" alt="截图" style="zoom:50%;" /></li>
+</ul>
+<h3 id="nginx-分配服务器策略"><a href="#nginx-分配服务器策略" class="headerlink" title="nginx 分配服务器策略"></a>nginx 分配服务器策略</h3><ul>
+<li><p>第一种 轮询（默认）</p>
+</li>
+<li><p>每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器 down 掉，能自动剔除。</p>
+</li>
+<li><p>第二种 weight</p>
+</li>
+<li><p>weight 代表权重默认为 1,权重越高被分配的客户端越多 (加在server ip:port weight:xxx)</p>
+</li>
+<li><p>第三种 ip_hash</p>
+</li>
+<li><p>每个请求按访问 ip 的 hash 结果分配，这样每个访客固定访问一个后端服务器</p>
+</li>
+<li><p>第四种 fair（第三方,需要安装）</p>
+</li>
+<li><p>按后端服务器的响应时间来分配请求，响应时间短的优先分配。</p>
+</li>
+<li><p>第五种least_conn</p>
+<ul>
+<li>最少连接访问，服务器最少连接数</li>
+</ul>
+</li>
+<li><p>第六种url_hash（需要第三方插件）</p>
+<ul>
+<li>根据用户访问的url定向转发请求</li>
+</ul>
+</li>
+</ul>
+<p>注意：后四种都是加在你定义的myserver中，与server平级,比如</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">upstream server_pool&#123; </span><br><span class="line">  ip_hash; </span><br><span class="line">  server 192.168.5.21:80; </span><br><span class="line">  server 192.168.5.22:80; </span><br><span class="line">&#125;</span><br><span class="line">upstream server_pool&#123;   </span><br><span class="line">  server 192.168.10.1:80;    </span><br><span class="line">  server 192.168.10.2:80;</span><br><span class="line">  server 192.168.10.3:80;</span><br><span class="line">  fair;    </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="其他参数"><a href="#其他参数" class="headerlink" title="其他参数"></a>其他参数</h4><img src="nginx.assets/af5d0298e8ad8f01f941cdef3b093a5f.png" alt="截图" style="zoom:100%;" />
+
+<br/>
+
+<h2 id="nginx-配置实例-动静分离"><a href="#nginx-配置实例-动静分离" class="headerlink" title="nginx 配置实例-动静分离"></a>nginx 配置实例-动静分离</h2><ul>
+<li>什么是动静分离</li>
+</ul>
+<img src="nginx.assets/b80cf6f756a00f8fd51490bec815549e.png" alt="截图" style="zoom:50%;" />
+
+<ul>
+<li><p>通过 location 指定不同的后缀名实现不同的请求转发。通过 expires 参数设置，可以使浏览器缓存过期时间，减少与服务器之前的请求和流量。具体 Expires 定义：是给一个资源设定一个过期时间，也就是说无需去服务端验证，直接通过浏览器自身确认是否过期即可，所以不会产生额外的流量。此种方法非常适合不经常变动的资源。（如果经常更新的文件，不建议使用 Expires 来缓存），我这里设置 3d，表示在这 3 天之内访问这个 URL，发送一个请求，比对服务器该文件最后更新时间没有变化，则不会从服务器抓取，返回状态码 304，<br>如果有修改，则直接从服务器重新下载，返回状态码 200。</p>
+</li>
+<li><p>动静分离从目前实现角度来讲大致分为两种</p>
+</li>
+<li><p>一种是纯粹把静态文件独立成单独的域名，放在独立的服务器上，也是目前主流</p>
+</li>
+<li><p>另外一种方法就是动态跟静态文件混合在一起发布，通过 nginx 来分开。<br>  通过 location 指定不同的后缀名实现不同的请求转发。</p>
+</li>
+<li><p>准备工作</p>
+</li>
+<li><p>在 liunx 系统中准备静态资源，用于进行访问</p>
+</li>
+<li><p><img src="/nginx.assets/ff203db6f03d345f80a0371c141eb139.png" alt="截图"></p>
+</li>
+<li><p>具体配置</p>
+</li>
+</ul>
+<img src="nginx.assets/8580bcac85910a918257417cce568850.png" alt="截图" style="zoom:80%;" />
+
+<ul>
+<li>autoindex on 通过访问目录时可以列出该目录问题。注意：文件路径的斜线</li>
+</ul>
+<h3 id="实验一"><a href="#实验一" class="headerlink" title="实验一"></a>实验一</h3><ul>
+<li>在浏览器地址栏输入地址：<a target="_blank" rel="noopener" href="http://192.168.98.128/image/">http://192.168.98.128/image/</a></li>
+</ul>
+<p><img src="/nginx.assets/6f2eb043d05c4176a58be697ab82c1dd.png" alt="截图"></p>
+<ul>
+<li>在浏览器地址栏输入地址：<a target="_blank" rel="noopener" href="http://192.168.98.128/www/a.html">http://192.168.98.128/www/a.html</a></li>
+</ul>
+<p><img src="/nginx.assets/7bd1309585aba48a6d3b3e657899b37d.png" alt="截图"></p>
+<h3 id="实验二"><a href="#实验二" class="headerlink" title="实验二"></a>实验二</h3><ul>
+<li>如果开启反向代理，访问tomcat动态资源index.jsp，jsp中引用的静态资源可以从nginx服务器中进行加载。</li>
+</ul>
+<p><img src="/nginx.assets/cd7ba13e4b2c63148e9eab8fdc1a03a3.png" alt="截图"></p>
+<ul>
+<li>建立jsp部署到tomcat8080&#x2F;webapps&#x2F;edu目录下;tomcat8081&#x2F;webapps&#x2F;edu目录下</li>
+</ul>
+<br/>
+
+<img src="nginx.assets/ca1d42f584e8b441eaae8d24573ab24d.png" alt="截图" style="zoom:40%;" />
+
+<br/>
+
+<img src="nginx.assets/df9d69339dcdddc1df81ec716e3dd0bb.png" alt="截图" style="zoom:40%;" />
+
+
+
+<h2 id="Nginx-配置高可用的集群"><a href="#Nginx-配置高可用的集群" class="headerlink" title="Nginx 配置高可用的集群"></a>Nginx 配置高可用的集群</h2><ul>
+<li><strong>什么是nginx高可用</strong></li>
+</ul>
+<img src="nginx.assets/image-20211119202304073.png" alt="image-20211119202304073"  />
+
+<ul>
+<li><p>准备工作</p>
+<ul>
+<li>准备两台服务器</li>
+<li>在两台服务器安装 nginx</li>
+<li>在两台服务器安装 keepalived</li>
+</ul>
+</li>
+<li><p>在两台服务器安装 keepalived</p>
+<ul>
+<li>yum install keepalived –y<ul>
+<li>安装之后，在 etc 里面生成目录 keepalived，有文件 keepalived.conf</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>完成高可用配置</p>
+<ul>
+<li><p>修改&#x2F;etc&#x2F;keepalived&#x2F;keepalivec.conf 配置文件</p>
+<ul>
+<li><pre><code>global_defs &#123; 
+ notification_email &#123; 
+ acassen@firewall.loc 
+ failover@firewall.loc 
+ sysadmin@firewall.loc 
+ &#125; 
+ notification_email_from Alexandre.Cassen@firewall.loc 
+ smtp_server 192.168.98.129
+ smtp_connect_timeout 30 
+ router_id LVS_DEVEL #访问到主机（看vim /ect/hosts文件）
+&#125; 
+ 
+vrrp_script chk_http_port &#123; 
+ 
+ script &quot;/usr/local/src/nginx_check.sh&quot; 
+ 
+ interval 2 #（检测脚本执行的间隔） 
+ 
+ weight 2 	#权重
+ 
+ &#125; 
+ 
+vrrp_instance VI_1 &#123; 
+ state MASTER # 备份服务器上将 MASTER 改为 BACKUP 
+ interface ens33 //网卡 
+ virtual_router_id 51 # 主、备机的 virtual_router_id 必须相同 
+ priority 100 # 主、备机取不同的优先级，主机值较大，备份机值较小 
+ advert_int 1 #每个1秒发个心跳看是否正常运行
+ authentication &#123; 
+ auth_type PASS #权限校验方式，pass密码
+ auth_pass 1111 #密码1111
+ &#125; 
+ virtual_ipaddress &#123; 
+ 192.168.98.50 // VRRP H 虚拟地址，可以绑定多个  要与该服务器在一个网关
+ &#125; 
+&#125; 
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- 在/usr/local/src 添加检测脚本</span><br><span class="line"></span><br><span class="line">  - ```shell</span><br><span class="line">    #!/bin/bash</span><br><span class="line">    A=`ps -C nginx –no-header |wc -l`</span><br><span class="line">    if [ $A -eq 0 ];then</span><br><span class="line">     /usr/local/nginx/sbin/nginx</span><br><span class="line">     sleep 2</span><br><span class="line">     if [ `ps -C nginx --no-header |wc -l` -eq 0 ];then</span><br><span class="line">     killall keepalived</span><br><span class="line">     fi</span><br><span class="line">    fi</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>把两台服务器上 nginx 和 keepalived 启动</p>
+</li>
+<li><p>启动 nginx：.&#x2F;nginx</p>
+</li>
+<li><p>启动 keepalived：systemctl start keepalived.service</p>
+</li>
+</ul>
+</li>
+<li><p>最终测试</p>
+<ul>
+<li>在浏览器地址栏输入 虚拟 ip 地址 192.168.98.50</li>
+</ul>
+</li>
+</ul>
+<h2 id="Nginx-的原理"><a href="#Nginx-的原理" class="headerlink" title="Nginx 的原理"></a>Nginx 的原理</h2><ul>
+<li><strong>mater 和 worker</strong><ul>
+<li><img src="/nginx.assets/image-20211119203503590.png" alt="image-20211119203503590"></li>
+</ul>
+</li>
+</ul>
+<img src="nginx.assets/image-20211119203600939.png" alt="image-20211119203600939" style="zoom:80%;" />
+
+<ul>
+<li><p><strong>master-workers 的机制的好处</strong> </p>
+<ul>
+<li>首先，对于每个 worker 进程来说，独立的进程，不需要加锁，所以省掉了锁带来的开销， 同时在编程以及问题查找时，也会方便很多。其次，采用独立的进程，可以让互相之间不会 影响，一个进程退出后，其它进程还在工作，服务不会中断，master 进程则很快启动新的 worker 进程。当然，worker 进程的异常退出，肯定是程序有 bug 了，异常退出，会导致当 前 worker 上的所有请求失败，不过不会影响到所有请求，所以降低了风险。</li>
+</ul>
+</li>
+<li><p><strong>需要设置多少个 worker</strong></p>
+<ul>
+<li>Nginx 同 redis 类似都采用了 io 多路复用机制，每个 worker 都是一个独立的进程，但每个进 程里只有一个主线程，通过异步非阻塞的方式来处理请求， 即使是千上万个请求也不在话 下。每个 worker 的线程可以把一个 cpu 的性能发挥到极致。所以 worker 数和服务器的 cpu 数相等是最为适宜的。设少了会浪费 cpu，设多了会造成 cpu 频繁切换上下文带来的损耗。</li>
+</ul>
+</li>
+<li><p><strong>连接数 worker_connection</strong></p>
+<ul>
+<li>第一个：发送请求，占用了 woker 的几个连接数？<ul>
+<li>答案：2 或者 4 个</li>
+</ul>
+</li>
+<li>这个值是表示每个 worker 进程所能建立连接的最大值，所以，一个 nginx 能建立的最大连接 数，应该是 worker_connections * worker_processes。当然，这里说的是最大连接数，对于 HTTP 请 求 本 地 资 源 来 说 ， 能 够 支 持 的 最 大 并 发 数 量 是 worker_connections *  worker_processes，如果是支持 http1.1 的浏览器每次访问要占两个连接，所以普通的静态访 问最大并发数是： worker_connections * worker_processes &#x2F;2，而如果是 HTTP 作 为反向代 理来说，最大并发数量应该是 worker_connections *  worker_processes&#x2F;4。因为作为反向代理服务器，每个并发会建立与客户端的连接和与后端服 务的连接，会占用两个连接。</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/nginx/nginx/" data-id="cloxtn0cq002e5gyecpcrccyy" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/rabbitmq/rabbitmq/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/MySQLmd%E7%AC%94%E8%AE%B0/mysql%E5%9F%BA%E7%A1%80%E7%AF%87%E7%AC%94%E8%AE%B0/%E7%AC%AC18%E7%AB%A0_MySQL8%E5%85%B6%E5%AE%83%E6%96%B0%E7%89%B9%E6%80%A7/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Stream流Stream流的常见生成方式【应用】 Stream流的思想   Stream流的三类方法  获取Stream流 -&gt; 进厂方法 创建一条流水线,并把数据放到流水线上准备进行操作   中间方法 -&gt; 车间方法 流水线上的操作 一次操作完毕之后,还可以继续进行其他操作   终结方法 -&gt; 出厂方法 一个Stream流只能有一个终结方法 是流水线上的最后一个操作    进">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/Stream%E6%B5%81/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Stream流Stream流的常见生成方式【应用】 Stream流的思想   Stream流的三类方法  获取Stream流 -&gt; 进厂方法 创建一条流水线,并把数据放到流水线上准备进行操作   中间方法 -&gt; 车间方法 流水线上的操作 一次操作完毕之后,还可以继续进行其他操作   终结方法 -&gt; 出厂方法 一个Stream流只能有一个终结方法 是流水线上的最后一个操作    进">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/Stream%E6%B5%81.assets/7959d4ac5e67bb38199e9239dc161b5b.png">
+<meta property="article:published_time" content="2023-11-14T04:11:24.710Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.286Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/Stream%E6%B5%81.assets/7959d4ac5e67bb38199e9239dc161b5b.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/Stream流" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/Stream%E6%B5%81/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.710Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Stream流"><a href="#Stream流" class="headerlink" title="Stream流"></a>Stream流</h1><h2 id="Stream流的常见生成方式【应用】"><a href="#Stream流的常见生成方式【应用】" class="headerlink" title="Stream流的常见生成方式【应用】"></a>Stream流的常见生成方式【应用】</h2><ul>
+<li><p>Stream流的思想</p>
+<p><img src="/Stream%E6%B5%81.assets/7959d4ac5e67bb38199e9239dc161b5b.png" alt="截图"></p>
+</li>
+<li><p>Stream流的三类方法</p>
+<ul>
+<li>获取Stream流 -&gt; <strong>进厂方法</strong><ul>
+<li>创建一条流水线,并把数据放到流水线上准备进行操作</li>
+</ul>
+</li>
+<li>中间方法 -&gt; <strong>车间方法</strong><ul>
+<li>流水线上的操作</li>
+<li>一次操作完毕之后,还可以继续进行其他操作</li>
+</ul>
+</li>
+<li>终结方法 -&gt; <strong>出厂方法</strong><ul>
+<li>一个Stream流只能有一个终结方法</li>
+<li>是流水线上的最后一个操作</li>
+</ul>
+</li>
+</ul>
+<h3 id="进厂方法"><a href="#进厂方法" class="headerlink" title="进厂方法"></a>进厂方法</h3><ul>
+<li><p>Collection体系集合</p>
+<p>使用默认方法stream()生成流， default Stream<E> stream()</p>
+</li>
+<li><p>Map体系集合</p>
+<p>把Map转成Set集合，间接的生成流</p>
+</li>
+<li><p>数组</p>
+<p>通过Arrays中的静态方法stream生成流</p>
+</li>
+<li><p>同种数据类型的多个数据</p>
+<p>通过Stream接口的静态方法of(T… values)生成流</p>
+<p><strong>代码演示</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Collection体系的集合使用默认方法stream()生成流</span></span><br><span class="line">        <span class="type">List</span> <span class="variable">list</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>();</span><br><span class="line">        <span class="type">Stream</span> <span class="variable">listStream</span> <span class="operator">=</span> list.stream();</span><br><span class="line"></span><br><span class="line">        <span class="type">Set</span> <span class="variable">set</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashSet</span>();</span><br><span class="line">        <span class="type">Stream</span> <span class="variable">setStream</span> <span class="operator">=</span> set.stream();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//Map体系的集合间接生成流</span></span><br><span class="line">        Map&lt;String,String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>();</span><br><span class="line">        Stream&lt;String&gt; keysStream = map.keySet().stream();</span><br><span class="line">        Stream&lt;String&gt; valuesStream = map.values().stream();</span><br><span class="line">        Set&lt;Map.Entry&lt;String, String&gt;&gt; entries = map.entrySet();</span><br><span class="line">        Stream&lt;Map.Entry&lt;String, String&gt;&gt; mapStream = entries.stream();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//数组可以通过Arrays中静态方法stream生成流</span></span><br><span class="line">        Integer [] intArray = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>&#125;;</span><br><span class="line">        Stream&lt;Integer&gt; intStream = Arrays.stream(intArray);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//同种数据类型的多个数据可以通过Stream接口的静态方法of(T... values)生成流</span></span><br><span class="line">        Stream&lt;Character&gt; a = Stream.of(<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="Stream流中间操作方法【应用】"><a href="#Stream流中间操作方法【应用】" class="headerlink" title="Stream流中间操作方法【应用】"></a>Stream流中间操作方法【应用】</h3><ul>
+<li><p>概念</p>
+<p>中间操作的意思是,执行完此方法之后,Stream流依然可以继续执行其他操作</p>
+</li>
+<li><p>常见方法</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Stream<T> filter(Predicate predicate)</td>
+<td>用于对流中的数据进行过滤</td>
+</tr>
+<tr>
+<td>Stream<T> limit(long maxSize)</td>
+<td>返回此流中的元素组成的流，截取前指定参数个数的数据</td>
+</tr>
+<tr>
+<td>Stream<T> skip(long n)</td>
+<td>跳过指定参数个数的数据，返回由该流的剩余元素组成的流</td>
+</tr>
+<tr>
+<td>static <T> Stream<T> concat(Stream a, Stream b)</td>
+<td>合并a和b两个流为一个流</td>
+</tr>
+<tr>
+<td>Stream<T> distinct()</td>
+<td>返回由该流的不同元素（根据Object.equals(Object) ）组成的流</td>
+</tr>
+<tr>
+<td>Stream<R> map(Function&lt;T,R&gt; mapper)</td>
+<td>转换车间: 把流中T类型数据转换成R类型数据</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p><strong>filter代码演示</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">fileMethod</span><span class="params">(Collection&lt;String&gt; collection)</span>&#123;</span><br><span class="line">        <span class="comment">//需求1：把list集合中以张开头的元素在控制台输出</span></span><br><span class="line">        collection.stream().filter(s -&gt; s.startsWith(<span class="string">&quot;张&quot;</span>)).forEach( System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------------------------------&quot;</span>);</span><br><span class="line">        <span class="comment">///需求2：把list集合中长度为3的元素在控制台输出</span></span><br><span class="line">        collection.stream().filter( s -&gt; s.length() == <span class="number">3</span>).forEach(  System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------------------------------&quot;</span>);</span><br><span class="line">        <span class="comment">//需求3：把list集合中以张开头的，长度为3的元素在控制台输出</span></span><br><span class="line">        collection.stream().filter(s -&gt; s.startsWith(<span class="string">&quot;张&quot;</span>)).filter(s-&gt; s.length() == <span class="number">3</span>).forEach(System.out::println);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>limit&amp;skip代码演示</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">limitAndSkip</span><span class="params">(Collection&lt;String&gt; collection)</span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//需求1：取前3个数据在控制台输出</span></span><br><span class="line">        collection.stream().limit(<span class="number">3</span>).forEach(  System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;--------------------------------&quot;</span>);</span><br><span class="line">        <span class="comment">//需求2：跳过3个元素，把剩下的元素在控制台输出</span></span><br><span class="line">        collection.stream().skip(<span class="number">3</span>).forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;--------------------------------&quot;</span>);</span><br><span class="line">        <span class="comment">//需求3：跳过2个元素，把剩下的元素中前2个在控制台输出</span></span><br><span class="line">        collection.stream().skip(<span class="number">2</span>).forEach(System.out::println);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>concat&amp;distinct代码演示</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">concatAndDistinct</span><span class="params">(Collection&lt;String&gt;  collection)</span>&#123;</span><br><span class="line">        <span class="comment">//需求1：取前4个数据组成一个流</span></span><br><span class="line">        Stream&lt;String&gt; s1 = collection.stream().limit(<span class="number">4</span>);</span><br><span class="line">        <span class="comment">//需求2：跳过2个数据组成一个流</span></span><br><span class="line">        Stream&lt;String&gt; s2 = collection.stream().skip(<span class="number">2</span>);</span><br><span class="line">        <span class="comment">//需求3：合并需求1和需求2得到的流，并把结果在控制台输出</span></span><br><span class="line">        <span class="comment">//Stream.concat(s1,s2).forEach(System.out::println);</span></span><br><span class="line">        <span class="comment">//需求4：合并需求1和需求2得到的流，并把结果在控制台输出，要求字符串元素不能重复</span></span><br><span class="line">        Stream.concat(s1,s2).distinct().forEach(System.out::println);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Stream流终结操作方法【应用】"><a href="#Stream流终结操作方法【应用】" class="headerlink" title="Stream流终结操作方法【应用】"></a>Stream流终结操作方法【应用】</h3><ul>
+<li><p>概念</p>
+<p>终结操作的意思是,执行完此方法之后,Stream流将不能再执行其他操作</p>
+</li>
+<li><p>常见方法</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void forEach(Consumer action)</td>
+<td>对此流的每个元素执行操作</td>
+</tr>
+<tr>
+<td>long count()</td>
+<td>返回此流中的元素数</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h3 id="Stream流的收集操作【应用】-出厂方法"><a href="#Stream流的收集操作【应用】-出厂方法" class="headerlink" title="Stream流的收集操作【应用】 -&gt; 出厂方法"></a>Stream流的收集操作【应用】 -&gt; 出厂方法</h3><ul>
+<li><p>概念</p>
+<p>对数据使用Stream流的方式操作完毕后,可以把流中的数据收集到集合中</p>
+</li>
+<li><p>常用方法</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>R collect(Collector collector)</td>
+<td>把结果收集到集合中</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>工具类Collectors提供了具体的收集方式</p>
+<table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public static <T> Collector toList()</td>
+<td>把元素收集到List集合中</td>
+</tr>
+<tr>
+<td>public static <T> Collector toSet()</td>
+<td>把元素收集到Set集合中</td>
+</tr>
+<tr>
+<td>public static  Collector toMap(Function keyMapper,Function valueMapper)</td>
+<td>把元素收集到Map集合中</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<p><strong>代码演示</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建List集合对象</span></span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;String&gt;();</span><br><span class="line">        list.add(<span class="string">&quot;林青霞&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;张曼玉&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;王祖贤&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;王祖贤&quot;</span>);</span><br><span class="line">        list.add(<span class="string">&quot;柳岩&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//需求1：得到名字为3个字的流</span></span><br><span class="line">        Stream&lt;String&gt; s1 = list.stream().filter(s -&gt; s.length() == <span class="number">3</span>);</span><br><span class="line">        <span class="comment">//需求2：把使用Stream流操作完毕的数据收集到Set集合中并遍历</span></span><br><span class="line">        Set&lt;String&gt; collect = s1.collect(Collectors.toSet());</span><br><span class="line">        collect.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------------------------&quot;</span>);</span><br><span class="line">        <span class="comment">//创建Set集合对象</span></span><br><span class="line">        Set&lt;Integer&gt; set = <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;Integer&gt;();</span><br><span class="line">        set.add(<span class="number">10</span>);</span><br><span class="line">        set.add(<span class="number">20</span>);</span><br><span class="line">        set.add(<span class="number">30</span>);</span><br><span class="line">        set.add(<span class="number">33</span>);</span><br><span class="line">        set.add(<span class="number">35</span>);</span><br><span class="line">        <span class="comment">//需求3：得到年龄大于25的流</span></span><br><span class="line">        Stream&lt;Integer&gt; setStream = set.stream().filter(age -&gt; age &gt; <span class="number">25</span>);</span><br><span class="line">        <span class="comment">//需求4：把使用Stream流操作完毕的数据收集到List集合中并遍历</span></span><br><span class="line">        List&lt;Integer&gt; ages = setStream.collect(Collectors.toList());</span><br><span class="line">        ages.forEach(System.out::println);</span><br><span class="line">        System.out.println(<span class="string">&quot;---------------------------------&quot;</span>);</span><br><span class="line">        <span class="comment">//定义一个字符串数组，每一个字符串数据由姓名数据和年龄数据组合而成</span></span><br><span class="line">        String[] strArray = &#123;<span class="string">&quot;林青霞,30&quot;</span>, <span class="string">&quot;张曼玉,35&quot;</span>, <span class="string">&quot;王祖贤,33&quot;</span>, <span class="string">&quot;柳岩,25&quot;</span>&#125;;</span><br><span class="line">        <span class="comment">//需求5：得到字符串中年龄数据大于28的流</span></span><br><span class="line">        Stream&lt;String&gt; ageStream = Stream.of(strArray).filter(s -&gt; Integer.parseInt(s.split(<span class="string">&quot;,&quot;</span>)[<span class="number">1</span>]) &gt; <span class="number">28</span>);</span><br><span class="line">        <span class="comment">//需求6：把使用Stream流操作完毕的数据收集到Map集合中并遍历，字符串中的姓名作键，年龄作值</span></span><br><span class="line">        Map&lt;String, Integer&gt; map = ageStream.collect(Collectors.toMap(s -&gt; s.split(<span class="string">&quot;,&quot;</span>)[<span class="number">0</span>],</span><br><span class="line">                s -&gt; Integer.parseInt(s.split(<span class="string">&quot;,&quot;</span>)[<span class="number">1</span>])));</span><br><span class="line">        <span class="comment">/*Map&lt;String, Integer&gt; map = ageStream.collect(Collectors.toMap(new Function&lt;String, String&gt;() &#123;</span></span><br><span class="line"><span class="comment">            @Override</span></span><br><span class="line"><span class="comment">            public String apply(String s) &#123;</span></span><br><span class="line"><span class="comment">                return s.split(&quot;,&quot;)[0];</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;, new Function&lt;String, Integer&gt;() &#123;</span></span><br><span class="line"><span class="comment">            @Override</span></span><br><span class="line"><span class="comment">            public Integer apply(String s) &#123;</span></span><br><span class="line"><span class="comment">                return Integer.parseInt(s.split(&quot;,&quot;)[1]);</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;));*/</span></span><br><span class="line">        Set&lt;Map.Entry&lt;String, Integer&gt;&gt; entries = map.entrySet();</span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, Integer&gt; entry : entries) &#123;</span><br><span class="line">            System.out.println(entry.getKey() + <span class="string">&quot;---&quot;</span> + entry.getValue());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>案例</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.yyq.streamDemo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Consumer;</span><br><span class="line"><span class="keyword">import</span> java.util.function.Function;</span><br><span class="line"><span class="keyword">import</span> java.util.stream.Stream;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">案例需求</span></span><br><span class="line"><span class="comment">现在有两个ArrayList集合，分别存储6名男演员名称和6名女演员名称，要求完成如下的操作</span></span><br><span class="line"><span class="comment">- 男演员只要名字为3个字的前三人</span></span><br><span class="line"><span class="comment">- 女演员只要姓林的，并且不要第一个</span></span><br><span class="line"><span class="comment">- 把过滤后的男演员姓名和女演员姓名合并到一起</span></span><br><span class="line"><span class="comment">- 把上一步操作后的元素作为构造方法的参数创建演员对象,遍历数据</span></span><br><span class="line"><span class="comment">演员类Actor已经提供，里面有一个成员变量，一个带参构造方法，以及成员变量对应的get/set方法</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Demo4</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        ArrayList&lt;String&gt; actors = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        actors.add(<span class="string">&quot;胡歌&quot;</span>);</span><br><span class="line">        actors.add(<span class="string">&quot;刘德华&quot;</span>);</span><br><span class="line">        actors.add(<span class="string">&quot;吴京&quot;</span>);</span><br><span class="line">        actors.add(<span class="string">&quot;陈道明&quot;</span>);</span><br><span class="line">        actors.add(<span class="string">&quot;成龙&quot;</span>);</span><br><span class="line">        actors.add(<span class="string">&quot;周深&quot;</span>);</span><br><span class="line">        ArrayList&lt;String&gt; actresses = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        actresses.add(<span class="string">&quot;IU&quot;</span>);</span><br><span class="line">        actresses.add(<span class="string">&quot;倪妮&quot;</span>);</span><br><span class="line">        actresses.add(<span class="string">&quot;杨紫&quot;</span>);</span><br><span class="line">        actresses.add(<span class="string">&quot;刘亦菲&quot;</span>);</span><br><span class="line">        actresses.add(<span class="string">&quot;古力娜扎&quot;</span>);</span><br><span class="line">        actresses.add(<span class="string">&quot;林心如&quot;</span>);</span><br><span class="line">        <span class="comment">/*Stream&lt;String&gt; s1 = actors.stream().limit(3);</span></span><br><span class="line"><span class="comment">        Stream&lt;String&gt; s2 = actresses.stream().skip(1).filter(actress -&gt;actress.startsWith(&quot;林&quot;));</span></span><br><span class="line"><span class="comment">        Stream&lt;String&gt; concat = Stream.concat(s1, s2);</span></span><br><span class="line"><span class="comment">        concat.forEach(s -&gt; &#123;</span></span><br><span class="line"><span class="comment">                Actor actor = new Actor(s);</span></span><br><span class="line"><span class="comment">                System.out.println(&quot;actorName = &quot; + actor.getName());</span></span><br><span class="line"><span class="comment">        &#125;);*/</span></span><br><span class="line"></span><br><span class="line">        Stream.concat(actors.stream().limit(<span class="number">3</span>),</span><br><span class="line">                actresses.stream().skip(<span class="number">1</span>).filter(actress -&gt;actress.startsWith(<span class="string">&quot;林&quot;</span>))</span><br><span class="line">        ).map(Actor::<span class="keyword">new</span>).forEach(actor -&gt; System.out.println(actor.getName()));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/Stream%E6%B5%81/" data-id="cloxtn0ca000y5gye29pnbane" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/StringBuffer%E7%B1%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/static/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

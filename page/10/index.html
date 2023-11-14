@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/10/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-JavaBase/Period类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/Period%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.697Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Period类"><a href="#Period类" class="headerlink" title="Period类"></a>Period类</h1><br/>
+
+<p><strong>Period类的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">Period</span></span><br><span class="line"><span class="keyword">extends</span> <span class="title class_">Object</span></span><br><span class="line"><span class="keyword">implements</span> <span class="title class_">ChronoPeriod</span>, Serializable</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>Period是JDK8的时间操作类</strong></p>
+<br/>
+
+<p><strong>Period操作方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">JDK8提供的专门处理时间间隔的类; </span><br><span class="line">Period类 -&gt;年月日的时间间隔</span><br><span class="line">    <span class="keyword">static</span> Period <span class="title function_">between</span><span class="params">(LocalDate startDateInclusive, LocalDate endDateExclusive)</span></span><br><span class="line">      <span class="number">1.</span> 参数类型 : LocalDate 年月日</span><br><span class="line">      <span class="number">2.</span> startDateInclusive : 起始时间     endDateExclusive结尾时间</span><br><span class="line"></span><br><span class="line">    <span class="type">long</span> <span class="title function_">get</span><span class="params">(TemporalUnit unit)</span> : 获取所请求单元的值。</span><br><span class="line">        TemporalUnit接口有一个枚举的实现类 ChronoUnit -&gt; 设置时间间隔的时间单位</span><br><span class="line">            	<span class="comment">//枚举类对象的创建: 枚举类的类名.枚举项 --&gt; 每个枚举项就是枚举类的一个对象</span></span><br><span class="line">            	例如间隔多少天的时间单位: ChronoUnit.DAYS</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/Period%E7%B1%BB/" data-id="cloxtn0c8000t5gye3tpl0w2v" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/Object类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/Object%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.695Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Object 类: 根类,超类,基类</span><br><span class="line">    Java中所有的类直接或者间接的继承与Object类 -&gt; Object类中的方法Java中所有的对象都可以使用!</span><br><span class="line">    </span><br><span class="line">    类 Object 是类层次结构的根类。每个类都使用 Object 作为超类。所有对象（包括数组）都实现这个类的方法。     </span><br><span class="line">    </span><br><span class="line">    构造方法: Object() --&gt; 为什么所有类的构造方法中第一句代码默认赠送的是 <span class="built_in">super</span>();</span><br><span class="line">        因为所有的类加载最终都会去加载Object类,要加载Object类就启动Object类的构造方法</span><br><span class="line">        </span><br><span class="line">    成员方法:</span><br><span class="line">        Class <span class="title function_">getClass</span><span class="params">()</span> : 获取一个对象的字节码对象</span><br><span class="line">            <span class="comment">//在多态中判断一个对象是否属于一种类型 : 对象名.getClass() == 类名.class</span></span><br><span class="line">                <span class="comment">//这样判断的依据是: 同一种类型所有的对象的字节码对象是同一个.</span></span><br><span class="line">        <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span> : 当子类没有重写Object类中的hashCode方法时,获取一个对象的物理地址值</span><br><span class="line">        </span><br><span class="line">== : 比较运算符</span><br><span class="line">    连接基本数据类型: 一定判断的是基本数据类型的值是否相同; --&gt; <span class="number">100</span> == <span class="number">200</span></span><br><span class="line">    连接引用数据类型(对象): 一定判断的是引用数据类型对象的地址值(物理地址)是否相同        </span><br></pre></td></tr></table></figure>
+
+<h5 id="Object类中的toString方法"><a href="#Object类中的toString方法" class="headerlink" title="Object类中的toString方法"></a>Object类中的toString方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">String <span class="title function_">toString</span><span class="params">()</span>: 返回该对象的字符串表示。</span><br><span class="line">    直接输出对象名就是得到对象.toString()方法</span><br><span class="line"></span><br><span class="line">    直接输出对象就应该得到全类名+地址值,但是有时候看不到对象的地址值而是对象的其他值</span><br><span class="line">                因为在此类中重写了Object类中的toString方法</span><br><span class="line"></span><br><span class="line">    我们输出对象的名字的时候如果不想看到对象的地址值而是属性值,我们可以在子类中重写父类的方法</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    Object类中toString()方法的源码 -&gt; 浏览名著的感觉</span><br><span class="line">        <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> getClass().getName() + <span class="string">&quot;@&quot;</span> + Integer.toHexString(hashCode());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">this</span>.getClass().getName() + <span class="string">&quot;@&quot;</span> + Integer.toHexString(hashCode())</span><br><span class="line">        <span class="built_in">this</span>.getClass().getName(): 对象的全类名 -&gt; 包名+类名</span><br><span class="line">            对象获取字节码对象 -&gt; 此对象的字节码对象获取字节码对象的名称</span><br><span class="line">        <span class="string">&quot;@&quot;</span>: 分隔</span><br><span class="line">        Integer.toHexString(<span class="built_in">this</span>.hashCode()) : 获取对象<span class="number">16</span>进制的地址值</span><br><span class="line">            <span class="built_in">this</span>.hashCode(): 若没有重写父类的hashCode获取的是对象的<span class="number">10</span>进制物理地址</span><br><span class="line">            Integer.toHexString(对象的十进制地址值) : 把<span class="number">10</span>进制的转成<span class="number">16</span>进制</span><br><span class="line"></span><br><span class="line">        Object中的toString():把对象的全类名和<span class="number">16</span>进制地址值进行返回</span><br><span class="line"></span><br><span class="line">        自动生成toString方法</span><br><span class="line">            alt + insert + toString    </span><br></pre></td></tr></table></figure>
+
+<h5 id="Object类中的equals方法"><a href="#Object类中的equals方法" class="headerlink" title="Object类中的equals方法"></a>Object类中的equals方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object obj)</span> : 判断其他某个对象是否与此对象“相等”。</span><br><span class="line"></span><br><span class="line">     主动查看源码:</span><br><span class="line">        <span class="number">1.</span> <span class="type">double</span> shift : 连按<span class="number">2</span>下shift 搜索你需要查询的类</span><br><span class="line">        <span class="number">2.</span> ctrl + n :  搜索你需要查询的类</span><br><span class="line"></span><br><span class="line">     Object中equals方法的源码分析:</span><br><span class="line">        <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object obj)</span> &#123; <span class="comment">//Object obj: 多态的特性</span></span><br><span class="line">            <span class="keyword">return</span> (<span class="built_in">this</span> == obj);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">this</span> == obj : 调用方法的对象和传入方法的对象进行==比较 ---&gt; 一定是比较对象的地址值</span><br><span class="line">            <span class="built_in">this</span> : 调用方法的对象</span><br><span class="line">            obj : 方法的形参 -&gt; 形参用来接收实参</span><br><span class="line"></span><br><span class="line">     如果你想比较对象的时候比较的不是对象的地址值而是对象的属性值,你需要重写父类的equals方法</span><br><span class="line"></span><br><span class="line">     注意: 就算你重写了父类的equals方法但是==判断的还是对象的地址值是否相同</span><br><span class="line">     </span><br><span class="line"><span class="number">1.</span> 自己编写equals方法     </span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object obj)</span> &#123;<span class="comment">// 1. = new Cat();  2. 自己跟自己比 3. = null</span></span><br><span class="line">        <span class="comment">//提高方法的性能</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">this</span> == obj)&#123;<span class="comment">//this == obj: 自己比自己</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//若obj是一个null</span></span><br><span class="line">        <span class="keyword">if</span> (obj == <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//向下转型之前要做安全性校验</span></span><br><span class="line">        <span class="keyword">if</span> (!(obj <span class="keyword">instanceof</span> Student))&#123;</span><br><span class="line">            <span class="comment">//obj不是学生类的对象</span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//先向下转型!</span></span><br><span class="line">        <span class="type">Student</span> <span class="variable">student</span> <span class="operator">=</span> (Student) obj;</span><br><span class="line">        <span class="comment">//String类型的对象中有equals方法来判断字符串的内容是否相同</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.name.equals(student.name) &amp;&amp; <span class="built_in">this</span>.age == student.age;</span><br><span class="line">    &#125;  </span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> IDEA自动生成的equals方法</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object o)</span> &#123;</span><br><span class="line">        <span class="comment">//自己和自己比</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span> == o) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="comment">// o是null || 2个对象不是同类型</span></span><br><span class="line">        <span class="keyword">if</span> (o == <span class="literal">null</span> || <span class="built_in">this</span>.getClass() != o.getClass()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="type">Student</span> <span class="variable">student</span> <span class="operator">=</span> (Student) o;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//提高性能 如果两个对象的年龄不一样</span></span><br><span class="line">        <span class="keyword">if</span> (age != student.age) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="comment">// 年龄相同才比较姓名</span></span><br><span class="line">        <span class="comment">// 比较调用方法对象的名字是否是null</span></span><br><span class="line">        <span class="comment">// 1. 如果调用方法的学生对象的name不为空那么拿着调用方法对象的姓名和传入方法对象的姓名进行比较内容</span></span><br><span class="line">        <span class="comment">// 2. 如果调用方法的学生对象的name 为空 那么判断传入方法的对象的姓名值是否是null</span></span><br><span class="line">        <span class="keyword">return</span> name != <span class="literal">null</span> ? <span class="built_in">this</span>.name.equals(student.name) : student.name == <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id=""><a href="#" class="headerlink" title=""></a></h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/Object%E7%B1%BB/" data-id="cloxtn0c8000s5gye62v90gcn" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/Objects类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/Objects%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.693Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Objects类"><a href="#Objects类" class="headerlink" title="Objects类"></a>Objects类</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">Objects 是一个关于对象操作的工具类 --&gt;最喜欢做非空校验(<span class="literal">null</span>)</span><br><span class="line">      Objects 是一个工具类型，方法都被<span class="keyword">static</span>修饰所以直接使用类名调用</span><br><span class="line">      </span><br><span class="line">    <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object a, Object b)</span>: 判断对象 a 和 b 是否相同,本质上调用了Object中的equals,但是Objects中equals方法增加了对a对象的非空校验;</span><br><span class="line">源码:</span><br><span class="line">      <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object a, Object b)</span> &#123;</span><br><span class="line">          <span class="comment">/*</span></span><br><span class="line"><span class="comment">          	a == b : 假设a和b都是基本数据类型或者a和b是同一个对象</span></span><br><span class="line"><span class="comment">          	a != null &amp;&amp; a.equals(b) : 对a对象进行非空校验再拿a调用equals方法</span></span><br><span class="line"><span class="comment">          */</span></span><br><span class="line">          <span class="keyword">return</span> (a == b) || (a != <span class="literal">null</span> &amp;&amp; a.equals(b));</span><br><span class="line">      &#125;</span><br><span class="line">      </span><br><span class="line">      </span><br><span class="line">      <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">(Object o)</span> : 本质上是在调用Object中的hashCode方法(若o对象类中重写了hashCode那么就调用重写后的hashCode方法),增加了对o对象的非空校验</span><br><span class="line">    源码:</span><br><span class="line">      <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">(Object o)</span> &#123;</span><br><span class="line">            <span class="comment">/*</span></span><br><span class="line"><span class="comment">            	o != null : 判断o是否是空</span></span><br><span class="line"><span class="comment">            		若o不是空,调用o.hashCode() </span></span><br><span class="line"><span class="comment">            		若o是空,直接返回0</span></span><br><span class="line"><span class="comment">            */</span></span><br><span class="line">            <span class="keyword">return</span> o != <span class="literal">null</span> ? o.hashCode() : <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">      <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isNull</span><span class="params">(Object obj)</span> : 判断obj对象是不是<span class="literal">null</span>,是<span class="literal">null</span>就返回<span class="literal">true</span>,不是<span class="literal">null</span>就返回<span class="literal">false</span></span><br><span class="line">  	源码:</span><br><span class="line">		  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">isNull</span><span class="params">(Object obj)</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> obj == <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">      <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">nonNull</span><span class="params">(Object obj)</span> : 判断obj对象是不是不是<span class="literal">null</span>,不是<span class="literal">null</span>就返回<span class="literal">true</span>,是<span class="literal">null</span>就返回<span class="literal">false</span>  </span><br><span class="line">  	源码:</span><br><span class="line">		  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">boolean</span> <span class="title function_">nonNull</span><span class="params">(Object obj)</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> obj != <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">      <span class="keyword">static</span> String <span class="title function_">toString</span><span class="params">(Object o)</span> : 调用o对象的toString(),但是若o对象是<span class="literal">null</span>,则返回<span class="string">&quot;null&quot;</span></span><br><span class="line">    	源码:</span><br><span class="line">			<span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">toString</span><span class="params">(Object o)</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> String.valueOf(o);</span><br><span class="line">            &#125;</span><br><span class="line">			<span class="comment">//String.valueOf(o);</span></span><br><span class="line">            <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">valueOf</span><span class="params">(Object obj)</span> &#123;</span><br><span class="line">                <span class="comment">/*</span></span><br><span class="line"><span class="comment">                	判断obj是否是null </span></span><br><span class="line"><span class="comment">                		是null就返回&quot;null&quot;</span></span><br><span class="line"><span class="comment">                		不是null就调用obj的toString()</span></span><br><span class="line"><span class="comment">                */</span></span><br><span class="line">                <span class="keyword">return</span> (obj == <span class="literal">null</span>) ? <span class="string">&quot;null&quot;</span> : obj.toString();</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        </span><br><span class="line">      <span class="keyword">static</span> String <span class="title function_">toString</span><span class="params">(Object o, String nullDefault)</span> :  调用o对象的toString(),当若o对象是<span class="literal">null</span>,则返回nullDefault    </span><br><span class="line">    	源码:</span><br><span class="line">			<span class="keyword">public</span> <span class="keyword">static</span> String <span class="title function_">toString</span><span class="params">(Object o, String nullDefault)</span> &#123;</span><br><span class="line">                <span class="comment">/*</span></span><br><span class="line"><span class="comment">                	o != null : 判断o对象是否是null</span></span><br><span class="line"><span class="comment">                		是null返回nullDefault</span></span><br><span class="line"><span class="comment">                		不是null返回o.toString()</span></span><br><span class="line"><span class="comment">                */</span></span><br><span class="line">                <span class="keyword">return</span> (o != <span class="literal">null</span>) ? o.toString() : nullDefault;</span><br><span class="line">            &#125;</span><br><span class="line">    </span><br><span class="line">    Java中的各种空：</span><br><span class="line">      <span class="literal">null</span>:空常量 -&gt; 代表对象没有地址值</span><br><span class="line">      <span class="string">&quot;&quot;</span>: 空字符串 -&gt; 具体的字符串对象!存在常量池中</span><br><span class="line">      <span class="string">&#x27;&#x27;</span>:空字符 -&gt; 具体的基本类型值!但是不能直接这样写，必须写unicode编码: <span class="string">&#x27;\u0000&#x27;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/Objects%E7%B1%BB/" data-id="cloxtn0c7000r5gyegrg64fmk" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/Math类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/Math%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.691Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><strong>Math类</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Math类:关于基本的数学操作类</span><br><span class="line">    功能:求最值，求和，求绝对值，三角函数....</span><br><span class="line">    </span><br><span class="line">    自定义常量：</span><br><span class="line">        <span class="keyword">static</span> <span class="type">double</span> E : 自然对数的底数</span><br><span class="line">        <span class="keyword">static</span> <span class="type">double</span> PI : 圆周率</span><br><span class="line">    静态方法:</span><br><span class="line">        <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">abs</span><span class="params">(<span class="type">int</span> a)</span>: 求一个数的绝对值</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">static</span> <span class="type">double</span> <span class="title function_">ceil</span><span class="params">(<span class="type">double</span> a)</span> : 向上取整</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">static</span> <span class="type">double</span> <span class="title function_">floor</span><span class="params">(<span class="type">double</span> a)</span> : 向下取整</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">static</span> <span class="type">long</span> <span class="title function_">round</span><span class="params">(<span class="type">double</span> a)</span> : 四舍五入</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">max</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> : 求两个数的较大值</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">min</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span> : 求两个数的较小值</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">static</span> <span class="type">double</span> <span class="title function_">pow</span><span class="params">(<span class="type">double</span> a,<span class="type">double</span> b)</span> : 求一个数的二次幂</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">static</span> <span class="type">double</span> <span class="title function_">random</span><span class="params">()</span> : 表示随机数的类 -&gt; 范围：[<span class="number">0</span>,<span class="number">1.0</span>)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/Math%E7%B1%BB/" data-id="cloxtn0c6000q5gye268zckbl" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/Map接口" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/Map%E6%8E%A5%E5%8F%A3/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.689Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Map接口"><a href="#Map接口" class="headerlink" title="Map&lt;K,V&gt;接口"></a>Map&lt;K,V&gt;接口</h1><br/>
+
+<p><strong>Map&lt;K,V&gt;接口的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Map</span>&lt;K,V&gt;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>Map&lt;K,V&gt;接口的使用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">创建对象</span><br><span class="line"> 	Map&lt;K,V&gt; 集合名 = <span class="keyword">new</span> 具体的子类集合&lt;K,V&gt;();</span><br><span class="line">		例如: Map&lt;String,String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;String,String&gt;();</span><br><span class="line">		K: 代表的是键集合的元素类型</span><br><span class="line">       	V: 代表的是值集合的元素类型</span><br><span class="line">增删改查</span><br><span class="line">    增,改: </span><br><span class="line">        V <span class="title function_">put</span><span class="params">(K key, V value)</span> : 往集合中添加一对映射关系</span><br><span class="line">            返回值: 添加成功返回<span class="literal">null</span>,返回oldValue说明是对集合中原有的键对应的值进行修改</span><br><span class="line">		<span class="comment">//1. 若添加的元素在集合中不存在,put方法添加元素的功能 返回null代表添加成功</span></span><br><span class="line">        <span class="comment">//2. 若添加的元素在集合中存在,put方法修改元素的功能 返回此键对应的老值代表修改成功 </span></span><br><span class="line">    删:</span><br><span class="line">		V <span class="title function_">remove</span><span class="params">(Object key)</span> : 根据传入的键,删除这一对映射关系,并返回键对应的值</span><br><span class="line">		<span class="keyword">default</span> <span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object key, Object value)</span> : JDK8中的新增方法-&gt; 根据传入的键值删除这对映射关系 </span><br><span class="line">		<span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span>: 清空集合中的键值对</span><br><span class="line">    查:</span><br><span class="line">		V <span class="title function_">get</span><span class="params">(Object key)</span> : 根据传入的键寻找值,若键没找到返回<span class="literal">null</span></span><br><span class="line">        <span class="keyword">default</span> V <span class="title function_">getOrDefault</span><span class="params">(Object key, V defaultValue)</span>  :  根据传入的键寻找值</span><br><span class="line">            若找不到这个键返回defaultValue</span><br><span class="line">            </span><br><span class="line">       <span class="type">boolean</span> <span class="title function_">containsKey</span><span class="params">(Object key)</span>  : 查询是否包含传入的键</span><br><span class="line">       <span class="type">boolean</span> <span class="title function_">containsValue</span><span class="params">(Object value)</span>  : 查询是否包含传入的值</span><br><span class="line">            </span><br><span class="line">       <span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span> : 判断Map集合中是否没有键值对</span><br><span class="line">            </span><br><span class="line">       Set&lt;K&gt; <span class="title function_">keySet</span><span class="params">()</span>: 获取所有的键,并存入到一个Set中 -&gt; 召集所有的丈夫     </span><br><span class="line">            --&gt; 双列集合中的键集是一个Set集合</span><br><span class="line">       Collection&lt;V&gt; <span class="title function_">values</span><span class="params">()</span> : 获取所有的值,并存入到一个Collection集合中 -&gt; 召集所有的妻子</span><br><span class="line">            --&gt; 双列集合中值集是一个Collection集合</span><br><span class="line">            </span><br><span class="line">       <span class="type">int</span> <span class="title function_">size</span><span class="params">()</span> : 获取双列集合中有多少对映射关系 </span><br></pre></td></tr></table></figure>
+
+<p><strong>Map集合的遍历</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//第一种</span></span><br><span class="line">        Map&lt;String,String&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">&quot;杨过&quot;</span>,<span class="string">&quot;小龙女&quot;</span>);</span><br><span class="line">        map.put(<span class="string">&quot;郭靖&quot;</span>,<span class="string">&quot;黄蓉&quot;</span>);</span><br><span class="line">        map.put(<span class="string">&quot;郭芙&quot;</span>,<span class="string">&quot;耶鲁齐&quot;</span>);</span><br><span class="line">        Set&lt;String&gt; keys = map.keySet();</span><br><span class="line">        <span class="keyword">for</span> (String key : keys) &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> map.get(key);</span><br><span class="line">            System.out.println(key + <span class="string">&quot;---&quot;</span> + s);</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;-------------------------------------&quot;</span>);</span><br><span class="line">        <span class="comment">//第二种</span></span><br><span class="line">        Set&lt;Map.Entry&lt;String,String&gt;&gt; entries = map.entrySet();</span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, String&gt; entry : entries) &#123;</span><br><span class="line">            System.out.println(entry.getKey() + <span class="string">&quot;---&quot;</span> + entry.getValue());</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/Map%E6%8E%A5%E5%8F%A3/" data-id="cloxtn0ca000x5gyecfd8bzdc" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/LocalDateTime类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/LocalDateTime%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.687Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="LocalDateTime类"><a href="#LocalDateTime类" class="headerlink" title="LocalDateTime类"></a>LocalDateTime类</h1><br/>
+
+<p><strong>LocalDateTime是JDK8的时间操作类</strong></p>
+<br/>
+
+<p><strong>LocalDateTime的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">LocalDateTime</span></span><br><span class="line"><span class="keyword">extends</span> <span class="title class_">Object</span></span><br><span class="line"><span class="keyword">implements</span> <span class="title class_">Temporal</span>, TemporalAdjuster, ChronoLocalDateTime&lt;LocalDate&gt;, Serializable</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>LocalDateTime的使用方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime的创建方式:</span><br><span class="line">    <span class="number">1.</span><span class="keyword">static</span> LocalDateTime <span class="title function_">now</span><span class="params">()</span> : 获取到LocalDateTime对象并指向现在</span><br><span class="line">    <span class="number">2.</span><span class="keyword">static</span> LocalDateTime <span class="title function_">of</span><span class="params">(<span class="type">int</span> year, <span class="type">int</span> month, <span class="type">int</span> dayOfMonth, <span class="type">int</span> hour, <span class="type">int</span> minute)</span> </span><br><span class="line">        从年，月，日，小时和分钟获得 LocalDateTime的实例，将秒和纳秒设置为零</span><br><span class="line">    <span class="number">3.</span><span class="keyword">static</span> LocalDateTime <span class="title function_">of</span><span class="params">(<span class="type">int</span> year, <span class="type">int</span> month, <span class="type">int</span> dayOfMonth, <span class="type">int</span> hour, <span class="type">int</span> minute, <span class="type">int</span> second, <span class="type">int</span> nanoOfSecond)</span>  </span><br><span class="line">        获取的实例 LocalDateTime从年，月，日，小时，分钟，秒和纳秒</span><br><span class="line"></span><br><span class="line">LocalDateTime的toString()方法源码:</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> date.toString() + <span class="string">&#x27;T&#x27;</span> + time.toString();</span><br><span class="line">    &#125;</span><br><span class="line">LocalDateTime中的两个成员变量:</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> LocalDate date -&gt; 年月日</span><br><span class="line">LocalDate：是年月日类</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> LocalTime time -&gt; 时分秒</span><br><span class="line">LocalTime:是时分秒类</span><br><span class="line"></span><br><span class="line">    <span class="number">1.</span> LocalDateTime是一个不可变的日期时间对象 -&gt; 只要时间改变了就是生成了新的LocalDateTime</span><br><span class="line">    <span class="number">2.</span> LocalDateTime时间可以表示纳秒精度  </span><br><span class="line">    <span class="number">3.</span> LocalDateTime解决了Calendar类中月份从<span class="number">0</span>开始的问题</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>LocalDateTime的转换功能</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime -&gt; LocalDate</span><br><span class="line">    LocalDate <span class="title function_">toLocalDate</span><span class="params">()</span>  : 获取年月日</span><br><span class="line">    <span class="comment">//源码</span></span><br><span class="line">        <span class="keyword">public</span> LocalDate <span class="title function_">toLocalDate</span><span class="params">()</span> &#123;</span><br><span class="line">    		<span class="comment">//LocalDate date 年月日</span></span><br><span class="line">            <span class="keyword">return</span> date;</span><br><span class="line">        &#125;</span><br><span class="line">LocalDateTime -&gt; LocalTime  </span><br><span class="line">    LocalTime <span class="title function_">toLocalTime</span><span class="params">()</span>  : 获取时分秒</span><br><span class="line">    <span class="comment">//源码</span></span><br><span class="line">        <span class="keyword">public</span> LocalTime <span class="title function_">toLocalTime</span><span class="params">()</span> &#123;</span><br><span class="line">    		<span class="comment">//LocalTime time 时分秒</span></span><br><span class="line">            <span class="keyword">return</span> time;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>LocalDateTime类的获取功能（get系列方法）</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime类的获取功能: 获取到LocalDateTime对象上的时间信息</span><br><span class="line">    </span><br><span class="line">使用步骤:</span><br><span class="line">	<span class="number">1.</span> 获取到一个LocalDateTime对象 (对象中封装着时间信息)</span><br><span class="line">  <span class="number">2.</span> 使用LocalDateTime对象调用下面的getXxx方法    </span><br><span class="line">    </span><br><span class="line"><span class="type">int</span> <span class="title function_">getYear</span><span class="params">()</span> : 获取年</span><br><span class="line">Month <span class="title function_">getMonth</span><span class="params">()</span> : 获取月份 (结果是枚举类型的Month对象)    </span><br><span class="line"><span class="type">int</span> <span class="title function_">getMonthValue</span><span class="params">()</span> : 获取月份(从<span class="number">1</span>到<span class="number">12</span>)  </span><br><span class="line"><span class="type">int</span> <span class="title function_">getDayOfMonth</span><span class="params">()</span> : 获取日期</span><br><span class="line">DayOfWeek <span class="title function_">getDayOfWeek</span><span class="params">()</span> : 获取星期 得到的是DayOfWeek枚举类对象</span><br><span class="line"><span class="type">int</span> <span class="title function_">getHour</span><span class="params">()</span> : 获取小时</span><br><span class="line"><span class="type">int</span> <span class="title function_">getMinute</span><span class="params">()</span> : 获取分钟</span><br><span class="line"><span class="type">int</span> <span class="title function_">getSecond</span><span class="params">()</span> : 获取秒钟</span><br><span class="line"><span class="type">int</span> <span class="title function_">getNano</span><span class="params">()</span> : 获取纳秒    </span><br></pre></td></tr></table></figure>
+
+<p><strong>LocalDateTime类的设置功能（with系列方法）</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime类的设置功能: 设置LocalDateTime对象上的时间信息</span><br><span class="line">    注意:设置后生成新的时间对象!! 原来的时间对象是不会改变,生成新的时间对象!!!</span><br><span class="line">       </span><br><span class="line">使用步骤:</span><br><span class="line">	<span class="number">1.</span> 获取到一个LocalDateTime对象 (对象中封装着时间信息)</span><br><span class="line">  <span class="number">2.</span> 使用LocalDateTime对象调用下面的getXxx方法    </span><br><span class="line">        </span><br><span class="line">LocalDateTime <span class="title function_">withYear</span><span class="params">(<span class="type">int</span> year)</span> : 设置年,生成新的时间对象</span><br><span class="line">LocalDateTime <span class="title function_">withMonth</span><span class="params">(<span class="type">int</span> month)</span> : 设置月份(<span class="number">1</span>-<span class="number">12</span>),生成新的时间对象 </span><br><span class="line">LocalDateTime <span class="title function_">withDayOfMonth</span><span class="params">(<span class="type">int</span> dayOfMonth)</span>: 设置日期,生成新的时间对象  </span><br><span class="line">LocalDateTime <span class="title function_">withDayOfYear</span><span class="params">(<span class="type">int</span> dayOfYear)</span> : 设置年中天,生成新的时间对象 </span><br><span class="line">LocalDateTime <span class="title function_">withHour</span><span class="params">(<span class="type">int</span> hour)</span> : 设置小时,生成新的时间对象 </span><br><span class="line">LocalDateTime <span class="title function_">withMinute</span><span class="params">(<span class="type">int</span> minute)</span> : 设置分钟,生成新的时间对象 </span><br><span class="line">LocalDateTime <span class="title function_">withSecond</span><span class="params">(<span class="type">int</span> second)</span> : 设置秒钟,生成新的时间对象</span><br><span class="line">LocalDateTime <span class="title function_">withNano</span><span class="params">(<span class="type">int</span> nanoOfSecond)</span> : 设置纳秒,生成新的时间对象  </span><br></pre></td></tr></table></figure>
+
+<p><strong>LocalDateTime类的增加时间功能(plus系列方法)</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime类的增加时间功能 : 对某个时间字段进行修改</span><br><span class="line">    传入正数: 加时间  , 传入负数: 减时间</span><br><span class="line"></span><br><span class="line"><span class="comment">//不会在原来的LocalDateTime对象上进行修改,会生成新的LocalDateTime对象</span></span><br><span class="line"></span><br><span class="line">LocalDateTime <span class="title function_">plusYears</span><span class="params">(<span class="type">long</span> years)</span> </span><br><span class="line">LocalDateTime <span class="title function_">plusMonths</span><span class="params">(<span class="type">long</span> months)</span>   </span><br><span class="line">LocalDateTime <span class="title function_">plusDays</span><span class="params">(<span class="type">long</span> days)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">plusHours</span><span class="params">(<span class="type">long</span> hours)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">plusMinutes</span><span class="params">(<span class="type">long</span> minutes)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">plusSeconds</span><span class="params">(<span class="type">long</span> seconds)</span> </span><br><span class="line">LocalDateTime <span class="title function_">plusNanos</span><span class="params">(<span class="type">long</span> nanos)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">plusWeeks</span><span class="params">(<span class="type">long</span> weeks)</span>   </span><br></pre></td></tr></table></figure>
+
+<p><strong>LocalDateTime类的减少时间功能（minus系列方法）</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime类的减少时间功能 : 对某个时间字段进行修改</span><br><span class="line">    传入正数: 减时间  , 传入负数: 增时间</span><br><span class="line">        </span><br><span class="line"><span class="comment">//不会在原来的LocalDateTime对象上进行修改,会生成新的LocalDateTime对象</span></span><br><span class="line"> </span><br><span class="line">LocalDateTime <span class="title function_">minusYears</span><span class="params">(<span class="type">long</span> years)</span> </span><br><span class="line">LocalDateTime <span class="title function_">minusMonths</span><span class="params">(<span class="type">long</span> months)</span>   </span><br><span class="line">LocalDateTime <span class="title function_">minusDays</span><span class="params">(<span class="type">long</span> days)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">minusHours</span><span class="params">(<span class="type">long</span> hours)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">minusMinutes</span><span class="params">(<span class="type">long</span> minutes)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">minusSeconds</span><span class="params">(<span class="type">long</span> seconds)</span> </span><br><span class="line">LocalDateTime <span class="title function_">minusNanos</span><span class="params">(<span class="type">long</span> nanos)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">minusWeeks</span><span class="params">(<span class="type">long</span> weeks)</span>  </span><br></pre></td></tr></table></figure>
+
+<p><strong>LocalDateTime类计算时间间隔的方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="title function_">until</span><span class="params">(Temporal endExclusive, TemporalUnit unit)</span>  </span><br><span class="line">分析: </span><br><span class="line">		<span class="built_in">this</span>: 起始时间 -&gt; 调用方法的对象所代表的时间是起始时间</span><br><span class="line">    Temporal endExclusive: 结尾时间 </span><br><span class="line">    Temporal接口是LocalDate ， LocalDateTime ， LocalTime的父接口</span><br><span class="line">    TemporalUnit unit: 接口,代表时间间隔的接口</span><br><span class="line">    TemporalUnit接口有一个枚举的实现类 ChronoUnit -&gt; 设置时间间隔的时间单位</span><br><span class="line">    <span class="comment">//枚举类对象的创建: 枚举类的类名.枚举项 --&gt; 每个枚举项就是枚举类的一个对象</span></span><br><span class="line">    例如间隔多少天的时间单位: ChronoUnit.DAYS</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/LocalDateTime%E7%B1%BB/" data-id="cloxtn0c6000n5gyefrm2aj9u" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/List接口" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/List%E6%8E%A5%E5%8F%A3/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.684Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="List接口"><a href="#List接口" class="headerlink" title="List接口"></a>List接口</h1><br/>
+
+<p><strong>List接口的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">List</span>&lt;E&gt;</span><br><span class="line"><span class="keyword">extends</span> <span class="title class_">Collection</span>&lt;E&gt;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>List接口的使用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">List&lt;E&gt;: 它是元素可以重复,元素有索引,元素存取有序的单列集合的根节点 </span><br><span class="line">    		(具备父接口Collection&lt;E&gt;的长度可变,只能存储对象)</span><br><span class="line">    </span><br><span class="line">创建对象:</span><br><span class="line">    List&lt;E&gt; 集合名 = <span class="keyword">new</span> 具体的子类对象&lt;E&gt;();</span><br><span class="line">    <span class="comment">//例如: List&lt;E&gt; list = new ArrayList&lt;E&gt;();</span></span><br><span class="line">    <span class="comment">//例如: List&lt;E&gt; list = new LinkedList&lt;E&gt;();</span></span><br><span class="line">            </span><br><span class="line">增删改查: List接口增加了很多索引操作</span><br><span class="line">	增</span><br><span class="line">   	 	<span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E e)</span> : 往集合中依次添加元素,永远返回<span class="literal">true</span></span><br><span class="line">    	<span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> index, E element)</span> :插入, 插队</span><br><span class="line">      <span class="type">int</span> index : 要插入的索引位置</span><br><span class="line">            E element : 要插入的元素                              </span><br><span class="line">  删</span><br><span class="line">     	<span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object o)</span> : 按照元素值来删除元素,返回删除是否成功</span><br><span class="line">     	E <span class="title function_">remove</span><span class="params">(<span class="type">int</span> index)</span> :删除指定索引位置的元素,并返回被删除的元素</span><br><span class="line">      <span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span> : 清空集合中所有的元素</span><br><span class="line">  改</span><br><span class="line">      E <span class="title function_">set</span><span class="params">(<span class="type">int</span> index, E element)</span> : 修改指定索引位置的元素,并返回被修改的元素</span><br><span class="line">  查</span><br><span class="line">      <span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(Object o)</span>  : 判断传入的元素是否包含在集合中</span><br><span class="line">      <span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span> : 判断集合是否没有元素</span><br><span class="line">      <span class="type">int</span> <span class="title function_">size</span><span class="params">()</span> : 获取集合的长度,获取集合中元素的个数</span><br><span class="line">      E <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span> : 查询指定索引位置的元素,返回该元素</span><br><span class="line">      <span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(Object o)</span>  :判断传入的元素第一次出现在集合的索引位置,不存在返回-<span class="number">1</span></span><br><span class="line">      <span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(Object o)</span> :判断传入的元素最后一次出现在集合的索引位置,不存在返回-<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/List%E6%8E%A5%E5%8F%A3/" data-id="cloxtn0c6000p5gye4iuu7oxr" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/ListIterator迭代器" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/ListIterator%E8%BF%AD%E4%BB%A3%E5%99%A8/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.683Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="ListIterator接口"><a href="#ListIterator接口" class="headerlink" title="ListIterator接口"></a>ListIterator接口</h1><br/>
+
+<p><strong>ListIterator接口的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">ListIterator</span>&lt;E&gt;</span><br><span class="line"><span class="keyword">extends</span> <span class="title class_">Iterator</span>&lt;E&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>ListIterator遍历数组&#x2F;集合的使用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">ListIterator列表迭代器可以解决 并发修改异常!</span><br><span class="line">   </span><br><span class="line">并发修改异常: ConcurrentModificationException</span><br><span class="line">    在使用迭代器对象遍历集合的时候,使用集合对象对集合元素进行增删改</span><br><span class="line"></span><br><span class="line">ListIterator列表迭代器的成员方法:</span><br><span class="line">	<span class="type">boolean</span> <span class="title function_">hasNext</span><span class="params">()</span>  : 判断指针的右边是否有下一个元素</span><br><span class="line">    E <span class="title function_">next</span><span class="params">()</span> : 获取指针右边的元素并移动指针到下一个可以停留的位置</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(E e)</span> : 迭代器对象的添加方法,往镜像中添加元素,并立刻同步到原集合(指针的左边添加元素)</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">remove</span><span class="params">()</span> : 删除指针左边的元素(当前next()方法得到元素)</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">set</span><span class="params">(E e)</span> : 修改指针左边的元素(当前next()方法得到元素)</span><br><span class="line">        </span><br><span class="line">    E <span class="title function_">previous</span><span class="params">()</span> : 返回列表中的前一个元素  </span><br><span class="line">        </span><br><span class="line"> <span class="comment">//1.超级for循环的底层是普通迭代器不是列表迭代器, 你还是不能再超级for中修改集合内容!!</span></span><br><span class="line"> <span class="comment">//2.只能通过修改迭代器间接修改集合，如果直接修改集合会报错</span></span><br><span class="line"><span class="comment">//3.如果在递归的情况下有修改操作，ListIterator可能也会报并发修改异常。因为在在每层递归中修改了迭代器，会同步到集合中，然后下层方法中的集合就修改了</span></span><br><span class="line"><span class="comment">//这时可以用CopyOnWriteArrayList</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/ListIterator%E8%BF%AD%E4%BB%A3%E5%99%A8.assets/0ec1ff14a9329199413bd9496d0fcfbf.png" alt="截图"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/ListIterator%E8%BF%AD%E4%BB%A3%E5%99%A8/" data-id="cloxtn0c6000o5gye14kffs6y" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/LinkedList集合" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/LinkedList%E9%9B%86%E5%90%88/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.681Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="LinkedList集合"><a href="#LinkedList集合" class="headerlink" title="LinkedList集合"></a>LinkedList集合</h1><br/>
+
+<p><strong>LinkedList集合声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LinkedList</span>&lt;E&gt;<span class="keyword">extends</span> <span class="title class_">AbstractSequentialList</span>&lt;E&gt;<span class="keyword">implements</span> <span class="title class_">List</span>&lt;E&gt;, Deque&lt;E&gt;, Cloneable, Serializable</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>LinkedList的使用</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">LinkedList&lt;E&gt; 它是底层为链表结构的单列集合!(底层是双向链表)</span><br><span class="line">    <span class="comment">//链表结构是没有索引的,但是由于LinkedList是List接口下的实现类集合.List接口是有索引的,所以LinkedList也是有索引的!</span></span><br><span class="line">    </span><br><span class="line">创建对象:</span><br><span class="line">      LinkedList&lt;E&gt; 集合名 = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;E&gt;();</span><br><span class="line">            </span><br><span class="line">增删改查: LinkedList和List接口的功能一模一样</span><br><span class="line">	增</span><br><span class="line">   	 	<span class="type">boolean</span> <span class="title function_">add</span><span class="params">(E e)</span> : 往集合中依次添加元素,永远返回<span class="literal">true</span></span><br><span class="line">    	<span class="keyword">void</span> <span class="title function_">add</span><span class="params">(<span class="type">int</span> index, E element)</span> :插入, 插队</span><br><span class="line">        	  <span class="type">int</span> index : 要插入的索引位置</span><br><span class="line">            E element : 要插入的元素                              </span><br><span class="line">    删</span><br><span class="line">     	<span class="type">boolean</span> <span class="title function_">remove</span><span class="params">(Object o)</span> : 按照元素值来删除元素,返回删除是否成功</span><br><span class="line">     	E <span class="title function_">remove</span><span class="params">(<span class="type">int</span> index)</span> :删除指定索引位置的元素,并返回被删除的元素</span><br><span class="line">      <span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span> : 清空集合中所有的元素</span><br><span class="line">    改</span><br><span class="line">      E <span class="title function_">set</span><span class="params">(<span class="type">int</span> index, E element)</span> : 修改指定索引位置的元素,并返回被修改的元素</span><br><span class="line">    查</span><br><span class="line">      <span class="type">boolean</span> <span class="title function_">contains</span><span class="params">(Object o)</span>  : 判断传入的元素是否包含在集合中</span><br><span class="line">      <span class="type">boolean</span> <span class="title function_">isEmpty</span><span class="params">()</span> : 判断集合是否没有元素</span><br><span class="line">      <span class="type">int</span> <span class="title function_">size</span><span class="params">()</span> : 获取集合的长度,获取集合中元素的个数</span><br><span class="line">      E <span class="title function_">get</span><span class="params">(<span class="type">int</span> index)</span> : 查询指定索引位置的元素,返回该元素</span><br><span class="line">      <span class="type">int</span> <span class="title function_">indexOf</span><span class="params">(Object o)</span>  :判断传入的元素第一次出现在集合的索引位置,不存在返回-<span class="number">1</span></span><br><span class="line">      <span class="type">int</span> <span class="title function_">lastIndexOf</span><span class="params">(Object o)</span> :判断传入的元素最后一次出现在集合的索引位置,不存在返回-<span class="number">1</span>    </span><br></pre></td></tr></table></figure>
+
+<p><strong>LinkedList的特有功能</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">LinkedList底层是一个双向链表 </span><br><span class="line">    数据结构: 链表结构的特点-&gt; 查询慢增删快</span><br><span class="line">    因为链表结构查询较慢,所以LinkedList集合提供了一些关于集合头尾的相关操作</span><br><span class="line">        </span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addFirst</span><span class="params">(E e)</span>  : 添加元素到集合的头部</span><br><span class="line"><span class="keyword">void</span> <span class="title function_">addLast</span><span class="params">(E e)</span>  : 添加元素到集合的尾部        </span><br><span class="line">        </span><br><span class="line">E <span class="title function_">removeFirst</span><span class="params">()</span> : 删除集合的第一个元素 </span><br><span class="line">E <span class="title function_">removeLast</span><span class="params">()</span> : 删除集合的最后一个元素</span><br><span class="line">        </span><br><span class="line">E <span class="title function_">getFirst</span><span class="params">()</span> : 获取集合中第一个元素</span><br><span class="line">E <span class="title function_">getLast</span><span class="params">()</span> : 获取集合中最后一个元素</span><br></pre></td></tr></table></figure>
+
+<p><strong>LinkedList底层源码分析</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">LinkedList&lt;E&gt;集合底层链表结构中节点的类:</span><br><span class="line"><span class="comment">//这个类名字叫Node --&gt; 节点, 它是LinkedList集合类中的内部类</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">Node</span>&lt;E&gt; &#123;</span><br><span class="line">        E item;<span class="comment">// 当前Node节点的元素值</span></span><br><span class="line">        Node&lt;E&gt; next; <span class="comment">// 下一个节点对象的地址值 -&gt; 拿到下一个节点的地址值</span></span><br><span class="line">        Node&lt;E&gt; prev; <span class="comment">// 上一个节点对象的地址值 -&gt; 拿到上一个节点的地址值</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//Node类的构造方法</span></span><br><span class="line">        Node(Node&lt;E&gt; prev, E element, Node&lt;E&gt; next) &#123;</span><br><span class="line">            <span class="built_in">this</span>.item = element;<span class="comment">//给链表节点赋予元素值</span></span><br><span class="line">            <span class="built_in">this</span>.next = next;<span class="comment">//给链表节点赋予下一个节点元素的地址值</span></span><br><span class="line">            <span class="built_in">this</span>.prev = prev;<span class="comment">//给链表节点赋予上一个节点元素的地址值</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/LinkedList%E9%9B%86%E5%90%88/" data-id="cloxtn0c5000l5gye8ofv176q" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-JavaBase/LinkedHashSet集合" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/LinkedHashSet%E9%9B%86%E5%90%88/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.677Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="LinkedHashSet集合"><a href="#LinkedHashSet集合" class="headerlink" title="LinkedHashSet集合"></a>LinkedHashSet集合</h1><br/>
+
+<p><strong>LinkedHashSet的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LinkedHashSet</span>&lt;E&gt;</span><br><span class="line"><span class="keyword">extends</span> <span class="title class_">HashSet</span>&lt;E&gt;</span><br><span class="line"><span class="keyword">implements</span> <span class="title class_">Set</span>&lt;E&gt;, Cloneable, Serializable</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p>LinkedHashSet的使用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">集合是 数据结构 + 集合类型</span><br><span class="line"></span><br><span class="line">LinkedHashSet的数据结构是 链表 + Hash表</span><br><span class="line">    链表的特点是 一环扣一环!! 导致了原本存取无序的HashSet集合就变成存取有序的HashSet集合;</span><br><span class="line"></span><br><span class="line">LinkedHashSet集合的创建对象和增删改查和遍历的功能和HashSet一模一样!!</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/LinkedHashSet%E9%9B%86%E5%90%88/" data-id="cloxtn0c5000m5gyeazpyak4v" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/9/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><a class="page-number" href="/page/12/">12</a><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/11/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Day_24随堂笔记网络编程123网络编程 :  Socket编程,套接字编程    功能: 实现了数据在PC于PC之间的传递      网络编程的三要素123456789网络编程的三要素:    IP地址:可以通过IP地址在网络世界中找到你主机的位置    端口号:可以通过端口号找到当前计算机中通讯的软件 -&gt; 通讯软件的编号    网络传输协议:UDP&#x2F;TCP&#x2F;&#x2F;举例: 寄快递    收">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Day_24随堂笔记网络编程123网络编程 :  Socket编程,套接字编程    功能: 实现了数据在PC于PC之间的传递      网络编程的三要素123456789网络编程的三要素:    IP地址:可以通过IP地址在网络世界中找到你主机的位置    端口号:可以通过端口号找到当前计算机中通讯的软件 -&gt; 通讯软件的编号    网络传输协议:UDP&#x2F;TCP&#x2F;&#x2F;举例: 寄快递    收">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.assets/54159a7a15dcaa821aa845e03715b08d.png">
+<meta property="og:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.assets/94e807c04995a1eeb6538bb63c41898f.png">
+<meta property="article:published_time" content="2023-11-14T04:11:24.779Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.315Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.assets/54159a7a15dcaa821aa845e03715b08d.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/网络编程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.779Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Day-24随堂笔记"><a href="#Day-24随堂笔记" class="headerlink" title="Day_24随堂笔记"></a>Day_24随堂笔记</h3><h4 id="网络编程"><a href="#网络编程" class="headerlink" title="网络编程"></a>网络编程</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">网络编程 :  Socket编程,套接字编程</span><br><span class="line">    </span><br><span class="line">功能: 实现了数据在PC于PC之间的传递    </span><br></pre></td></tr></table></figure>
+
+<h4 id="网络编程的三要素"><a href="#网络编程的三要素" class="headerlink" title="网络编程的三要素"></a>网络编程的三要素</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">网络编程的三要素:</span><br><span class="line">    IP地址:可以通过IP地址在网络世界中找到你主机的位置</span><br><span class="line">    端口号:可以通过端口号找到当前计算机中通讯的软件 -&gt; 通讯软件的编号</span><br><span class="line">    网络传输协议:UDP/TCP</span><br><span class="line"></span><br><span class="line"><span class="comment">//举例: 寄快递</span></span><br><span class="line">    收件人地址: 湖北省武汉市江夏区茅店山中路东湖网谷<span class="number">6</span>号楼<span class="number">4</span>楼尚硅谷 -&gt; IP地址</span><br><span class="line">    收件人的姓名和联系方式: 张三 电话   -&gt; 端口号</span><br><span class="line">    快递公司: 顺丰,邮政   -&gt; 网络协议</span><br></pre></td></tr></table></figure>
+
+<h5 id="IP地址"><a href="#IP地址" class="headerlink" title="IP地址"></a>IP地址</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">IP地址: 当前PC在网络世界的地址 -&gt; 我们可以通过IP地址找到当前主机;</span><br><span class="line"></span><br><span class="line">IP地址如何获取? </span><br><span class="line">    CMD窗口的命令: ipconfig </span><br><span class="line">        (打开CMD窗口 : win+r -&gt; 输入CMD)</span><br><span class="line">        </span><br><span class="line">    以太网适配器 以太网:</span><br><span class="line">       连接特定的 DNS 后缀 . . . . . . . :</span><br><span class="line">       IPv4 地址 . . . . . . . . . . . . : <span class="number">192.168</span><span class="number">.31</span><span class="number">.209</span> -&gt; IP地址</span><br><span class="line">       子网掩码  . . . . . . . . . . . . : <span class="number">255.255</span><span class="number">.255</span><span class="number">.0</span></span><br><span class="line">       默认网关. . . . . . . . . . . . . : <span class="number">192.168</span><span class="number">.31</span><span class="number">.1</span>  </span><br><span class="line">           </span><br><span class="line">IPv4 : 一种以点分十进制表示法表示的IP地址    </span><br><span class="line">    每一个数字最大能表示的数: <span class="number">255</span></span><br><span class="line">    <span class="number">192.168</span>.: 固定的</span><br><span class="line">    <span class="number">31</span>: 网段</span><br><span class="line">    <span class="number">209</span>: 计算机在此网段下具体的位置  </span><br><span class="line">        </span><br><span class="line">IPv6 : fe80:<span class="number">0000</span>:<span class="number">5417</span>:<span class="number">6931</span>:41da:<span class="number">1335</span></span><br><span class="line">    一种以冒分十六进制表示法表示的IP地址 -&gt;</span><br><span class="line">    </span><br><span class="line"> <span class="number">192.168</span><span class="number">.31</span>.(<span class="number">1</span>-<span class="number">255</span>) :</span><br><span class="line">    <span class="number">1</span> : 网关 -&gt; 一定在线</span><br><span class="line">        ping ip地址 -&gt; 查看自己的网络连接状态</span><br><span class="line">    <span class="number">255</span> : 广播地址 -&gt; 群发</span><br><span class="line">        给广播地址放消息,此号段内(<span class="number">31</span>)所有的在线设备都能收到消息</span><br><span class="line">        </span><br><span class="line">访问网址 : www.baidu.com --&gt; 本质也是IP地址  </span><br><span class="line">    DNS: 可以解析域名(www.baidu.com)获取当前域名表示的IP地址</span><br></pre></td></tr></table></figure>
+
+<h5 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">端口号: 计算机中软件的编号 (软件如果是多线程的,多个线程都可以进行网络通讯,每一个可以通讯的线程都会分配一个端口号)</span><br><span class="line">    </span><br><span class="line">范围: <span class="number">1</span> - <span class="number">65535</span>    </span><br><span class="line">    </span><br><span class="line">注意: </span><br><span class="line">    <span class="number">1.</span> 端口号不要重复 -&gt; 报错端口绑定异常</span><br><span class="line">    <span class="number">2.</span> <span class="number">1000</span>以内的端口号不要用 -&gt; 被占用了</span><br><span class="line">    <span class="number">3.</span> <span class="number">8080</span>: tomcat服务器</span><br><span class="line">       <span class="number">3306</span>: MySql数据库</span><br><span class="line">       <span class="number">2425</span>: feiQ的端口号    </span><br></pre></td></tr></table></figure>
+
+<h5 id="网络协议"><a href="#网络协议" class="headerlink" title="网络协议"></a>网络协议</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">UDP:面向无连接的网络协议</span><br><span class="line">    特点: 只管发不管接收 -&gt; 类似村口的大喇叭</span><br><span class="line">    原理: 每次发送数据,准备一个数据包(64K),已数据包的形式往接收端发送数据(只管发不管接收)    </span><br><span class="line">TCP:面向连接的网络协议</span><br><span class="line">    特点: 先建立连接,数据以流的形式传输</span><br><span class="line">    原理: </span><br><span class="line">        连接时:三次握手</span><br><span class="line">        断开连接时:四次挥手    </span><br><span class="line">            </span><br><span class="line">UDP: 效率高,安全性低</span><br><span class="line">TCP: 效率低,安全性高    </span><br></pre></td></tr></table></figure>
+
+<h5 id="UDP网络协议传输数据的特点"><a href="#UDP网络协议传输数据的特点" class="headerlink" title="UDP网络协议传输数据的特点"></a>UDP网络协议传输数据的特点</h5><p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.assets/54159a7a15dcaa821aa845e03715b08d.png" alt="image-20210825102421870.png"></p>
+<h5 id="TCP网络协议传输数据的特点"><a href="#TCP网络协议传输数据的特点" class="headerlink" title="TCP网络协议传输数据的特点"></a>TCP网络协议传输数据的特点</h5><p><img src="/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.assets/94e807c04995a1eeb6538bb63c41898f.png" alt="image-20210825103703321.png"></p>
+<h4 id="InetAddress"><a href="#InetAddress" class="headerlink" title="InetAddress"></a>InetAddress</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">InetAddress : 表示IP地址的类</span><br><span class="line">    </span><br><span class="line">创建InetAddress对象:</span><br><span class="line">    <span class="keyword">static</span> InetAddress <span class="title function_">getByName</span><span class="params">(String host)</span>  : 传入主机名或者IP地址,得到该主机的IP地址对象</span><br><span class="line">            <span class="type">InetAddress</span> <span class="variable">inet</span> <span class="operator">=</span> InetAddress.getByName(<span class="string">&quot;192.168.31.209&quot;</span>);</span><br><span class="line">            <span class="type">InetAddress</span> <span class="variable">inet</span> <span class="operator">=</span> InetAddress.getByName(<span class="string">&quot;Damon&quot;</span>);</span><br><span class="line">    <span class="keyword">static</span> InetAddress[] getAllByName(String host)  : 获取当前主机名的所有IP地址对象 </span><br><span class="line">        </span><br><span class="line">    <span class="keyword">static</span> InetAddress <span class="title function_">getLocalHost</span><span class="params">()</span> : 快速的获取本机的IP地址对象    </span><br><span class="line">        </span><br><span class="line">成员方法:</span><br><span class="line">    String <span class="title function_">getHostName</span><span class="params">()</span>  : 获取当前IP地址对象的主机名(取决于它是否用主机名构造或者是否已执行反向主机名解析)</span><br><span class="line">    String <span class="title function_">getHostAddress</span><span class="params">()</span>  : 获取当前IP地址对象的IP地址    </span><br></pre></td></tr></table></figure>
+
+<h4 id="UDP协议代码"><a href="#UDP协议代码" class="headerlink" title="UDP协议代码"></a>UDP协议代码</h4><h5 id="UDP协议的发送端"><a href="#UDP协议的发送端" class="headerlink" title="UDP协议的发送端"></a>UDP协议的发送端</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">UDP发送端的类: DatagramSocket</span><br><span class="line">    </span><br><span class="line">构造方法:</span><br><span class="line">    DatagramSocket() : 构建一个无参的UDP发送端对象</span><br><span class="line">        </span><br><span class="line">成员方法: send</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">send</span><span class="params">(DatagramPacket p)</span> : 发送数据</span><br><span class="line">    </span><br><span class="line">代码:</span><br><span class="line">        <span class="comment">//创建UDP协议发送端的对象</span></span><br><span class="line">        <span class="type">DatagramSocket</span> <span class="variable">ds</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DatagramSocket</span>();</span><br><span class="line">        <span class="type">InetAddress</span> <span class="variable">ip</span> <span class="operator">=</span> InetAddress.getByName(<span class="string">&quot;192.168.31.209&quot;</span>);</span><br><span class="line">        <span class="type">String</span> <span class="variable">line</span> <span class="operator">=</span> <span class="string">&quot;Hello! UDP~&quot;</span>;</span><br><span class="line">        <span class="comment">//DatagramPacket(byte[] buf, int offset, int length, InetAddress address, int port)</span></span><br><span class="line">        <span class="type">DatagramPacket</span> <span class="variable">p</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DatagramPacket</span>(line.getBytes(), <span class="number">0</span>, line.length(), ip, <span class="number">10086</span>);</span><br><span class="line">        <span class="comment">//发送数据</span></span><br><span class="line">        ds.send(p);</span><br><span class="line">        <span class="comment">//关闭资源</span></span><br><span class="line">        ds.close();</span><br></pre></td></tr></table></figure>
+
+<h5 id="发送端的DatagramPacket数据包"><a href="#发送端的DatagramPacket数据包" class="headerlink" title="发送端的DatagramPacket数据包"></a>发送端的DatagramPacket数据包</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">数据包: 快递包裹</span><br><span class="line">    快递包裹: 收件人地址(IP地址),商品(数据),收件人的联系方式(端口号)</span><br><span class="line">构造方法:</span><br><span class="line">    DatagramPacket(<span class="type">byte</span>[] buf, <span class="type">int</span> offset, <span class="type">int</span> length, InetAddress address, <span class="type">int</span> port) </span><br><span class="line">        <span class="type">byte</span>[] buf, <span class="type">int</span> offset, <span class="type">int</span> length: 数据</span><br><span class="line">        InetAddress address : IP地址对象</span><br><span class="line">        <span class="type">int</span> port  : 端口号</span><br></pre></td></tr></table></figure>
+
+<h5 id="UDP协议的接收端"><a href="#UDP协议的接收端" class="headerlink" title="UDP协议的接收端"></a>UDP协议的接收端</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">UDP接收端的类: DatagramSocket</span><br><span class="line">    </span><br><span class="line">构造方法:</span><br><span class="line">    DatagramSocket(<span class="type">int</span> port): 带有端口号的接收端对象 -&gt;(你要接收消息,必须知道自己是谁) </span><br><span class="line">        </span><br><span class="line">成员方法:</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">receive</span><span class="params">(DatagramPacket packet)</span>: 把数据接收到数据报包中</span><br></pre></td></tr></table></figure>
+
+<h5 id="接收端的DatagramPacket数据包"><a href="#接收端的DatagramPacket数据包" class="headerlink" title="接收端的DatagramPacket数据包"></a>接收端的DatagramPacket数据包</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">数据包: 快递包裹</span><br><span class="line">    </span><br><span class="line">构造方法:</span><br><span class="line">    DatagramPacket(<span class="type">byte</span>[] buf, <span class="type">int</span> offset, <span class="type">int</span> length) </span><br><span class="line">        <span class="type">byte</span>[] buf, <span class="type">int</span> offset, <span class="type">int</span> length: 数据接收到这个数组中去</span><br><span class="line">        </span><br><span class="line">成员方法:</span><br><span class="line">    InetAddress <span class="title function_">getAddress</span><span class="params">()</span> : 获取发件人的IP地址对象</span><br><span class="line">    <span class="type">byte</span>[] getData() : 获取数据报包的字节数组 -&gt; 没必要</span><br><span class="line">    <span class="type">int</span> <span class="title function_">getLength</span><span class="params">()</span> : 返回数据的真实长度    </span><br></pre></td></tr></table></figure>
+
+<h4 id="TCP协议代码"><a href="#TCP协议代码" class="headerlink" title="TCP协议代码"></a>TCP协议代码</h4><h5 id="TCP协议的客户端"><a href="#TCP协议的客户端" class="headerlink" title="TCP协议的客户端"></a>TCP协议的客户端</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">TCP协议的客户端的类: Socket</span><br><span class="line">    </span><br><span class="line">构造方法:</span><br><span class="line">    Socket(String host, <span class="type">int</span> port) : 直接传入服务器的主机名(IP地址)和端口号创建客户端对象;</span><br><span class="line">    Socket(InetAddress address, <span class="type">int</span> port) :直接传入服务器的InetAddress对象形式的主机名(IP地址)和端口号创建客户端对象;</span><br><span class="line"></span><br><span class="line"><span class="comment">//TCP协议是建立连接的,建立管道. 三次握手建立管道后数据通过流进行传输</span></span><br><span class="line"></span><br><span class="line">发送数据类服务器,要创建流对象: (网络编程的流对象都是通过Socket对象获取的)</span><br><span class="line">    OutputStream <span class="title function_">getOutputStream</span><span class="params">()</span>  :返回此套接字的输出流。</span><br><span class="line">    InputStream <span class="title function_">getInputStream</span><span class="params">()</span> :返回此套接字的输入流.</span><br><span class="line">        </span><br><span class="line"> 接下里就是IO流的标准代码.</span><br></pre></td></tr></table></figure>
+
+<h5 id="TCP协议的服务端"><a href="#TCP协议的服务端" class="headerlink" title="TCP协议的服务端"></a>TCP协议的服务端</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">TCP协议的服务端的类: ServerSocket -&gt; 此类实现服务器套接字</span><br><span class="line">    </span><br><span class="line">构造方法:</span><br><span class="line">    ServerSocket(<span class="type">int</span> port) : 指明端口号的方式创建服务端对象</span><br><span class="line">        </span><br><span class="line">成员方法:</span><br><span class="line">    Socket <span class="title function_">accept</span><span class="params">()</span> : 侦听并接受到此套接字的连接。</span><br><span class="line">        </span><br><span class="line"><span class="comment">//通过Socket对象获取输入流对象,有了输入流对象就可以读数据        </span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" data-id="cloxtn0cn001z5gye4isd0f2r" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/%E8%BF%90%E5%8A%A8%E5%91%98%E6%A1%88%E4%BE%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/%E7%BB%A7%E6%89%BF/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

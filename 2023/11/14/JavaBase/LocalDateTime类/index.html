@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="LocalDateTime类  LocalDateTime是JDK8的时间操作类   LocalDateTime的声明 123public final class LocalDateTimeextends Objectimplements Temporal, TemporalAdjuster, ChronoLocalDateTime&lt;LocalDate&gt;, Serializable">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2023/11/14/JavaBase/LocalDateTime%E7%B1%BB/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="LocalDateTime类  LocalDateTime是JDK8的时间操作类   LocalDateTime的声明 123public final class LocalDateTimeextends Objectimplements Temporal, TemporalAdjuster, ChronoLocalDateTime&lt;LocalDate&gt;, Serializable">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-11-14T04:11:24.687Z">
+<meta property="article:modified_time" content="2022-01-02T02:20:40.283Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-JavaBase/LocalDateTime类" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/11/14/JavaBase/LocalDateTime%E7%B1%BB/" class="article-date">
+  <time class="dt-published" datetime="2023-11-14T04:11:24.687Z" itemprop="datePublished">2023-11-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="LocalDateTime类"><a href="#LocalDateTime类" class="headerlink" title="LocalDateTime类"></a>LocalDateTime类</h1><br/>
+
+<p><strong>LocalDateTime是JDK8的时间操作类</strong></p>
+<br/>
+
+<p><strong>LocalDateTime的声明</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">class</span> <span class="title class_">LocalDateTime</span></span><br><span class="line"><span class="keyword">extends</span> <span class="title class_">Object</span></span><br><span class="line"><span class="keyword">implements</span> <span class="title class_">Temporal</span>, TemporalAdjuster, ChronoLocalDateTime&lt;LocalDate&gt;, Serializable</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>LocalDateTime的使用方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime的创建方式:</span><br><span class="line">    <span class="number">1.</span><span class="keyword">static</span> LocalDateTime <span class="title function_">now</span><span class="params">()</span> : 获取到LocalDateTime对象并指向现在</span><br><span class="line">    <span class="number">2.</span><span class="keyword">static</span> LocalDateTime <span class="title function_">of</span><span class="params">(<span class="type">int</span> year, <span class="type">int</span> month, <span class="type">int</span> dayOfMonth, <span class="type">int</span> hour, <span class="type">int</span> minute)</span> </span><br><span class="line">        从年，月，日，小时和分钟获得 LocalDateTime的实例，将秒和纳秒设置为零</span><br><span class="line">    <span class="number">3.</span><span class="keyword">static</span> LocalDateTime <span class="title function_">of</span><span class="params">(<span class="type">int</span> year, <span class="type">int</span> month, <span class="type">int</span> dayOfMonth, <span class="type">int</span> hour, <span class="type">int</span> minute, <span class="type">int</span> second, <span class="type">int</span> nanoOfSecond)</span>  </span><br><span class="line">        获取的实例 LocalDateTime从年，月，日，小时，分钟，秒和纳秒</span><br><span class="line"></span><br><span class="line">LocalDateTime的toString()方法源码:</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">toString</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> date.toString() + <span class="string">&#x27;T&#x27;</span> + time.toString();</span><br><span class="line">    &#125;</span><br><span class="line">LocalDateTime中的两个成员变量:</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> LocalDate date -&gt; 年月日</span><br><span class="line">LocalDate：是年月日类</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">final</span> LocalTime time -&gt; 时分秒</span><br><span class="line">LocalTime:是时分秒类</span><br><span class="line"></span><br><span class="line">    <span class="number">1.</span> LocalDateTime是一个不可变的日期时间对象 -&gt; 只要时间改变了就是生成了新的LocalDateTime</span><br><span class="line">    <span class="number">2.</span> LocalDateTime时间可以表示纳秒精度  </span><br><span class="line">    <span class="number">3.</span> LocalDateTime解决了Calendar类中月份从<span class="number">0</span>开始的问题</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><strong>LocalDateTime的转换功能</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime -&gt; LocalDate</span><br><span class="line">    LocalDate <span class="title function_">toLocalDate</span><span class="params">()</span>  : 获取年月日</span><br><span class="line">    <span class="comment">//源码</span></span><br><span class="line">        <span class="keyword">public</span> LocalDate <span class="title function_">toLocalDate</span><span class="params">()</span> &#123;</span><br><span class="line">    		<span class="comment">//LocalDate date 年月日</span></span><br><span class="line">            <span class="keyword">return</span> date;</span><br><span class="line">        &#125;</span><br><span class="line">LocalDateTime -&gt; LocalTime  </span><br><span class="line">    LocalTime <span class="title function_">toLocalTime</span><span class="params">()</span>  : 获取时分秒</span><br><span class="line">    <span class="comment">//源码</span></span><br><span class="line">        <span class="keyword">public</span> LocalTime <span class="title function_">toLocalTime</span><span class="params">()</span> &#123;</span><br><span class="line">    		<span class="comment">//LocalTime time 时分秒</span></span><br><span class="line">            <span class="keyword">return</span> time;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>LocalDateTime类的获取功能（get系列方法）</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime类的获取功能: 获取到LocalDateTime对象上的时间信息</span><br><span class="line">    </span><br><span class="line">使用步骤:</span><br><span class="line">	<span class="number">1.</span> 获取到一个LocalDateTime对象 (对象中封装着时间信息)</span><br><span class="line">  <span class="number">2.</span> 使用LocalDateTime对象调用下面的getXxx方法    </span><br><span class="line">    </span><br><span class="line"><span class="type">int</span> <span class="title function_">getYear</span><span class="params">()</span> : 获取年</span><br><span class="line">Month <span class="title function_">getMonth</span><span class="params">()</span> : 获取月份 (结果是枚举类型的Month对象)    </span><br><span class="line"><span class="type">int</span> <span class="title function_">getMonthValue</span><span class="params">()</span> : 获取月份(从<span class="number">1</span>到<span class="number">12</span>)  </span><br><span class="line"><span class="type">int</span> <span class="title function_">getDayOfMonth</span><span class="params">()</span> : 获取日期</span><br><span class="line">DayOfWeek <span class="title function_">getDayOfWeek</span><span class="params">()</span> : 获取星期 得到的是DayOfWeek枚举类对象</span><br><span class="line"><span class="type">int</span> <span class="title function_">getHour</span><span class="params">()</span> : 获取小时</span><br><span class="line"><span class="type">int</span> <span class="title function_">getMinute</span><span class="params">()</span> : 获取分钟</span><br><span class="line"><span class="type">int</span> <span class="title function_">getSecond</span><span class="params">()</span> : 获取秒钟</span><br><span class="line"><span class="type">int</span> <span class="title function_">getNano</span><span class="params">()</span> : 获取纳秒    </span><br></pre></td></tr></table></figure>
+
+<p><strong>LocalDateTime类的设置功能（with系列方法）</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime类的设置功能: 设置LocalDateTime对象上的时间信息</span><br><span class="line">    注意:设置后生成新的时间对象!! 原来的时间对象是不会改变,生成新的时间对象!!!</span><br><span class="line">       </span><br><span class="line">使用步骤:</span><br><span class="line">	<span class="number">1.</span> 获取到一个LocalDateTime对象 (对象中封装着时间信息)</span><br><span class="line">  <span class="number">2.</span> 使用LocalDateTime对象调用下面的getXxx方法    </span><br><span class="line">        </span><br><span class="line">LocalDateTime <span class="title function_">withYear</span><span class="params">(<span class="type">int</span> year)</span> : 设置年,生成新的时间对象</span><br><span class="line">LocalDateTime <span class="title function_">withMonth</span><span class="params">(<span class="type">int</span> month)</span> : 设置月份(<span class="number">1</span>-<span class="number">12</span>),生成新的时间对象 </span><br><span class="line">LocalDateTime <span class="title function_">withDayOfMonth</span><span class="params">(<span class="type">int</span> dayOfMonth)</span>: 设置日期,生成新的时间对象  </span><br><span class="line">LocalDateTime <span class="title function_">withDayOfYear</span><span class="params">(<span class="type">int</span> dayOfYear)</span> : 设置年中天,生成新的时间对象 </span><br><span class="line">LocalDateTime <span class="title function_">withHour</span><span class="params">(<span class="type">int</span> hour)</span> : 设置小时,生成新的时间对象 </span><br><span class="line">LocalDateTime <span class="title function_">withMinute</span><span class="params">(<span class="type">int</span> minute)</span> : 设置分钟,生成新的时间对象 </span><br><span class="line">LocalDateTime <span class="title function_">withSecond</span><span class="params">(<span class="type">int</span> second)</span> : 设置秒钟,生成新的时间对象</span><br><span class="line">LocalDateTime <span class="title function_">withNano</span><span class="params">(<span class="type">int</span> nanoOfSecond)</span> : 设置纳秒,生成新的时间对象  </span><br></pre></td></tr></table></figure>
+
+<p><strong>LocalDateTime类的增加时间功能(plus系列方法)</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime类的增加时间功能 : 对某个时间字段进行修改</span><br><span class="line">    传入正数: 加时间  , 传入负数: 减时间</span><br><span class="line"></span><br><span class="line"><span class="comment">//不会在原来的LocalDateTime对象上进行修改,会生成新的LocalDateTime对象</span></span><br><span class="line"></span><br><span class="line">LocalDateTime <span class="title function_">plusYears</span><span class="params">(<span class="type">long</span> years)</span> </span><br><span class="line">LocalDateTime <span class="title function_">plusMonths</span><span class="params">(<span class="type">long</span> months)</span>   </span><br><span class="line">LocalDateTime <span class="title function_">plusDays</span><span class="params">(<span class="type">long</span> days)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">plusHours</span><span class="params">(<span class="type">long</span> hours)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">plusMinutes</span><span class="params">(<span class="type">long</span> minutes)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">plusSeconds</span><span class="params">(<span class="type">long</span> seconds)</span> </span><br><span class="line">LocalDateTime <span class="title function_">plusNanos</span><span class="params">(<span class="type">long</span> nanos)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">plusWeeks</span><span class="params">(<span class="type">long</span> weeks)</span>   </span><br></pre></td></tr></table></figure>
+
+<p><strong>LocalDateTime类的减少时间功能（minus系列方法）</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime类的减少时间功能 : 对某个时间字段进行修改</span><br><span class="line">    传入正数: 减时间  , 传入负数: 增时间</span><br><span class="line">        </span><br><span class="line"><span class="comment">//不会在原来的LocalDateTime对象上进行修改,会生成新的LocalDateTime对象</span></span><br><span class="line"> </span><br><span class="line">LocalDateTime <span class="title function_">minusYears</span><span class="params">(<span class="type">long</span> years)</span> </span><br><span class="line">LocalDateTime <span class="title function_">minusMonths</span><span class="params">(<span class="type">long</span> months)</span>   </span><br><span class="line">LocalDateTime <span class="title function_">minusDays</span><span class="params">(<span class="type">long</span> days)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">minusHours</span><span class="params">(<span class="type">long</span> hours)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">minusMinutes</span><span class="params">(<span class="type">long</span> minutes)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">minusSeconds</span><span class="params">(<span class="type">long</span> seconds)</span> </span><br><span class="line">LocalDateTime <span class="title function_">minusNanos</span><span class="params">(<span class="type">long</span> nanos)</span>  </span><br><span class="line">LocalDateTime <span class="title function_">minusWeeks</span><span class="params">(<span class="type">long</span> weeks)</span>  </span><br></pre></td></tr></table></figure>
+
+<p><strong>LocalDateTime类计算时间间隔的方法</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> <span class="title function_">until</span><span class="params">(Temporal endExclusive, TemporalUnit unit)</span>  </span><br><span class="line">分析: </span><br><span class="line">		<span class="built_in">this</span>: 起始时间 -&gt; 调用方法的对象所代表的时间是起始时间</span><br><span class="line">    Temporal endExclusive: 结尾时间 </span><br><span class="line">    Temporal接口是LocalDate ， LocalDateTime ， LocalTime的父接口</span><br><span class="line">    TemporalUnit unit: 接口,代表时间间隔的接口</span><br><span class="line">    TemporalUnit接口有一个枚举的实现类 ChronoUnit -&gt; 设置时间间隔的时间单位</span><br><span class="line">    <span class="comment">//枚举类对象的创建: 枚举类的类名.枚举项 --&gt; 每个枚举项就是枚举类的一个对象</span></span><br><span class="line">    例如间隔多少天的时间单位: ChronoUnit.DAYS</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/11/14/JavaBase/LocalDateTime%E7%B1%BB/" data-id="cloxtn0c6000n5gyefrm2aj9u" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/11/14/JavaBase/Map%E6%8E%A5%E5%8F%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/11/14/JavaBase/List%E6%8E%A5%E5%8F%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/11/">November 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/%E5%9B%9B%E3%80%81SpringMVC%E5%AE%9E%E6%88%98%EF%BC%9A%E6%9E%84%E5%BB%BA%E9%AB%98%E6%95%88%E8%A1%A8%E8%BF%B0%E5%B1%82%E6%A1%86%E6%9E%B6/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/%E5%85%AD%E3%80%81%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E6%A1%86%E6%9E%B6%EF%BC%9ASpringBoot3%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/%E5%85%AB%E3%80%81%E7%BB%88%E6%9E%81%E5%AE%9E%E6%88%98%EF%BC%9ASpringBoot%E7%89%88%E5%BE%AE%E5%A4%B4%E6%9D%A1%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/%E4%BA%94%E3%80%81%E6%A1%86%E6%9E%B6%E5%AE%9E%E6%88%98%EF%BC%9ASSM%E6%95%B4%E5%90%88%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E6%88%98/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2023/11/14/ssm-md-master/%E6%96%B0%E7%89%88SSM%E6%95%B4%E5%90%88+SpringBoot3%E7%AC%94%E8%AE%B0/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/%E4%BA%8C%E3%80%81SpringFramework%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
